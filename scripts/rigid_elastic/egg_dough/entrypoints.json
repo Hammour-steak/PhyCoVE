@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "scene": "egg_dough",
+  "category": "rigid_elastic",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_egg_dough.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--case",
+        "--asset-dir",
+        "--frames",
+        "--steps-per-frame",
+        "--gpu",
+        "--unload-after",
+        "--preset",
+        "--initial-equilibrium",
+        "--initial-state-from"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu"
+      },
+      "cases": [
+        "source",
+        "soft_dough_e5",
+        "light_ball",
+        "heavy_ball",
+        "delete_egg"
+      ],
+      "python_runtime": ".venv-taichi-mpm/bin/python"
+    },
+    "render": {
+      "file": "render_egg_dough.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--simulation-dir",
+        "--out-dir",
+        "--frames",
+        "--save-blend",
+        "--resume",
+        "--blender",
+        "--gpu",
+        "--threads",
+        "--appearance-file"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_egg_dough.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--asset-dir",
+        "--python",
+        "--blender",
+        "--gpu",
+        "--threads",
+        "--dry-run",
+        "--preset",
+        "--steps-per-frame",
+        "--initial-state-mode",
+        "--source-initial-state"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "soft_dough_e5",
+        "light_ball",
+        "heavy_ball",
+        "delete_egg"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Scene-owned finite-strain viscoelastic FEM with six-DOF intact rigid egg, mesh signed-distance contact, full inertia and angular momentum, Cycles",
+  "implementation_files": [
+    "appearance/baking_look.py",
+    "appearance/material_helpers.py",
+    "appearance/realism_look.py",
+    "appearance/realism_look_assets.py",
+    "appearance/scene_egg_dough.py",
+    "build_pcve_egg_dough.py",
+    "dough_config.py",
+    "edit_vocab.py",
+    "physics/equilibrate_dough.py",
+    "physics/fem_viscoelastic.py",
+    "physics/rigid_geometry.py",
+    "physics/source_initial_state.py",
+    "physics/validate_egg_dough.py",
+    "render_egg_dough.py",
+    "simulate_egg_dough.py",
+    "tools/download_rigid_egg.py",
+    "tools/prepare_assets.py",
+    "tools/prepare_realism_assets.py",
+    "tools/prepare_rigid_egg.py",
+    "tools/prepare_visual_assets.py",
+    "presets.json",
+    "appearance/appearance.json",
+    "scene_manifest.json"
+  ]
+}

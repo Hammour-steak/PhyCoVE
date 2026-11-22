@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "scene": "book_pillow_bedroom",
+  "category": "rigid_elastic",
+  "case_number": 9,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_book_pillow_bedroom.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "case",
+        "--out",
+        "--tag",
+        "--rate",
+        "--material",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--stop",
+        "--fail-fast-deletion"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "cases": [
+        "source",
+        "heavy_book",
+        "soft_pillow",
+        "firm_pillow",
+        "remove_pillow",
+        "add_bedside_book"
+      ],
+      "stage_semantics": "none"
+    },
+    "render": {
+      "file": "render_book_pillow_bedroom.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output"
+      },
+      "native_options": [
+        "case",
+        "--output",
+        "--input",
+        "--tag",
+        "--samples",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin",
+        "--preview",
+        "--frames",
+        "--range",
+        "--cpu-stills"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "cases": [
+        "source",
+        "heavy_book",
+        "soft_pillow",
+        "firm_pillow",
+        "remove_pillow",
+        "add_bedside_book"
+      ],
+      "stage_semantics": "none"
+    },
+    "build_pcve": {
+      "file": "build_pcve_book_pillow_bedroom.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out-root",
+        "--delivery",
+        "--suite",
+        "--renders-root"
+      ],
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "heavy_book",
+        "soft_pillow",
+        "firm_pillow",
+        "remove_pillow",
+        "add_bedside_book"
+      ],
+      "stage_semantics": "selector"
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Coupled native FEM/ABD/IPC solve at 600 Hz of a 0.5 kg rigid hardcover falling onto a compressible pillow, folded 3D quilt and mattress; 96 native samples at i/24 s over four seconds, no retiming. Pillow, quilt and mattress are effective neo-Hookean volumes with Kelvin-Voigt viscosity, not calibrated measurements. Edits change one bound parameter (book mass x2, pillow Young modulus x0.5 or x5), delete the pillow, or add a pre-settled 0.65 kg book on the pillow under the falling book. The accepted native caches in renders/book_pillow_bedroom/accepted are the physics of every case; simulation reruns only inside the restored worker kit (Python 3.10, CUDA runtime, byte-frozen kit modules from assets/scenes/book_pillow_bedroom/kit, hash-checked inputs) on the hosts listed in scene_paths.py. Rendering replays a cache in Blender 4.3.2 Cycles (CUDA): the frozen kit modules build the bed, pillow and books exactly as in the accepted delivery, appearance/realism_look.py dresses a closed bedroom lit by sun and sky through a side window with scanned Poly Haven materials and props, and the renderer checks the book pose against the cache every frame and the quilt binding and visible contact gaps at sampled frames. build_pcve verifies the physics delivery and the published suite read-only (hashes, media contract, catalog prompts, ground truth).",
+  "implementation_files": [
+    "simulate_book_pillow_bedroom.py",
+    "render_book_pillow_bedroom.py",
+    "build_pcve_book_pillow_bedroom.py",
+    "scene_paths.py",
+    "edit_vocab.py",
+    "physics/physics.py",
+    "physics/simulate.py",
+    "appearance/render.py",
+    "appearance/realism_look.py",
+    "tools/dispatch.py",
+    "tools/launch.py",
+    "tools/audit.py",
+    "tools/verify_delivery.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "assets": "assets/scenes/book_pillow_bedroom",
+  "edit_catalog": {
+    "file": "build_pcve_book_pillow_bedroom.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  },
+  "appearance": "appearance/realism_look.py (daylight bedroom)"
+}

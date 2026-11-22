@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "scene_id": "basketball_corner_rebound",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_basketball_corner_rebound.py",
+    "render": "render_basketball_corner_rebound.py",
+    "build_pcve": "build_pcve_basketball_corner_rebound.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "basketball_corner_baseline",
+    "edit_fast_ball",
+    "edit_slow_ball",
+    "edit_slick_ball",
+    "edit_low_gravity",
+    "edit_spin_midway"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_basketball_corner_rebound_suite": {
+      "target": "renders/pcve_suites/pcve_basketball_corner_rebound_suite",
+      "case_video_sha256": {
+        "basketball_corner_baseline": "60028a4024ead0ea24bcd923609b3aa39cbaa679c405d067f24e0f67956b601f",
+        "edit_fast_ball": "9fc0482b725c5fd3d07673423e2963df7db6872bdb4e8d912a10e863a2a648c7",
+        "edit_low_gravity": "7b40ea1b772f74689b52369762484297ba39bd364b336f37eb5e119899d0382d",
+        "edit_slick_ball": "a473e1dac1985968db24c391220bb5c2f71ec4f850e0c93873f790d171cc2f1f",
+        "edit_slow_ball": "7298a97d6687d64afd903fe5743fa61a8b9ba226ff7464b885d9a52e07c0ab88",
+        "edit_spin_midway": "be6c7ecaf458eb63b465534c5bba1c5b8a42c2af8ba30c81a3ee398865f50f59"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "basketball_corner_baseline": "source",
+        "edit_fast_ball": "edit_fast_ball",
+        "edit_slow_ball": "edit_slow_ball",
+        "edit_slick_ball": "edit_slick_ball",
+        "edit_low_gravity": "edit_low_gravity",
+        "edit_spin_midway": "edit_spin_midway"
+      },
+      "public_case_video_sha256": {
+        "source": "60028a4024ead0ea24bcd923609b3aa39cbaa679c405d067f24e0f67956b601f",
+        "edit_fast_ball": "9fc0482b725c5fd3d07673423e2963df7db6872bdb4e8d912a10e863a2a648c7",
+        "edit_low_gravity": "7b40ea1b772f74689b52369762484297ba39bd364b336f37eb5e119899d0382d",
+        "edit_slick_ball": "a473e1dac1985968db24c391220bb5c2f71ec4f850e0c93873f790d171cc2f1f",
+        "edit_slow_ball": "7298a97d6687d64afd903fe5743fa61a8b9ba226ff7464b885d9a52e07c0ab88",
+        "edit_spin_midway": "be6c7ecaf458eb63b465534c5bba1c5b8a42c2af8ba30c81a3ee398865f50f59"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/basketball_corner_rebound",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/basketball_corner_rebound",
+      "scenes/basketball_corner_rebound"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

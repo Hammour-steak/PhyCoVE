@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "units": "SI",
+  "coordinate_system": "right-handed; x=left-to-right travel; y=table depth; z=up",
+  "fps": 24,
+  "duration_s": 4.0,
+  "frame_count": 96,
+  "cases": {
+    "source": {},
+    "remove_spring": {
+      "spring_present": false
+    },
+    "remove_block": {
+      "block_present": false
+    },
+    "heavier_block": {
+      "block_mass_kg": 0.42
+    },
+    "add_block": {
+      "obstacle_present": true
+    },
+    "stiffer_spring": {
+      "spring_young_modulus_pa": 616200000000.0
+    }
+  },
+  "edit_semantics": "Exactly one independent intervention at release t=0. Every initial generalized velocity is exactly zero. Each case is integrated independently after removal of its pre-release latch.",
+  "derived_interventions": {
+    "heavier_block": {
+      "independent_parameter": "block_mass_kg",
+      "factor": 3,
+      "derived_ballast_mass_kg": 0.28,
+      "wooden_exterior_unchanged": true
+    },
+    "add_block": {
+      "new_identity": "obstacle_block",
+      "source_present": false,
+      "independent_intervention": "Enable the source-declared new-body approach preset at t=0",
+      "relative_geometry": "5/6 along the actual source car-root to original-block-center line; no projection/offset",
+      "source_declared_new_parameters": {
+        "obstacle_present": false,
+        "obstacle_initial_position_m": [
+          0.169520337346175,
+          0.0,
+          0.029583333333333333
+        ],
+        "obstacle_size_m": [
+          0.08,
+          0.085,
+          0.059166666666666666
+        ],
+        "obstacle_mass_kg": 0.14,
+        "obstacle_ground_friction": 0.28,
+        "obstacle_car_friction": 0.35,
+        "obstacle_block_friction": 0.35,
+        "obstacle_initial_quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "all_existing_initial_poses_unchanged": true
+    },
+    "stiffer_spring": {
+      "independent_parameter": "spring_young_modulus_pa",
+      "factor": 3,
+      "realization": "Fixed coil geometry and Poisson ratio; Young's modulus multiplies by 3. Shear modulus G=E/[2(1+nu)] and the derived axial rate k=Gd^4/(8D^3n) therefore both multiply by 3.",
+      "nominal_initial_compression_unchanged_m": 0.06,
+      "car_initial_pose_unchanged": true,
+      "static_contact_compliance_tolerance_m": 5e-06,
+      "source_young_modulus_pa": 205400000000.0,
+      "edited_young_modulus_pa": 616200000000.0,
+      "coil_geometry_unchanged": true
+    }
+  },
+  "initial_state_contract": {
+    "all_generalized_velocities_exactly_zero": true,
+    "release_operation": "disable pre-release holding latch without changing qpos or qvel",
+    "post_release_actuators": 0,
+    "post_release_external_driving_forces": 0,
+    "stored_energy_source": "actual solved precompressed spring state, not assigned car kinetic energy",
+    "holding_work_scope": "Stored spring energy and holding forces define the release boundary condition. No preparation trajectory or its dissipation is simulated, and its work is outside the release energy ledger.",
+    "soft_contact_scope": "actual native micrometre-scale static contact deformation is recorded; positive contact force at release does not imply nonzero initial velocity"
+  },
+  "model_scope": "Passive precompressed guided coil releasing a stationary four-wheel Lightning McQueen-style toy car toward a free wooden block. Car root, wheel centers and body contact hull must come from the selected actual asset at approximately230mm scale. Spring axial constitutive mechanics, lightweight moving assembly and telescopic guide geometry are explicit; product contact/bearing/damping calibration, plate FEM and distributed/radial wire modes remain outside scope.",
+  "production_dt_s_by_case": {
+    "source": 2.0833333333333333e-05,
+    "remove_spring": 8.333333333333333e-05,
+    "remove_block": 2.0833333333333333e-05,
+    "heavier_block": 8.333333333333333e-05,
+    "add_block": 8.333333333333333e-05,
+    "stiffer_spring": 2.0833333333333333e-05
+  },
+  "numerical_resolution_semantics": "Each declared production timestep passed its complete 0–4s half-timestep comparison under unchanged gates. Numerical settings are independent of the one physical DSL intervention.",
+  "endpoint_policy": "96 physical/video samples use [0,4s): t=0 through t=95/24s. At 24fps playback is exactly4.000s; no duplicate t=4s endpoint is appended.",
+  "accepted_benchmark_gt": false,
+  "material_calibrated": false,
+  "scene_id": "spring_car_collision",
+  "baseline": {
+    "spring_present": true,
+    "car_present": true,
+    "block_present": true,
+    "fps": 24,
+    "duration_s": 4.0,
+    "simulation_dt_s": 2.0833333333333333e-05,
+    "seed": 17014,
+    "gravity_m_s2": 9.81,
+    "car_mass_kg": 0.3,
+    "car_speed_m_s": 0.0,
+    "car_initial_x_m": -0.38287797592295025,
+    "car_initial_y_m": 0.0,
+    "car_root_height_m": 0.04,
+    "car_length_m": 0.23,
+    "car_width_m": 0.11488171546706755,
+    "car_height_m": 0.08214008605654469,
+    "car_chassis_lower_size_m": [
+      0.23,
+      0.08,
+      0.02
+    ],
+    "car_chassis_lower_center_m": [
+      0.0,
+      0.0,
+      -0.005
+    ],
+    "car_chassis_upper_size_m": [
+      0.12,
+      0.07,
+      0.03
+    ],
+    "car_chassis_upper_center_m": [
+      0.0,
+      0.0,
+      0.02
+    ],
+    "car_chassis_com_m": [
+      -0.007643974478715498,
+      -0.0005606742347497126,
+      0.0004564480363866815
+    ],
+    "car_chassis_inertia_box_size_m": [
+      0.205,
+      0.1,
+      0.04
+    ],
+    "car_collision_mesh_file": null,
+    "car_collision_points_file": null,
+    "car_collision_surface_file": null,
+    "car_collision_surface_parts_file": null,
+    "car_collision_thin_sheet_thickness_m": 2e-05,
+    "car_collision_min_component_extent_m": 0.0001,
+    "car_wheel_centers_local_m": [
+      [
+        0.06689156630930683,
+        0.045088379948237126,
+        -0.015824375967488917
+      ],
+      [
+        0.06689156630930683,
+        -0.045088379948237126,
+        -0.015824375967488917
+      ],
+      [
+        -0.06153003654907267,
+        0.045088379948237126,
+        -0.015824375967488917
+      ],
+      [
+        -0.06153003654907267,
+        -0.045088379948237126,
+        -0.015824375967488917
+      ]
+    ],
+    "wheel_radius_m": 0.024175624032511087,
+    "wheel_width_m": 0.016558504075180523,
+    "wheel_mass_kg": 0.008,
+    "wheel_ground_sliding_friction": 0.7,
+    "wheel_ground_torsional_friction_m": 0.0001,
+    "wheel_ground_rolling_friction_m": 0.0004910482989406244,
+    "wheel_rolling_resistance_coefficient": 0.020311711428018096,
+    "wheel_bearing_damping_n_m_s": 1e-06,
+    "wheel_bearing_friction_loss_n_m": 3e-05,
+    "spring_stiffness_n_m": 47.4,
+    "spring_rest_length_m": 0.22,
+    "spring_mean_diameter_m": 0.03,
+    "spring_active_turns": 16,
+    "spring_total_turns": 18,
+    "spring_shear_modulus_pa": 79000000000.0,
+    "spring_density_kg_m3": 7850.0,
+    "spring_wire_diameter_m": 0.0012,
+    "spring_damping_n_s_m": 0.12,
+    "spring_guide_friction_loss_n": 0.005,
+    "spring_anchor_x_m": -0.66,
+    "spring_axis_z_m": 0.035,
+    "spring_max_stroke_m": 0.13,
+    "spring_initial_compression_m": 0.06,
+    "spring_plate_mass_kg": 0.012,
+    "spring_plate_size_m": [
+      0.006,
+      0.185,
+      0.06
+    ],
+    "spring_guide_y_m": 0.079,
+    "spring_guide_radius_m": 0.002,
+    "spring_guide_z_m": 0.019,
+    "spring_backstop_size_m": [
+      0.03,
+      0.19,
+      0.075
+    ],
+    "block_mass_kg": 0.14,
+    "block_initial_x_m": 0.28,
+    "block_initial_y_m": 0.0,
+    "block_size_m": [
+      0.08,
+      0.085,
+      0.055
+    ],
+    "block_ground_friction": 0.28,
+    "car_block_friction": 0.35,
+    "car_plate_friction": 0.25,
+    "contact_time_constant_s": 0.001,
+    "contact_damping_ratio": 1.0,
+    "contact_impedance": 0.995,
+    "solver_iterations": 120,
+    "solver_tolerance": 1e-11,
+    "preload_duration_s": 0.0,
+    "hold_constraint_time_constant_s": 0.001,
+    "hold_constraint_impedance": 0.9999,
+    "material_calibrated": false,
+    "accepted_benchmark_gt": false,
+    "release_status": "UNCALIBRATED_PHYSICAL_SURROGATE",
+    "obstacle_present": false,
+    "obstacle_initial_position_m": [
+      0.169520337346175,
+      0.0,
+      0.029583333333333333
+    ],
+    "obstacle_size_m": [
+      0.08,
+      0.085,
+      0.059166666666666666
+    ],
+    "obstacle_mass_kg": 0.14,
+    "obstacle_ground_friction": 0.28,
+    "obstacle_car_friction": 0.35,
+    "obstacle_block_friction": 0.35,
+    "obstacle_initial_quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "spring_young_modulus_pa": 205400000000.0,
+    "spring_poisson_ratio": 0.3
+  },
+  "edit_dsl": {
+    "remove_spring": "DELETE spring",
+    "remove_block": "DELETE block",
+    "heavier_block": "SET block.mass TIMES 3",
+    "add_block": "ADD obstacle_block AT PRESET approach",
+    "stiffer_spring": "SET spring.young_modulus TIMES 3"
+  },
+  "render": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "samples": 128,
+    "seed": 17,
+    "engine": "CYCLES",
+    "camera": "main",
+    "background": "residential_background.json"
+  },
+  "validation_scope": "Accepted data retain the original numerical/contact/visual evidence. Fresh solves are unvalidated until independently checked; neither source code nor packaging implies product material calibration."
+}

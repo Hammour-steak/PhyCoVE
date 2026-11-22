@@ -1,0 +1,28 @@
+{
+  "stable_object_id": "training_rebound_board",
+  "preset_id": "anchored_goal_interceptor",
+  "source_presence": 0,
+  "add_presence": 1,
+  "world_units": "m",
+  "coordinate_convention": "X across goal, Y shot direction, Z up; component dimensions ordered XYZ",
+  "body_model": "fixed externally anchored rigid assembly; not a freely standing finite-mass prop",
+  "fixity_justification": "two steel uprights bolted through footplates into stationary ground anchors",
+  "geometry_authority": "These five exact closed axis-aligned boxes are BOTH visible structural surfaces and physical colliders. No hidden collider, geometric bevel, added strut, displacement or per-case scale is allowed. Paint and micro-normal material detail may not move the contact surface.",
+  "components": [
+    {"id": "panel", "kind": "box", "center_m": [0.58, 0.35, 0.70], "dimensions_xyz_m": [1.8, 0.04, 1.2], "quaternion_wxyz": [1, 0, 0, 0], "material_role": "matte reinforced training rebound panel"},
+    {"id": "upright_left", "kind": "box", "center_m": [-0.12, 0.40, 0.406], "dimensions_xyz_m": [0.06, 0.06, 0.788], "quaternion_wxyz": [1, 0, 0, 0], "material_role": "painted steel upright"},
+    {"id": "upright_right", "kind": "box", "center_m": [1.28, 0.40, 0.406], "dimensions_xyz_m": [0.06, 0.06, 0.788], "quaternion_wxyz": [1, 0, 0, 0], "material_role": "painted steel upright"},
+    {"id": "foot_left", "kind": "box", "center_m": [-0.12, 0.40, 0.006], "dimensions_xyz_m": [0.20, 0.28, 0.012], "quaternion_wxyz": [1, 0, 0, 0], "material_role": "ground-bolted steel footplate"},
+    {"id": "foot_right", "kind": "box", "center_m": [1.28, 0.40, 0.006], "dimensions_xyz_m": [0.20, 0.28, 0.012], "quaternion_wxyz": [1, 0, 0, 0], "material_role": "ground-bolted steel footplate"}
+  ],
+  "contact_assumptions": {
+    "coefficient_of_restitution": 0.45,
+    "coulomb_friction_coefficient": 0.35,
+    "low_speed_restitution_cutoff_mps": 0.15,
+    "coefficients_measured": false,
+    "calibration_status": "explicit effective assumptions; not manufacturer-identified"
+  },
+  "placement_status": "new-object preset frozen for joint CPU clearance and remote actual-surface verification; installation NOT yet visually or triangle-wise accepted",
+  "source_existing_actors_may_move": false,
+  "new_object_pose_may_be_overridden_per_case": false
+}

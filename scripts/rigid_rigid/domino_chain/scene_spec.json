@@ -1,0 +1,383 @@
+{
+ "schema_version": 1,
+ "scene_id": "domino_chain",
+ "interaction_category": "rigid_rigid",
+ "event": "Five ivory resin dominoes on a green-baize card table; D01 starts tilted and a gravity-driven contact chain topples D02-D05.",
+ "units": {
+  "length": "meter",
+  "mass": "kilogram",
+  "time": "second",
+  "angle": "degree",
+  "up_axis": "+Z"
+ },
+ "physics": {
+  "domino_count": 5,
+  "domino_spacing": 0.035,
+  "domino_thickness": 0.008,
+  "domino_width": 0.025,
+  "domino_height": 0.05,
+  "domino_masses": [
+   0.016,
+   0.016,
+   0.016,
+   0.016,
+   0.016
+  ],
+  "domino_frictions": [
+   0.65,
+   0.65,
+   0.65,
+   0.65,
+   0.65
+  ],
+  "domino_restitutions": [
+   0.08,
+   0.08,
+   0.08,
+   0.08,
+   0.08
+  ],
+  "domino_active": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "floor_friction": 0.65,
+  "floor_restitution": 0.08,
+  "push_angle_deg": 12.0,
+  "floor_z": 0.84,
+  "gravity": [
+   0.0,
+   0.0,
+   -2.4525
+  ],
+  "linear_damping": 0.01,
+  "angular_damping": 0.01
+ },
+ "simulation_quality": {
+  "substeps_per_frame": 800,
+  "solver_iterations": 200,
+  "collision_margin_m": 2e-05,
+  "contact_breaking_threshold_m": 0.0001,
+  "contact_slop_m": 1e-06,
+  "restitution_velocity_threshold_m_per_s": 0.001
+ },
+ "appearance": {
+  "preset": "mahjong_afternoon_sun_quarter_gravity",
+  "camera": {
+   "location": [
+    0.27,
+    -0.65,
+    1.12
+   ],
+   "target": [
+    -0.006,
+    0.055,
+    0.9
+   ],
+   "lens_mm": 34.0,
+   "sensor_width_mm": 36.0,
+   "f_stop": 8.0
+  },
+  "desk": {
+   "dimensions_m": [
+    0.9314115655450855,
+    0.9314115655450855,
+    0.06759443592002755
+   ],
+   "surface_z_m": 0.84,
+   "roughness": 0.86
+  },
+  "domino": {
+   "roughness": 0.27,
+   "color_linear": [
+    0.52,
+    0.497,
+    0.432,
+    1
+   ],
+   "asset_kind": "sketchfab",
+   "asset_file": "assets/sketchfab/dominoes_render_at_night/dominoes_normalized.blend",
+   "finish": "daylight_handled_resin"
+  },
+  "window": {
+   "location": [
+    0.78,
+    0.16,
+    1.24
+   ],
+   "size_m": 0.68,
+   "power_w": 55.0,
+   "color": [
+    0.87,
+    0.94,
+    1.0
+   ],
+   "size_y_m": 1.04
+  },
+  "seed": 6100,
+  "room": {
+   "environment_strength": 0.32,
+   "exposure_ev": -0.45,
+   "environment_asset": "brown_photostudio_05",
+   "wood_asset": "oak_veneer_01",
+   "wood_repeat_m": 1.830000043,
+   "inset_pips": true,
+   "wood_saturation": 0.68,
+   "wood_albedo_scale": 0.31,
+   "environment_kind": "home_card_table",
+   "wood_tint_linear": [
+    0.7,
+    0.52,
+    0.33,
+    1.0
+   ],
+   "surface_revision": "natural",
+   "reflection_wall_color_linear": [
+    0.32,
+    0.33,
+    0.305,
+    1.0
+   ],
+   "domestic_revision": "daylight_home",
+   "back_wall_y_m": 3.0,
+   "window_context_revision": "painted_casement_garden",
+   "window_context_fill_w": 10.0,
+   "window_glass_roughness": 0.035,
+   "window_exterior_rotation_deg": 0.0,
+   "window_exterior_strength": 0.8,
+   "furniture_textile_revision": "gathered_linen_no_chair",
+   "curtain_translucent_weight": 0.26,
+   "curtain_tieback_height_m": 0.58,
+   "curtain_geometry_asset": "assets/pcve/domino_chain_curtain_drape/settled_cloth.json",
+   "window_sill_height_m": 0.84
+  },
+  "card_table": {
+   "outer_dimensions_m": [
+    0.9314115655450855,
+    0.9314115655450855
+   ],
+   "felt_dimensions_m": [
+    0.7514910816991298,
+    0.7514910816991298
+   ],
+   "center_y_m": 0.3,
+   "outer_corner_radius_m": 0.045,
+   "inner_corner_radius_m": 0.022,
+   "felt_color_linear": [
+    0.02,
+    0.06,
+    0.034,
+    1
+   ],
+   "felt_asset": "ambientcg/Fabric034",
+   "felt_selected_repeat_m": 0.2,
+   "visible_fibre_count": 90000,
+   "tea_center_xy_m": [
+    -0.145,
+    0.3
+   ],
+   "paper_support_revision": "seated_laminates",
+   "background_chair_center_xy_m": [
+    -0.32,
+    1.03
+   ],
+   "background_chair_asset": "none",
+   "background_chair_yaw_rad": 0.2,
+   "paper_finish_revision": "coated_stock",
+   "table_asset": "innerscene_mahjong_game_table",
+   "table_finish_revision": "pressed_baize",
+   "loose_cards": {
+    "revision": "loose_supported_stock",
+    "corner_lift_limits_m": [
+     0.00015,
+     0.0002
+    ],
+    "stock_tint_linear": [
+     0.73,
+     0.718,
+     0.68,
+     1
+    ],
+    "coat_weight": 0.035,
+    "roughness_range": [
+     0.34,
+     0.48
+    ],
+    "cut_edge_finish": {
+     "revision": "unprinted_stock",
+     "color_linear": [
+      0.76,
+      0.745,
+      0.7,
+      1
+     ],
+     "roughness": 0.82,
+     "border_wear_strength": 0.04
+    }
+   },
+   "horizontal_reference_height_m": 0.75
+  },
+  "realism": {
+   "revision": "afternoon_sun",
+   "sun": {
+    "azimuth_deg": 17.0,
+    "elevation_deg": 18.0,
+    "strength_w_m2": 4.0,
+    "angle_deg": 0.6,
+    "color_linear": [
+     1.0,
+     0.8,
+     0.6
+    ]
+   },
+   "exterior": {
+    "exterior_asset": "assets/polyhaven/sunny_rose_garden/sunny_rose_garden_8k.hdr",
+    "exterior_sun_u": 0.5996,
+    "exterior_clip": 6.0,
+    "exterior_strength": 1.0
+   },
+   "resin": {
+    "coat_weight": 0.45,
+    "coat_roughness": 0.12,
+    "tone_range": [
+     0.985,
+     1.012
+    ],
+    "roughness_range": [
+     0.22,
+     0.28
+    ],
+    "scratch_roughness": 0.02,
+    "grain_bump_strength": 0.0
+   },
+   "felt": {
+    "mottle_scale_per_m": 4.0,
+    "mottle_range": [
+     0.85,
+     1.15
+    ],
+    "nap_range": [
+     0.96,
+     1.04
+    ],
+    "sheen_weight": 0.5,
+    "sheen_roughness": 0.45,
+    "specular_level": 0.25,
+    "roughness_range": [
+     0.95,
+     1.0
+    ],
+    "fibre_bump_strength": 0.7
+   },
+   "enclosure": {
+    "ceiling_height_m": 2.8,
+    "right_wall_x_m": 2.2,
+    "front_wall_y_m": -2.4,
+    "ceiling_color_linear": [
+     0.78,
+     0.77,
+     0.74,
+     1
+    ]
+   },
+   "props": [
+    {
+     "asset": "assets/polyhaven/potted_plant_04/potted_plant_04_2k.blend",
+     "objects": [
+      "potted_plant_04_pot",
+      "potted_plant_04_plant",
+      "potted_plant_04_dirt"
+     ],
+     "anchor_m": [
+      -0.42,
+      2.88,
+      0.84
+     ],
+     "align": "bottom",
+     "yaw_deg": 30
+    }
+   ],
+   "key_area_scale": 0.35,
+   "window_fill_scale": 1.5,
+   "world_scale": 0.8,
+   "exposure_ev": 0.2
+  },
+  "image_formation": {
+   "pixel_filter_type": "BLACKMAN_HARRIS",
+   "pixel_filter_width_px": 0.85,
+   "video_crf": 14
+  },
+  "finish": {
+   "revision": "photographic_finish",
+   "remove_identity_labels": true,
+   "remove_playing_cards": true,
+   "baize": {
+    "asset": "assets/polyhaven/caban",
+    "repeat_m": [
+     0.2739921412,
+     0.2732999921
+    ],
+    "dye_linear": [
+     0.009,
+     0.07,
+     0.028,
+     1.0
+    ],
+    "luminance_window": [
+     0.18,
+     0.28
+    ],
+    "tone_range": [
+     0.8,
+     1.24
+    ],
+    "mottle_scale_per_m": 3.0,
+    "mottle_range": [
+     0.92,
+     1.08
+    ],
+    "roughness_range": [
+     0.8,
+     1.0
+    ],
+    "normal_strength": 0.45,
+    "specular_level": 0.15,
+    "sheen_weight": 0.12,
+    "sheen_roughness": 0.4,
+    "sheen_tint_linear": [
+     0.6,
+     0.75,
+     0.6,
+     1.0
+    ]
+   },
+   "lighting": {
+    "remove_lights": [
+     "Single soft rectangular daylight window",
+     "Soft fill through linen privacy window"
+    ],
+    "sky_strength": 1.0,
+    "remove_objects": [
+     "Off-camera room reflection surface"
+    ]
+   },
+   "exposure_ev": 2.2
+  }
+ },
+ "render": {
+  "resolution": [
+   1280,
+   720
+  ],
+  "fps": 24,
+  "duration_sec": 4.0,
+  "samples": 128,
+  "engine": "CYCLES",
+  "denoising": true,
+  "motion_blur_shutter_frames": 0.25,
+  "color_management": "AgX"
+ }
+}

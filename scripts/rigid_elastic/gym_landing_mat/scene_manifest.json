@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "scene_id": "gym_landing_mat",
+  "interaction_category": "rigid_elastic",
+  "case_number": 1,
+  "entry_points": {
+    "simulate": "simulate_gym_landing_mat.py",
+    "render": "render_gym_landing_mat.py",
+    "build_pcve": "build_pcve_gym_landing_mat.py"
+  },
+  "configuration": [
+    "physics/scene_specs.json",
+    "scene_inputs.py",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "mass_double",
+    "faster",
+    "young_modulus_rebound",
+    "add_path_obstacle",
+    "delete_actor"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/gym_landing_mat",
+    "runtime": ".runtime/gym_landing_mat",
+    "accepted_delivery": "renders/gym_landing_mat/accepted",
+    "rebuild_output": "renders/gym_landing_mat/rebuild"
+  },
+  "canonical_suites": {
+    "pcve_gym_landing_mat_suite": {
+      "target": "renders/pcve_suites/pcve_gym_landing_mat_suite",
+      "look": "appearance/realism.py over the accepted native states",
+      "case_video_sha256": {
+        "source": "94b481471ae2541de86e56dc2542c1937fa3ec6ca7be80d31b091a31c8fea18f",
+        "mass_double": "ca5d4ece74c9635cda737f18e0561a3b1e83522bbcf76207baa75ca1ba5fd26d",
+        "faster": "ae643c22d7df8302236df77623f1f3b4166a43507f41bef2e0da9ee3525510ee",
+        "young_modulus_rebound": "bc1606355788f9cedba570882fd606375a718c1c77f770fc51ff4765bb019b46",
+        "add_path_obstacle": "556ad7e0eacdd6f46bf81f83b6bc7fdf693ebbf6ee3091093e7932f9cd792be2",
+        "delete_actor": "cd07f7097dd2dd3c19c918e1bfbf6a69e6444d7205bf004c96c5a7ee396554d0",
+        "edit_delete_landing_mat": "2465e75c26970d0bcda6333c3dea9ddaa82b0760052ab8427b82bc7b6ca7e9ab"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "mass_double": "cases/edit_mass_double/video.mp4",
+        "faster": "cases/edit_faster/video.mp4",
+        "young_modulus_rebound": "cases/edit_young_modulus_rebound/video.mp4",
+        "add_path_obstacle": "cases/edit_add_path_obstacle/video.mp4",
+        "delete_actor": "cases/edit_delete_actor/video.mp4"
+      }
+    }
+  },
+  "accepted_native_delivery": {
+    "target": "renders/gym_landing_mat/accepted",
+    "case_video_sha256": {
+      "source": "d9a944bfa983a47a4d5c7e7913bb00537d62fc970bf380e0be8b82184d64dcf8",
+      "mass_double": "ff86e94475dbe55469ded0e05f8c34569a8626a373dcb58bc61041c88b040d53",
+      "faster": "53c2c21bb530776b4b1fa8fbeae7f299e6a003a21deb12828c61fc3a94b7d7de",
+      "young_modulus_rebound": "5febf478dba1414cad09873dfa5aee76fa512eb8d2deef62c7476dcfdba44660",
+      "add_path_obstacle": "98be9f41bf42e9baed515bdfdd513277489ecab515fe376032cfb617d5cb0cd8",
+      "delete_actor": "27c34a976d4b334e14d93a8849fb148c777f46fc963d5dc58825e39409e3a6e9"
+    },
+    "case_video_path": {
+      "source": "whole_clip/delivery/cases/production_source/main/video.mp4",
+      "mass_double": "whole_clip/delivery/cases/mass_double/main/video.mp4",
+      "faster": "whole_clip/delivery/cases/faster/main/video.mp4",
+      "young_modulus_rebound": "rebound/delivery/cases/young_modulus_rebound/main/video.mp4",
+      "add_path_obstacle": "whole_clip/delivery/cases/add_path_obstacle/main/video.mp4",
+      "delete_actor": "whole_clip/delivery/cases/delete_actor/main/video.mp4"
+    },
+    "note": "Native solver states, audits and the frozen accepted renders; scene_paths.py reads data.accepted_delivery. The published look is the canonical suite."
+  },
+  "current_look": "appearance/realism.py"
+}

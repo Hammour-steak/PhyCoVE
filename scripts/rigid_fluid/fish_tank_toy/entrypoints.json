@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "scene": "fish_tank_toy",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_fish_tank_toy.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out",
+        "filename": "simulation.json"
+      },
+      "native_options": [
+        "--out",
+        "--toy-mass-kg",
+        "--water-density-kg-m3",
+        "--water-kinematic-viscosity-m2-s",
+        "--toy-presence",
+        "--water-presence",
+        "--gravity-m-s2"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_fish_tank_toy.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--toy-mass-kg",
+        "--water-density-kg-m3",
+        "--water-kinematic-viscosity-m2-s",
+        "--toy-presence",
+        "--water-presence",
+        "--room",
+        "--camera",
+        "--camera-survey",
+        "--survey-frames",
+        "--resolution",
+        "--samples",
+        "--exposure",
+        "--domain-resolution",
+        "--effector-subframes",
+        "--time-scale",
+        "--still-frames",
+        "--skip-fluid-bake",
+        "--skip-render",
+        "--keep-intermediates",
+        "--rerender-baked",
+        "--scenario-overrides-json",
+        "--led-size",
+        "--mnee",
+        "--no-dof",
+        "--no-bubbles",
+        "--bubble-trappedair-min",
+        "--bubble-sampling",
+        "--bubble-wavecrest-sampling",
+        "--bubble-energy-min",
+        "--no-motion-blur",
+        "--blur-glossy",
+        "--hide-bubbles",
+        "--bake-frame-end",
+        "--clear-base",
+        "--review-tag",
+        "--back-film",
+        "--fractions",
+        "--cfl",
+        "--method",
+        "--timesteps",
+        "--viscosity-mode",
+        "--particle-number",
+        "--particle-band-width",
+        "--mesh-particle-radius",
+        "--mesh-smoothen-pos",
+        "--mesh-smoothen-neg"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_fish_tank_toy.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--blender",
+        "--resolution",
+        "--samples",
+        "--domain-resolution",
+        "--threads",
+        "--gpus",
+        "--parallel",
+        "--source-video",
+        "--keep-intermediates",
+        "--skip-existing",
+        "--dry-run",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender",
+        "threads": "--threads"
+      },
+      "cases": [
+        "fish_tank_toy_baseline",
+        "edit_light_toy_car",
+        "edit_dense_water_float_rock",
+        "edit_gel_water",
+        "edit_dense_water_at_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_fish_tank_toy.py",
+    "edit_vocab.py",
+    "render_fish_tank_toy.py",
+    "simulate_fish_tank_toy.py",
+    "scene_manifest.json"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "scene_id": "stair_ball_bounce",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_stair_ball_bounce.py",
+    "render": "render_stair_ball_bounce.py",
+    "build_pcve": "build_pcve_stair_ball_bounce.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_low_restitution",
+    "edit_high_restitution",
+    "edit_slow_initial_velocity",
+    "edit_fast_initial_velocity",
+    "edit_low_sliding_friction",
+    "edit_low_rolling_friction",
+    "edit_high_rolling_friction",
+    "edit_high_friction"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_stair_ball_bounce_suite": {
+      "target": "renders/pcve_suites/pcve_stair_ball_bounce_suite",
+      "case_video_sha256": {
+        "source": "2d21059f3313f86491ff93465ce9d861202c612b8861b234628de513b2a04b52",
+        "edit_low_restitution": "9ea1d6f1c9d75e3214405c019c8230669b8de5c2dedcd83b5456bbfc68cdf9b4",
+        "edit_high_restitution": "b031671db05ae8f039910c024c4dd648d247eebeb22218c77f07347dd14e92ff",
+        "edit_slow_initial_velocity": "dc1b1bee84584ec79fae3714bc8db0ff766dd364e8a9dc0499009e7e622d6231",
+        "edit_fast_initial_velocity": "6343250f278fb7d5e3a35444a5fb0edc98c179559e45f992f77d1df7428d82d6",
+        "edit_low_sliding_friction": "6e357f4f38eabb770c439f2bb461da66786de22be4f3ee01d10360fa5e8c6a7a",
+        "edit_low_rolling_friction": "d6dcc1ad44093ad49718353917cae20f032908a914a37c7c78fe2de4f8830da2",
+        "edit_high_rolling_friction": "659c327bc2d8391e70f2f81dcc8e9a4236027d475b322155eb07a1400716afbf",
+        "edit_high_friction": "3424c62f31b16985a1557477166c74dfaacabf8e1fc820e344203eee3665f5e4"
+      }
+    }
+  }
+}

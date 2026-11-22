@@ -1,0 +1,30 @@
+/assets/
+/renders/
+/video/
+/tools/
+/archive/
+/outputs/
+/work/
+/.runtime/
+/.venv*/
+
+# Local scene assets, including nested edit/workflow assets.
+/scripts/**/assets/
+
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+*.blend1
+*.part
+.DS_Store
+._*
+
+# generated scene previews and local inspection output
+preview_*/
+render_preview/
+asset_inspection/
+
+# render / eval run logs
+*.log

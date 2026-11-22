@@ -1,0 +1,680 @@
+{
+  "appearance": {
+    "preset": "beach_look",
+    "seed": 20261106,
+    "keep_objects": [
+      "Hammock_ElasticBody_ORIGINAL",
+      "BeachBall_RigidBody",
+      "Camera_Closeup_Point2"
+    ],
+    "camera": {
+      "name": "Camera_Closeup_Point2",
+      "pose_and_lens_unchanged": false,
+      "dof_enabled": true,
+      "fstop": 8.0,
+      "focus_point_m": [
+        0.77,
+        -8.93,
+        3.25
+      ],
+      "override": {
+        "location_m": [
+          5.135,
+          -11.781,
+          4.6
+        ],
+        "rotation_deg": [
+          86.0,
+          0.0,
+          56.8225
+        ],
+        "lens_mm": 40.0,
+        "note": "2.2 m above the sand, 4 deg below level, 40 mm, 2.2 m closer to the hammock than the original camera along the same heading; the hammock keeps about the same width in frame and the palms, umbrellas, chairs and the still sea show in the background"
+      }
+    },
+    "world": {
+      "hdri": "polyhaven/spiaggia_di_mondello/spiaggia_di_mondello_4k.hdr",
+      "strength": 1.0,
+      "sun_in_hdri_azimuth_deg": -36.35,
+      "sun_in_hdri_elevation_deg": 25.25,
+      "sun_world_azimuth_deg": 280.0
+    },
+    "terrain": {
+      "sand_level_z_m": 2.4,
+      "extent_x_m": [
+        -62.0,
+        26.0
+      ],
+      "extent_y_m": [
+        -38.0,
+        42.0
+      ],
+      "grid_step_m": 0.5,
+      "shoreline_pixels": [
+        [
+          0,
+          -60
+        ],
+        [
+          1280,
+          -60
+        ]
+      ],
+      "beach_rise_m": 0.45,
+      "beach_rise_width_m": 8.0,
+      "seabed_slope": 0.09,
+      "undulation_amplitude_m": 0.05,
+      "undulation_wavelength_m": 7.0,
+      "texture": "polyhaven/aerial_sand",
+      "texture_tile_m": 15.0,
+      "displacement_scale_m": 0.09,
+      "dicing_rate_px": 1.0,
+      "albedo_tint": [
+        1.0,
+        0.95,
+        0.82
+      ],
+      "detail_margin_m": 4.0,
+      "sea_side": "away_from_camera",
+      "shoreline_note": "the waterline lies just beyond the top edge of the frame (about 47 m from the camera), so no water is in view; the wet-sand band below it shows along the top edge",
+      "detail_max_distance_m": 30.0,
+      "detail_note": "displaced sand within 30 m of the camera, bump only beyond (70 m gave the same image and took 12x longer per frame)"
+    },
+    "sea": {
+      "level_offset_from_shore_m": 0.0,
+      "spatial_size_m": 20.0,
+      "resolution": 10,
+      "repeat": 8,
+      "wave_scale": 0.15,
+      "wind_velocity_m_s": 3.5,
+      "choppiness": 0.6,
+      "absorption_color": [
+        0.55,
+        0.86,
+        0.8
+      ],
+      "absorption_density": 0.9,
+      "scatter_color": [
+        0.35,
+        0.65,
+        0.62
+      ],
+      "scatter_density": 0.06,
+      "roughness": 0.03,
+      "foam_depth_m": 0.07,
+      "foam_strength": 0.85,
+      "render_grid_note": "render grid per tile = resolution^2 (100 x 100 over 20 m = 0.20 m spacing)",
+      "wave_alignment": 0.5,
+      "wave_direction_onshore": true,
+      "animate": false
+    },
+    "hammock": {
+      "fabric": "ambientcg/Fabric071",
+      "texture_tile_m": 0.45,
+      "fabric_width_m": 1.3,
+      "bed_rows": 150,
+      "columns": 48,
+      "gather_rows": 26,
+      "gather_length_m": 0.24,
+      "rim_fraction": 0.965,
+      "thickness_m": 0.0025,
+      "pleats": 7,
+      "pleat_amplitude_m": 0.01,
+      "bundle_radius_m": 0.022,
+      "shell_subdivision_levels": 2,
+      "contact_surface": {
+        "half_thickness_m": 0.075,
+        "contact_margin_m": 0.085,
+        "note": "visible canvas = MPM mid-surface offset along its normal by half the 0.15 m block thickness plus the grid contact margin, faded as 1-(s/s_end)^2 towards the pinned ends; the margin is the resting distance between the ball surface and the mid-surface minus the half thickness: 0.085 m at 15 kPa (accepted source) and 1.5 kPa, 0.1006 m at 70 kPa (stiffer block, less compressed under the ball); where the offset surface would enter the ball the canvas lies on the ball (non-penetration), blended over contact_band_m",
+        "contact_band_m": 0.016,
+        "contact_margin_by_young_modulus_pa": {
+          "70000": 0.1006
+        }
+      }
+    },
+    "rope": {
+      "texture": "ambientcg/Rope001",
+      "radius_m": 0.0065,
+      "whipping_length_m": 0.075,
+      "post_distance_from_bundle_m": {
+        "A": 0.45,
+        "B": 0.62
+      },
+      "wraps": 3,
+      "tail_length_m": 0.28,
+      "hue_shift": -0.015,
+      "saturation": 0.55,
+      "value": 1.3
+    },
+    "posts": {
+      "texture": "ambientcg/Wood062",
+      "radius_bottom_m": 0.08,
+      "radius_top_m": 0.072,
+      "height_above_sand_m": 2.15,
+      "embed_depth_m": 0.6,
+      "texture_tile_m": 0.7
+    },
+    "ball": {
+      "roughness": 0.18,
+      "coat_weight": 0.35,
+      "coat_roughness": 0.06,
+      "translucency": 0.12
+    },
+    "props": {
+      "note": "static set dressing placed by world position on the sand (xy, metres); shadow_target_xy places an out-of-view palm by where the shadow of its crown lands. keep_out_xy is the plan-view area around the hammock (between the posts, 0.3 m beyond each, 0.9 m to each side) and the ball's fall; no prop may enter it.",
+      "keep_out_xy": [
+        [
+          [
+            1.1625,
+            -11.0911
+          ],
+          [
+            2.111,
+            -6.9979
+          ],
+          [
+            0.3574,
+            -6.5915
+          ],
+          [
+            -0.5911,
+            -10.6847
+          ]
+        ]
+      ],
+      "items": [
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -4.94,
+            0.074
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            0
+          ],
+          "scale": 0.45,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "rotation_deg": [
+            0,
+            0,
+            70
+          ],
+          "scale": 0.55,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true,
+          "shadow_target_xy": [
+            -1.436,
+            -9.844
+          ]
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -14.777,
+            -4.149
+          ],
+          "rotation_deg": [
+            9,
+            0,
+            200
+          ],
+          "scale": 0.5,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/scanned_coconut/scanned_coconut.blend",
+          "object": "Scanned coconut",
+          "xy": [
+            -4.829,
+            -0.465
+          ],
+          "rotation_deg": [
+            80,
+            0,
+            30
+          ],
+          "scale": 1.0,
+          "sink_m": 0.04,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/scanned_coconut/scanned_coconut.blend",
+          "object": "Scanned coconut",
+          "xy": [
+            -4.369,
+            -0.301
+          ],
+          "rotation_deg": [
+            20,
+            0,
+            140
+          ],
+          "scale": 1.0,
+          "sink_m": 0.04,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/scanned_coconut/scanned_coconut.blend",
+          "object": "Scanned coconut",
+          "xy": [
+            -4.293,
+            -0.751
+          ],
+          "rotation_deg": [
+            95,
+            0,
+            250
+          ],
+          "scale": 1.0,
+          "sink_m": 0.04,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/blue_striped_beach_chair/blue_striped_beach_chair.blend",
+          "object": "Blue Striped beach chair",
+          "exclude": [
+            "wooden table ",
+            "wooden table .001",
+            "wooden table .002",
+            "wooden table BONE"
+          ],
+          "xy": [
+            -8.288,
+            -5.738
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            150
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "polyhaven/dry_branches_medium_01/dry_branches_medium_01_2k.blend",
+          "object": "dry_branches_medium_01_c",
+          "xy": [
+            -5.503,
+            -2.977
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            -30
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02
+        },
+        {
+          "file": "blenderkit/straw_hat/straw_hat.blend",
+          "object": "Straw hat",
+          "xy": [
+            -2.622,
+            -8.852
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            35
+          ],
+          "scale": 1.0,
+          "sink_m": 0.005
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -21.33,
+            -8.82
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            40
+          ],
+          "scale": 0.65,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -21.68,
+            -0.22
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            130
+          ],
+          "scale": 0.75,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -12.35,
+            10.4
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            250
+          ],
+          "scale": 0.6,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true,
+          "lean_deg": 6.0,
+          "lean_azimuth_deg": 236.8
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -17.14,
+            19.51
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            10
+          ],
+          "scale": 0.7,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -40.51,
+            -3.44
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            80
+          ],
+          "scale": 0.7,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/palm_tree_medium_dense/palm_tree_medium_dense.blend",
+          "object": "Palm Tree Medium Dense",
+          "anchor": "foot",
+          "xy": [
+            -3.21,
+            11.59
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            300
+          ],
+          "scale": 0.55,
+          "sink_m": 0.15,
+          "allow_out_of_frame": true,
+          "lean_deg": 8.0,
+          "lean_azimuth_deg": 56.8
+        },
+        {
+          "file": "blenderkit/beach_umbrella/beach_umbrella.blend",
+          "object": "Beach umbrella",
+          "xy": [
+            -8.82,
+            -11.62
+          ],
+          "scale": 0.75,
+          "sink_m": 0.06,
+          "allow_out_of_frame": true,
+          "albedo_hsv": {
+            "objects": [
+              "main_fabric",
+              "top_fabric"
+            ],
+            "saturation": 0.45,
+            "value": 2.4
+          }
+        },
+        {
+          "file": "blenderkit/beach_umbrella/beach_umbrella.blend",
+          "object": "Beach umbrella",
+          "xy": [
+            -5.07,
+            3.26
+          ],
+          "scale": 0.75,
+          "sink_m": 0.06,
+          "allow_out_of_frame": true,
+          "albedo_hsv": {
+            "objects": [
+              "main_fabric",
+              "top_fabric"
+            ],
+            "saturation": 0.45,
+            "value": 2.4
+          }
+        },
+        {
+          "file": "blenderkit/beach_umbrella/beach_umbrella.blend",
+          "object": "Beach umbrella",
+          "xy": [
+            -17.24,
+            -0.74
+          ],
+          "scale": 0.75,
+          "sink_m": 0.06,
+          "allow_out_of_frame": true,
+          "albedo_hsv": {
+            "objects": [
+              "main_fabric",
+              "top_fabric"
+            ],
+            "saturation": 0.45,
+            "value": 2.4
+          }
+        },
+        {
+          "file": "blenderkit/blue_striped_beach_chair/blue_striped_beach_chair.blend",
+          "object": "Blue Striped beach chair",
+          "exclude": [
+            "wooden table ",
+            "wooden table .001",
+            "wooden table .002",
+            "wooden table BONE"
+          ],
+          "xy": [
+            -8.81,
+            -12.7
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            56.8
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/blue_striped_beach_chair/blue_striped_beach_chair.blend",
+          "object": "Blue Striped beach chair",
+          "exclude": [
+            "wooden table ",
+            "wooden table .001",
+            "wooden table .002",
+            "wooden table BONE"
+          ],
+          "xy": [
+            -7.83,
+            -11.19
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            56.8
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/blue_striped_beach_chair/blue_striped_beach_chair.blend",
+          "object": "Blue Striped beach chair",
+          "exclude": [
+            "wooden table ",
+            "wooden table .001",
+            "wooden table .002",
+            "wooden table BONE"
+          ],
+          "xy": [
+            -5.06,
+            2.17
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            56.8
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/blue_striped_beach_chair/blue_striped_beach_chair.blend",
+          "object": "Blue Striped beach chair",
+          "exclude": [
+            "wooden table ",
+            "wooden table .001",
+            "wooden table .002",
+            "wooden table BONE"
+          ],
+          "xy": [
+            -4.08,
+            3.68
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            56.8
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/beach_folding_chair/beach_folding_chair.blend",
+          "object": "Beach Folding Chair",
+          "xy": [
+            -17.23,
+            -1.82
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            326.8
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/beach_folding_chair/beach_folding_chair.blend",
+          "object": "Beach Folding Chair",
+          "xy": [
+            -16.25,
+            -0.31
+          ],
+          "rotation_deg": [
+            0,
+            0,
+            326.8
+          ],
+          "scale": 1.0,
+          "sink_m": 0.02,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/scanned_coconut/scanned_coconut.blend",
+          "object": "Scanned coconut",
+          "xy": [
+            -20.74,
+            0.12
+          ],
+          "rotation_deg": [
+            30,
+            0,
+            20
+          ],
+          "scale": 1.0,
+          "sink_m": 0.04,
+          "allow_out_of_frame": true
+        },
+        {
+          "file": "blenderkit/scanned_coconut/scanned_coconut.blend",
+          "object": "Scanned coconut",
+          "xy": [
+            -22.54,
+            -0.62
+          ],
+          "rotation_deg": [
+            70,
+            0,
+            160
+          ],
+          "scale": 1.0,
+          "sink_m": 0.04,
+          "allow_out_of_frame": true
+        }
+      ]
+    }
+  },
+  "render": {
+    "engine": "CYCLES",
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "samples": 384,
+    "adaptive_threshold": 0.008,
+    "denoiser": "OPENIMAGEDENOISE",
+    "max_bounces": 10,
+    "diffuse_bounces": 3,
+    "glossy_bounces": 4,
+    "transmission_bounces": 10,
+    "volume_bounces": 2,
+    "clamp_indirect": 8.0,
+    "motion_blur": true,
+    "motion_blur_shutter": 0.25,
+    "persistent_data": false,
+    "view_transform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.45,
+    "animated_seed": false,
+    "animated_seed_note": "fixed sampling seed, so the residual noise of static scenery (thin palm fronds against the sky) does not change from frame to frame"
+  }
+}

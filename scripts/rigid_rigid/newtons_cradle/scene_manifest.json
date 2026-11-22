@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "scene_id": "newtons_cradle",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_newtons_cradle.py",
+    "render": "render_newtons_cradle.py",
+    "build_pcve": "build_pcve_newtons_cradle.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "newtons_cradle_baseline",
+    "edit_low_release",
+    "edit_high_release",
+    "edit_delete_middle_ball",
+    "edit_delete_inner_right_ball",
+    "edit_dead_bounce_timed"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_newtons_cradle_suite": {
+      "target": "renders/pcve_suites/pcve_newtons_cradle_suite",
+      "case_video_sha256": {
+        "edit_delete_inner_right_ball": "f66996f3967f06bc5cfd322fe5c73c748a707471dd8d7a1090eca7944e9c87e8",
+        "edit_delete_middle_ball": "43634749004e43519b6aeb4bcb8f7863ac5772b2e81197321af4129318c5cd37",
+        "edit_dead_bounce_timed": "4e9415dfad4df9de95ce287beb83f92b32cc59c49ce0f7d64f31be500b2b597e",
+        "edit_high_release": "b2f923f4e491caf6a4ddef7c5b2edad64040700d780e741829a2b7d1d4ce0a10",
+        "edit_low_release": "66c15a02e3589a8a2e8aaaf10e0ba7209e662af79b2cd031a90547086a9d7230",
+        "newtons_cradle_baseline": "83f727063a7d4a9b54563253a3078e9197928d24c92e669c772439c344abfc50"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "newtons_cradle_baseline": "source",
+        "edit_low_release": "edit_low_release",
+        "edit_high_release": "edit_high_release",
+        "edit_delete_middle_ball": "edit_delete_middle_ball",
+        "edit_delete_inner_right_ball": "edit_delete_inner_right_ball",
+        "edit_dead_bounce_timed": "edit_dead_bounce_timed"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_inner_right_ball": "f66996f3967f06bc5cfd322fe5c73c748a707471dd8d7a1090eca7944e9c87e8",
+        "edit_delete_middle_ball": "43634749004e43519b6aeb4bcb8f7863ac5772b2e81197321af4129318c5cd37",
+        "edit_dead_bounce_timed": "4e9415dfad4df9de95ce287beb83f92b32cc59c49ce0f7d64f31be500b2b597e",
+        "edit_high_release": "b2f923f4e491caf6a4ddef7c5b2edad64040700d780e741829a2b7d1d4ce0a10",
+        "edit_low_release": "66c15a02e3589a8a2e8aaaf10e0ba7209e662af79b2cd031a90547086a9d7230",
+        "source": "83f727063a7d4a9b54563253a3078e9197928d24c92e669c772439c344abfc50"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/newtons_cradle",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "polyhaven/newtons_cradle",
+      "scenes/newtons_cradle"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

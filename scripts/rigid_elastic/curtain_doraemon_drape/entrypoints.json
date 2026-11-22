@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "scene": "curtain_doraemon_drape",
+  "category": "rigid_elastic",
+  "case_number": 20,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_curtain_doraemon_drape.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--python-runtime",
+        "--case",
+        "--source-cache",
+        "--dt",
+        "--pitch",
+        "--duration",
+        "--prepare"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x10",
+        "density_x0_5",
+        "friction_x0_1",
+        "delete_figurine",
+        "friction_x0_1_at_frame_8"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "python": "--python-runtime"
+      }
+    },
+    "render": {
+      "file": "render_curtain_doraemon_drape.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--simulation",
+        "--out",
+        "--gpu-uuid",
+        "--render-threads",
+        "--blender-bin",
+        "--device",
+        "--width",
+        "--samples",
+        "--stills",
+        "--frame-start",
+        "--frame-end",
+        "--shutter",
+        "--exposure",
+        "--allow-other-baseline"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x10",
+        "density_x0_5",
+        "friction_x0_1",
+        "delete_figurine",
+        "friction_x0_1_at_frame_8"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads",
+        "blender": "--blender-bin"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_curtain_doraemon_drape.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--root"
+      },
+      "native_options": [
+        "--stage",
+        "--root",
+        "--accepted-root",
+        "--simulation-root",
+        "--simulation-run",
+        "--cases"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x10",
+        "density_x0_5",
+        "friction_x0_1",
+        "delete_figurine",
+        "friction_x0_1_at_frame_8"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {}
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/curtain_doraemon_drape",
+  "implementation_policy": "libuipc 0.0.29 CUDA IPC solve (case-isolated wheel in .runtime/curtain_doraemon_drape/uipc_029, Python 3.10 with numpy/scipy/trimesh) of a 0.92 m x 0.50 m pleated cotton-linen curtain, already released at the first frame and modelled as a strain-limiting Baraff-Witkin thin shell with discrete shell bending, falling onto a dynamic 0.75 kg affine-body porcelain vase (object id figurine; hollow open-mouth collider built from the CC0 scan by tools/prepare_vase.py) standing on a fixed desk by a window; momentum-preserving internal damping and passive air drag enter as external forces, nothing is authored or filtered (physics/simulate.py, physics/cloth_dissipation.py). The four whole-clip edits change only their DSL-bound parameter (physics/vocab.py); the timed edit friction_x0_1_at_frame_8 continues the accepted source solve from the exact source state of frame 8 with the edited friction (physics/simulate.py --source-cache). appearance/render.py replays the native curtain vertices through an exact MDD cache and the native affine transforms into a closed window-side room lit only by HDRI daylight through the window (Cycles, fixed camera, motion blur, OIDN). tools/finalize_remote.py encodes the video and writes masks, camera calibration and native GT sidecars; tools/build_suite.py and tools/standardize_case.py package the native delivery (scene_manifest.json data.accepted_delivery); tools/publish_suite.py and tools/export_ground_truth.py assemble the PCVE suite named in canonical_suites. Solves and renders run on a Linux host on the GPU given by --gpu-uuid, or on an idle GPU picked by tools/worker_run.py. Effective material parameters, not fitted to a measured product.",
+  "implementation_files": [
+    "simulate_curtain_doraemon_drape.py",
+    "render_curtain_doraemon_drape.py",
+    "build_pcve_curtain_doraemon_drape.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/baseline.py",
+    "physics/vocab.py",
+    "physics/simulate.py",
+    "physics/cloth_dissipation.py",
+    "physics/audit.py",
+    "appearance/render.py",
+    "tools/prepare_vase.py",
+    "tools/worker_run.py",
+    "tools/finalize_remote.py",
+    "tools/standardize_case.py",
+    "tools/build_suite.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_curtain_doraemon_drape.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

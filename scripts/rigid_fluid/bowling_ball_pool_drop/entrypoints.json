@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "scene": "bowling_ball_pool_drop",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_bowling_ball_pool_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--domain-top",
+        "--out",
+        "--dx",
+        "--substeps",
+        "--divergence-error",
+        "--density-error",
+        "--extra-layers",
+        "--film-band",
+        "--min-sweeps",
+        "--contact-gap",
+        "--warm-start",
+        "--skip-air",
+        "--damping",
+        "--settle-seconds",
+        "--check-seconds",
+        "--water-state",
+        "--end-frame",
+        "--ball-mass",
+        "--remove-ball",
+        "--conservative-floor-pressure",
+        "--timed-edits-json",
+        "--resume-source",
+        "--liquid-density",
+        "--liquid-nu"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_bowling_ball_pool_drop.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--run",
+        "--out",
+        "--frames",
+        "--frame-list",
+        "--samples",
+        "--exposure",
+        "--resolution",
+        "--sun-strength",
+        "--dry-run"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_bowling_ball_pool_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--dx",
+        "--keep-intermediates",
+        "--skip-existing",
+        "--parallel",
+        "--dry-run",
+        "--cases",
+        "--gpu",
+        "--resume-source"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu"
+      },
+      "cases": [
+        "bowling_ball_pool_drop_baseline",
+        "edit_light_ball",
+        "edit_high_density_liquid",
+        "edit_viscous_liquid",
+        "edit_delete_ball",
+        "edit_light_ball_after_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_bowling_ball_pool_drop.py",
+    "physics/caustics_bowling_ball_pool_drop.py",
+    "edit_vocab.py",
+    "physics/optics_bowling_ball_pool_drop.py",
+    "physics/physics_bowling_ball_pool_drop.py",
+    "tools/pipeline_bowling_ball_pool_drop.sh",
+    "render_bowling_ball_pool_drop.py",
+    "tools/run_on_idle_gpu.sh",
+    "appearance/scene_bowling_ball_pool_drop.py",
+    "simulate_bowling_ball_pool_drop.py",
+    "physics/splash_bowling_ball_pool_drop.py",
+    "appearance/sun_visibility_bowling_ball_pool_drop.py",
+    "scene_manifest.json"
+  ]
+}

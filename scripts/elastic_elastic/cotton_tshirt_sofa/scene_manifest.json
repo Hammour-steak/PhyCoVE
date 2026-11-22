@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "scene_id": "cotton_tshirt_sofa",
+  "interaction_category": "elastic_elastic",
+  "case_number": 25,
+  "look": "living room with soft afternoon sun (tools/native/realism.py over tools/native/render.py)",
+  "entry_points": {
+    "simulate": "simulate_cotton_tshirt_sofa.py",
+    "render": "render_cotton_tshirt_sofa.py",
+    "build_pcve": "build_pcve_cotton_tshirt_sofa.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "scene_driver.py",
+    "tools/native/edit_vocab.py",
+    "tools/native/scene_spec.json"
+  ],
+  "supported_cases": [
+    "source",
+    "stiff_shirt",
+    "heavy_shirt",
+    "low_friction",
+    "remove_seat",
+    "low_friction_at_frame_10"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/cotton_tshirt_sofa (presentation.json camera, geometry/ prepared FEM inputs, raw/ sofa and shirt, fabric_textures/ and room_textures/ textures)",
+    "accepted_delivery": "renders/cotton_tshirt_sofa (accepted_delivery/videos/, accepted_delivery/benchmark_increment/scenes/cotton_tshirt_sofa/cases/<case>/, accepted_renders/<case>/render_report.json)",
+    "timed_native_solves": "renders/pcve_suites/pcve_cotton_tshirt_sofa_suite/inputs/native_timed/<case>/ (merged simulation.npz, shutter_positions.npz, simulation_config.json, state_handoff.json)",
+    "rebuild_output": "renders/cotton_tshirt_sofa/<new folder>"
+  },
+  "canonical_suites": {
+    "pcve_cotton_tshirt_sofa_suite": {
+      "target": "renders/pcve_suites/pcve_cotton_tshirt_sofa_suite",
+      "look": "living room with soft afternoon sun (tools/native/realism.py)",
+      "public_case_ids": {
+        "source": "source",
+        "stiff_shirt": "edit_stiff_shirt",
+        "heavy_shirt": "edit_heavy_shirt",
+        "low_friction": "edit_low_friction",
+        "remove_seat": "edit_remove_seat",
+        "low_friction_at_frame_10": "edit_low_friction_at_frame_10"
+      },
+      "case_video_sha256": {
+        "source": "cfe0f56703a0fc7d982e069fe2826705a181465b90daece9afdc719558ecaef3",
+        "stiff_shirt": "a214d075469ed2c9f3ab9301787588c8b5d7ecfbdfc3de8c3d3ef3b34508f09e",
+        "heavy_shirt": "2b49c9b7a5d6f89b75bff9ae5c4699353ffbc09fbfe7f21ee6397f27b02364e2",
+        "low_friction": "a0d012acc536dcd5ed93d88dc4ed74ea0235fbb9c407b660c50626b5dfb505b2",
+        "remove_seat": "e497cc7b68f632b517a41e45810c8d2171b2cf852c4a13a2f82dd136c505e481",
+        "low_friction_at_frame_10": "b1505a5dbcb0429b59561a2523756529f56d3f3cbb81d017cba9f529ddf81594"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s; a 1/60 s exposure from three solver states per frame (shutter_positions.npz)"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), from the native deformation caches by tools/export_ground_truth.py"
+}

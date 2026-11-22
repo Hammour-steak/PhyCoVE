@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "scene_id": "twin_pendulum_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_twin_pendulum_collision.py",
+    "render": "render_twin_pendulum_collision.py",
+    "build_pcve": "build_pcve_twin_pendulum_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "twin_pendulum_collision_baseline",
+    "edit_heavy_driver",
+    "edit_large_amplitude",
+    "edit_high_drag",
+    "edit_remove_receiver",
+    "edit_remove_receiver_after_impact",
+    "edit_remove_driver"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_twin_pendulum_collision_suite": {
+      "target": "renders/pcve_suites/pcve_twin_pendulum_collision_suite",
+      "case_video_sha256": {
+        "edit_heavy_driver": "8c505122e5b8cd63b7f0097483c32fd5ebd8508f12bc0cdb200148bdc7937bf9",
+        "edit_high_drag": "6ba7e637302f6b9c0a973d19ec250183619e0570ad343cd87083e90277f48034",
+        "edit_large_amplitude": "a78af5d57e0b24fc10b984173b282886f162d3744754ad517e90af229bc1a53c",
+        "edit_remove_driver": "789f914e03c164e18e93499d0d39f6a7ca1f23fffdf11918530c1d35c37efa89",
+        "edit_remove_receiver": "ff81751a4f0ee161b1348ec66d4ab849ff0d12d7e4a83013f23179b075183933",
+        "edit_remove_receiver_after_impact": "702cb70977e5e91bec1da08e12eac846e2a5437c117dc0322498d71bf01b84b4",
+        "twin_pendulum_collision_baseline": "2bbbcd3851d3186e28ab185a1a048c193b2fe14837bc04de1d92589abca23319"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "twin_pendulum_collision_baseline": "source",
+        "edit_heavy_driver": "edit_heavy_driver",
+        "edit_large_amplitude": "edit_large_amplitude",
+        "edit_high_drag": "edit_high_drag",
+        "edit_remove_receiver": "edit_remove_receiver",
+        "edit_remove_receiver_after_impact": "edit_remove_receiver_after_impact"
+      },
+      "public_case_video_sha256": {
+        "edit_heavy_driver": "8c505122e5b8cd63b7f0097483c32fd5ebd8508f12bc0cdb200148bdc7937bf9",
+        "edit_high_drag": "6ba7e637302f6b9c0a973d19ec250183619e0570ad343cd87083e90277f48034",
+        "edit_large_amplitude": "a78af5d57e0b24fc10b984173b282886f162d3744754ad517e90af229bc1a53c",
+        "edit_remove_driver": "789f914e03c164e18e93499d0d39f6a7ca1f23fffdf11918530c1d35c37efa89",
+        "edit_remove_receiver": "ff81751a4f0ee161b1348ec66d4ab849ff0d12d7e4a83013f23179b075183933",
+        "edit_remove_receiver_after_impact": "702cb70977e5e91bec1da08e12eac846e2a5437c117dc0322498d71bf01b84b4",
+        "source": "2bbbcd3851d3186e28ab185a1a048c193b2fe14837bc04de1d92589abca23319"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/twin_pendulum_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/twin_pendulum_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

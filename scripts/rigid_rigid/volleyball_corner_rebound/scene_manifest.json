@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "scene_id": "volleyball_corner_rebound",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_volleyball_corner_rebound.py",
+    "render": "render_volleyball_corner_rebound.py",
+    "build_pcve": "build_pcve_volleyball_corner_rebound.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "volleyball_corner_rebound_baseline",
+    "edit_speed_x15",
+    "edit_restitution_x03",
+    "edit_friction_x05",
+    "edit_wall_restitution_x04",
+    "edit_gravity_x25_at24"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_volleyball_corner_rebound_suite": {
+      "target": "renders/pcve_suites/pcve_volleyball_corner_rebound_suite",
+      "case_video_sha256": {
+        "edit_friction_x05": "b75bdb5ddb07c7fc54c4bf5aba10c1985d93ef4cfea9c29b9ae2ed64af9f2138",
+        "edit_gravity_x25_at24": "127123e06b25b275b38792b7e5d5d110a142b3964d2965365b1335bb8ea55997",
+        "edit_restitution_x03": "98a886e4c7e6fce510fbb917a18ec6dbced4cd2155eaee121ea2502648b06d59",
+        "edit_speed_x15": "baddceb751057cddf7314da7f0b378a67ec748e98ab6d81c7527c7021e6add03",
+        "edit_wall_restitution_x04": "2417398de5be2f1ef26c1b39c458794a81b4c198d3d25550b0a040c4db4ce5ef",
+        "volleyball_corner_rebound_baseline": "ee62fbe58fb26884f41ea94a47f4db470655b0366bae0752b8a7c9f20ac013dd"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "volleyball_corner_rebound_baseline": "source",
+        "edit_speed_x15": "edit_speed_x15",
+        "edit_restitution_x03": "edit_restitution_x03",
+        "edit_friction_x05": "edit_friction_x05",
+        "edit_wall_restitution_x04": "edit_wall_restitution_x04",
+        "edit_gravity_x25_at24": "edit_gravity_x25_at24"
+      },
+      "public_case_video_sha256": {
+        "edit_friction_x05": "b75bdb5ddb07c7fc54c4bf5aba10c1985d93ef4cfea9c29b9ae2ed64af9f2138",
+        "edit_gravity_x25_at24": "127123e06b25b275b38792b7e5d5d110a142b3964d2965365b1335bb8ea55997",
+        "edit_restitution_x03": "98a886e4c7e6fce510fbb917a18ec6dbced4cd2155eaee121ea2502648b06d59",
+        "edit_speed_x15": "baddceb751057cddf7314da7f0b378a67ec748e98ab6d81c7527c7021e6add03",
+        "edit_wall_restitution_x04": "2417398de5be2f1ef26c1b39c458794a81b4c198d3d25550b0a040c4db4ce5ef",
+        "source": "ee62fbe58fb26884f41ea94a47f4db470655b0366bae0752b8a7c9f20ac013dd"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/volleyball_corner_rebound",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/volleyball_corner_rebound",
+      "scenes/volleyball_corner_rebound"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

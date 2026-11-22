@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "scene_id": "elastic_fluid_duck",
+  "interaction_category": "elastic_fluid",
+  "entry_points": {
+    "simulate": "simulate_elastic_fluid_duck.py",
+    "render": "render_elastic_fluid_duck.py",
+    "build_pcve": "build_pcve_elastic_fluid_duck.py"
+  },
+  "configuration": [
+    "assets/elastic_fluid/elastic_fluid_duck/scene_spec.json",
+    "build_pcve_elastic_fluid_duck.py (EDIT_CASES, vocabulary())"
+  ],
+  "supported_cases": [
+    "elastic_fluid_duck_baseline",
+    "edit_heavy_duck",
+    "edit_viscous_liquid",
+    "edit_delete_duck",
+    "edit_delete_water_contact_fixed",
+    "edit_low_density_liquid_slow_sink_185",
+    "edit_low_density_liquid_after_float_185_f73"
+  ],
+  "workflows": {},
+  "native_settings": {
+    "same_run": "elastic_fluid_duck_baseline and edit_low_density_liquid_after_float_185_f73 come from one run with --source-branch-case (frames 1-73 identical)",
+    "source": "the suite source is re-simulated (--resimulate-base); without it the builder copies selected_base_video.mp4, an earlier take without a particle cache"
+  },
+  "data": {
+    "assets": "assets/elastic_fluid/elastic_fluid_duck",
+    "suite": "renders/pcve_suites/pcve_elastic_fluid_duck_suite"
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame i = simulation frame i, t = (i - 1)/24 s (10 steps of 1/240 s per frame)"
+  },
+  "ground_truth": "cases/<case_id>/ground_truth_transforms.json in the suite (pcve_ground_truth/1)",
+  "canonical_suites": {
+    "pcve_elastic_fluid_duck_suite": {
+      "target": "renders/pcve_suites/pcve_elastic_fluid_duck_suite",
+      "public_case_ids": {
+        "elastic_fluid_duck_baseline": "source",
+        "edit_heavy_duck": "edit_heavy_duck",
+        "edit_viscous_liquid": "edit_viscous_liquid",
+        "edit_delete_duck": "edit_delete_duck",
+        "edit_delete_water_contact_fixed": "edit_delete_water_contact_fixed",
+        "edit_low_density_liquid_slow_sink_185": "edit_low_density_liquid_slow_sink_185",
+        "edit_low_density_liquid_after_float_185_f73": "edit_low_density_liquid_after_float_185_f73"
+      },
+      "case_video_sha256": {
+        "elastic_fluid_duck_baseline": "a7d425f5fc25bb60770b94d1314043eb54fc462bc115311b311016a82cd122a5",
+        "edit_heavy_duck": "0953333069b10627a622d0b7e65e4436c24b6c173be5b7e92963b4374ffe3318",
+        "edit_viscous_liquid": "a54c85350fa08836ad8c473bdbaf60c36a6f9b3204ad3d659a1af3c991593f14",
+        "edit_delete_duck": "db77f7dd9d0331ca6b3694830805ea69427ee9e2feadfb3430458a77aaccee8e",
+        "edit_delete_water_contact_fixed": "96002dd199bab50fea8e6a88ea665339d8d5f52c1c0775635f3692a996b21183",
+        "edit_low_density_liquid_slow_sink_185": "7cc094da426af09914de37e4ec4c84e4a7448a80dba8aff6cbea72fcab84f7b2",
+        "edit_low_density_liquid_after_float_185_f73": "16b421745cb5f46686183e8f069da0175947da1e87828622a019d3157e202531"
+      },
+      "case_video_path": {
+        "elastic_fluid_duck_baseline": "cases/source/video.mp4",
+        "edit_heavy_duck": "cases/edit_heavy_duck/video.mp4",
+        "edit_viscous_liquid": "cases/edit_viscous_liquid/video.mp4",
+        "edit_delete_duck": "cases/edit_delete_duck/video.mp4",
+        "edit_delete_water_contact_fixed": "cases/edit_delete_water_contact_fixed/video.mp4",
+        "edit_low_density_liquid_slow_sink_185": "cases/edit_low_density_liquid_slow_sink_185/video.mp4",
+        "edit_low_density_liquid_after_float_185_f73": "cases/edit_low_density_liquid_after_float_185_f73/video.mp4"
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "scene": "silicone_block_chain",
+  "category": "rigid_elastic",
+  "case_number": 17,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_silicone_block_chain.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "native_options": [
+        "--case",
+        "--out-root",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "stiff_foam",
+        "light_ball",
+        "viscous_foam",
+        "remove_foam",
+        "light_ball_at_frame_8"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out-root"
+      },
+      "requirements": "Python with numpy and scipy (.venv-rigid-elastic: numpy 1.26.4, scipy 1.15.3); CPU only"
+    },
+    "render": {
+      "file": "render_silicone_block_chain.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--look",
+        "--out-root",
+        "--out",
+        "--frames",
+        "--samples",
+        "--device",
+        "--native-dir",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "stiff_foam",
+        "light_ball",
+        "viscous_foam",
+        "remove_foam",
+        "light_ball_at_frame_8"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out-root"
+      },
+      "requirements": "Blender 4.3.2 (tools/blender-4.3.2-linux-x64 in the repository root); ffmpeg for the video"
+    },
+    "build_pcve": {
+      "file": "build_pcve_silicone_block_chain.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "stiff_foam",
+        "light_ball",
+        "viscous_foam",
+        "remove_foam",
+        "light_ball_at_frame_8"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      },
+      "requirements": "Python with numpy (.venv-rigid-elastic/bin/python or the genesis venv); reads the caches"
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "CPU implicit solve (numpy/scipy L-BFGS-B, 1/1920 s steps, cached at 96 Hz) of a 6x6x8-cell tetrahedral finite-strain viscoelastic foam block coupled to a guided platen with a shallow cup, a 32 mm steel ball that rolls down an analytic ramp and is then caught by penalty cup contacts with Coulomb friction and rolling resistance, and a passive hinged flag lifted by the platen edge (physics/physics.py, geometry in physics/rig.py, baseline, the four whole-clip edits and the timed edit in physics/config.py). A timed edit runs in the same solve as the source parameters and switches the ball mass at its edit step. The four whole-clip edits replay their accepted caches (assets scenes/silicone_block_chain/accepted_solves/physics), baked into the accepted packed scenes (accepted_solves/packed/<case>.blend); the source and the timed edit replay a re-solve kept with the suite case (native_metadata), baked into the workshop template by appearance/bake_native.py. appearance/realism.py renders the current look and checks every frame against the cache before rendering; appearance/scene.py is the bake and the delivered look (tools/worker.py). Video frame f is native sample 4(f-1); 1280x720, 24 fps, 96 frames. tools/export_ground_truth.py writes pcve_ground_truth/1 ground truth from the solves, tools/publish_suite.py assembles and swaps in a suite. Material, friction and contact values are nominal, not calibrated.",
+  "implementation_files": [
+    "simulate_silicone_block_chain.py",
+    "render_silicone_block_chain.py",
+    "build_pcve_silicone_block_chain.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/physics.py",
+    "physics/config.py",
+    "physics/rig.py",
+    "appearance/realism.py",
+    "appearance/scene.py",
+    "appearance/bake_native.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/worker.py"
+  ],
+  "assets": "assets/scenes/silicone_block_chain",
+  "edit_catalog": {
+    "file": "build_pcve_silicone_block_chain.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

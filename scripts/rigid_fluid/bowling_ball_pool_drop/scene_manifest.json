@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "scene_id": "bowling_ball_pool_drop",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_bowling_ball_pool_drop.py",
+    "render": "render_bowling_ball_pool_drop.py",
+    "build_pcve": "build_pcve_bowling_ball_pool_drop.py"
+  },
+  "supported_cases": [
+    "bowling_ball_pool_drop_baseline",
+    "edit_light_ball",
+    "edit_high_density_liquid",
+    "edit_viscous_liquid",
+    "edit_delete_ball",
+    "edit_light_ball_after_2s"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_bowling_ball_pool_drop_suite": {
+      "target": "renders/pcve_suites/pcve_bowling_ball_pool_drop_suite",
+      "case_video_sha256": {
+        "bowling_ball_pool_drop_baseline": "5a0d85d3f114bb1a22bcc57cf4813549e166786a486a025d46a85af2518499cf",
+        "edit_light_ball": "f426def2ba08db9adc18897590b1f7fa8d91c9c8ea344bc6484d77e37d52c0e3",
+        "edit_high_density_liquid": "5ee3159410f07e92d226ed1a34d2e93bdf49e87077a81905de0f5adc0cbd697e",
+        "edit_viscous_liquid": "3b17c3fe46387735f3889fb36d8cd39e94c261fc2a073a34491b3368018dfd0b",
+        "edit_delete_ball": "d0834c58f4e6837be8bb583102dd885f8a0cb5a9988b15e2b7255591387fbb71",
+        "edit_light_ball_after_2s": "29ccbc4f3ab77a81f643b704fedce76cbb9d98371c960feb35a93cd5702444ad",
+        "edit_delete_water": "4b2edb985bb3dffcd21102bc32c0c2babbfca51d0413ace1e2fb400545166fed"
+      },
+      "public_case_ids": {
+        "bowling_ball_pool_drop_baseline": "source",
+        "edit_light_ball": "edit_light_ball",
+        "edit_high_density_liquid": "edit_high_density_liquid",
+        "edit_viscous_liquid": "edit_viscous_liquid",
+        "edit_delete_ball": "edit_delete_ball",
+        "edit_light_ball_after_2s": "edit_light_ball_after_2s"
+      }
+    }
+  },
+  "objects": [
+    "rigid bowling ball",
+    "water"
+  ],
+  "render": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "duration_seconds": 4.0,
+    "samples": 64,
+    "exposure": -0.75,
+    "sun_strength": 15.0,
+    "denoising": true
+  },
+  "camera": {
+    "location_m": [
+      1.25,
+      -2.0,
+      0.45
+    ],
+    "target_m": [
+      0.0,
+      0.0,
+      0.25
+    ],
+    "lens_mm": 26
+  },
+  "simulation": {
+    "engine": "Genesis 1.4.3 DFSPH; rigid translating ball, pressure-boundary ghost shells",
+    "particle_size_m": 0.02,
+    "substeps_per_frame": 100,
+    "divergence_error": 0.1,
+    "density_error_percent": 0.05,
+    "extra_settle_layers": 3,
+    "film_band_dx": 1.0,
+    "contact_gap_dx": 0.5,
+    "domain_top_m": 4.25,
+    "settled_surface_m": -0.25026002526283264,
+    "pool_corners_m": [
+      [
+        -1.6361418750703298,
+        0.3553007724839943
+      ],
+      [
+        0.26139901569343044,
+        -2.017602318511232
+      ],
+      [
+        1.618938795441292,
+        -0.32140465029409887
+      ],
+      [
+        -0.2746941938750684,
+        2.056408390052882
+      ]
+    ]
+  },
+  "baseline_physics": {
+    "ball_radius": 0.075,
+    "ball_mass": 2.068702658637,
+    "ball_initial_z": 0.7,
+    "ball_initial_velocity_z": -4.0,
+    "liquid_surface_z": -0.25,
+    "liquid_density": 1000.0,
+    "liquid_kinematic_viscosity": 1e-06
+  },
+  "edits": [
+    {
+      "case_id": "edit_light_ball",
+      "dsl": "SET ball.mass TIMES 0.25626870931880164",
+      "summary": "The ball's mass falls to about 0.530 kg (mean density about 300 kg/m^3): it enters with far less momentum, rises back and floats with about 30% of its volume submerged.",
+      "physics_override": {
+        "mass (ball)": 0.5301437603
+      },
+      "measured": {
+        "final_ball_z_m": -0.228,
+        "last_second_submerged_fraction": 0.32,
+        "water_z_max_m": 0.35
+      }
+    },
+    {
+      "case_id": "edit_high_density_liquid",
+      "dsl": "SET water.density TIMES 2",
+      "summary": "The liquid density doubles to 2000 kg/m^3, above the ball's 1170.65 kg/m^3: the ball plunges in, rises back and floats with about 59% of its volume submerged.",
+      "physics_override": {
+        "density (water)": 2000.0
+      },
+      "measured": {
+        "final_ball_z_m": -0.258,
+        "last_second_submerged_fraction": 0.62,
+        "water_z_max_m": 1.72
+      }
+    },
+    {
+      "case_id": "edit_viscous_liquid",
+      "dsl": "SET water.viscosity TIMES 100000",
+      "summary": "The liquid's kinematic viscosity rises to 0.1 m^2/s (Reynolds number about 9 at entry): the splash, cavity and waves are strongly damped and the ball creeps down at a few centimetres per second.",
+      "physics_override": {
+        "viscosity (water)": 0.1
+      },
+      "measured": {
+        "final_ball_z_m": -0.334,
+        "last_second_submerged_fraction": 1.0,
+        "water_z_max_m": -0.25
+      }
+    },
+    {
+      "case_id": "edit_delete_ball",
+      "dsl": "DELETE ball",
+      "summary": "Remove the bowling ball from the beginning; the same settled pool evolves without its impact.",
+      "applies_from_frame": 1,
+      "applies_from_time_s": 0.0,
+      "simulation_quality_diff": {},
+      "physics_diff": {
+        "presence (ball)": {
+          "from": true,
+          "to": false
+        },
+        "timing": {
+          "applies_from_frame": 1,
+          "total_frames": 96,
+          "unedited_frames": []
+        }
+      },
+      "measured": {
+        "ball_absent_all_frames": true,
+        "no_ball_shadow_all_frames": true,
+        "no_impact_spray_mist_or_foam": true
+      }
+    },
+    {
+      "case_id": "edit_light_ball_after_2s",
+      "dsl": "SET ball.mass TO 0.5301437603 AT FRAME 49",
+      "summary": "At 2.00 s, reduce the ball's mass from 2.068702658637 kg to 0.5301437603 kg without an imposed impulse or size change; the ball rises from the floor and bobs at the surface. The continuation also retains the previously omitted floor-layer pressure reactions as a declared numerical repair.",
+      "applies_from_frame": 49,
+      "applies_from_time_s": 2.0,
+      "simulation_quality_diff": {
+        "floor_pressure_reaction": {
+          "from": "floor_band_omitted",
+          "to": "all_fluid",
+          "from_time_s": 2.0
+        }
+      },
+      "physics_diff": {
+        "mass (ball)": {
+          "from": 2.068702658637,
+          "to": 0.5301437603
+        },
+        "timing": {
+          "applies_from_frame": 49,
+          "total_frames": 96,
+          "unedited_frames": [
+            1,
+            48
+          ]
+        }
+      },
+      "measured": {
+        "mass_kg_before": 2.068702658637,
+        "mass_kg_after": 0.5301437603,
+        "first_less_than_95_percent_submerged_time_s": 3.0833333333333335,
+        "final_ball_center_m": [
+          -0.022148079460074313,
+          0.021960795551048327,
+          -0.20443981666710961
+        ],
+        "final_submerged_fraction": 0.30333721294559596
+      }
+    }
+  ]
+}

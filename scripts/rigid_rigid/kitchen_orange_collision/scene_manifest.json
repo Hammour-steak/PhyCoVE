@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scene_id": "kitchen_orange_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_kitchen_orange_collision.py",
+    "render": "render_kitchen_orange_collision.py",
+    "build_pcve": "build_pcve_kitchen_orange_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "kitchen_orange_collision_baseline",
+    "edit_heavy_driver",
+    "edit_heavy_cut",
+    "edit_fast_driver",
+    "edit_rear_queue",
+    "edit_midframe_surge",
+    "edit_delete_cut_orange",
+    "edit_delete_driver_orange"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_kitchen_orange_collision_suite": {
+      "target": "renders/pcve_suites/pcve_kitchen_orange_collision_suite",
+      "case_video_sha256": {
+        "edit_delete_cut_orange": "e6ded1a14ebf439f76d19a35e54dea4019075370b5f9da105980e9657326eec1",
+        "edit_delete_driver_orange": "a9711536aed63f3722f5edace5375992a0fb42ff95b20eb575941cb3d40e6b57",
+        "edit_fast_driver": "107061ed944662e87ba05f96c9bad780592ae6c60758c5b47b7b2333e91ced5d",
+        "edit_heavy_cut": "878ca8a170d8fb53179a6a22f5b649d68e092d5965e1efe82fdd5d251a7dfb91",
+        "edit_heavy_driver": "451b05d7276e9a51661fa36430a07c807c2bd481732361156ffb5a2b278e42c7",
+        "edit_midframe_surge": "38b778bda1f5da991cd636d3153f723442d70a4460740af778145418104b093a",
+        "edit_rear_queue": "af650739c69710711ea3b16a0f81b1b59fcd66685cb0855c6f3b4b72468591ae",
+        "kitchen_orange_collision_baseline": "e33ddd37c87409cd3d50d2347ff5093fbfb929980734fd666dd484ab6d75820f"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "kitchen_orange_collision_baseline": "source",
+        "edit_heavy_driver": "edit_heavy_driver",
+        "edit_heavy_cut": "edit_heavy_cut",
+        "edit_fast_driver": "edit_fast_driver",
+        "edit_rear_queue": "edit_rear_queue",
+        "edit_midframe_surge": "edit_midframe_surge"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_cut_orange": "e6ded1a14ebf439f76d19a35e54dea4019075370b5f9da105980e9657326eec1",
+        "edit_delete_driver_orange": "a9711536aed63f3722f5edace5375992a0fb42ff95b20eb575941cb3d40e6b57",
+        "edit_fast_driver": "107061ed944662e87ba05f96c9bad780592ae6c60758c5b47b7b2333e91ced5d",
+        "edit_heavy_cut": "878ca8a170d8fb53179a6a22f5b649d68e092d5965e1efe82fdd5d251a7dfb91",
+        "edit_heavy_driver": "451b05d7276e9a51661fa36430a07c807c2bd481732361156ffb5a2b278e42c7",
+        "edit_midframe_surge": "38b778bda1f5da991cd636d3153f723442d70a4460740af778145418104b093a",
+        "edit_rear_queue": "af650739c69710711ea3b16a0f81b1b59fcd66685cb0855c6f3b4b72468591ae",
+        "source": "e33ddd37c87409cd3d50d2347ff5093fbfb929980734fd666dd484ab6d75820f"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/kitchen_orange_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/kitchen_orange_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "scene": "faucet_sink",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_faucet_sink.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--work-dir"
+      },
+      "native_options": [
+        "--case-id",
+        "--scene",
+        "--work-dir"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "edit_low_flow",
+        "edit_high_flow",
+        "edit_high_viscosity",
+        "edit_stop_flow_at_2s"
+      ]
+    },
+    "render": {
+      "file": "render_faucet_sink.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--case-id",
+        "--scene",
+        "--output-dir"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "edit_low_flow",
+        "edit_high_flow",
+        "edit_high_viscosity",
+        "edit_stop_flow_at_2s"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_faucet_sink.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--cases",
+        "--template",
+        "--out-root",
+        "--stage",
+        "--python",
+        "--blender",
+        "--threads",
+        "--gpu",
+        "--dry-run"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "edit_low_flow",
+        "edit_high_flow",
+        "edit_high_viscosity",
+        "edit_stop_flow_at_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_faucet_sink.py",
+    "edit_vocab.py",
+    "appearance/prepare_faucet_sink.py",
+    "render_faucet_sink.py",
+    "simulate_faucet_sink.py",
+    "scene_manifest.json"
+  ]
+}

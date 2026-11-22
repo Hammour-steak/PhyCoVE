@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "scene_id": "toy_car_ramp_pool_genesis",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_toy_car_ramp_pool_genesis.py",
+    "render": "render_toy_car_ramp_pool_genesis.py",
+    "build_pcve": "build_pcve_toy_car_ramp_pool_genesis.py"
+  },
+  "supported_cases": [
+    "source",
+    "no_car",
+    "heavy_car_x3",
+    "low_density_div4",
+    "high_viscosity_x20000",
+    "mass_after_2s_x3"
+  ],
+  "workflows": {
+    "current-source": "reproduce_current.py",
+    "current-edits": "reproduce_current.py"
+  },
+  "canonical_suites": {
+    "pcve_toy_car_ramp_pool_genesis_suite": {
+      "target": "renders/pcve_suites/pcve_toy_car_ramp_pool_genesis_suite",
+      "case_video_sha256": {
+        "source": "c523a50da55621e30ae8201c61c2ef4c45fe3b42aa89533ec36d2c6455438991",
+        "no_car": "ce06722761f05a1b56c5e9aa2e4e58c4327468ad9b4ee04a138475ee8b4d1eb5",
+        "heavy_car_x3": "4bbdc55bfaec4665d7062440cc1f4b8b8cb2b105e17848f0f1e8f9fd4131ef63",
+        "low_density_div4": "df89f8092724e444c4ccb41f720d5c836af9b7d3ae3607651987840b5be16c72",
+        "high_viscosity_x20000": "36b55376daae5f382ec3dde319f7c964aabd39ea005ee2a5aa6e0e5249a27cbe",
+        "mass_after_2s_x3": "e18a0ae48762b29a693da8b8f1de17c8b7f692713f659de2db4365246c244a27",
+        "edit_delete_water": "3d6eca07f7854c1a1832beeacc2e5956dbbed8e8814a20deb7f0eb79500c59f3"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "no_car": "edit_no_car",
+        "heavy_car_x3": "edit_heavy_car_x3",
+        "low_density_div4": "edit_low_density_div4",
+        "high_viscosity_x20000": "edit_high_viscosity_x20000",
+        "mass_after_2s_x3": "edit_mass_after_2s_x3"
+      }
+    }
+  }
+}

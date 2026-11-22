@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "scene": "entryway_eva_slippers",
+  "category": "elastic_elastic",
+  "case_number": 16,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_entryway_eva_slippers.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--pool-audit",
+        "--gpu-uuid",
+        "--threads-count"
+      ],
+      "cases": [
+        "source",
+        "stiff_falling",
+        "slippery_floor",
+        "light_falling",
+        "remove_resting",
+        "add_shoe_tray"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--threads-count"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_entryway_eva_slippers.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--pool-audit",
+        "--gpu-uuid",
+        "--threads-count",
+        "--cache",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "stiff_falling",
+        "slippery_floor",
+        "light_falling",
+        "remove_resting",
+        "add_shoe_tray"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--threads-count",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_entryway_eva_slippers.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "stiff_falling",
+        "slippery_floor",
+        "light_falling",
+        "remove_resting",
+        "add_shoe_tray"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/entryway_eva_slippers",
+  "implementation_policy": "Two EVA slides on a stone entryway floor: compressible volumetric FEM (StableNeoHookean with a native objective-viscosity extension, runtime/native/pcve_viscosity) and two-way IPC contact in libuipc (CUDA, bdf2), production tetrahedral geometry accepted_delivery/geometry_d, sampled at exactly 24 Hz for 4 s; the optional wooden shoe tray is a finite-mass affine body. tools/native/simulate.py (source, stiff_falling, remove_resting, add_shoe_tray with vocab_hero.py) and simulate_revision.py (slippery_floor, light_falling with vocab_revised.py) solve one case; render_hero.py replays the exact FEM surface vertices in Blender; tools/native/realism.py is the look of the published videos. tools/launch.py starts both through tools/native/pool_worker.py (GPU preflight, lease, UUID binding). --stage verify checks the accepted native delivery (strict edits, videos and native caches against each case's artifact manifest and render binding, 24 Hz clocks). Materials are effective values, not calibrated.",
+  "implementation_files": [
+    "build_pcve_entryway_eva_slippers.py",
+    "simulate_entryway_eva_slippers.py",
+    "render_entryway_eva_slippers.py",
+    "edit_vocab.py",
+    "tools/launch.py",
+    "tools/retained.py",
+    "tools/native/common.py",
+    "tools/native/edit_vocab.py",
+    "tools/native/geometry.py",
+    "tools/native/hero_materials.py",
+    "tools/native/material_model.py",
+    "tools/native/pool_worker.py",
+    "tools/native/realism.py",
+    "tools/native/render.py",
+    "tools/native/render_hero.py",
+    "tools/native/render_replay.py",
+    "tools/native/room_scene.py",
+    "tools/native/shoe_tray.py",
+    "tools/native/simulate.py",
+    "tools/native/simulate_revision.py",
+    "tools/native/vocab_hero.py",
+    "tools/native/vocab_replay.py",
+    "tools/native/vocab_revised.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_entryway_eva_slippers.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "scene_id": "domino_chain",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_domino_chain.py",
+    "render": "render_domino_chain.py",
+    "build_pcve": "build_pcve_domino_chain.py"
+  },
+  "configuration": [
+    "scene_spec.json",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "domino_chain_baseline",
+    "edit_heavy_D03",
+    "edit_remove_D03",
+    "edit_remove_D01",
+    "edit_remove_D01_after_contact",
+    "edit_heavy_D01",
+    "edit_heavy_D04"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_domino_chain_suite": {
+      "target": "renders/pcve_suites/pcve_domino_chain_suite",
+      "case_video_sha256": {
+        "domino_chain_baseline": "e0338baa986536ca194473bb25244034440c37e184ea0c5c559158aa8d37b1dc",
+        "edit_heavy_D03": "8744b1379fb7e364106bdc12c2428a23ca4ca85a0f601e195c7cb468ab5c4ad8",
+        "edit_remove_D03": "c8d36f3b2f7b5bc8ae61af916ff8a0622cfcf892df80ec881345cc36c1d7433b",
+        "edit_remove_D01": "41391623f68b8de5e8607d098eda63503410ab6bae69fddb411f9a3e1aa2c8ec",
+        "edit_remove_D01_after_contact": "e167f9bd32d492f3683f0aac9b2830de1afe53fb7c2886fd5cd7bff9213d9c8a",
+        "edit_heavy_D01": "5d9a7d7319173edae1dcf2f148610515966e72603b5af0309da5eb460be01833",
+        "edit_heavy_D04": "d38d7364d266164173949054b2fe89279e8a63b15eb8684c252d7012e0615181"
+      },
+      "public_case_ids": {
+        "domino_chain_baseline": "source",
+        "edit_heavy_D03": "edit_heavy_D03",
+        "edit_remove_D03": "edit_remove_D03",
+        "edit_remove_D01": "edit_remove_D01",
+        "edit_remove_D01_after_contact": "edit_remove_D01_after_contact",
+        "edit_heavy_D01": "edit_heavy_D01",
+        "edit_heavy_D04": "edit_heavy_D04"
+      },
+      "public_case_video_sha256": {
+        "source": "e0338baa986536ca194473bb25244034440c37e184ea0c5c559158aa8d37b1dc",
+        "edit_heavy_D03": "8744b1379fb7e364106bdc12c2428a23ca4ca85a0f601e195c7cb468ab5c4ad8",
+        "edit_remove_D03": "c8d36f3b2f7b5bc8ae61af916ff8a0622cfcf892df80ec881345cc36c1d7433b",
+        "edit_remove_D01": "41391623f68b8de5e8607d098eda63503410ab6bae69fddb411f9a3e1aa2c8ec",
+        "edit_remove_D01_after_contact": "e167f9bd32d492f3683f0aac9b2830de1afe53fb7c2886fd5cd7bff9213d9c8a",
+        "edit_heavy_D01": "5d9a7d7319173edae1dcf2f148610515966e72603b5af0309da5eb460be01833",
+        "edit_heavy_D04": "d38d7364d266164173949054b2fe89279e8a63b15eb8684c252d7012e0615181"
+      }
+    }
+  },
+  "software": {
+    "blender": "4.3.2",
+    "physics_solver": "PyBullet 3.2.7",
+    "python_runtime": ".venv-domino/bin/python"
+  },
+  "physics_model": "PyBullet free 6-DOF box collisions at quarter gravity; normalized Sketchfab visual meshes do not drive physics.",
+  "assets": [
+    {
+      "path": "assets/polyhaven/oak_veneer_01",
+      "name": "Oak Veneer 01",
+      "author": {
+        "Jenelle van Heerden": "All"
+      },
+      "source": "https://polyhaven.com/a/oak_veneer_01",
+      "license": "CC0",
+      "asset_manifest_sha256": "631e6fec31d400d214590b658b97c220cbdbd2af2c0e54eba3360bb88b2c2631"
+    },
+    {
+      "path": "assets/polyhaven/brown_photostudio_05",
+      "name": "Brown Photostudio 05",
+      "author": {
+        "Sergej Majboroda": "All"
+      },
+      "source": "https://polyhaven.com/a/brown_photostudio_05",
+      "license": "CC0",
+      "asset_manifest_sha256": "64942e75dba6028a5fabe8bc176f48d0763a6608a7129af5f6acbd61930fffc3"
+    },
+    {
+      "path": "assets/polyhaven/tea_set_01",
+      "name": "Tea Set 01",
+      "author": {
+        "James Ray Cock": "texturing",
+        "Rico Cilliers": "modeling",
+        "Jurita Burger": "graphic design"
+      },
+      "source": "https://polyhaven.com/a/tea_set_01",
+      "license": "CC0 1.0",
+      "asset_manifest_sha256": "93214175916fcf8f62728e9333556c65d077d84744fa0db4cdcfaff5a2059e3c"
+    },
+    {
+      "path": "assets/polyhaven/suburban_field_01",
+      "name": "Suburban Field 01",
+      "author": {
+        "Jacopo Voltolina": "All"
+      },
+      "source": "https://polyhaven.com/a/suburban_field_01",
+      "license": "CC0",
+      "asset_manifest_sha256": "31a22606943100e13346c36bbcbabf61b8e5cf95bb6bd7756009c1a130651d34"
+    },
+    {
+      "path": "assets/polyhaven/rough_linen",
+      "name": "Rough Linen",
+      "author": {
+        "colormass": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "source": "https://polyhaven.com/a/rough_linen",
+      "license": "CC0",
+      "asset_manifest_sha256": "601b5c4a211f0aea5e308743463ff0fce12127759d7dec3b9cb6f6a3dd0f06ec"
+    },
+    {
+      "path": "assets/polyhaven/sunny_rose_garden",
+      "name": "Sunny Rose Garden",
+      "author": {
+        "Dimitrios Savva": "Photography",
+        "Jarod Guest": "Processing"
+      },
+      "source": "https://polyhaven.com/a/sunny_rose_garden",
+      "license": "CC0",
+      "asset_manifest_sha256": "a18d882556be094b64e23f25e86a64b71a3b7c4dec2bc014246c2fc2355c75a8"
+    },
+    {
+      "path": "assets/polyhaven/potted_plant_04",
+      "name": "Potted Plant 04",
+      "author": {
+        "James Ray Cock": "All"
+      },
+      "source": "https://polyhaven.com/a/potted_plant_04",
+      "license": "CC0",
+      "asset_manifest_sha256": "faac7a48b4d11f31dea6a657dff474a4533ae2fb64632f32a840bd6336a04524"
+    },
+    {
+      "path": "assets/sketchfab/dominoes_render_at_night",
+      "name": "Dominoes",
+      "author": "Render at Night (https://sketchfab.com/Render_at_Night)",
+      "source": "https://sketchfab.com/3d-models/dominoes-6b89d69fe15748efa113e26354736507",
+      "license": "CC-BY-4.0",
+      "asset_manifest_sha256": "ed757f9effd9070796f4ce8736e034478875970369ac4dd8aee63423c87e0625"
+    },
+    {
+      "path": "assets/public_domain/byron_knoll_cards",
+      "name": "Byron Knoll vector playing-card face artwork",
+      "author": "Byron Knoll",
+      "source": null,
+      "license": "Public Domain (as declared by original author and repository)",
+      "asset_manifest_sha256": "c2f5266563e64cb0f01a1dfa7919b4c9a2edbdfba12205873029cdfcf2484b1d"
+    },
+    {
+      "path": "assets/ambientcg/Fabric034",
+      "name": "Fabric 034",
+      "author": "Lennart Demes / ambientCG",
+      "source": "https://ambientcg.com/a/Fabric034",
+      "license": "CC0 1.0",
+      "asset_manifest_sha256": "78bf5b7ba04b05779b5338365f9fe7756ecc0e7224aaa6b57b18a702c7ddd452"
+    },
+    {
+      "path": "assets/pcve/domino_chain_natural",
+      "name": "PCVE domino-chain natural appearance derivatives",
+      "author": null,
+      "source": null,
+      "license": null,
+      "asset_manifest_sha256": "9a6eacb73755495a9a57885452fab631450fed792b120ef07b4d137e0d06f448"
+    },
+    {
+      "path": "assets/pcve/domino_chain_cards",
+      "name": "Original engraved navy playing-card back and coated-stock surface",
+      "author": "PhyCoVE scene artwork",
+      "source": "Generated by scripts/rigid_rigid/domino_chain/tools/make_card_back.py",
+      "license": "CC0-1.0 for new original SVG and raster artwork",
+      "asset_manifest_sha256": "dd00e83d15eb02a22ddfc5625f8851235b4b9bd5d35b780f3cc2e382ce9d2b0b"
+    },
+    {
+      "path": "assets/innerscene/mahjong_game_table",
+      "name": "Mahjong table - Game Table",
+      "author": "Innerscene",
+      "source": "https://www.innerscene.com/tools/library/3d-parts/mahjong-table-game-table-a19f52ef",
+      "license": "CC0-1.0",
+      "asset_manifest_sha256": "a64256531502d480e80e5866ae482fbd739eb890ec3909143843a5cfb4fe2e00"
+    },
+    {
+      "path": "assets/blenderkit/modern_living_room_interior",
+      "name": "Modern Living Room Interior",
+      "author": "Ibrohim Toxirov",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/a04121e0-0f53-4eb6-98f0-08182121855c/",
+      "license": "royalty_free",
+      "asset_manifest_sha256": "5e40dbe3d9ef712ff24f5509ac74026658b36f54a0e20137f2727597cfd0515e"
+    },
+    {
+      "path": "assets/pcve/domino_chain_curtain_drape",
+      "name": "PCVE loosely tied gravity-draped linen panels",
+      "author": null,
+      "source": null,
+      "license": "Project-generated geometry; no borrowed mesh. Photographic weave is separately CC0 Poly Haven Rough Linen.",
+      "asset_manifest_sha256": "d9f5453eaa37069b073817b7a04222cacdfcc9d1b7d4b399f3864534b87d3165"
+    },
+    {
+      "path": "assets/polyhaven/caban",
+      "name": "Caban",
+      "author": {
+        "colormass": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "source": "https://polyhaven.com/a/caban",
+      "license": "CC0",
+      "asset_manifest_sha256": "24766e01cd0a42fc33d3889380c687f12c2d4a308e343253242a9d27e5be6fed"
+    }
+  ]
+}

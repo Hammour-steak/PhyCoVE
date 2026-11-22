@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "scene": "curling_collision",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_curling_collision.py",
+      "runtime": "python",
+      "python_runtime": "python3",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--config-json"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_curling_collision.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--physics-json",
+        "--out-dir",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--threads-native",
+        "--skip-existing",
+        "--asset-root"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "threads": "--threads-native"
+      },
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_curling_collision.py",
+      "runtime": "python",
+      "python_runtime": "python3",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--threads-native",
+        "--device",
+        "--skip-existing",
+        "--config-json"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender",
+        "threads": "--threads-native"
+      },
+      "cases": [
+        "source",
+        "edit_add_green_stone_midpoint",
+        "edit_delete_yellow_stone",
+        "edit_delete_blue_stone",
+        "edit_blue_mass_x3",
+        "edit_red_mass_x1p1"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Exact event-driven 1D constrained rigid contacts and Coulomb ice friction. Only world X translation is allowed, as requested. Impacts are solved from geometry and current state; no authored event times or pose paths. No unconstrained curling, spin or deformation claim. Visuals keep the handle and cap of the registered Sketchfab Curling Stone by FilinMX, CC BY-NC 4.0, with a granite body lathed from its measured profile and procedural granite and polymer. The club is full 3D geometry in a closed room with scanned CC0 surfaces and props; glossy pebbled ice, its wear map and all optical detail leave collision geometry and frozen rigid motion unchanged.",
+  "implementation_files": [
+    "scene_config.py",
+    "simulate_curling_collision.py",
+    "physics/validate_curling_collision.py",
+    "appearance/look_curling_collision.py",
+    "render_curling_collision.py",
+    "build_pcve_curling_collision.py",
+    "asset_manifest.json",
+    "tools/prepare_sketchfab_asset.py",
+    "edit_vocab.py"
+  ]
+}

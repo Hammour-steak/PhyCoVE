@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scene_id": "plastic_ruler_coin",
+  "interaction_category": "rigid_elastic",
+  "case_number": 11,
+  "entry_points": {
+    "simulate": "simulate_plastic_ruler_coin.py",
+    "render": "render_plastic_ruler_coin.py",
+    "build_pcve": "build_pcve_plastic_ruler_coin.py"
+  },
+  "supported_cases": [
+    "source",
+    "coin_mass_x02",
+    "ruler_modulus_x025",
+    "ruler_modulus_x8",
+    "delete_coin",
+    "add_second_coin"
+  ],
+  "data": {
+    "assets": "assets/scenes/plastic_ruler_coin",
+    "native_caches": "assets/scenes/plastic_ruler_coin/accepted/physics/<case>",
+    "runtime": ".runtime/plastic_ruler_coin",
+    "accepted_native_delivery": "renders/plastic_ruler_coin/accepted",
+    "rebuild_output": "renders/plastic_ruler_coin/rebuild"
+  },
+  "canonical_suites": {
+    "pcve_plastic_ruler_coin_suite": {
+      "target": "renders/pcve_suites/pcve_plastic_ruler_coin_suite",
+      "case_video_sha256": {
+        "source": "ce9d71d00a0afce540054b07376305fb840ab0bafabae026540892d4e4cf14e7",
+        "coin_mass_x02": "0cbb13496cb3823db02a6c5cfd3acb38446b44a3efd3d67e5ecf60c4474c3b28",
+        "ruler_modulus_x025": "ec0fba6fca18def3147377ba09bee88e778f3e77570a05004419efa48d19ef9b",
+        "ruler_modulus_x8": "8c27b2d0de6c58fc35df6a84e8b84cd141a72a9d66d62ac5318b7b308068a66a",
+        "delete_coin": "77a3530da005d7819500979491d538be914add8182fe6275312028adeb67b114",
+        "add_second_coin": "52fa9b3ee1f8e93f49b33d888b8c5c8fadb652a813c3fbc1d4505b8c96904058",
+        "edit_delete_ruler": "a4692cf3ed840f5b6fa6f016cc6af188fcacdf97f792937ee4d1414281d745f8"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "coin_mass_x02": "cases/edit_coin_mass_x02/video.mp4",
+        "ruler_modulus_x025": "cases/edit_ruler_modulus_x025/video.mp4",
+        "ruler_modulus_x8": "cases/edit_ruler_modulus_x8/video.mp4",
+        "delete_coin": "cases/edit_delete_coin/video.mp4",
+        "add_second_coin": "cases/edit_add_second_coin/video.mp4"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame f = native state at (f-1)/24 s"
+  }
+}

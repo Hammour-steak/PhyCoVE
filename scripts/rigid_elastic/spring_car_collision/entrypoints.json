@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "scene": "spring_car_collision",
+  "category": "rigid_elastic",
+  "case_number": 5,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_spring_car_collision.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--asset-dir",
+        "--cases",
+        "--dry-run"
+      ],
+      "resource_flags": {},
+      "stage_semantics": "none",
+      "cases": [
+        "source",
+        "remove_spring",
+        "remove_block",
+        "heavier_block",
+        "add_block",
+        "stiffer_spring"
+      ]
+    },
+    "render": {
+      "file": "render_spring_car_collision.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--case",
+        "--cache",
+        "--out-root",
+        "--blender-bin",
+        "--device",
+        "--gpu-index",
+        "--render-threads",
+        "--samples",
+        "--seed",
+        "--frame-start",
+        "--frame-end",
+        "--frames",
+        "--resume",
+        "--save-blend",
+        "--dry-run"
+      ],
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-index",
+        "threads": "--render-threads"
+      },
+      "stage_semantics": "none",
+      "cases": [
+        "source",
+        "remove_spring",
+        "remove_block",
+        "heavier_block",
+        "add_block",
+        "stiffer_spring"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_spring_car_collision.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out-root",
+        "--suite",
+        "--blender-bin",
+        "--gpu-index",
+        "--render-threads",
+        "--device",
+        "--publish",
+        "--dry-run"
+      ],
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-index",
+        "threads": "--render-threads"
+      },
+      "stage_semantics": "selector",
+      "stages": [
+        "verify",
+        "simulate",
+        "render",
+        "publish"
+      ],
+      "cases": [
+        "source",
+        "remove_spring",
+        "remove_block",
+        "heavier_block",
+        "add_block",
+        "stiffer_spring"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "A stationary toy car is launched by a precompressed guided steel coil spring and rolls into a free wooden block. MuJoCo 3.3.7 rigid bodies: the toy car (modelled in appearance/car_model.py; tools/make_car_geometry.py writes its body surface and the shared at-rest pose into assets/scenes/spring_car_collision/toy_car) collides through the convex hull of its body and rolls on four separate wheel cylinders with bearing damping and rolling resistance; the spring is a reduced axial model (k = G d^4 / (8 D^3 n) from the wire geometry and Young's modulus, preload 60 mm, damping and guide friction) driving a 12 g pusher plate; block and added block are free boxes on the table plane z = 0. Each case starts from the same frozen at-rest initial state, the holding latch is removed at t = 0 and the case is integrated at its declared time step and sampled at 24 Hz for 4 s (physics/physics_model.py; baseline and edit DSL in scene_spec.json and edit_vocab.py). The accepted solves (assets/scenes/spring_car_collision/native_cases) are replayed in Blender 4.3.2 Cycles: appearance/render_native.py keys the 96 native samples (car, wheels, block, pusher, coil shape) and checks every frame against the cache, appearance/assets_scene.py and appearance/car_model.py build the moving parts at their physical dimensions (the car body is checked against the frozen solver geometry), appearance/look.py the room, table, lighting, materials and camera. Video frame f is native sample f-1; 1280x720, 24 fps, 96 frames. tools/export_ground_truth.py writes the per-frame ground truth from the solves; tools/publish_suite.py assembles the published suite. Material values are nominal, not calibrated.",
+  "implementation_files": [
+    "simulate_spring_car_collision.py",
+    "render_spring_car_collision.py",
+    "build_pcve_spring_car_collision.py",
+    "scene_config.py",
+    "edit_vocab.py",
+    "scene_spec.json",
+    "scene_manifest.json",
+    "physics/physics_model.py",
+    "appearance/render_native.py",
+    "appearance/assets_scene.py",
+    "appearance/car_model.py",
+    "appearance/look.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/make_car_geometry.py"
+  ],
+  "assets": "assets/scenes/spring_car_collision",
+  "edit_catalog": {
+    "file": "build_pcve_spring_car_collision.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

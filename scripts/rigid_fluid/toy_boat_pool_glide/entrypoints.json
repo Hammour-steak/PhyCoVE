@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "scene": "toy_boat_pool_glide",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_toy_boat_pool_glide.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--water-state",
+        "--frames",
+        "--dx",
+        "--steps-per-frame",
+        "--substeps",
+        "--fluid-drag-rate",
+        "--settle-frames",
+        "--fluid-damping",
+        "--water-level",
+        "--fill-height",
+        "--boat-draft",
+        "--boat-mass",
+        "--boat-start",
+        "--boat-heading-deg",
+        "--preroll-frames",
+        "--boat-speed",
+        "--water-density",
+        "--water-viscosity",
+        "--hull-viscous-shear",
+        "--single-force-integration",
+        "--record-coupling-forces",
+        "--hull-pressure-mode",
+        "--initial-draft-ratio",
+        "--pool-no-slip",
+        "--quasistatic-planar-drag",
+        "--boat-presence",
+        "--water-presence",
+        "--timed-edits-json"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_toy_boat_pool_glide.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--run",
+        "--out-dir",
+        "--surface-dir-name",
+        "--frames",
+        "--camera",
+        "--survey",
+        "--resolution",
+        "--samples"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_toy_boat_pool_glide.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--source-run",
+        "--keep-intermediates",
+        "--skip-existing",
+        "--parallel",
+        "--dry-run",
+        "--reuse-sweep",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "toy_boat_pool_glide_baseline",
+        "edit_heavy_boat",
+        "edit_slow_push",
+        "edit_fast_push",
+        "edit_light_water",
+        "edit_viscous_water",
+        "edit_remove_boat",
+        "edit_heavy_boat_mid_glide"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_toy_boat_pool_glide.py",
+    "physics/check_wall_toy_boat_pool_glide.py",
+    "tools/download_lawn_assets.py",
+    "edit_vocab.py",
+    "appearance/garden_environment_toy_boat.py",
+    "physics/physics_toy_boat_pool_glide.py",
+    "tools/pipeline_toy_boat_pool_glide.sh",
+    "appearance/prepare_assets_toy_boat_pool_glide.py",
+    "appearance/realism_environment_toy_boat.py",
+    "render_toy_boat_pool_glide.py",
+    "tools/run_splash_parallel.sh",
+    "tools/run_viscous_glide.sh",
+    "simulate_toy_boat_pool_glide.py",
+    "physics/splash_toy_boat_pool_glide.py",
+    "tools/sweep_edits.sh",
+    "physics/viscous_hull_toy_boat.py",
+    "scene_manifest.json"
+  ]
+}

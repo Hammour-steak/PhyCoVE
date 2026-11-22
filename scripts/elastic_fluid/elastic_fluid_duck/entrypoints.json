@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "scene": "elastic_fluid_duck",
+  "category": "elastic_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_elastic_fluid_duck.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--case-dir"
+      },
+      "native_options": [
+        "--case-dir",
+        "--stage",
+        "--frames",
+        "--max-wall-seconds",
+        "--source-branch-case"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_elastic_fluid_duck.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--case-dir",
+        "--out-dir",
+        "--frames",
+        "--samples",
+        "--verify-only",
+        "--skip-existing",
+        "--occluders",
+        "--evidence-manifest"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_elastic_fluid_duck.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--project-root",
+        "--asset-dir",
+        "--out-root",
+        "--case-storage-root",
+        "--python",
+        "--blender",
+        "--stage",
+        "--cases",
+        "--edits-only",
+        "--jobs",
+        "--max-wall-seconds",
+        "--skip-existing",
+        "--keep-intermediates",
+        "--dry-run",
+        "--resimulate-base",
+        "--import-base-case",
+        "--import-base-render-dir"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "elastic_fluid_duck_baseline",
+        "edit_heavy_duck",
+        "edit_viscous_liquid",
+        "edit_delete_duck",
+        "edit_delete_water_contact_fixed",
+        "edit_low_density_liquid_slow_sink_185",
+        "edit_low_density_liquid_after_float_185_f73"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_elastic_fluid_duck.py",
+    "physics/caustics_elastic_fluid_duck.py",
+    "physics/optics_elastic_fluid_duck.py",
+    "render_elastic_fluid_duck.py",
+    "simulate_elastic_fluid_duck.py",
+    "physics/splash_elastic_fluid_duck.py",
+    "physics/wetness_elastic_fluid_duck.py",
+    "scene_manifest.json"
+  ]
+}

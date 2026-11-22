@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "scene": "football_goal_net",
+  "category": "rigid_elastic",
+  "case_number": 6,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_football_goal_net.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--mode",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "young_tenth",
+        "mass_double",
+        "speed_half",
+        "remove_net",
+        "mass_double_at_frame_8"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      },
+      "notes": [
+        "mass_double_at_frame_8: --mode solve runs physics/solve_timed.py (the source physics to frame 8 on the accepted solver snapshot, then the edit restored from its lossless checkpoint at that tick)",
+        "whole-clip cases: --mode native or canonical exports the accepted native state; they are not re-solved"
+      ]
+    },
+    "render": {
+      "file": "render_football_goal_net.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--cache-dir",
+        "--out",
+        "--render",
+        "--encode-only",
+        "--frames",
+        "--device",
+        "--samples",
+        "--parallel",
+        "--gpu",
+        "--blender-bin",
+        "--threads"
+      ],
+      "cases": [
+        "source",
+        "young_tenth",
+        "mass_double",
+        "speed_half",
+        "remove_net",
+        "mass_double_at_frame_8"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "output": {
+        "flag": "--out"
+      },
+      "notes": [
+        "a timed case is rendered from its merged native solve: --render --case mass_double_at_frame_8 --cache-dir <folder> (the suite keeps it in inputs/native_timed/mass_double_at_frame_8)"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_football_goal_net.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "young_tenth",
+        "mass_double",
+        "speed_half",
+        "remove_net",
+        "mass_double_at_frame_8"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Physics is the accepted native CPU solve of each case (float64 hexagonal-mesh rod network for the net with bending and Kelvin-Voigt loss, thin-shell rigid ball, viscoelastic turf foundation, frozen collision world; 192 kHz, 120 Hz output, 0-4 s). The five whole-clip caches are registered assets (assets/scenes/football_goal_net/native/<case>/). The timed edit mass_double_at_frame_8 is solved natively by physics/solve_timed.py: the source to frame 8, then the mass edit restored from the solver's lossless checkpoint at that tick; the merged cache is kept in the suite's inputs/native_timed/. Rendering replays those states unchanged into the packed stadium scene with Blender 4.3.2 Cycles (appearance/render.py: net drawn from the solver's own strand centrelines, ball keyed with the solver pose, turf bound to the solver's compression samples, fixed pitchside 90 mm camera, re-projected Poly Haven Orlando Stadium photograph behind the goal) and applies the current look (appearance/realism.py); video frame k shows native state 5(k-1). The builder verifies the accepted deliveries and the published suite and holds the edit catalog; tools/publish_suite.py assembles a suite from render outputs and tools/export_ground_truth.py writes its ground truth.",
+  "implementation_files": [
+    "simulate_football_goal_net.py",
+    "render_football_goal_net.py",
+    "build_pcve_football_goal_net.py",
+    "edit_vocab.py",
+    "physics/solve_timed.py",
+    "physics/strict_edit_plan.json",
+    "appearance/render.py",
+    "appearance/realism.py",
+    "appearance/look_base.py",
+    "appearance/surfaces.py",
+    "appearance/turf.py",
+    "appearance/visual_profile.py",
+    "appearance/visual_layout.json",
+    "appearance/camera.py",
+    "appearance/grass_binding.py",
+    "appearance/grass_patches.py",
+    "appearance/backdrop.py",
+    "appearance/stadium_backdrop.py",
+    "appearance/rebound_board.py",
+    "appearance/training_rebound_board.preset.json",
+    "tools/retained.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "assets": "assets/scenes/football_goal_net",
+  "edit_catalog": {
+    "file": "build_pcve_football_goal_net.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

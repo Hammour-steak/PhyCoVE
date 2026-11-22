@@ -1,0 +1,211 @@
+"""SI-scale, orientation-locked curling: physical and visual inputs are separate."""
+from __future__ import annotations
+import copy
+import hashlib
+import json
+
+SCENE = "curling_collision"
+BASELINE = {'physics': {'units': {'length': 'm', 'mass': 'kg', 'time': 's', 'up_axis': 'Z'},
+             'gravity_m_per_s2': 9.81,
+             'radius_m': 0.145,
+             'granite_height_m': 0.14,
+             'com_height_m': 0.07,
+             'running_band_radius_m': 0.065,
+             'track_y_m': -0.55,
+             'mass_kg': [19.5, 19.5, 19.5],
+             'object_ids': ['R01', 'B01', 'Y01'],
+             'initial_x_m': [-1.28, -0.3, 0.84],
+             'initial_velocity_m_per_s': [1.25, 0.0, 0.0],
+             'stone_pair_restitution': 0.82,
+             'ice_kinetic_friction': 0.018,
+             'degrees_of_freedom': 'world X translation only; Y, Z and all rotations constrained',
+             'model': 'Exact event-driven one-dimensional rigid-cylinder contact impulses with Newton '
+                      'restitution and Coulomb ice friction. Flat ice supplies normal support. The requested '
+                      'non-spinning, non-curling motion is a constrained rigid-body model; no 6-DOF or '
+                      'deformation claim.'},
+ 'simulation_quality': {'trajectory_hz': 480,
+                        'event_time_tolerance_sec': 1e-10,
+                        'contact_tolerance_m': 1e-09,
+                        'maximum_events': 100},
+ 'appearance': {'preset': 'photographic_club_realism',
+                'stone_asset': {'registry_id': 'sketchfab/curling_stone_filinmx',
+                                'blend_filename': 'normalized_stone.blend',
+                                'collection_name': 'Curling stone / FilinMX / normalized SI',
+                                'normalized_blend_sha256': 'ab46106cbbaf0c1bcf4bc61bde1ecbae7f5fd761513edb2b3dcec7b86bf61285',
+                                'source_glb_sha256': '4395792301a6b11ef9e5c27a7aea85d489cb84335f87155324cd19d1818e4112',
+                                'source_page': 'https://sketchfab.com/3d-models/curling-stone-436c3ebc3eb14cdb92c83adb9190b34e',
+                                'author': 'FilinMX',
+                                'license': 'CC BY-NC 4.0'},
+                'seed': 4090,
+                'granite_tone_multiplier': 0.65,
+                'handle_colors_rgb': [[0.5, 0.01, 0.016], [0.01, 0.075, 0.46], [0.9, 0.6, 0.0]],
+                'rink_width_m': 4.75,
+                'rink_length_m': 44.5,
+                'house_center_m': [2.75, 0.0],
+                'house_radii_m': [1.83, 1.22, 0.61, 0.1524],
+                'pebble_spacing_m': 0.0055,
+                'pebble_height_m': 0.0003,
+                'camera': {'position_m': [-2.5, -7.2, 0.78],
+                           'target_m': [0.55, -0.1, 0.42],
+                           'lens_mm': 66,
+                           'sensor_width_mm': 36.0,
+                           'dof_fstop': 3.2,
+                           'focus_distance_m': 7.33},
+                'camera_finish': {'barrel_distortion': 0.0,
+                                  'lateral_dispersion': 0.003,
+                                  'bloom_threshold': 1.2,
+                                  'bloom_mix': -0.9,
+                                  'bloom_size': 8,
+                                  'vignette_ellipse': [1.25, 1.25],
+                                  'vignette_softness_percent': 30.0,
+                                  'vignette_strength': 0.18},
+                'lighting_power_w': {'ceiling_batten': 62,
+                                     'gallery_spill': 10,
+                                     'walkway_downlight_scale': 1.0},
+                'ice_finish': {'base_rgb': [0.6, 0.64, 0.67],
+                               'blue_paint_rgb': [0.006, 0.055, 0.34],
+                               'red_paint_rgb': [0.48, 0.012, 0.018],
+                               'line_rgb': [0.02, 0.03, 0.05],
+                               'divider_rgb': [0.03, 0.05, 0.09],
+                               'frost_rgb': [0.72, 0.75, 0.77],
+                               'base_roughness': 0.5,
+                               'coat_weight': 1.0,
+                               'coat_ior': 1.39,
+                               'coat_roughness_range': [0.035, 0.09],
+                               'scuff_roughness_delta': 0.1,
+                               'paint_edge_softening_m': 0.0015,
+                               'pebble_albedo_contrast': 0.12,
+                               'pebble_cluster_scale_per_m': 70.0,
+                               'pebble_cluster_contrast': 0.07,
+                               'marking_under_ice_haze': 0.05,
+                               'mesoscale_frost_contrast': 0.05,
+                               'mesoscale_frost_scale_per_m': 1.6,
+                               'lane_albedo_delta': 0.11,
+                               'track_albedo_delta': 0.09,
+                               'scuff_albedo_delta': 0.14,
+                               'board_frost_width_m': 1.1,
+                               'board_frost_mix': 0.4,
+                               'pebble_normal_strength': 0.12,
+                               'undulation_scale_per_m': 1.1,
+                               'undulation_height_m': 0.0005,
+                               'wear_map_pixels': [4096, 3072],
+                               'wear_map_origin_m': [-6.0, -6.0],
+                               'wear_map_extent_m': [18.0, 13.5],
+                               'wear_tracks_per_sheet': 110,
+                               'wear_scuffs_per_sheet': 900,
+                               'debris_cells_per_m': 6.0,
+                               'debris_fraction': 0.12,
+                               'debris_radius_m': 0.003,
+                               'debris_rgb': [0.04, 0.035, 0.03],
+                               'mottle_scale_per_m': 7.0,
+                               'mottle_contrast': 0.05},
+                'stone_finish': {'handle_roughness': 0.26,
+                                 'handle_roughness_variation': 0.08,
+                                 'handle_coat_weight': 0.35,
+                                 'handle_coat_roughness': 0.1,
+                                 'granite_roughness_min': 0.16,
+                                 'granite_roughness_max': 0.22,
+                                 'handling_scuff_scale_per_m': 18.0,
+                                 'handling_scuff_roughness': 0.08,
+                                 'lower_shoulder_roughness': 0.16,
+                                 'granite_dark_rgb': [0.01, 0.011, 0.012],
+                                 'granite_mid_rgb': [0.055, 0.062, 0.06],
+                                 'granite_light_rgb': [0.17, 0.175, 0.17],
+                                 'granite_dark_fraction': 0.2,
+                                 'granite_light_fraction': 0.12,
+                                 'granite_crystal_spacing_m': 0.0034,
+                                 'granite_warp_m': 0.0018,
+                                 'granite_fine_mix': 0.42,
+                                 'granite_cloud_scale_per_m': 26.0,
+                                 'granite_cloud_contrast': 0.16,
+                                 'strike_band_centre_m': 0.0655,
+                                 'strike_band_half_width_m': [0.0125, 0.016],
+                                 'strike_band_pale': 0.45,
+                                 'strike_band_rgb': [0.15, 0.155, 0.15],
+                                 'strike_band_chip_rgb': [0.34, 0.35, 0.34],
+                                 'strike_band_roughness': 0.6},
+                'arena': {'sheet_centers_y_m': [0.0, 4.75],
+                          'far_board_y_m': 7.205,
+                          'wall_y_m': 10.05,
+                          'ceiling_height_m': 5.5,
+                          'world_strength': 0.01,
+                          'world_rgb': [0.73, 0.79, 0.86],
+                          'wall_rgb': [0.25, 0.245, 0.22],
+                          'lighting_reference': 'Rows of lengthwise ceiling battens over a closed room; warm '
+                                                'viewing gallery behind glazing; glossy opaque pebbled-ice '
+                                                'optical approximation.',
+                          'door_x_m': 9.0,
+                          'gallery_center_z_m': 1.83,
+                          'fixture_emission': 10.0,
+                          'fixture_size_m': [3.4, 0.26],
+                          'fixture_rows_y_m': [-9.0, -6.0, -3.2, -0.8, 1.6, 3.95],
+                          'fixture_columns_x_m': [-12.0, -7.5, -3.0, 1.5, 6.0, 10.5],
+                          'wall_band_rgb': [0.1, 0.125, 0.12],
+                          'wall_band_top_m': 1.05,
+                          'wall_block_tile_m': 1.75,
+                          'wall_floor_grime': 0.45,
+                          'walkway_downlights': [[-3.4, 70], [1.1, 88], [3.9, 44], [6.6, 92], [11.0, 70]],
+                          'broom_x_m': [3.3, 3.68, 9.95],
+                          'conduit_z_m': 2.62,
+                          'photo_z_m': 2.36,
+                          'gallery_blind_slats': 9,
+                          'bumper_section_m': 0.152,
+                          'bumper_length_m': 2.134,
+                          'bumper_rgb': [0.022, 0.024, 0.027],
+                          'wall_block_m': [0.4, 0.2],
+                          'wall_joint_m': 0.008,
+                          'wall_streak': 0.07,
+                          'wall_patch_low': 0.93,
+                          'gallery_window_x_m': 2.0,
+                          'gallery_window_size_m': [3.1, 1.46],
+                          'bar_room_offset_m': [1.0, 13.55, -0.25],
+                          'bar_room_x_limits_m': [-4.5, 6.5],
+                          'bar_room_texture_px': 512,
+                          'bar_room_lights': [[3.0, 13.5, 3.9, 55], [1.0, 15.0, 3.9, 35]],
+                          'photo_x_m': [4.62, 5.2, 5.82, 6.42, 7.0, 7.56],
+                          'photo_lower_row_x_m': [4.6, 5.3, 6.0, 6.72, 7.42],
+                          'photo_lower_row_z_m': 1.72,
+                          'bench_x_m': [2.0, 6.0],
+                          'towel_xy_m': [5.55, 0.46],
+                          'bin_x_m': 0.32}},
+ 'render': {'resolution': [1280, 720],
+            'fps': 24,
+            'duration_sec': 4.0,
+            'total_frames': 96,
+            'samples': 128,
+            'path_bounces': {'total': 12, 'diffuse': 6, 'glossy': 6, 'transmission': 8},
+            'adaptive_threshold': 0.01,
+            'denoising': True,
+            'color_management': 'AgX',
+            'exposure': -0.05,
+            'motion_blur_shutter_frames': 0.25,
+            'encoding': {'codec': 'libx264', 'crf': 17, 'pixel_format': 'yuv420p'},
+            'look': 'AgX - High Contrast'}}
+def merge(base, override):
+    result = copy.deepcopy(base)
+    for key, value in override.items():
+        if key not in result:
+            raise ValueError(f"Unknown configuration field: {key}")
+        result[key] = merge(result[key], value) if isinstance(result[key], dict) and isinstance(value, dict) else copy.deepcopy(value)
+    return result
+
+def scenario(override=None):
+    cfg = merge(BASELINE, override or {})
+    ph, rd = cfg["physics"], cfg["render"]
+    if rd["total_frames"] != round(rd["fps"] * rd["duration_sec"]):
+        raise ValueError("Frame count must equal fps times duration")
+    if not len(ph["mass_kg"]) == len(ph["object_ids"]) == len(ph["initial_x_m"]) == len(ph["initial_velocity_m_per_s"]) or any(m <= 0 for m in ph["mass_kg"]):
+        raise ValueError("Every stone needs a positive mass, a position and a speed")
+    if not 0 <= ph["stone_pair_restitution"] <= 1 or ph["ice_kinetic_friction"] <= 0:
+        raise ValueError("Restitution must be dissipative and ice friction positive")
+    if any(b-a <= 2*ph["radius_m"] for a,b in zip(ph["initial_x_m"], ph["initial_x_m"][1:])):
+        raise ValueError("Initial stones must have positive gaps")
+    # The red stone (R01, always first) is the only one launched; once a DELETE has removed it, every
+    # remaining stone starts at rest.
+    launched = ph["object_ids"][0] == "R01"
+    if (launched and ph["initial_velocity_m_per_s"][0] <= 0) or any(v != 0.0 for v in ph["initial_velocity_m_per_s"][int(launched):]):
+        raise ValueError("Only the red stone has positive initial speed")
+    return cfg
+
+def signature(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":")).encode()).hexdigest()

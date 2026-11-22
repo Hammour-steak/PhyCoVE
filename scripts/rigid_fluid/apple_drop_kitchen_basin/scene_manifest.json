@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "scene_id": "apple_drop_kitchen_basin",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_apple_drop_kitchen_basin.py",
+    "render": "render_apple_drop_kitchen_basin.py",
+    "build_pcve": "build_pcve_apple_drop_kitchen_basin.py"
+  },
+  "supported_cases": [
+    "source",
+    "edit_heavy_apple",
+    "edit_high_density_liquid",
+    "edit_viscous_liquid",
+    "delete_water",
+    "delete_water_at_2s"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_apple_drop_kitchen_basin_suite": {
+      "target": "renders/pcve_suites/pcve_apple_drop_kitchen_basin_suite",
+      "case_video_sha256": {
+        "source": "5b92e9081f5a7ff0ebaaeab5703f4bbd4b00a26e6347f71cae76f4e222b7bdf1",
+        "edit_heavy_apple": "32cbad13c9a1b638f64e220a12470f4f5f576b8c7601da4efb9db3dedc1c7d00",
+        "edit_high_density_liquid": "3e6dd1df9cecfe2b042766250e3dfe7b6ab1883094455508d875eb1609f391e6",
+        "edit_viscous_liquid": "66577bed35af67fa3bed33b7c98f643a53756b3243ab2d975f4f97d38b7d3413",
+        "delete_water": "958a6e3fa204b0eed1844c3226e9311fe1539f96df6b5e97311945449ca36249",
+        "delete_water_at_2s": "8a993a3905a3f5ebdd4df3b89cf816a8d0b7a7cbf4e1c348a5d1a2b2314922db",
+        "edit_delete_apple": "8b2ecd9d35dffdc71fce169fefa9b57600dad61da6b87982dce6a54496314b20"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "edit_heavy_apple": "edit_heavy_apple",
+        "edit_high_density_liquid": "edit_high_density_liquid",
+        "edit_viscous_liquid": "edit_viscous_liquid",
+        "delete_water": "edit_delete_water",
+        "delete_water_at_2s": "edit_delete_water_at_2s"
+      }
+    }
+  }
+}

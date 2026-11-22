@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "scene": "metro_security_bag_curtain",
+  "category": "rigid_elastic",
+  "case_number": 12,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_metro_security_bag_curtain.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--case",
+        "--tag",
+        "--out-root",
+        "--dt",
+        "--iterations",
+        "--duration",
+        "--source-cache"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x100",
+        "belt_speed_x2",
+        "friction_x0p02",
+        "delete_curtain",
+        "delete_curtain_at_frame_12"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "python_runtime": ".venv-rigid-elastic/bin/python"
+    },
+    "render": {
+      "file": "render_metro_security_bag_curtain.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--case",
+        "--tag",
+        "--cache-root",
+        "--out-root",
+        "--frames",
+        "--samples",
+        "--width",
+        "--device",
+        "--backend",
+        "--save-blend",
+        "--grounding-audit",
+        "--assemble-only",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--render-threads"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x100",
+        "belt_speed_x2",
+        "friction_x0p02",
+        "delete_curtain",
+        "delete_curtain_at_frame_12"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_metro_security_bag_curtain.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out-root",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--render-threads",
+        "--device",
+        "--samples"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x100",
+        "belt_speed_x2",
+        "friction_x0p02",
+        "delete_curtain",
+        "delete_curtain_at_frame_12"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads"
+      },
+      "python_runtime": ".venv-rigid-elastic/bin/python"
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Float64 CPU (Numba) solve of six independent clamped strip shells (discrete-shell membrane and bending with Kelvin-Voigt viscosity, strip self-contact) two-way coupled to planar rigid backpacks (x, z, pitch) that ride a kinematic belt and leave over a fixed lip, a stainless chute and a pickup deck whose planes are the solver's support profile; the bag collider is a signed-distance field of the scanned backpack (assets/scenes/metro_security_bag_curtain/backpack). Each whole-clip edit changes one edit_vocab parameter or presence flag through the shared DSL; the timed edit delete_curtain_at_frame_12 restores the exact float64 source state of frame 12 (t = 11/24 s) from the source states (simulate --source-cache), removes the curtain there and keeps solving, frames 1-11 being the source states. Motion and curtain deformation come only from the solver. The accepted native states of the source and the whole-clip edits are read from assets/scenes/metro_security_bag_curtain/native and the timed edit's merged states from the suite's inputs/native_timed/; they are replayed in Blender 4.3.2 (appearance/render_scene.py builds the scanner, belt, outfeed and station; appearance/realism.py is the current look; a timed DELETE hides the curtain from its edit frame) with a fixed camera; replay audits compare every frame with the states. tools/export_ground_truth.py writes per-frame ground truth from the same states, tools/publish_suite.py assembles a suite from render outputs, tools/encode_case.py encodes frames rendered on a host without ffmpeg and tools/worker_guard.py launches a Blender job on a checked idle GPU. Effective, uncalibrated material and friction values.",
+  "assets": "assets/scenes/metro_security_bag_curtain",
+  "implementation_files": [
+    "simulate_metro_security_bag_curtain.py",
+    "render_metro_security_bag_curtain.py",
+    "build_pcve_metro_security_bag_curtain.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/simulate_case.py",
+    "physics/shell_solver.py",
+    "physics/constitutive.py",
+    "physics/self_contact.py",
+    "physics/planar_rigid.py",
+    "physics/curtain_coupling.py",
+    "appearance/render_scene.py",
+    "appearance/scene_environment.py",
+    "appearance/checkpoint_details.py",
+    "appearance/detail_refinement.py",
+    "appearance/monitor_upgrade.py",
+    "appearance/concourse_return.py",
+    "appearance/outfeed.py",
+    "appearance/station_details.py",
+    "appearance/realism.py",
+    "appearance/audit_grounding.py",
+    "appearance/audit_scene_reuse.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/encode_case.py",
+    "tools/worker_guard.py"
+  ],
+  "data_id": "metro_security_bag_curtain",
+  "review_status": "pending_user_review",
+  "edit_catalog": {
+    "file": "build_pcve_metro_security_bag_curtain.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  },
+  "data": {
+    "assets": "assets/scenes/metro_security_bag_curtain",
+    "native_states": "assets/scenes/metro_security_bag_curtain/native/accepted_states",
+    "runtime": ".runtime/metro_security_bag_curtain",
+    "accepted_delivery": "renders/metro_security_bag_curtain/accepted",
+    "published_suite": "renders/pcve_suites/pcve_metro_security_bag_curtain_suite"
+  }
+}

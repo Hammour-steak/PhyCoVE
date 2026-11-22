@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scene_id": "pot_lid_drop",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_pot_lid_drop.py",
+    "render": "render_pot_lid_drop.py",
+    "build_pcve": "build_pcve_pot_lid_drop.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "pot_lid_drop_baseline",
+    "edit_light_gravity",
+    "edit_add_bowl_at_landing",
+    "edit_slick_rim",
+    "edit_bouncy_lid",
+    "edit_zero_gravity_timed"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_pot_lid_drop_suite": {
+      "target": "renders/pcve_suites/pcve_pot_lid_drop_suite",
+      "case_video_sha256": {
+        "edit_add_bowl_at_landing": "11b6ab599008bb54df902cb53a94e779bb0a4e98dbe353061bbdd1616e168728",
+        "edit_bouncy_lid": "0b6d99462b6772673adcd1eae596ab7a6e4f4d4fe792295d9e5e8e2cf562dc32",
+        "edit_light_gravity": "4addc9863b995bc0ea64539728bb526891acda2437304d81f06e84583ae366e0",
+        "edit_slick_rim": "13a32fd30818fd0fd4efd9d5ac37fdec0dcee662910b4fa4d3f0f969120412f4",
+        "edit_zero_gravity_timed": "7cbf9ddaad2a0a5b4260a99877d62d904d99441f9152c4d8628374c2524903a5",
+        "pot_lid_drop_baseline": "6031836e56ce11d492be90b9a3962a8674ce198fcf1ae95fe88fec77e08a11e7"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "pot_lid_drop_baseline": "source",
+        "edit_light_gravity": "edit_light_gravity",
+        "edit_add_bowl_at_landing": "edit_add_bowl_at_landing",
+        "edit_slick_rim": "edit_slick_rim",
+        "edit_bouncy_lid": "edit_bouncy_lid",
+        "edit_zero_gravity_timed": "edit_zero_gravity_timed"
+      },
+      "public_case_video_sha256": {
+        "edit_add_bowl_at_landing": "11b6ab599008bb54df902cb53a94e779bb0a4e98dbe353061bbdd1616e168728",
+        "edit_bouncy_lid": "0b6d99462b6772673adcd1eae596ab7a6e4f4d4fe792295d9e5e8e2cf562dc32",
+        "edit_light_gravity": "4addc9863b995bc0ea64539728bb526891acda2437304d81f06e84583ae366e0",
+        "edit_slick_rim": "13a32fd30818fd0fd4efd9d5ac37fdec0dcee662910b4fa4d3f0f969120412f4",
+        "edit_zero_gravity_timed": "7cbf9ddaad2a0a5b4260a99877d62d904d99441f9152c4d8628374c2524903a5",
+        "source": "6031836e56ce11d492be90b9a3962a8674ce198fcf1ae95fe88fec77e08a11e7"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/pot_lid_drop",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/pot_lid_drop",
+      "scenes/pot_lid_drop"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

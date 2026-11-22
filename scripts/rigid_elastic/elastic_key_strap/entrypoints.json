@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "scene": "elastic_key_strap",
+  "category": "rigid_elastic",
+  "case_number": 13,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_elastic_key_strap.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--case",
+        "--out-root",
+        "--out",
+        "--duration",
+        "--dt-factor",
+        "--rows",
+        "--source-cache"
+      ],
+      "cases": [
+        "source",
+        "keys_mass_5x",
+        "strap_soft",
+        "strap_stiff",
+        "remove_strap",
+        "keys_mass_5x_at_frame_24"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "requirements": "Python 3.10 with numpy, numba, scipy and mujoco==3.3.7 (CPU). The repository's .venv-rigid-elastic has mujoco 3.15.0, which rejects the model; the accepted solves are kept as inputs."
+    },
+    "render": {
+      "file": "render_elastic_key_strap.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--case",
+        "--out-root",
+        "--out",
+        "--frames",
+        "--samples",
+        "--device",
+        "--cache-dir",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "keys_mass_5x",
+        "strap_soft",
+        "strap_stiff",
+        "remove_strap",
+        "keys_mass_5x_at_frame_24"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "requirements": "Blender 4.3.2 (tools/blender-4.3.2-linux-x64 in the repository root when present, else pcve_assets.blender()); CPU or an NVIDIA GPU (OptiX/CUDA)"
+    },
+    "build_pcve": {
+      "file": "build_pcve_elastic_key_strap.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--accepted-physics",
+        "--device",
+        "--samples",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "keys_mass_5x",
+        "strap_soft",
+        "strap_stiff",
+        "remove_strap",
+        "keys_mass_5x_at_frame_24"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Finite-strain plane-stress Neo-Hookean silicone strap (25 x 2 node ribbon, discrete bending, objective Kelvin-Voigt reference-strain viscosity) as a numba passive-force callback on native MuJoCo 3.3.7 rigid bodies: a free steel keyring with two keys on ball joints (convex hulls of the key meshes), the strap pinned to the rack hook and welded to the ring, contact with the cabinet top and the wall; explicit Euler at dt = 1/768000 s on the CPU, sampled at 24 Hz for 4 s (physics/physics_model.py, baseline in physics/scene_spec.json, DSL-bound edits in edit_vocab.py). The timed edit keys_mass_5x_at_frame_24 restores the exact source state (qpos, qvel) of frame 24 from a source solve (--source-cache, default the accepted source solve), applies the key mass there and keeps solving; frames 1-23 are the source solve. The accepted whole-clip solves (asset store scenes/elastic_key_strap/native_solves) and the merged timed solve kept in the published suite (inputs/native_timed/<case>) are replayed in Blender 4.3.2 Cycles: appearance/render_scene.py builds the moving parts, rack, cabinet and fixed camera; appearance/realism.py adds the daylit-entryway look, bakes the 96 native states into keyframes and strap shape keys for motion blur and checks every frame against the cache. Video frame f is native state f-1; 1280x720, 24 fps, 96 frames. tools/publish_suite.py assembles a new suite in the current format from finished renders and tools/export_ground_truth.py writes its ground truth from the native solves. Material values are nominal, not calibrated.",
+  "implementation_files": [
+    "simulate_elastic_key_strap.py",
+    "render_elastic_key_strap.py",
+    "build_pcve_elastic_key_strap.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/physics_model.py",
+    "physics/scene_spec.json",
+    "appearance/render_scene.py",
+    "appearance/realism.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "assets": "assets/scenes/elastic_key_strap",
+  "edit_catalog": {
+    "file": "build_pcve_elastic_key_strap.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

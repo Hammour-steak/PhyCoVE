@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "scene_id": "milk_pitcher_glass",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_milk_pitcher_glass.py",
+    "render": "render_milk_pitcher_glass.py",
+    "build_pcve": "build_pcve_milk_pitcher_glass.py"
+  },
+  "supported_cases": [
+    "milk_pitcher_glass_baseline",
+    "edit_high_flow_speed",
+    "edit_low_flow_speed",
+    "edit_delete_milk",
+    "edit_stop_after_2s"
+  ],
+  "workflows": {},
+  "configuration": {
+    "simulation": {
+      "solver": "Genesis 1.4.3 DFSPH at 1 mm; glass and counter are static ghost-particle boundaries with their own pressure (split density solve); Akinci surface tension scaled to 0.046 N/m",
+      "baseline_physics": {
+        "milk_density_kg_m3": 1030.0,
+        "milk_kinematic_viscosity_m2_s": 2.2e-06,
+        "spout_flow_m3_s": 7.5e-05,
+        "pour_start_sec": 0.25,
+        "gravity_m_s2": 9.81
+      },
+      "fps": 24,
+      "frames": 96,
+      "steps_per_frame": 10,
+      "substeps": 32,
+      "spout": {
+        "exit_m": [
+          -0.0345,
+          0.005,
+          0.16
+        ],
+        "axis": [
+          0.70711,
+          0.0,
+          -0.70711
+        ],
+        "jet_radius_m": 0.008
+      },
+      "timed_stop": "edit_stop_after_2s continues the source run from its frame-48 state (--resume-from, --resume-frame)"
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 64,
+      "denoising": true,
+      "motion_blur_shutter_frames": 0.5,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96
+    },
+    "edit_flags": "edit_vocab.sim_args maps each edit DSL onto simulate_milk_pitcher_glass.py flags"
+  },
+  "assets": {
+    "scene_template": {
+      "path": "assets/scenes/milk_pitcher_glass/milk_carton_kitchen.blend",
+      "sha256": "7f407c5d9b10d9eef3f2ed84e8f494cd63b1827bdca04217b5b16390656503bb"
+    },
+    "glass_mesh": "geometry/glass_cup.npz"
+  },
+  "data": {
+    "native_runs": "not kept: the per-case particle runs of the published videos were not preserved; renders/pcve_suites/pcve_milk_pitcher_glass_suite/inputs/ holds the native suite manifest and videos"
+  },
+  "canonical_suites": {
+    "pcve_milk_pitcher_glass_suite": {
+      "target": "renders/pcve_suites/pcve_milk_pitcher_glass_suite",
+      "public_case_ids": {
+        "milk_pitcher_glass_baseline": "source",
+        "edit_high_flow_speed": "edit_high_flow_speed",
+        "edit_low_flow_speed": "edit_low_flow_speed",
+        "edit_delete_milk": "edit_delete_milk",
+        "edit_stop_after_2s": "edit_stop_after_2s"
+      },
+      "case_video_sha256": {
+        "milk_pitcher_glass_baseline": "99a23676f32d66f2c3ff1bd2b9070a1a7301409dc6f846b53f44bfdd74ce19dc",
+        "edit_high_flow_speed": "dec42d6140e196202c7829eaa4068040d935d52d8e30984e7d3993f35bfd3f22",
+        "edit_low_flow_speed": "808387e417933dce9c20d4d02505ff3fee1b277dfa47a897f55c9d25588b7f35",
+        "edit_delete_milk": "79b1948bbd6e9d2cc0c8daed2906a7b608df5f31ce8647a2dae3f0860ebaf8f9",
+        "edit_stop_after_2s": "e50c0baa8d2010dbc72e225d05dee3c5040ec09e9aceee59397dc3b9cd0c1332"
+      }
+    }
+  }
+}

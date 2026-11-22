@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "scene": "silicone_bag_can",
+  "category": "rigid_elastic",
+  "case_number": 14,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_silicone_bag_can.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--initial",
+        "--gpu-uuid",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "can_mass_x2",
+        "bag_young_x0_25",
+        "bag_young_x5",
+        "delete_bag",
+        "add_second_can"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_silicone_bag_can.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--look",
+        "--source",
+        "--out",
+        "--template",
+        "--frames",
+        "--samples",
+        "--device",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "can_mass_x2",
+        "bag_young_x0_25",
+        "bag_young_x5",
+        "delete_bag",
+        "add_second_can"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_silicone_bag_can.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "can_mass_x2",
+        "bag_young_x0_25",
+        "bag_young_x5",
+        "delete_bag",
+        "add_second_can"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "libuipc 0.0.28 CUDA solve (physics/solver.py) of a 1.4 mm silicone tote as a NeoHookean thin shell with discrete-shell bending (both from the same E, nu and local thickness; 2.4 mm reinforced handles with a moulded transition, Rayleigh mass damping C = 6 M s^-1), hanging from fixed vertices at the middle of its two handles, coupled through IPC frictional contact to a 340 g closed tin-can mesh as an affine body, with static colliders for the counter and cabinet and a native sub-step Newton/Coulomb floor-restitution impulse (e = 0.30); dt = 1/1920 s, 97 states at 24 Hz over 4 s. Every case except delete_bag starts from a prepared bag state solved under gravity first (prepared_empty.npz; add_second_can from prepared_preloaded.npz with the second can already resting in the bag), the falling can always starting at rest from the same transform; each edit changes only its DSL-resolved parameter (can mass, bag Young's modulus), removes the bag body, or adds the preloaded second can. appearance/render_counter.py is the accepted renderer: it opens the packed kitchen (assets source_scene.blend), keys every native bag state as an exact shape key and the native can transforms, replays the per-vertex wall thickness, and audits the replay; appearance/realism.py, the current look, binds the native states in the same way and only restyles static room geometry, lights and materials, so bag shapes, can transforms, camera and frame timing are those of the native solve. tools/export_ground_truth.py writes each case's ground truth from its native cache and the fixed camera; --stage verify checks the accepted delivery (pinned SHA-256), the native inputs and the published suite. Effective material parameters, not fitted to a measured bag.",
+  "implementation_files": [
+    "simulate_silicone_bag_can.py",
+    "render_silicone_bag_can.py",
+    "build_pcve_silicone_bag_can.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/solver.py",
+    "physics/geometry.py",
+    "physics/floor_contact.py",
+    "physics/vocab.py",
+    "physics/scene_spec.json",
+    "appearance/realism.py",
+    "appearance/render_counter.py",
+    "appearance/optics_native.py",
+    "appearance/build_details.py",
+    "tools/worker_run.py",
+    "tools/audit_native.py",
+    "tools/retained_delivery.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "assets": "assets/scenes/silicone_bag_can",
+  "edit_catalog": {
+    "file": "build_pcve_silicone_bag_can.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

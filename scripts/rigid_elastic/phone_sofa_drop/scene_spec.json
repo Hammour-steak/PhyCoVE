@@ -1,0 +1,93 @@
+{
+  "scene_id": "phone_sofa_drop",
+  "fps": 24,
+  "frame_count": 96,
+  "duration_s": 4.0,
+  "resolution": [
+    1280,
+    720
+  ],
+  "native_clock": "libuipc dt 1/1200 s; states stored at 240 Hz (simulation_dense.npz) and 30 Hz (simulation.npz); video frame f shows the 240 Hz state 10 (f - 1)",
+  "phone_dimensions_m": [
+    0.0706,
+    0.1466,
+    0.00825
+  ],
+  "cushion_dimensions_m": [
+    0.7733,
+    0.9589,
+    0.2342
+  ],
+  "baseline": {
+    "phone_mass_kg": 0.187,
+    "cushion_young_modulus_pa": 1000.0,
+    "phone_present": true,
+    "cushion_present": true,
+    "pillow_present": false,
+    "phone_contact_friction": 0.5,
+    "gravity_m_s2": 5.0,
+    "drop_height_m": 0.25,
+    "phone_initial_velocity_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "phone_initial_angular_velocity_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pillow_asset_scale": 0.78,
+    "pillow_center_m": [
+      0.0,
+      -0.18,
+      0.5657728340019473
+    ],
+    "pillow_orientation_quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "pillow_young_modulus_pa": 1800.0,
+    "pillow_poisson_ratio": 0.1,
+    "pillow_density_kg_m3": 30.0,
+    "pillow_shear_viscosity_pa_s": 40.0,
+    "pillow_bulk_viscosity_pa_s": 80.0,
+    "pillow_contact_friction": 0.8
+  },
+  "cases": {
+    "source": {},
+    "remove_cushion": {
+      "cushion_present": false
+    },
+    "added_pillow": {
+      "pillow_present": true
+    },
+    "stiff_x100": {
+      "cushion_young_modulus_pa": 100000.0
+    },
+    "soft_e_div2": {
+      "cushion_young_modulus_pa": 500.0
+    },
+    "heavy_phone": {
+      "phone_mass_kg": 1.87
+    }
+  },
+  "edit_dsl": {
+    "remove_cushion": "DELETE cushion",
+    "added_pillow": "ADD landing_pillow AT PRESET middle_seat",
+    "stiff_x100": "SET cushion.young_modulus TIMES 100",
+    "soft_e_div2": "SET cushion.young_modulus TIMES 0.5",
+    "heavy_phone": "SET phone.mass TIMES 10"
+  },
+  "edit_semantics": {
+    "remove_cushion": "Remove the middle seat cushion; the phone lands on the upholstered rigid wooden seat deck underneath.",
+    "added_pillow": "Add a small blue-grey pillow lying flat on the middle cushion directly below the unchanged phone release point.",
+    "stiff_x100": "Multiply only the middle cushion's effective Young's modulus by 100.",
+    "soft_e_div2": "Multiply only the middle cushion's effective Young's modulus by 0.5.",
+    "heavy_phone": "Multiply only the phone's mass by 10."
+  },
+  "physics_source": "the original solver producers re-run from t = 0 to 4 s with every physical setting unchanged; the registered caches assets/scenes/phone_sofa_drop/solves_4s_240hz are the reproduction inputs",
+  "appearance": "appearance/realism_look.py + appearance/appearance.json"
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scene_id": "egg_dough",
+  "interaction_category": "rigid_elastic",
+  "entry_points": {
+    "simulate": "simulate_egg_dough.py",
+    "render": "render_egg_dough.py",
+    "build_pcve": "build_pcve_egg_dough.py"
+  },
+  "configuration": [
+    "dough_config.py",
+    "presets.json",
+    "edit_vocab.py",
+    "appearance/appearance.json"
+  ],
+  "supported_cases": [
+    "source",
+    "soft_dough_e5",
+    "light_ball",
+    "heavy_ball",
+    "delete_egg"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_egg_dough_suite": {
+      "target": "renders/pcve_suites/pcve_egg_dough_suite",
+      "case_video_sha256": {
+        "source": "3adefa2ad41b5041542f92dcc640a493f7f2b5d7f3c6bcc0bc48b6d5fb08e564",
+        "soft_dough_e5": "12ce2dc73096f12b3ec707e32f1ec85c3aac8b6e6d90ac131d905655607f7a82",
+        "light_ball": "50aa7ad492741ae1aaaa764f3448f952143cba6ce409bdc82a063affd8b415aa",
+        "heavy_ball": "7669ea17515fa3dd27b4fa00dcbbc9e244ffecaf283bfd58db8b70d640e17cb2",
+        "delete_egg": "2a8fe70713a2929b8b1b9cf6529282a203c02fe47626fa49347d8f7440330d0f",
+        "edit_delete_dough": "7471aa82e4dc888330dbd23e2b137333dd668c3e96e23931534f01997d9f2690"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "soft_dough_e5": "edit_soft_dough_e5",
+        "light_ball": "edit_light_egg",
+        "heavy_ball": "edit_heavy_egg",
+        "delete_egg": "edit_delete_egg"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_dough": "7471aa82e4dc888330dbd23e2b137333dd668c3e96e23931534f01997d9f2690",
+        "edit_delete_egg": "2a8fe70713a2929b8b1b9cf6529282a203c02fe47626fa49347d8f7440330d0f",
+        "edit_heavy_egg": "7669ea17515fa3dd27b4fa00dcbbc9e244ffecaf283bfd58db8b70d640e17cb2",
+        "edit_light_egg": "50aa7ad492741ae1aaaa764f3448f952143cba6ce409bdc82a063affd8b415aa",
+        "edit_soft_dough_e5": "12ce2dc73096f12b3ec707e32f1ec85c3aac8b6e6d90ac131d905655607f7a82",
+        "source": "3adefa2ad41b5041542f92dcc640a493f7f2b5d7f3c6bcc0bc48b6d5fb08e564"
+      }
+    }
+  }
+}

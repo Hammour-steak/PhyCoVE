@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scene_id": "silicone_bag_can",
+  "interaction_category": "rigid_elastic",
+  "case_number": 14,
+  "entry_points": {
+    "simulate": "simulate_silicone_bag_can.py",
+    "render": "render_silicone_bag_can.py",
+    "build_pcve": "build_pcve_silicone_bag_can.py"
+  },
+  "supported_cases": [
+    "source",
+    "can_mass_x2",
+    "bag_young_x0_25",
+    "bag_young_x5",
+    "delete_bag",
+    "add_second_can"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/silicone_bag_can",
+    "native_inputs": "assets/scenes/silicone_bag_can/native",
+    "template": "assets/scenes/silicone_bag_can/source_scene.blend",
+    "prepared_states": [
+      "assets/scenes/silicone_bag_can/prepared_empty.npz",
+      "assets/scenes/silicone_bag_can/prepared_preloaded.npz"
+    ],
+    "runtime": "staged on the host that runs the native solves; not in this checkout",
+    "accepted_delivery": "renders/silicone_bag_can/accepted/pcve_silicone_bag_can_suite",
+    "rebuild_output": "renders/silicone_bag_can/rebuild"
+  },
+  "canonical_suites": {
+    "pcve_silicone_bag_can_suite": {
+      "target": "renders/pcve_suites/pcve_silicone_bag_can_suite",
+      "look": "appearance/realism.py over the packed kitchen with the accepted native states",
+      "case_video_sha256": {
+        "source": "172f2578597660c6b92360868fdcfd48f54e2109c0f7a8722bc1455b066a22c6",
+        "can_mass_x2": "b562f406b76cac10a546db18c02fb1401a162a6b5edb98905cf7d7e3c1df8812",
+        "bag_young_x0_25": "079de4ceb076d345d5fabdbe6e19bda32499cd2f143b268fe5bbbb92592e4ffb",
+        "bag_young_x5": "027e1e1ace8691dec19cb928884e83558ce29dacde46078a6c4c587d436fa9fa",
+        "delete_bag": "0532261ac4d6b61904bf5402d829073454f9aa5dcdbeafbf7a253b3f118f4cb0",
+        "add_second_can": "8dd31bc5523ee266c2994e54965b061e566d96879dcf40f33c9273a295f14c96",
+        "edit_delete_can": "af75f2293cbfffb5b8100feeec5aa4f89fc950ed05fa939765a89d14b04b119e"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "can_mass_x2": "cases/edit_can_mass_x2/video.mp4",
+        "bag_young_x0_25": "cases/edit_bag_young_x0_25/video.mp4",
+        "bag_young_x5": "cases/edit_bag_young_x5/video.mp4",
+        "delete_bag": "cases/edit_delete_bag/video.mp4",
+        "add_second_can": "cases/edit_add_second_can/video.mp4"
+      }
+    }
+  },
+  "accepted_native_delivery": {
+    "target": "renders/silicone_bag_can/accepted/pcve_silicone_bag_can_suite",
+    "case_video_sha256": {
+      "source": "aa8a17f405055f869898d54d523a03a81316172a2ae2c6202722c7201b02baf3",
+      "can_mass_x2": "d639b5cc621c6bb79592fb9b9a2adf0156a25d6fbce243b83f17268c0c47ef2e",
+      "bag_young_x0_25": "0a87230e2d7a0532aba0898a479f56ac5600288c876a3e90675d0878b1cee8ed",
+      "bag_young_x5": "f4b6511853cdf90a09f5a2fd1682de6d5812d92af3b0dbe4509e2a6c09f70421",
+      "delete_bag": "97d7a38a1c6908971cbda4b8c12d645d04b4d011ca20092825b6917d17cf3841",
+      "add_second_can": "4c3f16ee431d13817df0f0fa8a411f4df834ac3882fcca53a19694bec197dd15"
+    },
+    "note": "Native audits, the delivery's GT, receipts, packaging records and the six reference videos (cases/<case>/video.mp4); the native caches it produced are in data.native_inputs."
+  },
+  "current_look": "appearance/realism.py"
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "scene": "passive_car_spring_return_ramp",
+  "category": "rigid_elastic",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_passive_car_spring_return_ramp.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--output-dir",
+        "--case",
+        "--base-config",
+        "--reuse-cache"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "soft_spring",
+        "stiff_spring",
+        "high_friction",
+        "heavy_car",
+        "delete_spring"
+      ]
+    },
+    "render": {
+      "file": "render_passive_car_spring_return_ramp.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--simulation-dir",
+        "--output-dir",
+        "--frames",
+        "--device",
+        "--resume",
+        "--graybox",
+        "--appearance-config"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "soft_spring",
+        "stiff_spring",
+        "high_friction",
+        "heavy_car",
+        "delete_spring"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_passive_car_spring_return_ramp.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--output-dir",
+        "--stage",
+        "--cases",
+        "--python",
+        "--blender",
+        "--gpu",
+        "--threads",
+        "--device",
+        "--resume",
+        "--simulation-root",
+        "--appearance-config"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "soft_spring",
+        "stiff_spring",
+        "high_friction",
+        "heavy_car",
+        "delete_spring"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Native unactuated MuJoCo free rigid chassis, four hinge wheels, unilateral contact and horizontal passive spring slider; Blender replays solved poses and reconstructs the helix only. Appearance-only overlays reuse accepted solved caches.",
+  "implementation_files": [
+    "appearance/look_passive_car_spring_return_ramp.py",
+    "appearance/scene_geometry.py",
+    "appearance_config.py",
+    "build_pcve_passive_car_spring_return_ramp.py",
+    "edit_vocab.py",
+    "physics/verify_suite.py",
+    "render_passive_car_spring_return_ramp.py",
+    "scene_config.py",
+    "simulate_passive_car_spring_return_ramp.py",
+    "tools/prepare_assets.py",
+    "book_assets.json",
+    "appearance/appearance_overlay.json",
+    "scene_manifest.json"
+  ],
+  "formal_quality": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "duration_s": 4,
+    "frames": 96,
+    "engine": "Cycles",
+    "samples": 384
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "scene_id": "steel_ball_tensioned_membrane",
+  "interaction_category": "rigid_elastic",
+  "case_number": 7,
+  "look": "university mechanics laboratory (appearance/realism_overlay.py)",
+  "entry_points": {
+    "simulate": "simulate_steel_ball_tensioned_membrane.py",
+    "render": "render_steel_ball_tensioned_membrane.py",
+    "build_pcve": "build_pcve_steel_ball_tensioned_membrane.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "scene_paths.py",
+    "assets/scenes/steel_ball_tensioned_membrane/scene_spec.json"
+  ],
+  "supported_cases": [
+    "source",
+    "ball_mass_heavy",
+    "membrane_soft",
+    "membrane_stiff",
+    "remove_membrane",
+    "add_second_ball"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/steel_ball_tensioned_membrane (university_workshop_4k.hdr, scene_spec.json)",
+    "scene_spec": "assets/scenes/steel_ball_tensioned_membrane/scene_spec.json",
+    "accepted_delivery": "renders/steel_ball_tensioned_membrane (accepted_case.json, delivery/accepted/videos/, outputs/accepted/cases/<case>/)",
+    "published_look_inputs": "renders/steel_ball_tensioned_membrane/outputs/accepted/cases/<case>/scene.blend and simulation.npz",
+    "rebuild_output": "renders/steel_ball_tensioned_membrane/<new folder>"
+  },
+  "canonical_suites": {
+    "pcve_steel_ball_tensioned_membrane_suite": {
+      "target": "renders/pcve_suites/pcve_steel_ball_tensioned_membrane_suite",
+      "look": "university mechanics laboratory (appearance/realism_overlay.py)",
+      "case_video_sha256": {
+        "source": "4c3dc2142d93d53bf81ef94dfcb46dff87422af49ce2b229dd6b228c8e2bc197",
+        "ball_mass_heavy": "4a94f1367a22f7bbad10db10d10e97a4473b9bda8a518763d632378bd13cbbe9",
+        "membrane_soft": "5df4e46b739bd2b15507b954da747b8cd813cdeeeb778b18a7cf5e8712a8ede9",
+        "membrane_stiff": "19d84688cf8d1b6db8d5bc4291f08eb381a559b17106022fa8292c3e18242b60",
+        "remove_membrane": "e1bb4a4a4a2bb9f2d357b26bfd945b29c30c604414506a67c8760b5931b61405",
+        "add_second_ball": "1b47357e42868a9e5cc46485119c688034b7e1586e37dc50211e0094a138bcea",
+        "edit_remove_ball": "4efaad9952ebfa14457574034b92b9407105d4d58f7a1b0b399c3632422d8e9f"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s; the 97th native state (t = 4 s) stays in the cache"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), from the native simulation.npz of each case"
+}

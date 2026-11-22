@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "scene": "yoga_mat_rolled_edge",
+  "category": "rigid_elastic",
+  "case_number": 10,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_yoga_mat_rolled_edge.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--case",
+        "--out",
+        "--source-cache",
+        "--ball-mass",
+        "--ball-speed",
+        "--ball-radius",
+        "--young",
+        "--dt",
+        "--duration",
+        "--settle",
+        "--fps",
+        "--frames",
+        "--grid-x",
+        "--grid-y",
+        "--velocity-tol",
+        "--newton-max",
+        "--curl-height",
+        "--hinge-viscosity",
+        "--viscosity-scale"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "cases": [
+        "source",
+        "delete_mat",
+        "ball_speed_slow",
+        "mat_stiff",
+        "ball_mass_light",
+        "mass_x0p25_at_frame_16"
+      ],
+      "stage_semantics": "none"
+    },
+    "render": {
+      "file": "render_yoga_mat_rolled_edge.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--cache",
+        "--out",
+        "--samples",
+        "--width",
+        "--look",
+        "--single-frame-index",
+        "--ffmpeg",
+        "--all-contact-frames",
+        "--scene-edit",
+        "--device",
+        "--exposure"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "blender": "--blender-bin",
+        "threads": "--render-threads"
+      },
+      "cases": [
+        "source",
+        "delete_mat",
+        "ball_speed_slow",
+        "mat_stiff",
+        "ball_mass_light",
+        "mass_x0p25_at_frame_16"
+      ],
+      "stage_semantics": "none"
+    },
+    "build_pcve": {
+      "file": "build_pcve_yoga_mat_rolled_edge.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--suite",
+        "--out-root"
+      ],
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "delete_mat",
+        "ball_speed_slow",
+        "mat_stiff",
+        "ball_mass_light",
+        "mass_x0p25_at_frame_16"
+      ],
+      "stage_semantics": "selector"
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Physics: libuipc CUDA IPC solve (physics/simulate_source.py) of a rigid affine-body medicine ball rolling without slip into the curled end of a yoga mat modelled as one NeoHookean shell with discrete shell bending and the native viscosity extension (plugin assets/scenes/yoga_mat_rolled_edge/native), 97x25 vertices, dt 1/960 s, sampled at t=(i-1)/24 for 96 frames from the accepted settled state (assets settled_state.npz); DELETE mat is the closed-form rigid-floor branch on the CPU; the timed edit restores the source state of its frame (--source-cache/--edit-frame) and continues with the edited value. The simulate entry fills the per-case parameters from edit_vocab.py, launches the solve on a leased GPU (tools/worker_run.py) and audits the cache (physics/audit_source.py). Render: Blender 4.3.2 Cycles replay of the cache (appearance/render_source_review.py) with the published daylight look of appearance/realism.py, 96 samples, 1280x720, encoded at 24 fps. tools/export_ground_truth.py writes pcve_ground_truth/1 from a suite case's native cache and render record; --stage verify checks the published suite against the builder catalog, edit_vocab.py and fresh ground-truth exports. Material values are effective, not calibrated.",
+  "implementation_files": [
+    "simulate_yoga_mat_rolled_edge.py",
+    "render_yoga_mat_rolled_edge.py",
+    "build_pcve_yoga_mat_rolled_edge.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/simulate_source.py",
+    "physics/prepare_mat.py",
+    "physics/viscosity.py",
+    "physics/scene_spec.json",
+    "physics/audit_source.py",
+    "appearance/render_source_review.py",
+    "appearance/realism.py",
+    "tools/export_ground_truth.py",
+    "tools/worker_run.py"
+  ],
+  "assets": "assets/scenes/yoga_mat_rolled_edge",
+  "edit_catalog": {
+    "file": "build_pcve_yoga_mat_rolled_edge.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "provider": "Poly Haven",
+  "credit": "Powered by Poly Haven",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "id": "fine_grained_wood",
+      "source": "https://polyhaven.com/a/fine_grained_wood",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "resolution": "4k",
+      "published_texture_span_m": 0.6,
+      "chosen_texture_span_m": 0.6,
+      "files": [
+        {
+          "role": "Diffuse",
+          "relative_path": "fine_grained_wood/fine_grained_wood_col_4k.jpg",
+          "size": 4744081,
+          "md5": "50cba9a39e97c3063d87cb0a9db1f106",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/fine_grained_wood/fine_grained_wood_col_4k.jpg",
+          "sha256": "0c71b4505412216bbe7b2dc2b2bcfe414dfd319d13e48992cdaeb2961f44146f"
+        },
+        {
+          "role": "Rough",
+          "relative_path": "fine_grained_wood/fine_grained_wood_rough_4k.jpg",
+          "size": 3094322,
+          "md5": "85f24089d92ba2691644e0245ce290b0",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/fine_grained_wood/fine_grained_wood_rough_4k.jpg",
+          "sha256": "abd1d509d037c404168fbb23f6cf8ac9bf61bf7dd14b4e4e91a6a022f6d14f37"
+        },
+        {
+          "role": "nor_gl",
+          "relative_path": "fine_grained_wood/fine_grained_wood_nor_gl_4k.jpg",
+          "size": 3075600,
+          "md5": "de7f162847a757b8beb189b404e9b361",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/fine_grained_wood/fine_grained_wood_nor_gl_4k.jpg",
+          "sha256": "72e01bb23fd35909c98cfcd08361424b429f6bfb576dd4a97b9e69183859aead"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 2,
+  "scene_id": "spring_car_collision",
+  "interaction_category": "rigid_elastic",
+  "case_number": 5,
+  "objects": [
+    "spring: guided steel compression spring with a moving pusher plate (static launcher frame stays when the spring is deleted)",
+    "car: toy coupe modelled in appearance/car_model.py, chassis plus four rolling wheels",
+    "block: wooden block",
+    "obstacle_block: second wooden block added by the ADD edit"
+  ],
+  "entry_points": {
+    "simulate": "simulate_spring_car_collision.py",
+    "render": "render_spring_car_collision.py",
+    "build_pcve": "build_pcve_spring_car_collision.py"
+  },
+  "supported_cases": [
+    "source",
+    "remove_spring",
+    "remove_block",
+    "heavier_block",
+    "add_block",
+    "stiffer_spring"
+  ],
+  "files": {
+    "edit_vocabulary": "edit_vocab.py",
+    "scene_spec": "scene_spec.json",
+    "paths": "scene_config.py",
+    "physics": "physics/physics_model.py",
+    "look": "appearance/look.py",
+    "ground_truth": "tools/export_ground_truth.py",
+    "publish": "tools/publish_suite.py"
+  },
+  "data": {
+    "assets": "assets/scenes/spring_car_collision",
+    "native_cases": "assets/scenes/spring_car_collision/native_cases/<case>",
+    "runtime": ".runtime/spring_car_collision/deps (mujoco 3.3.7 cp310), used with .venv-rigid-elastic/bin/python when that environment exists, else with the current interpreter",
+    "toy_car_geometry": "assets/scenes/spring_car_collision/toy_car (solver geometry and at-rest pose of the current car)"
+  },
+  "native_cases": {
+    "source": {
+      "path": "assets/scenes/spring_car_collision/native_cases/source",
+      "trajectory_sha256": "3ac5bb6b5f14707384bc542f9bd120662049be57b359baaa51f83761d72df794",
+      "scene_params_sha256": "333f1d298b3e0e4984f484a798b692af8a2895fa9c69d8f1191bc3995235bb11"
+    },
+    "remove_spring": {
+      "path": "assets/scenes/spring_car_collision/native_cases/remove_spring",
+      "trajectory_sha256": "e740c8823c45ffff2de04e5ee43b9aefadf5938dd7ce30b8631e38fbc500f969",
+      "scene_params_sha256": "6fa611b5358ce80e1d44b38982b074b396ea1f3aa5eecee8285cad5826ee703c"
+    },
+    "remove_block": {
+      "path": "assets/scenes/spring_car_collision/native_cases/remove_block",
+      "trajectory_sha256": "8a138754b64bb4f056376477f1e573b9bd8e8182205808e8276d992958b3ec94",
+      "scene_params_sha256": "42c333fa69ae1ab379d970a71f30a5ab4d6d426e28bad06fc1a3887c451e75ad"
+    },
+    "heavier_block": {
+      "path": "assets/scenes/spring_car_collision/native_cases/heavier_block",
+      "trajectory_sha256": "4fe9cc3c0b21004af2a30a5d5f704c2364836a89d79ece5963674c3d984fe17d",
+      "scene_params_sha256": "671d92b22a0c42117913ce54aab87bdd1399f4b73b3638af397903367654cc2e"
+    },
+    "add_block": {
+      "path": "assets/scenes/spring_car_collision/native_cases/add_block",
+      "trajectory_sha256": "f992031a9dc09892176a6e03c741bf674b835c81256c02b6fddaf0e9187cd307",
+      "scene_params_sha256": "d85116767a5fda10cbc53174a6819edda8e6f8ff8ecd77f4ebc464fb631c3385"
+    },
+    "stiffer_spring": {
+      "path": "assets/scenes/spring_car_collision/native_cases/stiffer_spring",
+      "trajectory_sha256": "923d7f1805877d71211e92a33e8b8d86103ac91b5d3df12af1fc086347f18ede",
+      "scene_params_sha256": "bf91126d38fa7c8235acbe009c49d27ec119c0b8de52c01d79c295e37f405f02"
+    }
+  },
+  "native_solve_note": "Toy-car solves with MuJoCo 3.3.7 on the CPU, each case run twice with byte-identical results.",
+  "canonical_suites": {
+    "pcve_spring_car_collision_suite": {
+      "target": "renders/pcve_suites/pcve_spring_car_collision_suite",
+      "case_video_sha256": {
+        "source": "cc7fe466ee270fb185e68f91bd3ab45e0d71b85a952c554c2069146f286fa41e",
+        "remove_spring": "4543875e1530935625f7f3e98f9aae18c2afe71c41c606df48f64505186b0af5",
+        "remove_block": "17422b74053229bf3055bf9ad6ba22b51b8929294c97801aae14b2553aff1d42",
+        "heavier_block": "c4953904500d04589782f3712fa8d86f372a4575f27d1bfd59e631268014d091",
+        "add_block": "cae25f8e0d841b8a65e81a7632ffe3c4c1e54a5c956fe367d89cbceab682977d",
+        "stiffer_spring": "3c03f747848b4e71b18897743455b554f4165c7f86de6e954a236a28216f1ff3",
+        "edit_remove_car": "d31f80c9ff0b527a1da0775f8ed7b7a219220e50f211216e2da71d194360ebb6"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "remove_spring": "cases/edit_remove_spring/video.mp4",
+        "remove_block": "cases/edit_remove_block/video.mp4",
+        "heavier_block": "cases/edit_heavier_block/video.mp4",
+        "add_block": "cases/edit_add_block/video.mp4",
+        "stiffer_spring": "cases/edit_stiffer_spring/video.mp4"
+      }
+    }
+  },
+  "final_video_contract": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "duration_seconds": 4.0,
+    "frames": 96,
+    "timestamp_interval": "[0,4s)",
+    "enforcement": "All fresh renders, finalizers and benchmark exports fail closed on mismatch."
+  },
+  "source_and_edits": {
+    "source": null,
+    "remove_spring": "DELETE spring",
+    "remove_block": "DELETE block",
+    "heavier_block": "SET block.mass TIMES 3",
+    "add_block": "ADD obstacle_block AT PRESET approach",
+    "stiffer_spring": "SET spring.young_modulus TIMES 3"
+  },
+  "dependencies": {
+    "physics": [
+      "mujoco==3.3.7",
+      "numpy (1.26)",
+      "scipy"
+    ],
+    "render": [
+      "Blender 4.3.2 (tools/blender-4.3.2-linux-x64 in the repository root, else pcve_assets.blender())"
+    ],
+    "encode": [
+      "ffmpeg"
+    ]
+  },
+  "material_calibrated": false
+}

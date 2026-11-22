@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "scene": "cooking_oil_pan",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_cooking_oil_pan.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--pan",
+        "--particle",
+        "--rest-spacing",
+        "--frames",
+        "--fps",
+        "--steps-per-frame",
+        "--substeps",
+        "--rho",
+        "--mu",
+        "--surface-tension",
+        "--flow",
+        "--schedule",
+        "--start",
+        "--exit",
+        "--axis",
+        "--jet-radius",
+        "--inlet-buffer",
+        "--ghost-radius",
+        "--wet",
+        "--wall-drag",
+        "--cl-friction",
+        "--div-iters",
+        "--resume-from",
+        "--resume-frame"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_cooking_oil_pan.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--run",
+        "--out-dir",
+        "--frames",
+        "--samples",
+        "--mesh-dir"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [],
+      "prefix_args": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_cooking_oil_pan.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--suite-root",
+        "--blender",
+        "--python",
+        "--publish-root",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "cooking_oil_pan_baseline",
+        "edit_increase_flow",
+        "edit_decrease_flow",
+        "edit_increase_at_2s",
+        "edit_decrease_at_1s",
+        "edit_increase_viscosity"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_cooking_oil_pan.py",
+    "edit_vocab.py",
+    "render_cooking_oil_pan.py",
+    "simulate_cooking_oil_pan.py",
+    "surface_cooking_oil_pan.py",
+    "physics/coupling_cooking_oil_pan.py",
+    "appearance/look_cooking_oil_pan.py",
+    "scene_manifest.json"
+  ]
+}

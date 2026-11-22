@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "scene": "wind_flag",
+  "category": "elastic_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_wind_flag.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--out",
+        "--case",
+        "--E",
+        "--frames",
+        "--fps",
+        "--steps-per-frame",
+        "--settle-seconds",
+        "--nx",
+        "--nz",
+        "--checkpoint",
+        "--from-rest",
+        "--ipc-deps",
+        "--scenario-overrides-json",
+        "--emit-timed-branch",
+        "--timed-branch-out"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "flow_6mps",
+        "young_stiff",
+        "flow_0p5mps",
+        "flow_0mps"
+      ]
+    },
+    "render": {
+      "file": "render_wind_flag.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--simulation-dir",
+        "--out-dir",
+        "--asset-dir",
+        "--blender",
+        "--gpu",
+        "--frames",
+        "--preview",
+        "--skip-existing",
+        "--dry-run"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender",
+        "gpu": "--gpu"
+      },
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_wind_flag.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--suite-root",
+        "--stage",
+        "--cases",
+        "--import-approved",
+        "--skip-existing",
+        "--asset-dir",
+        "--render-assets",
+        "--ipc-deps",
+        "--python",
+        "--blender",
+        "--gpu",
+        "--dry-run"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu"
+      },
+      "cases": [
+        "wind_flag_baseline",
+        "edit_wind_6mps",
+        "edit_young_modulus_100mpa",
+        "edit_wind_drop_at_2s",
+        "edit_wind_0p5mps",
+        "edit_wind_0mps"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Genesis FEM/IPC shell flag driven by a prescribed one-way relative-air wind field; Blender Eevee renders the solved cache",
+  "implementation_files": [
+    "appearance/audit_appearance_wind_flag.py",
+    "appearance/audit_contact_wind_flag.py",
+    "appearance/scene_wind_flag.py",
+    "build_pcve_wind_flag.py",
+    "edit_vocab.py",
+    "physics/validate_wind_flag.py",
+    "render_wind_flag.py",
+    "simulate_wind_flag.py",
+    "wind_flag_config.py",
+    "scene_spec.json",
+    "scene_manifest.json"
+  ]
+}

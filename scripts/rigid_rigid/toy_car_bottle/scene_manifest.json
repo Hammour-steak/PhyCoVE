@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "scene_id": "toy_car_bottle",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_toy_car_bottle.py",
+    "render": "render_toy_car_bottle.py",
+    "build_pcve": "build_pcve_toy_car_bottle.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "toy_car_bottle_baseline",
+    "edit_heavy_bottle",
+    "edit_fast_car",
+    "edit_slippery_bottle",
+    "edit_add_midpoint_bottle",
+    "edit_fast_car_midflight",
+    "edit_delete_car",
+    "edit_delete_bottle"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_toy_car_bottle_suite": {
+      "target": "renders/pcve_suites/pcve_toy_car_bottle_suite",
+      "case_video_sha256": {
+        "edit_add_midpoint_bottle": "2f38c4e417887e0e3b0968c6671659829896365e9186f1c3d2d38f35173f4c6a",
+        "edit_delete_bottle": "abc26ee28b525aa64caa4c8f5251030d2d1cedf0f346737ec3123a680825d5cf",
+        "edit_delete_car": "5008985c744142fa3777427c97530df0282dc192e79ba29292347c594730ecad",
+        "edit_fast_car": "0a7c9c57cec686f498ea918823c1f67d817b7abdb86a91b662c24df277be32dc",
+        "edit_fast_car_midflight": "4545dbed5626da9826114183c9ca29652015c0632f5be949c17885b69dd61490",
+        "edit_heavy_bottle": "7312e97187c2e63e2d4a3d25fc50461dd02a3690d0c19f3da89de5ce2b45ea13",
+        "edit_slippery_bottle": "ebcd257750b16250c545e5d0452540b3e0910508c2e8f8299cc957ec32379528",
+        "toy_car_bottle_baseline": "9d2008c59028923df91b228aa4f4e0b2fa6a6d660c2fe3255b768eeb484e9a8e"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "toy_car_bottle_baseline": "source",
+        "edit_heavy_bottle": "edit_heavy_bottle",
+        "edit_fast_car": "edit_fast_car",
+        "edit_slippery_bottle": "edit_slippery_bottle",
+        "edit_add_midpoint_bottle": "edit_add_midpoint_bottle",
+        "edit_fast_car_midflight": "edit_fast_car_midflight"
+      },
+      "public_case_video_sha256": {
+        "edit_add_midpoint_bottle": "2f38c4e417887e0e3b0968c6671659829896365e9186f1c3d2d38f35173f4c6a",
+        "edit_delete_bottle": "abc26ee28b525aa64caa4c8f5251030d2d1cedf0f346737ec3123a680825d5cf",
+        "edit_delete_car": "5008985c744142fa3777427c97530df0282dc192e79ba29292347c594730ecad",
+        "edit_fast_car": "0a7c9c57cec686f498ea918823c1f67d817b7abdb86a91b662c24df277be32dc",
+        "edit_fast_car_midflight": "4545dbed5626da9826114183c9ca29652015c0632f5be949c17885b69dd61490",
+        "edit_heavy_bottle": "7312e97187c2e63e2d4a3d25fc50461dd02a3690d0c19f3da89de5ce2b45ea13",
+        "edit_slippery_bottle": "ebcd257750b16250c545e5d0452540b3e0910508c2e8f8299cc957ec32379528",
+        "source": "9d2008c59028923df91b228aa4f4e0b2fa6a6d660c2fe3255b768eeb484e9a8e"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/toy_car_bottle",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [
+      "toy_car_bottle"
+    ],
+    "registry_keys": [
+      "models",
+      "polyhaven/toy_car_bottle",
+      "scenes/toy_car_bottle"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

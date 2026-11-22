@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "scene_id": "phone_sofa_drop",
+  "interaction_category": "rigid_elastic",
+  "entry_points": {
+    "simulate": "simulate_phone_sofa_drop.py",
+    "render": "render_phone_sofa_drop.py",
+    "build_pcve": "build_pcve_phone_sofa_drop.py"
+  },
+  "supported_cases": [
+    "source",
+    "remove_cushion",
+    "added_pillow",
+    "stiff_x100",
+    "soft_e_div2",
+    "heavy_phone"
+  ],
+  "data": {
+    "native_caches": "assets/scenes/phone_sofa_drop/solves_4s_240hz/<case>/simulation_dense.npz",
+    "reference_caches": "assets/scenes/phone_sofa_drop/solves_3s_30hz/<case>/simulation.npz",
+    "packed_scenes": "assets/scenes/phone_sofa_drop/packed/<case>/scene.blend",
+    "cushion_embeddings": "assets/scenes/phone_sofa_drop/embedding/<case>/native_embedding.npz",
+    "render_outputs": "renders/phone_sofa_drop/render/<case>/"
+  },
+  "canonical_suites": {
+    "pcve_phone_sofa_drop_suite": {
+      "target": "renders/pcve_suites/pcve_phone_sofa_drop_suite",
+      "case_video_sha256": {
+        "source": "5286bd9944860ac986585a19a617bf801e73592a53f3177c103eda38f1392379",
+        "remove_cushion": "ced332987632afad26f9f47c2aa3f7951e1b95db4367cf1aef893a19e8f8acaf",
+        "added_pillow": "22cd2deaa09ad13e658a12c30f0ced9b7157c2a0113f2e75c8d51f3d2531523a",
+        "stiff_x100": "69a00f9fe9fde66823cfa29d1c0a8ebd92c7aaec2f58196d9e7135c16f9af5db",
+        "soft_e_div2": "1896d8d835856845b823244b6749202f31919cf5166ee8373db4e4937e868a3f",
+        "heavy_phone": "bd6af8ea1ac4e9a0f98d765dbdd29fe8ece9bf3562336de14c64eadaea6bf59d",
+        "edit_remove_phone": "eb32a8f04e1b0bd3c6189fb87294b0314b5652a45ad783eb657fa6c934d7d2f0"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame f = native state at (f-1)/24 s"
+  }
+}

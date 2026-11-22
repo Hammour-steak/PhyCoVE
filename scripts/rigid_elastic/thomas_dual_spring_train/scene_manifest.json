@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "scene_id": "thomas_dual_spring_train",
+  "interaction_category": "rigid_elastic",
+  "case_number": 23,
+  "look": "appearance/realism.py (overlay on appearance/render.py)",
+  "entry_points": {
+    "simulate": "simulate_thomas_dual_spring_train.py",
+    "render": "render_thomas_dual_spring_train.py",
+    "build_pcve": "build_pcve_thomas_dual_spring_train.py"
+  },
+  "configuration": [
+    "physics/native.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "mass_x3",
+    "rolling_x4",
+    "right_young_x025",
+    "delete_right_spring",
+    "add_wood_block"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/thomas_dual_spring_train",
+    "accepted_native_delivery": "renders/thomas_dual_spring_train/delivery/accepted/<case>/video.mp4",
+    "accepted_native_states": "renders/thomas_dual_spring_train/simulation/accepted/<case>/states.npz",
+    "rebuild_output": "renders/thomas_dual_spring_train/<new folder>"
+  },
+  "canonical_suites": {
+    "pcve_thomas_dual_spring_train_suite": {
+      "target": "renders/pcve_suites/pcve_thomas_dual_spring_train_suite",
+      "case_video_sha256": {
+        "source": "d2a7155c3d3dad91f884fe420d8da2f8b6595bba29bfd6d632994d20ba056291",
+        "mass_x3": "3ee138b8a50a17b490eae993c6525dad847d77e33938f76a81853dfbef465deb",
+        "rolling_x4": "d5dfdba9c8b816af74fb04cf5b64479f03617d81fcf1d788e56ee086db7cea96",
+        "right_young_x025": "1a6b5f408c4af4db839f21d27e76844414500af9dd0e81b9d8f56e84faa9c143",
+        "delete_right_spring": "6d1dd5a94ba1cc8ae522902c8b53debf2964c9dfb217ad8fee130abc5c9db35c",
+        "add_wood_block": "d92ff1ac4f6bd5587e0484b8414deacb08a36b9ddd3dd2754865e2be95341ade",
+        "edit_delete_train": "aec6efeea0ae9487ff8a0ba344565f12be5b48e8ab5dc2033dc3f24e9bfe3d1c"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), from the native states.npz in render coordinates (solver z + 0.569 m)"
+}

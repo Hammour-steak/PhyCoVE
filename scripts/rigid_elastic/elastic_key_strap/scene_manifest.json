@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scene_id": "elastic_key_strap",
+  "interaction_category": "rigid_elastic",
+  "case_number": 13,
+  "look": "daylit entryway (appearance/realism.py)",
+  "entry_points": {
+    "simulate": "simulate_elastic_key_strap.py",
+    "render": "render_elastic_key_strap.py",
+    "build_pcve": "build_pcve_elastic_key_strap.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "scene_paths.py",
+    "physics/scene_spec.json"
+  ],
+  "supported_cases": [
+    "source",
+    "keys_mass_5x",
+    "strap_soft",
+    "strap_stiff",
+    "remove_strap",
+    "keys_mass_5x_at_frame_24"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/elastic_key_strap",
+    "native_caches": "assets/scenes/elastic_key_strap/native_solves/cases/<case>",
+    "timed_native_solves": "renders/pcve_suites/pcve_elastic_key_strap_suite/inputs/native_timed/<case>",
+    "accepted_native_delivery": "renders/elastic_key_strap/accepted_physics",
+    "accepted_delivery_videos": "renders/elastic_key_strap/accepted_physics/cases/<case>/video.mp4 (SHA-256 in accepted_case.json)",
+    "native_renders": "renders/elastic_key_strap/accepted_media",
+    "rebuild_output": "renders/elastic_key_strap/rebuild"
+  },
+  "canonical_suites": {
+    "pcve_elastic_key_strap_suite": {
+      "target": "renders/pcve_suites/pcve_elastic_key_strap_suite",
+      "look": "daylit entryway (appearance/realism.py)",
+      "public_case_ids": {
+        "source": "source",
+        "keys_mass_5x": "edit_keys_mass_5x",
+        "strap_soft": "edit_strap_soft",
+        "strap_stiff": "edit_strap_stiff",
+        "remove_strap": "edit_remove_strap",
+        "keys_mass_5x_at_frame_24": "edit_keys_mass_5x_at_frame_24"
+      },
+      "case_video_sha256": {
+        "source": "a2ac150a5b5fc61f2ffccb1bb75de243b88755b2f054e4dc9366588272ff7760",
+        "keys_mass_5x": "4f18332e311c3ecea29c790c815ee97633d711092a3e6ec498ed73704458cf2e",
+        "strap_soft": "a22caebf4e05d7d200c23bcb213e1c847384486073a0c1ac982526ca36c5e32a",
+        "strap_stiff": "25ff4d8056f57c6d66036c2f3cfe19cf255d484c069b0166bfd0057cf7a33512",
+        "remove_strap": "fe187ff75d81f66f6b3a35b8442656e731d386266f84556804a8e441362b44aa",
+        "keys_mass_5x_at_frame_24": "fe05e58d4e701efcf6c61d14ee57349e5b3502b9ff19f9af5c914f8d14378b65",
+        "edit_remove_keyring": "d20ee9b664fc9101999c7a0b60d7df8c7cd4933a5d10856613f4c952445a79ef"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "keys_mass_5x": "cases/edit_keys_mass_5x/video.mp4",
+        "strap_soft": "cases/edit_strap_soft/video.mp4",
+        "strap_stiff": "cases/edit_strap_stiff/video.mp4",
+        "remove_strap": "cases/edit_remove_strap/video.mp4",
+        "keys_mass_5x_at_frame_24": "cases/edit_keys_mass_5x_at_frame_24/video.mp4"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s; the 97th native state (t = 4 s) stays in the cache"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), from the native solves by tools/export_ground_truth.py"
+}

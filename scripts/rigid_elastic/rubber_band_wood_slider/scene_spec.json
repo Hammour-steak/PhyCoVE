@@ -1,0 +1,121 @@
+{
+  "scene_id": "rubber_band_wood_slider",
+  "baseline": {
+    "young_pa": 1200000.0,
+    "mass_kg": 0.036,
+    "friction": 0.2,
+    "wood_band_friction": 0.65,
+    "density_kg_m3": 1000.0,
+    "band_width_m": 0.0016,
+    "band_thickness_m": 0.0006,
+    "loop_rest_m": 0.2,
+    "equilibrium_fraction": 0.8,
+    "maxwell_fractions": [
+      0.15,
+      0.05
+    ],
+    "maxwell_times_s": [
+      0.03,
+      0.35
+    ],
+    "membrane_viscosity_pa_s": 20.0,
+    "bending_viscosity_pa_s": 40.0,
+    "poisson": 0.49,
+    "floor_z_m": 0.006,
+    "band_z_m": 0.0095,
+    "anchor_x_m": -0.07,
+    "initial_x_m": 0.09,
+    "attachment_offset_m": -0.0425,
+    "pin_radius_m": 0.003,
+    "slider_size_m": [
+      0.055,
+      0.042,
+      0.024
+    ],
+    "tongue_size_m": [
+      0.02,
+      0.02,
+      0.002
+    ],
+    "tongue_offset_m": -0.035,
+    "guide_size_m": [
+      0.3,
+      0.066,
+      0.006
+    ],
+    "release_time_s": 0.5,
+    "hold_preparation_s": 0.4,
+    "band_present": [
+      1
+    ],
+    "stopper_present": [
+      0
+    ],
+    "stopper_position_m": [
+      0.015,
+      0.0,
+      0.016
+    ],
+    "stopper_size_m": [
+      0.006,
+      0.042,
+      0.02
+    ]
+  },
+  "cases": {
+    "source": {},
+    "young_x0p5": {
+      "young_pa": 600000.0
+    },
+    "mass_x3": {
+      "mass_kg": 0.108
+    },
+    "friction_x2": {
+      "friction": 0.4
+    },
+    "delete_band": {
+      "band_present": [
+        0
+      ]
+    },
+    "add_stop": {
+      "stopper_present": [
+        1
+      ]
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_s": 4.0
+  },
+  "baseline_notes": {
+    "description": "Shared prestretch from a 200 mm relaxed loop on the fixture placement; physical finite-strain relaxation, no playback or trajectory scaling",
+    "static_props": "Common wood finish, end-grain scale and window exposure for all six captures; object initial poses shared.",
+    "friction_note": "The stronger-pull baseline uses wood sliding friction 0.20 (assumed), limiting the energy-based stopping distance inside the guide; independent friction edit is x2 to 0.40.",
+    "add_preset_note": "Source-absent stopper preset centered at x=15 mm, allowing about 44.5 mm return before impact. No existing object is moved by an edit."
+  },
+  "physics_scope": "finite-strain closed viscoelastic shell; identical two-branch material relaxation in membrane and bending; native frictional rigid-flex contact; guided prismatic wood",
+  "material_calibrated": false,
+  "source_assets": "Reused licensed BlenderKit geometry and CC0 scanned PBR/HDRI; preserve original attribution",
+  "constitutive_model": "Objective membrane/bending Maxwell law; native wooden-pin/slider collision filtering for the long path; completed-step midpoint constraint work is a diagnostic and does not change forces.",
+  "numerical_discretization": {
+    "n_loop": 160,
+    "width_rows": 2,
+    "dt_s": 2.6041666666666666e-06,
+    "state_hz": 480,
+    "temporal_control_dt_s": 1.3020833333333333e-06,
+    "spatial_control_n_loop": 192
+  },
+  "boundary_conditions": {
+    "left": "finite material arc fixed to world",
+    "right": "finite material arc rigidly bound to slider",
+    "refinement": "tangent points and fixed material intervals coincide for n128/n160/n192"
+  },
+  "native_cache_reused": true,
+  "native_origin": "the solves of the registered increment, with these physical parameters and the fixed material boundary; the visible clamp, camera and appearance are shared by all cases"
+}

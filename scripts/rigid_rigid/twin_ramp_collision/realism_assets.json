@@ -1,0 +1,634 @@
+{
+  "schema_version": 7,
+  "revision": "natural_home_realism",
+  "provider_credit": "Powered by Poly Haven; textures from ambientCG",
+  "assets": [
+    {
+      "asset_id": "oak_veneer_01",
+      "source": "https://polyhaven.com/a/oak_veneer_01",
+      "author": "Jenelle van Heerden",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Construction-only dependency of the architecture layer the final look builds on; removed before the final render; no visible object or texture from this asset retained"
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/oak_veneer_01/asset_manifest.json",
+          "bytes": 1326,
+          "sha256": "631e6fec31d400d214590b658b97c220cbdbd2af2c0e54eba3360bb88b2c2631"
+        },
+        {
+          "path": "assets/polyhaven/oak_veneer_01/oak_veneer_01_diff_8k.jpg",
+          "bytes": 42259152,
+          "sha256": "7d37c1fe4b5064e42a94f032a766081e35e8e98c4576c36e62981aa90f5366a1"
+        },
+        {
+          "path": "assets/polyhaven/oak_veneer_01/oak_veneer_01_nor_gl_4k.jpg",
+          "bytes": 11584844,
+          "sha256": "e9bb26f63682773895ce3f0dfd9a43554a719c4caae65b6bcf41712ecfaf3d26"
+        },
+        {
+          "path": "assets/polyhaven/oak_veneer_01/oak_veneer_01_rough_4k.jpg",
+          "bytes": 18638525,
+          "sha256": "3e7eb00705c173babfc01443de1ed1e8d40d055b97de278a6e817b65e8decb38"
+        }
+      ]
+    },
+    {
+      "asset_id": "wood_table_001",
+      "source": "https://polyhaven.com/a/wood_table_001",
+      "author": "Dimitrios Savva / Rico Cilliers",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Construction-only dependency of the architecture layer the final look builds on; removed before the final render; no visible object or texture from this asset retained"
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/wood_table_001/asset_manifest.json",
+          "bytes": 1508,
+          "sha256": "3d8a9aa190daf8e979190eb06e1dd534a629073b842b44ca8d9fb5242595dc7a"
+        },
+        {
+          "path": "assets/polyhaven/wood_table_001/wood_table_001_diff_8k.jpg",
+          "bytes": 12207870,
+          "sha256": "7fa6be01bec1e394e714ad28c9de9f16d69cf83f27955abc7144e91e92de6de7"
+        },
+        {
+          "path": "assets/polyhaven/wood_table_001/wood_table_001_nor_gl_4k.jpg",
+          "bytes": 2326816,
+          "sha256": "fc9f1d2600e7686504b36d805b79bd785a327b752a3e7943a41e7d6e9bdfe399"
+        },
+        {
+          "path": "assets/polyhaven/wood_table_001/wood_table_001_rough_4k.jpg",
+          "bytes": 3630403,
+          "sha256": "1349d61fee3ccc6f6b4bfe5f49ebf4803c1d88bd4ba2c6e2fd3a40da84a459af"
+        }
+      ]
+    },
+    {
+      "asset_id": "book_encyclopedia_set_01",
+      "source": "https://polyhaven.com/a/book_encyclopedia_set_01",
+      "author": "John Malcolm",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Construction-only dependency of the architecture layer the final look builds on; removed before the final render; no visible object or texture from this asset retained"
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/asset_manifest.json",
+          "bytes": 2782,
+          "sha256": "a0554e0c37f8912c9932d4969ca9a060b43c21b96ea33f91ef6080ec4512adbf"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/book_encyclopedia_set_01_2k.blend",
+          "bytes": 1619208,
+          "sha256": "76019d7de4f90fc12aa82c6d9b9b6c89e03e773a3954100910883ed94f55171f"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_diff_2k.png",
+          "bytes": 3727355,
+          "sha256": "9f93800db579470c7ab2f198890d191973b94593a8c797ed825aaa10bc030ad0"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_metallic_2k.png",
+          "bytes": 70467,
+          "sha256": "d1f9aca3d619f3e7b1b824c6709cc566fc7dd70469442c6dac57b4c8b3655a59"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_nor_gl_2k.png",
+          "bytes": 62824,
+          "sha256": "a734f1dd24a262f29486433469fb1c8d38066ccfe1a2095ac94c19f4c541e519"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_roughness_2k.png",
+          "bytes": 2059998,
+          "sha256": "027ee5965aa46766b6ed1f3a9e8b7e2d912c7056b950bcde09f956cc7b6fc8b5"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/textures/book_encyclopedia_set_01_paper_diff_2k.png",
+          "bytes": 1041521,
+          "sha256": "9ef4c115773d0b3a403b5c887b29cc39277ea7b045608d1343a736dba9a38d91"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/textures/book_encyclopedia_set_01_paper_nor_gl_2k.png",
+          "bytes": 1374815,
+          "sha256": "fc467eb9a4ea4ffc0222513594768c881dbf147cd7a2294814c9cd8deb3c8d3f"
+        },
+        {
+          "path": "assets/polyhaven/book_encyclopedia_set_01/textures/book_encyclopedia_set_01_paper_roughness_2k.png",
+          "bytes": 8597,
+          "sha256": "034cb60d6a3b75a9ffafd12522837ada345f3a5c9eb189b7414819a6be088982"
+        }
+      ]
+    },
+    {
+      "asset_id": "painted_wooden_chair_01",
+      "source": "https://polyhaven.com/a/painted_wooden_chair_01",
+      "author": "Kuutti Siitonen",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Construction-only dependency of the architecture layer the final look builds on; removed before the final render; no visible object or texture from this asset retained"
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/painted_wooden_chair_01/ATTRIBUTION.txt",
+          "bytes": 251,
+          "sha256": "d32d9865753e96ac2a15926bccd4607a45fcad28eec319878d9e7759bd0c7af8"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_chair_01/asset_manifest.json",
+          "bytes": 2524,
+          "sha256": "4d15bb32a7461b2a85028624fcbece44b3331dbed6d68e88912b655f4080f739"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_chair_01/painted_wooden_chair_01_2k.blend",
+          "bytes": 140995,
+          "sha256": "cac1e8364045e2b3ca052457373f3378dd90f1d9531a839083630cdcb13f6d77"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_chair_01/textures/painted_wooden_chair_01_diff_2k.jpg",
+          "bytes": 540489,
+          "sha256": "7c2914843fd3e73c91c7a25058e20460195095a99b8d4ffd78ea61391f0966a9"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_chair_01/textures/painted_wooden_chair_01_metal_2k.exr",
+          "bytes": 13296,
+          "sha256": "04c0ec0bb6938981a49adf46c12a316981decdf6bda80f664838be8ae19e77c6"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_chair_01/textures/painted_wooden_chair_01_nor_gl_2k.exr",
+          "bytes": 3832258,
+          "sha256": "52f28bec69ddb3c6b4fc2a29039f82394cf4020736720283da74bf3e71c04c2b"
+        },
+        {
+          "path": "assets/polyhaven/painted_wooden_chair_01/textures/painted_wooden_chair_01_rough_2k.jpg",
+          "bytes": 417784,
+          "sha256": "b3d7ce48a2628c2643a5786d0a8dddb85d92b9089874ad773318c6bb2c9c78db"
+        }
+      ]
+    },
+    {
+      "asset_id": "potted_plant_02",
+      "source": "https://polyhaven.com/a/potted_plant_02",
+      "author": "Rico Cilliers",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Original three glTF meshes and PBR; placed on the real window sill",
+        "original_height_m": 0.841179,
+        "placed_height_m": 0.29,
+        "placement_xy_m": [
+          -0.67,
+          1.3
+        ],
+        "bottom_z_m": 0.845,
+        "yaw_deg": -15
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/potted_plant_02.bin",
+          "bytes": 1852244,
+          "sha256": "9c9812482c78a59789ed32fa842b4cbd9365e09c900c31ebb998e5efe627fe97"
+        },
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/potted_plant_02_1k.gltf",
+          "bytes": 6653,
+          "sha256": "c533dcce0d1aa4379eb7db04601a04983f8df2422b28578de922655a416e64a9"
+        },
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/textures/potted_plant_02_leaves_diff_1k.jpg",
+          "bytes": 167700,
+          "sha256": "3643dce6e6c0a9f40129bd837ec1a11802e8f43ea43cb29e58219d82e0ac632b"
+        },
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/textures/potted_plant_02_leaves_nor_gl_1k.jpg",
+          "bytes": 127232,
+          "sha256": "e0fe090ff7a511729c9bbe59df7288b400430fdab178529443dec75e0f06007d"
+        },
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/textures/potted_plant_02_leaves_rough_1k.jpg",
+          "bytes": 102396,
+          "sha256": "ac8959f70c0e91e77f3cd6fd3f73578b8aed64ac6c33fc34ac027a4e88276960"
+        },
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/textures/potted_plant_02_pot_diff_1k.jpg",
+          "bytes": 155244,
+          "sha256": "684949bf24821d7e951d46915366b5a388d2e4ccaaa9d5284e718c83604705e9"
+        },
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/textures/potted_plant_02_pot_nor_gl_1k.jpg",
+          "bytes": 108343,
+          "sha256": "981a68721c8b7b9ac26b96d0210334599d5e8f529362f505082c071a0a58e86c"
+        },
+        {
+          "path": "assets/polyhaven_models/potted_plant_02/textures/potted_plant_02_pot_rough_1k.jpg",
+          "bytes": 114886,
+          "sha256": "4e92ad8ee0f098050785d9a025e2c5a7d55bc7a7f7e1916cc7627fc7824a938f"
+        }
+      ]
+    },
+    {
+      "asset_id": "residential_garden",
+      "source": "https://polyhaven.com/a/residential_garden",
+      "author": "Greg Zaal",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Only light source: overcast HDRI outside the closed room, entering through the rear window and the out-of-frame side window; both openings carry non-emitting Cycles portals",
+        "strength": 6.0,
+        "rotation_rad": 0.6
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/residential_garden/residential_garden_4k.hdr",
+          "bytes": 25980512,
+          "sha256": "367b27a182951d1fdbcc809cdc4df3d04ea3e3dfd46baf7245e8b031bd9e3d28"
+        }
+      ]
+    },
+    {
+      "asset_id": "Fabric034",
+      "source": "https://ambientcg.com/a/Fabric034",
+      "author": "Lennart Demes / ambientCG",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Color and DirectX tangent normal on irregular curtain folds ; green channel inverted for Blender GL normal",
+        "provider_measured_repeat_m": null,
+        "art_directed_repeat_m": 0.2
+      },
+      "files": [
+        {
+          "path": "assets/ambientcg/Fabric034/ATTRIBUTION.txt",
+          "bytes": 237,
+          "sha256": "77d0bc6ef8566df1759a44cad28f8bc261fdb4c72b0ec25fd6112ee2aeeb978d"
+        },
+        {
+          "path": "assets/ambientcg/Fabric034/Fabric034_SQ_Color.jpg",
+          "bytes": 1295250,
+          "sha256": "343b80e4ff7e394cb21dbd4b3c7ac962819a568227c9fd7c2b4fcbcffa686e82"
+        },
+        {
+          "path": "assets/ambientcg/Fabric034/asset_manifest.json",
+          "bytes": 2108,
+          "sha256": "78bf5b7ba04b05779b5338365f9fe7756ecc0e7224aaa6b57b18a702c7ddd452"
+        },
+        {
+          "path": "assets/ambientcg/Fabric034/license_source.html",
+          "bytes": 34106,
+          "sha256": "60138e09b277c89977841462634b36e99d7bae5b77174777813502069c59461c"
+        },
+        {
+          "path": "assets/ambientcg/Fabric034/provider_metadata.json",
+          "bytes": 9099,
+          "sha256": "06dc96795b16ffabd3f11d92bd614d35003a4a3af67f803b2c42d597908a617f"
+        },
+        {
+          "path": "assets/ambientcg/Fabric034/Fabric034_SQ_NormalDX.jpg",
+          "bytes": 4266348,
+          "sha256": "08b9dec4bfffca30d7b3b6ba6e4e5d72f06e7fdd10e464a258734bf0b3746a9e"
+        }
+      ]
+    },
+    {
+      "asset_id": "wooden_table_02",
+      "source": "https://polyhaven.com/a/wooden_table_02",
+      "authors": {
+        "Serhii Khromov": "All"
+      },
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Construction-only dependency of the architecture layer; the worn wooden table is removed before the laminate/steel table is built. No visible object or texture retained."
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/wooden_table_02/asset_manifest.json",
+          "bytes": 1730,
+          "sha256": "6b2dfc84690d0a1e7fdda47326e248a1bcf3f86ea04f1e4e4270977122dcc9c0"
+        },
+        {
+          "path": "assets/polyhaven/wooden_table_02/textures/wooden_table_02_diff_4k.jpg",
+          "bytes": 3181514,
+          "sha256": "45a00a81ad0d2d6ecef27eb9ad06ce549f13eca5ede0ba77f2a640ae4b3c45e8"
+        },
+        {
+          "path": "assets/polyhaven/wooden_table_02/textures/wooden_table_02_metal_4k.exr",
+          "bytes": 42864,
+          "sha256": "c742045846e491dee183386d85ce9af02d971d7fe015a74484a8fbf5139b028f"
+        },
+        {
+          "path": "assets/polyhaven/wooden_table_02/textures/wooden_table_02_nor_gl_4k.exr",
+          "bytes": 16631696,
+          "sha256": "2c05814098c93b2ed303cc485c772b7edd2b89c59cf9d3c56511fb62e6876f57"
+        },
+        {
+          "path": "assets/polyhaven/wooden_table_02/textures/wooden_table_02_rough_4k.jpg",
+          "bytes": 3806300,
+          "sha256": "b4860f2da4f21c2934b12f59cb09e4145c1ceb103be296bf07e8d23f331c6aa6"
+        },
+        {
+          "path": "assets/polyhaven/wooden_table_02/wooden_table_02_4k.blend",
+          "bytes": 137134,
+          "sha256": "18fce308b45f7ddf2d48fc67644461d0f1e6235722daee6ff344175a0671682b"
+        }
+      ]
+    },
+    {
+      "asset_id": "plywood",
+      "source": "https://polyhaven.com/a/plywood",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Photographed plywood diffuse, roughness and GL normal on exact original ramp profile",
+        "measured_repeat_m": 0.5,
+        "grain_image_axis": "U",
+        "normal_strength": 0.075,
+        "physical_displacement_m": 0.0,
+        "coating_variation": "Low-frequency roughness/albedo, very light hairline wear outside rolling lane"
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/plywood/asset_manifest.json",
+          "bytes": 1027,
+          "sha256": "368182b53e11996b94fbbe6af5bfb021dd44363ecb5fcca8f362c44c7334303e"
+        },
+        {
+          "path": "assets/polyhaven/plywood/plywood_diff_4k.jpg",
+          "bytes": 16467261,
+          "sha256": "0d628704affb5fa38ef4c886ad9a70f6ddfffe9c22ed5c84b03e27ef5505cfd9"
+        },
+        {
+          "path": "assets/polyhaven/plywood/plywood_nor_gl_4k.jpg",
+          "bytes": 10240705,
+          "sha256": "17d62671c2e49b6f75549983ebbb187d320beb2d7d199d21f8229ce3ac371f39"
+        },
+        {
+          "path": "assets/polyhaven/plywood/plywood_rough_4k.jpg",
+          "bytes": 13314048,
+          "sha256": "dcc9f8ce7a483dcc4c3ad2298ba3b9083df341ad9cf5a8d3c4d853eef369ba65"
+        }
+      ]
+    },
+    {
+      "asset_id": "alarm_clock_01",
+      "source": "https://polyhaven.com/a/alarm_clock_01",
+      "authors": {
+        "Yann Kervran": "Rigging",
+        "James Ray Cock": "Modeling & Texturing"
+      },
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Worn aqua twin-bell clock, original 0.174155 m height and UV/PBR, 2K atlas, rig rest pose baked for static background use"
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/alarm_clock_01/alarm_clock_01_2k.blend",
+          "bytes": 624188,
+          "sha256": "d3349471d6b307c70731cd8509a131bbe4d9147c09166e868caa9f0b209a58e7"
+        },
+        {
+          "path": "assets/polyhaven/alarm_clock_01/asset_manifest.json",
+          "bytes": 2470,
+          "sha256": "94a87db08a550d0e951745e20a37bed00a47fa32b0d2845e940e0fbbb05f8968"
+        },
+        {
+          "path": "assets/polyhaven/alarm_clock_01/provider_info.json",
+          "bytes": 1276,
+          "sha256": "db2edec3e8bf0e8f75c2be7033b2014d25444b0ac2910fe556b4f6daaff4e869"
+        },
+        {
+          "path": "assets/polyhaven/alarm_clock_01/textures/alarm_clock_01_diff_2k.jpg",
+          "bytes": 1254506,
+          "sha256": "077228e3132c61f92982c06b74fbb59d3e7164c915cdd41577c556322b163a67"
+        },
+        {
+          "path": "assets/polyhaven/alarm_clock_01/textures/alarm_clock_01_metal_2k.exr",
+          "bytes": 809397,
+          "sha256": "1c833c3b0ca1920672e24efb96469a46a05c6d8711670abfd098ba12908cdcca"
+        },
+        {
+          "path": "assets/polyhaven/alarm_clock_01/textures/alarm_clock_01_nor_gl_2k.exr",
+          "bytes": 2981683,
+          "sha256": "e8304d45647452a006fa94f62c0ffd4753a84b35a8d05b23ead32223a5c089d0"
+        },
+        {
+          "path": "assets/polyhaven/alarm_clock_01/textures/alarm_clock_01_rough_2k.exr",
+          "bytes": 1603535,
+          "sha256": "84a0cfe958fb3c1c8b4be3b2e141da19798c73bd3f3223d174e4d3832ed8d17b"
+        }
+      ]
+    },
+    {
+      "asset_id": "measuring_tape_01",
+      "source": "https://polyhaven.com/a/measuring_tape_01",
+      "authors": {
+        "Kuutti Siitonen": "All"
+      },
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Worn rubberized tape measure with yellow lock, metal clip and attached strap; original 0.073414 m height, original UV/PBR and 2K atlas"
+      },
+      "files": [
+        {
+          "path": "assets/polyhaven/measuring_tape_01/asset_manifest.json",
+          "bytes": 2504,
+          "sha256": "c4aaaf064c1126910d5deec7e14d25ff3da8e3688992a626c6c34ade75a452b8"
+        },
+        {
+          "path": "assets/polyhaven/measuring_tape_01/measuring_tape_01_2k.blend",
+          "bytes": 202155,
+          "sha256": "01abb3d3e4046ad97ddfb2343d00e1bd3ea50ee1caad78214b4c97d0ac2f98ec"
+        },
+        {
+          "path": "assets/polyhaven/measuring_tape_01/provider_info.json",
+          "bytes": 1250,
+          "sha256": "f32b8f9489e2b1a4730ec1ca8b4bedd70c6d9e7baff502b974eb17a64297d8b2"
+        },
+        {
+          "path": "assets/polyhaven/measuring_tape_01/textures/measuring_tape_01_diff_2k.jpg",
+          "bytes": 258603,
+          "sha256": "9d87cec36b1543a7444f2870b4c627aa1f584489de5ed2b9e40eca692b3aabdd"
+        },
+        {
+          "path": "assets/polyhaven/measuring_tape_01/textures/measuring_tape_01_metal_2k.exr",
+          "bytes": 71519,
+          "sha256": "519634969d19a90c160bc02e8fafb9059e9bb5231475dfd732b75266576d236c"
+        },
+        {
+          "path": "assets/polyhaven/measuring_tape_01/textures/measuring_tape_01_nor_gl_2k.exr",
+          "bytes": 4396864,
+          "sha256": "8a94e2e5e9efe9b04b1851dd837c3102bb1b7e92b9034e22632f4de5a4431ad6"
+        },
+        {
+          "path": "assets/polyhaven/measuring_tape_01/textures/measuring_tape_01_rough_2k.jpg",
+          "bytes": 472248,
+          "sha256": "cfb7519b93b7c9ed4ad2353cacb3bfafcaa736e22aa7c69cf57f75d7cae6a596"
+        }
+      ]
+    },
+    {
+      "asset_id": "beige_wall_001",
+      "source": "https://polyhaven.com/a/beige_wall_001",
+      "author": "Dimitrios Savva (photography) / Rico Cilliers (processing)",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Photographed matte emulsion wall paint (diffuse, roughness, GL normal) on all room walls and the ceiling",
+        "provider_measured_repeat_m": 3.0,
+        "repeat_m": 3.0,
+        "diffuse_saturation": 0.4,
+        "diffuse_value": 1.38,
+        "roughness_range": [
+          0.78,
+          0.94
+        ],
+        "normal_strength": 0.6
+      },
+      "files": [
+        {
+          "path": "assets/scenes/twin_ramp_collision/wall_textures/beige_wall_001/beige_wall_001_diff_2k.jpg",
+          "bytes": 235868,
+          "sha256": "222d4d2e7d5c425c97e5a66790852388cec7706714d773f769fba6bfe08cea4e"
+        },
+        {
+          "path": "assets/scenes/twin_ramp_collision/wall_textures/beige_wall_001/beige_wall_001_nor_gl_2k.jpg",
+          "bytes": 815507,
+          "sha256": "7f5cbecd6766f44034f3b78b4addb1559e12bdd5a77501bd418a736609e7cedc"
+        },
+        {
+          "path": "assets/scenes/twin_ramp_collision/wall_textures/beige_wall_001/beige_wall_001_rough_2k.jpg",
+          "bytes": 656368,
+          "sha256": "a76e2307d8ec47d1be1d4710851fc4545db7aecfa176333738a6756358b64767"
+        }
+      ]
+    },
+    {
+      "asset_id": "SurfaceImperfections018",
+      "source": "https://ambientcg.com/a/SurfaceImperfections018",
+      "author": "ambientCG (Lennart Demes)",
+      "license": "CC0 1.0",
+      "usage": {
+        "use": "Photographed smudge/dust roughness map: laminate tabletop roughness and floor-tile roughness/tone variation",
+        "table_repeat_m": 0.6,
+        "table_roughness_range": [
+          0.2,
+          0.5
+        ],
+        "floor_repeat_m": 0.9,
+        "floor_roughness_range": [
+          0.52,
+          0.8
+        ],
+        "floor_albedo_scale": [
+          1.03,
+          0.94
+        ]
+      },
+      "files": [
+        {
+          "path": "assets/ambientcg/SurfaceImperfections018/SurfaceImperfections018_SQ_Roughness.jpg",
+          "bytes": 1372349,
+          "sha256": "fb7a1f629082f2962a081ba4afb6037d7c9ca9668cbc625dd6e158ef169e1576"
+        }
+      ]
+    }
+  ],
+  "physical_geometry_changed": false,
+  "running_surface_displacement_m": 0.0,
+  "authored_geometry": [
+    "Frozen solver-exact ramp and trestles, no geometry changes",
+    "Profiled window, double glazing and irregular curtains",
+    "Rounded 25 mm laminate tabletop, four 36 mm steel legs, underside frame, fixing plates and 7 mm floor plugs",
+    "Both evaluated linen panels translated 180 mm toward the room, with gathered straight hanging header",
+    "16 mm curtain rod, two wall brackets, fourteen rings",
+    "600 mm matte porcelain tiles with 2 mm recessed joints, continuous solid substrate and four connected skirting runs",
+    "Same 50 mm UV spheres with two procedural ivory spots; no numerals or other characters",
+    "Second double-glazed casement (1.20 x 1.40 m opening) cut into the left return wall, outside the camera frustum"
+  ],
+  "lighting": {
+    "environment_strength": 6.0,
+    "environment_rotation_rad": 0.6,
+    "rear_window_portal": {
+      "location": [
+        -0.97,
+        1.516,
+        1.55
+      ],
+      "target": [
+        -0.97,
+        0.0,
+        1.55
+      ],
+      "size_m": [
+        1.26,
+        1.46
+      ],
+      "purpose": "Cycles light portal covering the masonry window opening; emits nothing, only guides sky sampling"
+    },
+    "side_window": {
+      "opening_y_m": [
+        -1.45,
+        -0.25
+      ],
+      "opening_z_m": [
+        0.85,
+        2.25
+      ],
+      "portal_x_m": -2.455,
+      "purpose": "Ordinary second casement in the left return wall, outside the camera frustum; daylight enters through it"
+    },
+    "emitting_lamps": 0,
+    "hidden_fill_lights": 0,
+    "look": "AgX - Medium High Contrast",
+    "exposure_stops": 1.8,
+    "glass_shadow_approximation": "Retained 0.96 transparent shadow-ray boundary approximation; real refractive glass for camera and glossy rays"
+  },
+  "texture_policy": {
+    "foreground": "Unchanged original 4K photographic maps",
+    "new_background_props": "Original native 2048 px PBR atlases, no resampling",
+    "fabric_normal": "AmbientCG DirectX green inverted explicitly for Blender GL tangent normal"
+  },
+  "camera_and_shutter": {
+    "fps": 24,
+    "shutter_frames": 0.25,
+    "exposure_sec": 0.010416666666666666
+  },
+  "ball_surface": {
+    "material": "Opaque hard cast resin",
+    "visual_radius_m": 0.025,
+    "dynamic_properties_changed": false,
+    "marks": "Two antipodal plain ivory spots; no printed numerals",
+    "roughness_range": [
+      0.1,
+      0.15
+    ],
+    "coat_weight": 0.6,
+    "coat_roughness": 0.04
+  },
+  "table": {
+    "construction": "Original authored metre-scale 3D geometry and shader nodes",
+    "dimensions_m": [
+      1.72,
+      0.86,
+      0.76
+    ],
+    "top_thickness_m": 0.025,
+    "surface": "Warm-grey satin laminate; photographed handling-mark roughness (SurfaceImperfections018)",
+    "floor_z_m": 0.0,
+    "top_z_m": 0.76
+  },
+  "room_detail": {
+    "curtain_forward_offset_m": 0.18,
+    "tile_pitch_m": 0.6,
+    "tile_joint_m": 0.002,
+    "tile_grid_origin_m": [
+      0.0,
+      0.05
+    ],
+    "floor_srgb": [
+      0.61,
+      0.605,
+      0.57
+    ],
+    "skirting_height_m": 0.096,
+    "purpose": "Clear both linen panels from sill/masonry and establish visible floor depth under table"
+  }
+}

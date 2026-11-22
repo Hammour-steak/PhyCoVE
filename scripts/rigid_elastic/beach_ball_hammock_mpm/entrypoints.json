@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "scene": "beach_ball_hammock_mpm",
+  "category": "rigid_elastic",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_beach_ball_hammock_mpm.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--work-dir"
+      },
+      "native_options": [
+        "--work-dir",
+        "--frames",
+        "--grid-resolution",
+        "--substeps",
+        "--young-modulus",
+        "--young-modulus-after",
+        "--young-modulus-change-time",
+        "--ball-mass",
+        "--ball-vz",
+        "--ball-x",
+        "--ball-y",
+        "--visible-damping",
+        "--strain-limit-min",
+        "--strain-limit-max",
+        "--inplane-tether-hz",
+        "--inplane-tether-damping-ratio",
+        "--end-transition-width",
+        "--end-tether-hz",
+        "--end-tether-damping-ratio",
+        "--pre-roll-seconds",
+        "--pre-roll-damping",
+        "--variant-id",
+        "--max-lateral-displacement",
+        "--cpu-threads",
+        "--source-branch-work-dir",
+        "--source-branch-variant-id",
+        "--reuse-cache"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_beach_ball_hammock_mpm.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--work-dir",
+        "--output-dir",
+        "--appearance-json",
+        "--device",
+        "--frames-only"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_beach_ball_hammock_mpm.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--source-blend",
+        "--work-dir",
+        "--output-dir",
+        "--appearance-json",
+        "--simulation-args",
+        "--out-root",
+        "--stage",
+        "--python",
+        "--blender",
+        "--threads",
+        "--gpu",
+        "--dry-run"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "edit_hammock_young_1500pa",
+        "edit_young_15000_to_1500pa_at_2_5s",
+        "edit_young_70000pa_hard"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "appearance/apply_mpm_cache_to_blender.py",
+    "build_pcve_beach_ball_hammock_mpm.py",
+    "edit_vocab.py",
+    "appearance/look_beach.py",
+    "appearance/appearance.json",
+    "appearance/prepare_beach_ball_hammock_mpm.py",
+    "render_beach_ball_hammock_mpm.py",
+    "appearance/render_mpm_full.py",
+    "appearance/render_pcve_beach_ball_hammock_mpm.py",
+    "physics/run_taichi_mpm_hammock.py",
+    "simulate_beach_ball_hammock_mpm.py",
+    "physics/simulate_pcve_beach_ball_hammock_mpm.py",
+    "appearance/validate_mpm_blend.py",
+    "scene_manifest.json"
+  ]
+}

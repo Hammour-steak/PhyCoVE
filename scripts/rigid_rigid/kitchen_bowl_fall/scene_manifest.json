@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "scene_id": "kitchen_bowl_fall",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_kitchen_bowl_fall.py",
+    "render": "render_kitchen_bowl_fall.py",
+    "build_pcve": "build_pcve_kitchen_bowl_fall.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "kitchen_bowl_fall_baseline",
+    "edit_heavy_bowl",
+    "edit_strong_gravity",
+    "edit_remove_tableware",
+    "edit_bouncier_kitchen",
+    "edit_gravity_off_after_impact",
+    "edit_remove_falling_bowl"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_kitchen_bowl_fall_suite": {
+      "target": "renders/pcve_suites/pcve_kitchen_bowl_fall_suite",
+      "case_video_sha256": {
+        "kitchen_bowl_fall_baseline": "7289bc7951615bb508708c05a0411f7e922c99a44670e692ec49d97184e86ad5",
+        "edit_heavy_bowl": "fa2a65f6f0e1a904d7e24a93aa389103bb082cc0ffa2fa3124e3fa935bf3eb6a",
+        "edit_strong_gravity": "117f517490af1ae64dab51dec7d9afc3590386e6d1df4bdd5681f5381b57b486",
+        "edit_remove_tableware": "7f9b739001417bae5cbd1b5c259a9d932dd994c331f25b54c0eaf4c7473c5190",
+        "edit_bouncier_kitchen": "918266e22508d78850df7026c8d161cd83107a14c03f2f375e24562c1bfbe443",
+        "edit_gravity_off_after_impact": "950aa58da45e68affd2391552f48e5b08ccc2ebe693eb1b0559ce1906b8d05f4",
+        "edit_remove_falling_bowl": "4cfdd11ffe354acdcfbdacd5f7ea2b3ab4760988a6bac4c621c53d90cb182852"
+      },
+      "last_render": {
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 24,
+        "frames": 96,
+        "samples": 384,
+        "engine": "Cycles",
+        "backend": "CUDA",
+        "denoiser": "OpenImageDenoise"
+      },
+      "distribution_schema_version": 3,
+      "prompts_complete": true,
+      "public_case_ids": {
+        "kitchen_bowl_fall_baseline": "source",
+        "edit_heavy_bowl": "edit_heavy_bowl",
+        "edit_strong_gravity": "edit_strong_gravity",
+        "edit_remove_tableware": "edit_remove_tableware",
+        "edit_bouncier_kitchen": "edit_bouncier_kitchen",
+        "edit_gravity_off_after_impact": "edit_gravity_off_after_impact"
+      },
+      "public_case_video_sha256": {
+        "source": "7289bc7951615bb508708c05a0411f7e922c99a44670e692ec49d97184e86ad5",
+        "edit_heavy_bowl": "fa2a65f6f0e1a904d7e24a93aa389103bb082cc0ffa2fa3124e3fa935bf3eb6a",
+        "edit_strong_gravity": "117f517490af1ae64dab51dec7d9afc3590386e6d1df4bdd5681f5381b57b486",
+        "edit_remove_tableware": "7f9b739001417bae5cbd1b5c259a9d932dd994c331f25b54c0eaf4c7473c5190",
+        "edit_bouncier_kitchen": "918266e22508d78850df7026c8d161cd83107a14c03f2f375e24562c1bfbe443",
+        "edit_gravity_off_after_impact": "950aa58da45e68affd2391552f48e5b08ccc2ebe693eb1b0559ce1906b8d05f4",
+        "edit_remove_falling_bowl": "4cfdd11ffe354acdcfbdacd5f7ea2b3ab4760988a6bac4c621c53d90cb182852"
+      }
+    }
+  },
+  "source_provenance": "authored in this repository; room colliders measured from assets/models/modern_kitchen.glb; the loft kitchen, the open cupboard and both bowls are built procedurally on those colliders; Poly Haven CC0 surfaces and props in assets/polyhaven/kitchen_bowl_fall",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "scenes/kitchen_bowl_fall",
+      "polyhaven/kitchen_bowl_fall"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

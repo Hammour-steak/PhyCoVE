@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scene_id": "tennis_bottle_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_tennis_bottle_collision.py",
+    "render": "render_tennis_bottle_collision.py",
+    "build_pcve": "build_pcve_tennis_bottle_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "tennis_bottle_collision_baseline",
+    "edit_fast_ball",
+    "edit_heavy_bottles",
+    "edit_remove_far_bottle",
+    "edit_add_lane_bottle",
+    "edit_heavy_bottles_midfall",
+    "edit_remove_tennis_ball"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_tennis_bottle_collision_suite": {
+      "target": "renders/pcve_suites/pcve_tennis_bottle_collision_suite",
+      "case_video_sha256": {
+        "edit_add_lane_bottle": "0eb586294b78ea1479da5261fec3d64c467838e57d781342153645ab3b0f5a5b",
+        "edit_fast_ball": "c7b5d8675d6d6cd754b2bb1752035bb25f5fcf5ef1b52cd46d876585113d08ef",
+        "edit_heavy_bottles": "dfc835d0082cc0f0f39cbbc2a07adbee3c2ed98fc1cc5b20892f6ad0bbc795a7",
+        "edit_heavy_bottles_midfall": "0070c831629c2dc6fb2b270d81447fdf90ceadcaac53800f3cdcc3542ed8e19d",
+        "edit_remove_far_bottle": "3930146c60102bfc5ce04994ba173edcfc721af58f3fc9d5bdb9b3b7e760a145",
+        "edit_remove_tennis_ball": "530dd4bf970574c2938302fddd2ad908ac33a1a7c6d13f8a961537d170a2df3b",
+        "tennis_bottle_collision_baseline": "ddbdf27b7a775acfd96c66d1dfc2a2bc78f559f11acf162beafda7c612921a37"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "tennis_bottle_collision_baseline": "source",
+        "edit_fast_ball": "edit_fast_ball",
+        "edit_heavy_bottles": "edit_heavy_bottles",
+        "edit_remove_far_bottle": "edit_remove_far_bottle",
+        "edit_add_lane_bottle": "edit_add_lane_bottle",
+        "edit_heavy_bottles_midfall": "edit_heavy_bottles_midfall"
+      },
+      "public_case_video_sha256": {
+        "edit_add_lane_bottle": "0eb586294b78ea1479da5261fec3d64c467838e57d781342153645ab3b0f5a5b",
+        "edit_fast_ball": "c7b5d8675d6d6cd754b2bb1752035bb25f5fcf5ef1b52cd46d876585113d08ef",
+        "edit_heavy_bottles": "dfc835d0082cc0f0f39cbbc2a07adbee3c2ed98fc1cc5b20892f6ad0bbc795a7",
+        "edit_heavy_bottles_midfall": "0070c831629c2dc6fb2b270d81447fdf90ceadcaac53800f3cdcc3542ed8e19d",
+        "edit_remove_far_bottle": "3930146c60102bfc5ce04994ba173edcfc721af58f3fc9d5bdb9b3b7e760a145",
+        "edit_remove_tennis_ball": "530dd4bf970574c2938302fddd2ad908ac33a1a7c6d13f8a961537d170a2df3b",
+        "source": "ddbdf27b7a775acfd96c66d1dfc2a2bc78f559f11acf162beafda7c612921a37"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/tennis_bottle_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/door_basketball_collision",
+      "polyhaven/tennis_bottle_collision",
+      "scenes/tennis_bottle_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

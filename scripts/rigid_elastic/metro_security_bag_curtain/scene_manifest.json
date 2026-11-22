@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "scene_id": "metro_security_bag_curtain",
+  "interaction_category": "rigid_elastic",
+  "case_number": 12,
+  "entry_points": {
+    "simulate": "simulate_metro_security_bag_curtain.py",
+    "render": "render_metro_security_bag_curtain.py",
+    "build_pcve": "build_pcve_metro_security_bag_curtain.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "young_modulus_x100",
+    "belt_speed_x2",
+    "friction_x0p02",
+    "delete_curtain",
+    "delete_curtain_at_frame_12"
+  ],
+  "data": {
+    "assets": "assets/scenes/metro_security_bag_curtain",
+    "native_states": "assets/scenes/metro_security_bag_curtain/native/accepted_states",
+    "runtime": ".runtime/metro_security_bag_curtain",
+    "accepted_delivery": "renders/metro_security_bag_curtain/accepted"
+  },
+  "canonical_suites": {
+    "pcve_metro_security_bag_curtain_suite": {
+      "target": "renders/pcve_suites/pcve_metro_security_bag_curtain_suite",
+      "public_case_ids": {
+        "source": "source",
+        "belt_speed_x2": "edit_belt_speed_x2",
+        "delete_curtain": "edit_delete_curtain",
+        "friction_x0p02": "edit_friction_x0p02",
+        "young_modulus_x100": "edit_young_modulus_x100",
+        "delete_curtain_at_frame_12": "edit_delete_curtain_at_frame_12",
+        "delete_bag": "edit_delete_bag"
+      },
+      "case_video_sha256": {
+        "source": "8c5131b55a229198e205d2300fbcd936719b8012c0e3645fa2788fbd41ad62aa",
+        "belt_speed_x2": "2f8b6d5463cc3a981f50a6a5b2f37f061027f04682bf5e269ab915619d03be73",
+        "delete_curtain": "018e91320c9912feae0213678e07dec059a8a3f863f2f05b39c9d6ad60bb999f",
+        "friction_x0p02": "70aa0b0cd66c7677425fdf9e3e93dccc1ca06bd494408f051e751962ec4ee67b",
+        "young_modulus_x100": "09b83439ded90ed832e932f98e384880fb73f33773d24bcf94683dabb6f8ded4",
+        "delete_curtain_at_frame_12": "cd5ffc0259db83644a1ceb27bc9edcb620c1f6f69f527dc040d9dc8e34ffafb9",
+        "delete_bag": "03d8d50abb5a62d60bfa91b9530b4c0d1657fe51ee9c6343f6850a4a86950026"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "belt_speed_x2": "cases/edit_belt_speed_x2/video.mp4",
+        "delete_curtain": "cases/edit_delete_curtain/video.mp4",
+        "friction_x0p02": "cases/edit_friction_x0p02/video.mp4",
+        "young_modulus_x100": "cases/edit_young_modulus_x100/video.mp4",
+        "delete_curtain_at_frame_12": "cases/edit_delete_curtain_at_frame_12/video.mp4",
+        "delete_bag": "cases/edit_delete_bag/video.mp4"
+      },
+      "case_ground_truth_sha256": {
+        "source": "a9963e4407ac46d08eea4825f069df4df731534e5d89dd5125f4850d4a1016ef",
+        "belt_speed_x2": "34cd3e04f4dd5fbd8f97705a068ff09facc5def18aeed16c02ba76ee7753dcfa",
+        "delete_curtain": "97dcf17d3ec0a2486d24243f180509c2e36f98eb164af68bca8b90c46e3e83ad",
+        "friction_x0p02": "e81b4c2c64e5770f17c75e6c32f5542d8591cb170133c1e1e10562b911a66ce7",
+        "young_modulus_x100": "aa49ebacba9843663ae746f53231950f2d002a351f6bf9c2b54264ca32571443",
+        "delete_curtain_at_frame_12": "4abafe0cfe9a8d772359a830e8e49940c35116341fca5e4721ac1956638d7aff",
+        "delete_bag": "91a7764cd0d2613e65858062c8e5dc970b40c43563d39526fcd363c4ca5f7126"
+      }
+    }
+  }
+}

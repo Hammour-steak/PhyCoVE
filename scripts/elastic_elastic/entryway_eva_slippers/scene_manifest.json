@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scene_id": "entryway_eva_slippers",
+  "interaction_category": "elastic_elastic",
+  "look": "tools/native/realism.py (morning light, lived-in hallway)",
+  "entry_points": {
+    "simulate": "simulate_entryway_eva_slippers.py",
+    "render": "render_entryway_eva_slippers.py",
+    "build_pcve": "build_pcve_entryway_eva_slippers.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "tools/native/vocab_revised.py",
+    "tools/native/vocab_hero.py",
+    "tools/native/common.py"
+  ],
+  "supported_cases": [
+    "source",
+    "stiff_falling",
+    "slippery_floor",
+    "light_falling",
+    "remove_resting",
+    "add_shoe_tray"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/entryway_eva_slippers",
+    "accepted_native_delivery": "renders/entryway_eva_slippers/accepted_delivery/pcve_entryway_eva_slippers_suite",
+    "production_specification": "renders/entryway_eva_slippers/accepted_delivery/revised_scene_spec.json (falls back to accepted_delivery/scene_spec.json)",
+    "rebuild_output": "renders/entryway_eva_slippers/<new folder>"
+  },
+  "canonical_suites": {
+    "pcve_entryway_eva_slippers_suite": {
+      "target": "renders/pcve_suites/pcve_entryway_eva_slippers_suite",
+      "look": "tools/native/realism.py",
+      "case_video_sha256": {
+        "source": "627f43e71920640a07a23b25100950c41427bd1ef9fd7a0a8a132ffa4481b783",
+        "stiff_falling": "abb9c7bf2073f3d89431cfc1a36938be41c3711b7b5e2563d278de0ae53eb9ee",
+        "slippery_floor": "a7d4a0859508d1accf7b3ce0ad2accbb554e6d8c25e95deaca29ce91285b2c8d",
+        "light_falling": "bec777d637bc499d0f25f605ede5e81f819e8fa72d26cd1906e025a755bae51f",
+        "remove_resting": "3f2d4d4b14e825bf81f0ad764cac6f799f067f6fd25ca41c04c5896f85904ca7",
+        "add_shoe_tray": "64b120831a12c66e0346bcebb01415396249a24f8ae48b558972a96955aee8c9",
+        "edit_remove_falling_slipper": "6ebff79c80820e50a985cc45e5eda3af42b8bde4a477472abaad4ea4edd9589f"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1): slide surface-vertex centroids and the tray centre from each case's native simulation.npz"
+}

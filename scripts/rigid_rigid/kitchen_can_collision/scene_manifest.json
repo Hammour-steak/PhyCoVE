@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "scene_id": "kitchen_can_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_kitchen_can_collision.py",
+    "render": "render_kitchen_can_collision.py",
+    "build_pcve": "build_pcve_kitchen_can_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "kitchen_can_collision_baseline",
+    "edit_heavy_driver",
+    "edit_heavy_receiver",
+    "edit_remove_receiver",
+    "edit_rough_cans",
+    "edit_slippery_table",
+    "edit_remove_rolling_can"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_kitchen_can_collision_suite": {
+      "target": "renders/pcve_suites/pcve_kitchen_can_collision_suite",
+      "case_video_sha256": {
+        "edit_heavy_driver": "6e342a50511878d13ffd8b758b46b75fa4b6624e72361b6813814a02e1a077db",
+        "edit_heavy_receiver": "741d1718634effb9aaba8988be73c5a0a91f5b05586cab85154431ce6a6e7d3e",
+        "edit_remove_receiver": "3e5c5ee8419f93cdbd75e1455120ea7e35747ee6c2fb86853c88b742fbe43825",
+        "edit_remove_rolling_can": "15ec6fccecd7ec455270ec24b3a3858e4a58eb2a5a8f9a6f837aae41a4da40af",
+        "edit_rough_cans": "83e4f036bdf7ed5d0c4bff805a890cfade8537cc1b42cffe2816237b4adef8c3",
+        "edit_slippery_table": "c98a434b90444bebcb9cc31448a7d687f4a099a60789ae0c9a01d3537736533c",
+        "kitchen_can_collision_baseline": "b6982a90851373d6102b8ad77fccd549f831be0bb72bb9be7f1c4c119132da3e"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "kitchen_can_collision_baseline": "source",
+        "edit_heavy_driver": "edit_heavy_driver",
+        "edit_heavy_receiver": "edit_heavy_receiver",
+        "edit_remove_receiver": "edit_remove_receiver",
+        "edit_rough_cans": "edit_rough_cans",
+        "edit_slippery_table": "edit_slippery_table"
+      },
+      "public_case_video_sha256": {
+        "edit_heavy_driver": "6e342a50511878d13ffd8b758b46b75fa4b6624e72361b6813814a02e1a077db",
+        "edit_heavy_receiver": "741d1718634effb9aaba8988be73c5a0a91f5b05586cab85154431ce6a6e7d3e",
+        "edit_remove_receiver": "3e5c5ee8419f93cdbd75e1455120ea7e35747ee6c2fb86853c88b742fbe43825",
+        "edit_remove_rolling_can": "15ec6fccecd7ec455270ec24b3a3858e4a58eb2a5a8f9a6f837aae41a4da40af",
+        "edit_rough_cans": "83e4f036bdf7ed5d0c4bff805a890cfade8537cc1b42cffe2816237b4adef8c3",
+        "edit_slippery_table": "c98a434b90444bebcb9cc31448a7d687f4a099a60789ae0c9a01d3537736533c",
+        "source": "b6982a90851373d6102b8ad77fccd549f831be0bb72bb9be7f1c4c119132da3e"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/kitchen_can_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/kitchen_can_collision",
+      "scenes/kitchen_can_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

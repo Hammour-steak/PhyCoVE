@@ -1,0 +1,3 @@
+# Optional code-formatting tools; not required by simulation or Blender.
+black==25.1.0
+ruff==0.11.8

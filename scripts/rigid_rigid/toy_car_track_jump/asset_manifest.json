@@ -1,0 +1,126 @@
+{
+  "schema_version": 2,
+  "scene": "toy_car_track_jump",
+  "appearance_preset": "activity_room",
+  "assets": [
+    {
+      "id": "toy_car",
+      "source_page": "https://github.com/KhronosGroup/glTF-Sample-Assets/blob/main/Models/ToyCar/README.md",
+      "license": "CC0-1.0",
+      "provider": "Khronos glTF Sample Assets",
+      "authors": [
+        "Guido Odendahl",
+        "Eric Chadwick"
+      ],
+      "files": [
+        {
+          "path": "assets/scenes/toy_car_track_jump/room_dressing/toy_car/README.md",
+          "download_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/README.md",
+          "bytes": 2073,
+          "sha256": "aed216cda25deab59a115bdd6f486da0437fe4e1d9df11c34e496242dbf89fe2"
+        },
+        {
+          "path": "assets/scenes/toy_car_track_jump/room_dressing/toy_car/ToyCar.glb",
+          "download_url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/ToyCar/glTF-Binary/ToyCar.glb",
+          "bytes": 5422412,
+          "sha256": "01a60862de55cd4b9f3acfab0b0def86451800f9c42467fcd61052c16cb9838c"
+        }
+      ]
+    }
+  ],
+  "generated_assets": [
+    {
+      "id": "red_toy_car",
+      "path": "assets/scenes/toy_car_track_jump/car_150mm/red_toy_car_library.blend",
+      "generator": "tools/prepare_real_car.py",
+      "sha256": "e1b166a235f049c16004d2cf8418ed6cc51e3406a959c85b822afdb4b55987d0",
+      "modifications": "Uniform 150 mm body, red paint and neutral glazing on the original mapped mesh, four separate wheel meshes with 12.7 mm radius."
+    },
+    {
+      "id": "orange_track_and_risers",
+      "generator": "appearance/look_toy_car_track_jump.py",
+      "kind": "original metric geometry following common modular toy construction; not a branded product replica"
+    },
+    {
+      "id": "clear_window_panes",
+      "generator": "appearance/refine_toy_car_track_jump.py",
+      "kind": "Four procedural clear 4 mm glass panes fitted inside the existing frames."
+    },
+    {
+      "id": "finish_layer",
+      "generator": "appearance/finish_toy_car_track_jump.py",
+      "kind": "Shader and lighting changes only: hidden ceiling fill removed, real sun through the side window, semi-gloss molded plastics, rug sheen, roof race number painted out, plain book cloth without titles; the labelled wine bottle is replaced by polyhaven/potted_plant_04."
+    }
+  ],
+  "redistribution": "Included model/texture assets CC0-1.0. Source readme and file hashes retained. All render images are packed into the delivered Blender scene.",
+  "asset_license_page": "https://polyhaven.com/license",
+  "asset_directory": "assets/scenes/toy_car_track_jump",
+  "construction_references": [
+    "https://m.service.mattel.com/us/Technical/productDetail?prodno=DLF05",
+    "https://service.mattel.com/instruction_sheets/DLF05-2L.pdf",
+    "https://m.service.mattel.com/us/Technical/productDetail?prodno=GLD49"
+  ],
+  "reference_image_policy": "Manufacturer images/manuals were viewed as construction references only. No reference photographs, logos or PDF pages are used as textures or redistributed in the scene assets.",
+  "shared_assets": [
+    {
+      "registry_name": "polyhaven/wood_floor",
+      "license": "CC0-1.0"
+    },
+    {
+      "registry_name": "polyhaven/sunny_rose_garden",
+      "license": "CC0-1.0"
+    },
+    {
+      "registry_name": "polyhaven/hanging_picture_frame_02",
+      "license": "CC0-1.0"
+    },
+    {
+      "registry_name": "polyhaven/book_encyclopedia_set_01",
+      "license": "CC0-1.0"
+    },
+    {
+      "registry_name": "polyhaven/rough_linen",
+      "license": "CC0-1.0"
+    },
+    {
+      "registry_name": "polyhaven/potted_plant_04",
+      "license": "CC0-1.0",
+      "source_page": "https://polyhaven.com/a/potted_plant_04",
+      "note": "Shelf plant in place of the labelled wine bottle"
+    },
+    {
+      "registry_name": "scenes/toy_car_track_jump/room_dressing",
+      "license": "CC0-1.0",
+      "note": "throw_pillows_01 cushion shape and the ToyCar source model"
+    },
+    {
+      "registry_name": "pcve/domino_chain_curtain_drape",
+      "license": "project-generated",
+      "note": "Relaxed cloth panels; made by this project, not hosted publicly"
+    }
+  ],
+  "room_assets": {
+    "provider": "Poly Haven",
+    "license": "CC0-1.0",
+    "license_page": "https://polyhaven.com/license",
+    "registry_name": "scenes/toy_car_track_jump/room",
+    "source_pages": {
+      "Sofa_01": "https://polyhaven.com/a/Sofa_01",
+      "antique_ceramic_vase_01": "https://polyhaven.com/a/antique_ceramic_vase_01",
+      "ceramic_vase_02": "https://polyhaven.com/a/ceramic_vase_02",
+      "fancy_picture_frame_01": "https://polyhaven.com/a/fancy_picture_frame_01",
+      "jug_01": "https://polyhaven.com/a/jug_01",
+      "plastered_wall": "https://polyhaven.com/a/plastered_wall",
+      "poly_wool_herringbone": "https://polyhaven.com/a/poly_wool_herringbone",
+      "side_table_01": "https://polyhaven.com/a/side_table_01",
+      "standing_picture_frame_01": "https://polyhaven.com/a/standing_picture_frame_01",
+      "wine_bottles_01": "https://polyhaven.com/a/wine_bottles_01",
+      "wooden_display_shelves_01": "https://polyhaven.com/a/wooden_display_shelves_01"
+    }
+  },
+  "shared_scene_template": {
+    "filename": "source_template.blend",
+    "contents": "Packed shared room, car, track, shaders, lights and camera; native case poses are applied during preparation.",
+    "applies_to": "Optional --source-scene input of the builder; the current appearance is built from code without a template."
+  }
+}

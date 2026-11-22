@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "scene_id": "rubber_band_wood_slider",
+  "interaction_category": "rigid_elastic",
+  "review_status": "published_suite_pending_visual_review",
+  "entry_points": {
+    "simulate": "simulate_rubber_band_wood_slider.py",
+    "render": "render_rubber_band_wood_slider.py",
+    "build_pcve": "build_pcve_rubber_band_wood_slider.py"
+  },
+  "supported_cases": [
+    "source",
+    "young_x0p5",
+    "mass_x3",
+    "friction_x2",
+    "delete_band",
+    "add_stop"
+  ],
+  "canonical_suites": {
+    "pcve_rubber_band_wood_slider_suite": {
+      "target": "renders/pcve_suites/pcve_rubber_band_wood_slider_suite",
+      "case_video_sha256": {
+        "source": "f755bac7ca7d29e8d94e74ad67e8fe833e674f40227b7d1f326980069204e33e",
+        "add_stop": "c53fa4dabbbd10bf1b292bef771b9cdd8fc58f4bb9ee69c581f9152e1cb2a117",
+        "delete_band": "4f7e06cdf1c836463cd6c6c3802129efe33df636b280b7c3438c4b0c684b2e05",
+        "friction_x2": "95d34ad3aeb73c005d5e0bb26b5b55cf5c22fce648c027d3638ada91d7b6a895",
+        "mass_x3": "cc4a3837b4d7ac2569554ccb21dc6f290b146679a56b16bde6540e91d6434f68",
+        "young_x0p5": "b284d4ad1006975f9376cd34c4bf20ca3cf7d98b670e5bc10baa238214cebdc0"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "add_stop": "cases/edit_add_stop/video.mp4",
+        "delete_band": "cases/edit_delete_band/video.mp4",
+        "friction_x2": "cases/edit_friction_x2/video.mp4",
+        "mass_x3": "cases/edit_mass_x3/video.mp4",
+        "young_x0p5": "cases/edit_young_x0p5/video.mp4"
+      }
+    }
+  },
+  "accepted_physics": {
+    "increment": "assets/scenes/rubber_band_wood_slider/native/accepted_increment.zip",
+    "increment_sha256": "62b4b2556e648fe23ceae9fb770a730794e197d0e41c6ae51aa22b1daf22edfe",
+    "native_rate_hz": 480,
+    "video_frame_stride": 20,
+    "material_calibrated": false,
+    "accepted_benchmark_gt": false
+  },
+  "native_outputs": {
+    "native_states": "assets/scenes/rubber_band_wood_slider/native/accepted_increment.zip (cases/<case>/simulation.npz), extracted on demand to .runtime/rubber_band_wood_slider/native/<case>/"
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame i = native state 20 (i - 1) at (i-1)/24 s"
+  }
+}

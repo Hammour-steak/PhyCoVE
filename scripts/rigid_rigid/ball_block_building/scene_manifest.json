@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "scene_id": "ball_block_building",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_ball_block_building.py",
+    "render": "render_ball_block_building.py",
+    "build_pcve": "build_pcve_ball_block_building.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "ball_block_building_baseline",
+    "edit_heavy_ball",
+    "edit_fast_ball",
+    "edit_low_block_friction",
+    "edit_delete_block_01",
+    "edit_stronger_gravity_timed",
+    "edit_delete_ball"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_ball_block_building_suite": {
+      "target": "renders/pcve_suites/pcve_ball_block_building_suite",
+      "case_video_sha256": {
+        "ball_block_building_baseline": "f7145554aa68de8400ce26a5c0b1afcfadaf1772e799291a398995f230d7f209",
+        "edit_delete_ball": "c3bc9ddfb8d069240b7fd1b68545d6869515b43483aea2fb09f7ca3773dbbea3",
+        "edit_delete_block_01": "b63228dc2d547f666868a6f81d33b2ed535b7735c2a3fa964e8f52132c1a38fa",
+        "edit_fast_ball": "d0901e37e863a99f2c50fe2207025bcab1190ead7a50e236959a03d0dd237152",
+        "edit_heavy_ball": "4078dfbe2cae1e9fb8d724aac17f32b8a125c9edbfddc84aa99d924f4e2ea53a",
+        "edit_low_block_friction": "e97f62fd4cf0ca905067b1c3718a98d08598cb257361f87a184fff4597cb31c8",
+        "edit_stronger_gravity_timed": "d7ff4d4b4eb6a7a2abfde9f1dc82f124ea27b5c2f18af5eee1a34a82c9dce7b0"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "ball_block_building_baseline": "source",
+        "edit_heavy_ball": "edit_heavy_ball",
+        "edit_fast_ball": "edit_fast_ball",
+        "edit_low_block_friction": "edit_low_block_friction",
+        "edit_delete_block_01": "edit_delete_block_01",
+        "edit_stronger_gravity_timed": "edit_stronger_gravity_timed"
+      },
+      "public_case_video_sha256": {
+        "source": "f7145554aa68de8400ce26a5c0b1afcfadaf1772e799291a398995f230d7f209",
+        "edit_delete_block_01": "b63228dc2d547f666868a6f81d33b2ed535b7735c2a3fa964e8f52132c1a38fa",
+        "edit_fast_ball": "d0901e37e863a99f2c50fe2207025bcab1190ead7a50e236959a03d0dd237152",
+        "edit_heavy_ball": "4078dfbe2cae1e9fb8d724aac17f32b8a125c9edbfddc84aa99d924f4e2ea53a",
+        "edit_low_block_friction": "e97f62fd4cf0ca905067b1c3718a98d08598cb257361f87a184fff4597cb31c8",
+        "edit_stronger_gravity_timed": "d7ff4d4b4eb6a7a2abfde9f1dc82f124ea27b5c2f18af5eee1a34a82c9dce7b0",
+        "edit_delete_ball": "c3bc9ddfb8d069240b7fd1b68545d6869515b43483aea2fb09f7ca3773dbbea3"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/ball_block_building",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "polyhaven/ball_block_building"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

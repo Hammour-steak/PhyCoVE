@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "scene_id": "basketball_rim_roll_in",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_basketball_rim_roll_in.py",
+    "render": "render_basketball_rim_roll_in.py",
+    "build_pcve": "build_pcve_basketball_rim_roll_in.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "basketball_rim_baseline",
+    "edit_fast_ball",
+    "edit_aim_high",
+    "edit_aim_left",
+    "edit_bouncier",
+    "edit_gravity_midway",
+    "edit_delete_backboard"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_basketball_rim_roll_in_suite": {
+      "target": "renders/pcve_suites/pcve_basketball_rim_roll_in_suite",
+      "case_video_sha256": {
+        "basketball_rim_baseline": "8039da663ab6613b56872185b0a8d046a324fe6d25043ebdb8bda52b5eae8c0f",
+        "edit_aim_high": "6fe530c6632f11cab62449fc5522df3f26718e006df78ea8e61701a0cb35360d",
+        "edit_aim_left": "b637d12710cfed231d445016aaf9dff6a8c358b998201cf9347b73529ad5ee1f",
+        "edit_bouncier": "bf010a5d1238d6f5f12c03c74cbe4ad563aa7b6cec129a0ad9946a759eb164f8",
+        "edit_delete_backboard": "e85fe62c95e6f8fdb973508a9d5a2215e06a70b74c6292bbddc8b5a934adee73",
+        "edit_fast_ball": "a6513ce80f3fbd6f792fdfd68e083219d0f2ea639a1fd986b5a6452d8c90ae67",
+        "edit_gravity_midway": "d92a9ef4d6b8498156e10cd33c9208dbe7b79a220ed575c3b9d11b001516b74f"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "basketball_rim_baseline": "source",
+        "edit_fast_ball": "edit_fast_ball",
+        "edit_aim_high": "edit_aim_high",
+        "edit_aim_left": "edit_aim_left",
+        "edit_bouncier": "edit_bouncier",
+        "edit_gravity_midway": "edit_gravity_midway"
+      },
+      "public_case_video_sha256": {
+        "source": "8039da663ab6613b56872185b0a8d046a324fe6d25043ebdb8bda52b5eae8c0f",
+        "edit_aim_high": "6fe530c6632f11cab62449fc5522df3f26718e006df78ea8e61701a0cb35360d",
+        "edit_aim_left": "b637d12710cfed231d445016aaf9dff6a8c358b998201cf9347b73529ad5ee1f",
+        "edit_bouncier": "bf010a5d1238d6f5f12c03c74cbe4ad563aa7b6cec129a0ad9946a759eb164f8",
+        "edit_fast_ball": "a6513ce80f3fbd6f792fdfd68e083219d0f2ea639a1fd986b5a6452d8c90ae67",
+        "edit_gravity_midway": "d92a9ef4d6b8498156e10cd33c9208dbe7b79a220ed575c3b9d11b001516b74f",
+        "edit_delete_backboard": "e85fe62c95e6f8fdb973508a9d5a2215e06a70b74c6292bbddc8b5a934adee73"
+      }
+    }
+  },
+  "source_provenance": "authored in this repository",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/basketball_rim_roll_in",
+      "scenes/basketball_rim_roll_in"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

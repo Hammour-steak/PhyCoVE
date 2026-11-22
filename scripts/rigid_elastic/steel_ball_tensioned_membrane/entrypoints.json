@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "scene": "steel_ball_tensioned_membrane",
+  "category": "rigid_elastic",
+  "case_number": 7,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_steel_ball_tensioned_membrane.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--case",
+        "--duration",
+        "--dt"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "cases": [
+        "source",
+        "ball_mass_heavy",
+        "membrane_soft",
+        "membrane_stiff",
+        "remove_membrane",
+        "add_second_ball"
+      ],
+      "stage_semantics": "none"
+    },
+    "render": {
+      "file": "render_steel_ball_tensioned_membrane.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--cache",
+        "--input",
+        "--out",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--render-threads",
+        "--case",
+        "--samples",
+        "--width",
+        "--camera",
+        "--preview-frame",
+        "--preview-frames",
+        "--frames",
+        "--stills",
+        "--look",
+        "--set"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads",
+        "blender": "--blender-bin"
+      },
+      "cases": [
+        "source",
+        "ball_mass_heavy",
+        "membrane_soft",
+        "membrane_stiff",
+        "remove_membrane",
+        "add_second_ball"
+      ],
+      "stage_semantics": "none"
+    },
+    "build_pcve": {
+      "file": "build_pcve_steel_ball_tensioned_membrane.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--stage",
+        "--stages",
+        "--cases",
+        "--out",
+        "--accepted-root",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--render-threads"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads",
+        "blender": "--blender-bin"
+      },
+      "cases": [
+        "source",
+        "ball_mass_heavy",
+        "membrane_soft",
+        "membrane_stiff",
+        "remove_membrane",
+        "add_second_ball"
+      ],
+      "stage_semantics": "selector"
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "A 2.09 kg polished steel ball (radius 4 cm) is released from rest 38 cm above the centre of a black rubber membrane (clear diameter 76 cm, 0.8 mm thick, E = 1.2 MPa, Poisson 0.48, pretension 65 N/m) clamped between two rings. physics/simulate_native.py solves the coupled rigid-ball / nonlinear thin-shell problem with libuipc (affine rigid body, Neo-Hookean shell, discrete-shell bending, IPC contact with friction) at dt = 1/1920 s and stores the native states (simulation.npz). Edits change one declared input through edit_vocab.py (ball mass x2, membrane modulus x0.5 / x3, delete the membrane, add an identical second ball on the drop line). appearance/render_native.py replays a native cache in the modelled laboratory workcell (Blender 4.3.2 Cycles); the published videos are the accepted saved scene of each case with the laboratory look of appearance/realism_overlay.py, which changes shaders, lights and colour only and checks geometry, animation and camera byte for byte before rendering. --stage verify checks the accepted delivery (renders/steel_ball_tensioned_membrane). Material values are nominal, not calibrated.",
+  "assets": "assets/scenes/steel_ball_tensioned_membrane",
+  "implementation_files": [
+    "appearance/geometry.py",
+    "appearance/primitives.py",
+    "appearance/realism.py",
+    "appearance/realism_overlay.py",
+    "appearance/render_native.py",
+    "appearance/upgrade_visuals.py",
+    "build_pcve_steel_ball_tensioned_membrane.py",
+    "edit_vocab.py",
+    "physics/simulate_native.py",
+    "render_steel_ball_tensioned_membrane.py",
+    "scene_paths.py",
+    "simulate_steel_ball_tensioned_membrane.py",
+    "tools/audit.py",
+    "tools/audit_native_replay.py",
+    "tools/audit_real4s.py",
+    "tools/finalize.py",
+    "tools/worker_run.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_steel_ball_tensioned_membrane.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

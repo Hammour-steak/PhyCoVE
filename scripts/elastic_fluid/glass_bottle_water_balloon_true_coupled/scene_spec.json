@@ -1,0 +1,113 @@
+{
+  "scene_id": "pcve_glass_bottle_water_balloon_true_coupled",
+  "category": "elastic_fluid",
+  "version": "kitchen_tap_pour",
+  "material_revision": "uniform_relative_elastic_scale",
+  "edit_catalog_revision": "retain_all_edits",
+  "water_retention_revision": "retain_all_with_unilateral_pressure",
+  "additional_edits": {
+    "edit_high_flow": {"outlet_speed_multiplier": 2.0, "flow_l_min": 9.0},
+    "edit_tap_off_from_start": {"outlet_speed_m_s": 0.0, "flow_l_min": 0.0},
+    "edit_hard_balloon": {"relative_modulus_scale": 5.0, "stretch_shear_network_edge_n_m": 125.0, "bending_spring_n_m": 30.0}
+  },
+  "description": "A kitchen tap fills a blue balloon inside a glass jar. All injected water is retained by an explicitly idealized pressure/volume constraint; no overflow is simulated or displayed.",
+  "duration_seconds": 4.0,
+  "fps": 24,
+  "frames": 96,
+  "solver": {
+    "software": "simulate_glass_bottle_water_balloon_true_coupled.py (numpy)",
+    "membrane": "XPBD triangle-edge latex membrane, colour-group Gauss-Seidel, bending springs across interior edges",
+    "water": "incompressible volume; free-surface height solved each step so the enclosed volume below it equals the poured volume",
+    "loading": "hydrostatic pressure rho*g*(H - z) below the water line; water mass lumped onto the wetted latex",
+    "mouth": "Visually open, but retain_all imposes idealized no-discharge behavior; not a physical open-mouth pressure boundary.",
+    "water_retention": "retain_all: poured volume equals retained volume; spilled volume is always zero. Once full, a unilateral wet-volume constraint supplies additional pressure to stretch the membrane.",
+    "overflow_display": "Disabled by zero discharge. No exterior water film or counter puddle is generated.",
+    "retention_limit": "No burst model. Finite jar wall/floor contacts remain active. Current input range must be verified; unlimited water in a finite jar is not physically possible.",
+    "prescribed_balloon_growth": false,
+    "water_particles": false
+  },
+  "physical_setup": {
+    "units": "m-kg-s",
+    "gravity_m_s2": [0.0, 0.0, -9.81],
+    "flow_l_min": 4.5,
+    "water_retention": "retain_all",
+    "pour_start_frame": 2,
+    "latex_edge_stiffness_n_m": 25.0,
+    "latex_bending_stiffness_n_m": 6.0,
+    "elastic_modulus_scale": 1.0,
+    "absolute_Young_modulus_Pa": null,
+    "latex_areal_density_kg_m2": 0.285,
+    "velocity_damping_per_s": 5.0,
+    "substeps_per_frame": 120,
+    "settle_seconds": 1.0,
+    "deflated_balloon": {
+      "cross_section": "stadium (two flat sheets, rounded edges)",
+      "body_half_width_m": 0.026,
+      "body_half_depth_m": 0.004,
+      "body_length_m": 0.070,
+      "neck_rest_radius_m": 0.007,
+      "clamped_neck_radius_m": 0.0215
+    },
+    "jar": {
+      "height_m": 0.25,
+      "outer_radius_m": 0.072,
+      "wall_m": 0.003,
+      "mouth_inner_radius_m": 0.023
+    },
+    "balloon_location": "inside jar, neck rolled over the jar lip"
+  },
+  "elastic_material_edit": {
+    "case_id": "edit_hard_balloon",
+    "edit_dsl": "SET balloon.young_modulus_scale TIMES 5",
+    "relative_modulus_scale": 5.0,
+    "resolved_stretch_shear_network_edge_n_m": 125.0,
+    "resolved_bending_spring_n_m": 30.0,
+    "mapping": "All elastic spring energies share one positive dimensionless scale; U_s(x) = s U_1(x).",
+    "shear": "implicit in the triangulated edge network, not a separately adjustable spring",
+    "poisson_ratio": "emergent from the discrete network, not independently prescribed",
+    "unchanged": ["rest geometry", "mass and areal density", "thickness", "water input", "damping", "mesh", "time integration quality", "camera and appearance"],
+    "limits": "Relative discrete-model E/E0 only; absolute E in Pa and a continuum Poisson ratio are not calibrated."
+  },
+  "results": {
+    "scope": "Accepted source only.",
+    "water_at_frame_96_ml": 297,
+    "spilled_ml": 0,
+    "water_line_below_neck_top_mm": 0.8,
+    "balloon_max_radius_mm": [21.1, 32.3],
+    "balloon_bottom_sim_z_mm": [201.0, 171.0]
+  },
+  "render": {
+    "software": "Blender 5.1.2",
+    "engine": "Cycles GPU, 96 samples, denoised",
+    "resolution": [1280, 720],
+    "environment": "BlenderKit 'Modern Living and Kitchen Interior' (dark marble island, undermount sink)",
+    "jar_world_xy": [-0.7985, 1.60],
+    "counter_top_z": 2.147,
+    "tap": "asset tap 'Kitchen tap balck' scaled 1.5x about its base and swung so the outlet is over the jar axis",
+    "stream": "free-fall column from the outlet to each frame's water line, radius ~ v^-1/2",
+    "latex_shading": "colour and translucency driven by per-vertex areal stretch",
+    "compositor_edit": "asset Hue Correct node muted (it desaturated blues)",
+    "camera": {
+      "name": "front_low",
+      "location": [-0.62, 0.80, 2.37],
+      "target": [-0.84, 1.62, 2.35],
+      "lens_mm": 40.0,
+      "fstop": 5.6
+    }
+  },
+  "acceptance": {
+    "scope": "Accepted source only.",
+    "counterfactual_limits": "Every case must retain all injected water, have zero discharge and sufficient membrane capacity within 0.1 mL. No claim of physical open-mouth hydrodynamics or full CFD. Each changed trajectory requires new surfaces, rendering and visual review.",
+    "water_inside_latex_all_frames": true,
+    "closest_water_to_latex_mm": 0.593,
+    "no_spill": true,
+    "video_probe": "H.264, 1280x720, 96 frames, 24 FPS, 4.000 s"
+  },
+  "outputs": {
+    "root": "renders/glass_bottle_water_balloon_true_coupled",
+    "simulation": "sim_pour",
+    "surfaces": "surfaces_pour",
+    "frames": "render_pour_A/frames",
+    "video": "glass_jar_water_balloon_kitchen_pour_A.mp4"
+  }
+}

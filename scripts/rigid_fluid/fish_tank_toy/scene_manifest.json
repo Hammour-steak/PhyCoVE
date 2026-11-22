@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "scene_id": "fish_tank_toy",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_fish_tank_toy.py",
+    "render": "render_fish_tank_toy.py",
+    "build_pcve": "build_pcve_fish_tank_toy.py"
+  },
+  "supported_cases": [
+    "fish_tank_toy_baseline",
+    "edit_light_toy_car",
+    "edit_dense_water_float_rock",
+    "edit_gel_water",
+    "edit_dense_water_at_2s"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_fish_tank_toy_suite": {
+      "target": "renders/pcve_suites/pcve_fish_tank_toy_suite",
+      "case_video_sha256": {
+        "fish_tank_toy_baseline": "11dc7e5465ab6287c928430e23ed5a1de44afc56d0ba1fe79eeff50fce437de6",
+        "edit_light_toy_car": "7b464b31614759a6de44f10f40402fc8a10d9b146bce5d326ae5c4fc965fec7c",
+        "edit_dense_water_float_rock": "443a05e1de03038016d03bafb61b8d94fb9bcef0990941277de8bcf7d64963c8",
+        "edit_gel_water": "06ae2863555a762a7db2aab990d480b3ccf95815fb53c02b7d0a8e0816cd6572",
+        "edit_dense_water_at_2s": "63778ba2d68ff08b028f2a14244307a2ecbdb99d159f26d461d327ec91f515e0",
+        "edit_delete_toy_car": "0aee9d5fb2c76b2d0ed64779287b3abb5ef1b3a3d94ec294009ed162e462782c",
+        "edit_delete_water": "bd9dbf7877efe8d736bd6c26210c5ce93363d0cf6fd16bc7914a49892e729d12"
+      },
+      "public_case_ids": {
+        "fish_tank_toy_baseline": "source",
+        "edit_light_toy_car": "edit_light_toy_car",
+        "edit_dense_water_float_rock": "edit_dense_water_float_rock",
+        "edit_gel_water": "edit_gel_water",
+        "edit_dense_water_at_2s": "edit_dense_water_at_2s"
+      }
+    }
+  },
+  "video": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "samples": 96,
+    "camera": "front_eye",
+    "camera_location": [
+      0.675,
+      -1.2,
+      0.95
+    ],
+    "camera_target": [
+      1.575,
+      -1.22,
+      0.68
+    ]
+  },
+  "simulation": {
+    "solver": "Blender 4.3.2 Mantaflow FLIP",
+    "domain_resolution": 160,
+    "mesh_scale": 2,
+    "mesh_particle_radius": 2.0,
+    "mesh_smoothing": [
+      2,
+      1
+    ],
+    "flip_ratio": 0.9,
+    "effector_subframes": 24,
+    "bake_seconds": 3401,
+    "render_seconds": 981,
+    "first_water_contact_frame": 13,
+    "substrate_contact_frame": 24.76,
+    "use_fractions": false,
+    "substrate": "glass base, z=0.485 m",
+    "liquid_volume_l": {
+      "frame_1": 43.784,
+      "frame_24": 43.241,
+      "frame_96": 43.119
+    },
+    "surface_level_change_m": -0.0037
+  },
+  "coupling": "Prescribed analytic rigid trajectory driving a Mantaflow obstacle; not native two-way FSI.",
+  "edits": "EDIT_CASES in build_pcve_fish_tank_toy.py",
+  "scene_variant": "empty tank, water only",
+  "back_pane_reflection": "no glass or water-wall reflections for the camera's specular chain; see README",
+  "lighting": {
+    "refractive_caustics": true,
+    "led_area_light_w": 40.0,
+    "led_world_z_m": 0.86,
+    "wall_ao_only_local": true,
+    "glass_shadow_transparent": true
+  },
+  "tank_placement": {
+    "origin_m": [
+      1.625,
+      -1.18,
+      0.428
+    ],
+    "note": "back edge flush with the toy chest's back edge (x 1.80)"
+  },
+  "realism": {
+    "bubbles": "Mantaflow trapped-air bubbles (trappedair min 3, sampling 6; wave-crest sampling 5), rendered as air-in-water icospheres; source peak 729/frame",
+    "motion_blur": "car only, shutter 0.5 (liquid speed vectors smeared highlights)",
+    "decor": [
+      "sketchfab_plant_pot",
+      "books_stack",
+      "moss_rock_photoscan"
+    ],
+    "decor_dimensions_m": {
+      "plant_pot_xyz": [
+        0.235154,
+        0.23521,
+        0.228501
+      ],
+      "books_stack_height": 0.101,
+      "moss_rock_xyz": [
+        0.085,
+        0.067,
+        0.04
+      ]
+    },
+    "decor_note": "user-selected Sketchfab plant pot on the left of the chest, compact book stack on the right; photoscanned moss rock on the back-right tank floor, clear of the central toy path",
+    "plant_pot_attribution": "Plant Pot by Aparicio Silva 3D (apariciosilva3D), CC BY 4.0, Sketchfab UID ae825dd0d3c5437a953b4236d6cef08b",
+    "tank_decor_coupling": "appearance-only; rock is not a Mantaflow obstacle and does not displace water or affect the prescribed toy trajectory",
+    "dof_fstop": 5.6,
+    "water_absorption": [
+      0.88,
+      0.96,
+      0.94,
+      0.5
+    ],
+    "pane_tint_density": 8.0,
+    "dof_note": "camera focus_object cleared (room camera shipped one, which put the tank out of focus in the first realism render)"
+  }
+}

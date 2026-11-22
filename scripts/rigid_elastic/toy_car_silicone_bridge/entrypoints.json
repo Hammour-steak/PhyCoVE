@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "scene": "toy_car_silicone_bridge",
+  "category": "rigid_elastic",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_toy_car_silicone_bridge.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--output-dir",
+        "--case",
+        "--base-config",
+        "--timestep",
+        "--grid",
+        "--no-car",
+        "--reuse-cache"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "soft_bridge",
+        "stiff_bridge",
+        "heavy_car",
+        "delete_bridge"
+      ]
+    },
+    "render": {
+      "file": "render_toy_car_silicone_bridge.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--simulation-dir",
+        "--output-dir",
+        "--frames",
+        "--device",
+        "--resume",
+        "--allow-diagnostic-input"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "soft_bridge",
+        "stiff_bridge",
+        "heavy_car",
+        "delete_bridge"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_toy_car_silicone_bridge.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--output-dir",
+        "--stage",
+        "--cases",
+        "--python",
+        "--blender",
+        "--gpu",
+        "--threads",
+        "--resume",
+        "--device",
+        "--reuse-physics-from"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "soft_bridge",
+        "stiff_bridge",
+        "heavy_car",
+        "delete_bridge"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Shared MuJoCo shell/rigid solve with SI material parameters; renderer consumes solved cache only",
+  "implementation_files": [
+    "appearance/scene_geometry.py",
+    "build_pcve_toy_car_silicone_bridge.py",
+    "edit_vocab.py",
+    "physics/bridge_physics.py",
+    "physics/reuse_cached_physics.py",
+    "physics/verify_suite.py",
+    "render_toy_car_silicone_bridge.py",
+    "simulate_toy_car_silicone_bridge.py",
+    "tools/fetch_assets.py",
+    "tools/generate_basket_linen.py",
+    "appearance/appearance.json",
+    "asset_sources.json",
+    "scene_manifest.json"
+  ]
+}

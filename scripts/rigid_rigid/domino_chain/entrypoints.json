@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "scene": "domino_chain",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_domino_chain.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "simulation.json"
+      },
+      "native_options": [
+        "--out",
+        "--scenario-overrides-json",
+        "--fps",
+        "--duration-sec",
+        "--substeps",
+        "--domino-count",
+        "--domino-spacing",
+        "--domino-thickness",
+        "--domino-width",
+        "--domino-height",
+        "--domino-mass",
+        "--domino-friction",
+        "--domino-restitution",
+        "--floor-friction",
+        "--push-angle-deg",
+        "--domino-masses",
+        "--domino-frictions-list",
+        "--domino-restitutions-list",
+        "--domino-active"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_domino_chain.py",
+      "runtime": "blender",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--mode",
+        "--out-dir",
+        "--physics-json",
+        "--preview-frame",
+        "--keyframes",
+        "--resolution",
+        "--fps",
+        "--duration-sec",
+        "--samples",
+        "--device",
+        "--appearance-json"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_domino_chain.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--device",
+        "--threads-native",
+        "--skip-existing",
+        "--physics-source-root"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "domino_chain_baseline",
+        "edit_heavy_D03",
+        "edit_remove_D03",
+        "edit_remove_D01",
+        "edit_remove_D01_after_contact",
+        "edit_heavy_D01",
+        "edit_heavy_D04"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "84 cm grounded table level with the 84 cm window sill. Table footprint, camera pose, room, materials and target edits are frozen. The appearance adds a low sun through the real casement, an enclosed room, f/8 depth of field and finish refinements, removes printed text and the playing cards, shades the baize with Poly Haven Caban and lights the room only by the sun and garden sky through the casement. Accepted collision trajectories replay unchanged; solver output does not depend on the appearance.",
+  "implementation_files": [
+    "build_pcve_domino_chain.py",
+    "simulate_domino_chain.py",
+    "render_domino_chain.py",
+    "edit_vocab.py",
+    "scene_spec.json",
+    "appearance/look_domino_chain.py",
+    "appearance/card_table_environment.py",
+    "appearance/natural_card_table.py",
+    "appearance/paper_support.py",
+    "appearance/daylight_card_table.py",
+    "appearance/playing_card_finish.py",
+    "appearance/mahjong_table_realism.py",
+    "appearance/window_realism.py",
+    "appearance/furniture_textile_realism.py",
+    "appearance/gathered_linen.py",
+    "appearance/loose_card_realism.py",
+    "appearance/sunlit_room_realism.py",
+    "appearance/photographic_finish.py",
+    "tools/make_card_back.py"
+  ]
+}

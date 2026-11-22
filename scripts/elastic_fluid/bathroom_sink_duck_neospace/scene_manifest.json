@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "scene_id": "bathroom_sink_duck_neospace",
+  "interaction_category": "elastic_fluid",
+  "entry_points": {
+    "simulate": "simulate_bathroom_sink_duck_neospace.py",
+    "render": "render_bathroom_sink_duck_neospace.py",
+    "build_pcve": "build_pcve_bathroom_sink_duck_neospace.py"
+  },
+  "configuration": [
+    "build_pcve_bathroom_sink_duck_neospace.py (SOURCE, EDITS, vocabulary())"
+  ],
+  "external_code": [
+    "../elastic_fluid_duck/simulate_elastic_fluid_duck.py (create_boundary_solver, loaded by path; --pool-simulate)"
+  ],
+  "supported_cases": [
+    "bathroom_sink_duck_baseline",
+    "edit_stiff_duck",
+    "edit_soft_core_duck",
+    "edit_delete_duck",
+    "edit_delete_water",
+    "edit_high_flow",
+    "edit_stop_flow_at_2s"
+  ],
+  "workflows": {},
+  "native_settings": {
+    "map_width": {
+      "bathroom_sink_duck_baseline": 12,
+      "edit_stiff_duck": 12,
+      "edit_high_flow": 12,
+      "edit_stop_flow_at_2s": 12,
+      "edit_soft_core_duck": 20,
+      "edit_delete_duck": 20,
+      "edit_delete_water": 20
+    },
+    "same_run": "bathroom_sink_duck_baseline and edit_stop_flow_at_2s come from one run with --source-branch-out (records 1-48 identical)"
+  },
+  "data": {
+    "assets": [
+      "assets/elastic_fluid/elastic_fluid_duck/scene.blend",
+      "assets/sketchfab/bathroom_rev1_neospace/bathroom_rev1.glb"
+    ],
+    "suite": "renders/pcve_suites/pcve_bathroom_sink_duck_neospace_suite"
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "video frame k = simulation record k, k/24 s after the faucet opens"
+  },
+  "ground_truth": "cases/<case_id>/ground_truth_transforms.json in the suite (pcve_ground_truth/1)",
+  "canonical_suites": {
+    "pcve_bathroom_sink_duck_neospace_suite": {
+      "target": "renders/pcve_suites/pcve_bathroom_sink_duck_neospace_suite",
+      "public_case_ids": {
+        "bathroom_sink_duck_baseline": "source",
+        "edit_stiff_duck": "edit_stiff_duck",
+        "edit_soft_core_duck": "edit_soft_core_duck",
+        "edit_delete_duck": "edit_delete_duck",
+        "edit_delete_water": "edit_delete_water",
+        "edit_high_flow": "edit_high_flow",
+        "edit_stop_flow_at_2s": "edit_stop_flow_at_2s"
+      },
+      "case_video_sha256": {
+        "bathroom_sink_duck_baseline": "32c92ce8f3492073f5bc7ec870cc334f4dded97b85ba01a7cbb307431c0ff3bc",
+        "edit_stiff_duck": "109a9f00ebb79a240387ae8f2bdb6a303689b40d1ac7f3c689c4d4b87d554b2f",
+        "edit_soft_core_duck": "fbd95ab81d282b75dd1368a861f92e0aa86ba9760206b385166e7e7b6e53d761",
+        "edit_delete_duck": "a4b2ba47f2f88fb4fe89f809efe0918b2c1983be524ba13ef75473c06ebae23f",
+        "edit_delete_water": "52d6d830614ee6c06bf3f592f49278cd50ce30c27d3a2189d927cf5460f91fb0",
+        "edit_high_flow": "2a0cad7599efd94956ce823a0b42f7f29944ade4ac7695f3e2191fbb29c82014",
+        "edit_stop_flow_at_2s": "7d235f151ca85ee4f5f900040d0d35c8c3754b9e2d3d9dca5e81b261efb282d7"
+      },
+      "case_video_path": {
+        "bathroom_sink_duck_baseline": "cases/source/video.mp4",
+        "edit_stiff_duck": "cases/edit_stiff_duck/video.mp4",
+        "edit_soft_core_duck": "cases/edit_soft_core_duck/video.mp4",
+        "edit_delete_duck": "cases/edit_delete_duck/video.mp4",
+        "edit_delete_water": "cases/edit_delete_water/video.mp4",
+        "edit_high_flow": "cases/edit_high_flow/video.mp4",
+        "edit_stop_flow_at_2s": "cases/edit_stop_flow_at_2s/video.mp4"
+      }
+    }
+  }
+}

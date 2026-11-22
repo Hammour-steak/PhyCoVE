@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PhyCoVE Human Preference Study</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">PhyCoVE</p>
+        <h1>Human Preference Study</h1>
+        <p class="subtitle">Compare two anonymous candidate videos and choose the one that better completes the physical editing task.</p>
+      </div>
+      <div id="progress" class="progress-pill">Not started</div>
+    </header>
+
+    <section id="login" class="card login-card">
+      <h2>Start annotating</h2>
+      <p>Enter the annotator code assigned by the study team. Only an irreversible hash is stored, never the original code.</p>
+      <div class="login-row">
+        <input id="rater" maxlength="64" autocomplete="off" placeholder="e.g. RATER-01">
+        <button id="start" class="primary">Enter the study</button>
+      </div>
+      <p id="login-error" class="error"></p>
+    </section>
+
+    <section id="study" class="hidden">
+      <section class="card instruction-card">
+        <div class="instruction-heading">
+          <span>Edit instruction</span>
+          <span id="event" class="event-badge"></span>
+        </div>
+        <p id="instruction" class="instruction-main"></p>
+        <div class="criteria">
+          <strong>Order of judgment:</strong> first check whether the edited object, direction, timing and consequences are correct; then whether rigid bodies, deformation, fluids and temporal evolution are plausible; finally whether unrelated content stays stable.
+        </div>
+      </section>
+
+      <section class="reference-grid">
+        <article class="video-card">
+          <div class="video-label">Source</div>
+          <video id="source" controls muted playsinline preload="metadata"></video>
+        </article>
+        <article class="video-card gt-card">
+          <div class="video-label">Ground Truth</div>
+          <video id="gt" controls muted playsinline preload="metadata"></video>
+        </article>
+      </section>
+
+      <section class="candidate-grid">
+        <article class="video-card candidate-card">
+          <div class="video-label candidate-label">Candidate A</div>
+          <video id="a" controls muted playsinline preload="metadata"></video>
+        </article>
+        <article class="video-card candidate-card">
+          <div class="video-label candidate-label">Candidate B</div>
+          <video id="b" controls muted playsinline preload="metadata"></video>
+        </article>
+      </section>
+
+      <section class="card controls-card">
+        <div class="playback-controls">
+          <button id="play-all">Play all from the start</button>
+          <button id="play-event">Play from the intervention time</button>
+          <button id="pause-all">Pause all</button>
+          <span id="watch-status">Fully watched 0/4</span>
+        </div>
+        <div class="question">Overall, which candidate video better completes this physical editing task?</div>
+        <div class="choice-row">
+          <button data-choice="a" class="choice" disabled>A is better <kbd>A</kbd></button>
+          <button data-choice="tie" class="choice tie" disabled>About the same <kbd>T</kbd></button>
+          <button data-choice="b" class="choice" disabled>B is better <kbd>B</kbd></button>
+        </div>
+        <p class="hint">Choose “About the same” only when the difference cannot be told reliably. Footage that is hard to judge is not a technical issue.</p>
+        <div class="footer-actions">
+          <button id="technical" class="link-button">Media cannot be played</button>
+          <span id="message"></span>
+        </div>
+      </section>
+    </section>
+
+    <section id="finished" class="card finished hidden">
+      <h2>This annotation round is complete</h2>
+      <p>Thank you. Your judgments have been saved; you can close this page.</p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

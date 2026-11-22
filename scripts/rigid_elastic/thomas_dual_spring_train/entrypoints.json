@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "scene": "thomas_dual_spring_train",
+  "category": "rigid_elastic",
+  "case_number": 23,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_thomas_dual_spring_train.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "mass_x3",
+        "rolling_x4",
+        "right_young_x025",
+        "delete_right_spring",
+        "add_wood_block"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_thomas_dual_spring_train.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--state-root",
+        "--samples",
+        "--mode",
+        "--tag",
+        "--frame",
+        "--gpu",
+        "--blender-bin",
+        "--threads"
+      ],
+      "cases": [
+        "source",
+        "mass_x3",
+        "rolling_x4",
+        "right_young_x025",
+        "delete_right_spring",
+        "add_wood_block"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_thomas_dual_spring_train.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--accepted-root"
+      ],
+      "cases": [
+        "source",
+        "mass_x3",
+        "rolling_x4",
+        "right_young_x025",
+        "delete_right_spring",
+        "add_wood_block"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/thomas_dual_spring_train",
+  "implementation_policy": "MuJoCo 3.3.7 CPU solve (physics/native.py) of an unpowered 150 g wooden toy train between two guided steel compression springs (wire 1.1 mm, mean coil 24 mm, 12 active turns, rest length 120 mm, E = 200 GPa; left spring preloaded by 45 mm) with finite-mass pusher plates: the grooves reduce the chassis to longitudinal translation, six revolute wheels exchange bounded maximum-dissipation Coulomb traction impulses with the track, rolling torque acts at the hinges, the plates touch the train unilaterally; dt = 1/38400 s, 4 s, frame k = native state at (k-1)/24 s. Wheel geometry comes from the registered assets/scenes/thomas_dual_spring_train/canonical/geometry.json. Edits change only their DSL field (train mass x3, rolling resistance x4, right spring modulus x0.25, right spring and plate removed, an 85 g wooden block added on the track). appearance/render.py (Blender 5.1, Cycles OptiX) replays the native states with the overlay of the published videos (appearance/realism.py); the render lifts the solver frame by 0.569 m onto the table. --stage verify checks the accepted delivery (renders/thomas_dual_spring_train). Contact, bearing and material parameters are not calibrated on the toy.",
+  "implementation_files": [
+    "simulate_thomas_dual_spring_train.py",
+    "render_thomas_dual_spring_train.py",
+    "build_pcve_thomas_dual_spring_train.py",
+    "edit_vocab.py",
+    "appearance/base_scene.py",
+    "appearance/details.py",
+    "appearance/render.py",
+    "appearance/realism.py",
+    "appearance/toy_railway_props.py",
+    "physics/native.py",
+    "tools/retained_delivery.py",
+    "tools/worker.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_thomas_dual_spring_train.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

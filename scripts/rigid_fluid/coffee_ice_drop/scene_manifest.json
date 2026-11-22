@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "scene_id": "coffee_ice_drop",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_coffee_ice_drop.py",
+    "render": "render_coffee_ice_drop.py",
+    "build_pcve": "build_pcve_coffee_ice_drop.py"
+  },
+  "supported_cases": [
+    "coffee_ice_drop_baseline",
+    "edit_low_density_coffee",
+    "edit_high_viscosity_coffee",
+    "edit_delete_ice",
+    "edit_delete_coffee"
+  ],
+  "workflows": {},
+  "configuration": {
+    "simulation": {
+      "solver": "Genesis 1.4.3: rigid ice two-way coupled to DFSPH coffee through ghost particles on the ice; the high-viscosity edit adds an implicit viscosity solve",
+      "baseline_physics": {
+        "ice_side_m": 0.016,
+        "ice_density_kg_m3": 920.0,
+        "coffee_density_kg_m3": 1030.0,
+        "coffee_kinematic_viscosity_m2_s": 1.45e-06,
+        "gravity_m_s2": 9.81,
+        "ice_drop_height_m": 0.04
+      },
+      "particle_size_m": 0.001,
+      "settle_s": 0.4,
+      "fps": 24,
+      "frames": 96,
+      "steps_per_frame": 10,
+      "substeps": 16,
+      "time_scale": 1.0
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 128,
+      "adaptive_sampling": false,
+      "denoising": true,
+      "motion_blur_shutter_deg": 180,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96,
+      "camera": {
+        "lens_mm": 58.0,
+        "elevation_deg": 30.0,
+        "distance_m": 0.5,
+        "target_z_m": 0.862
+      }
+    },
+    "edit_flags": "edit_vocab.sim_args maps each edit DSL onto simulate_coffee_ice_drop.py flags"
+  },
+  "data": {
+    "stage_blend": "assets/scenes/coffee_ice_drop/loft_restaurant_stage.blend",
+    "ice_asset": "assets/blenderkit/realistic_ice_cube/realistic_ice_cube.blend",
+    "native_runs": {
+      "path": "renders/pcve_suites/pcve_coffee_ice_drop_suite/inputs/02_ground_truth_resimulation",
+      "cases": [
+        "source",
+        "edit_low_density_coffee",
+        "edit_high_viscosity_coffee",
+        "edit_delete_coffee"
+      ],
+      "content": "sim_log.json (per-frame ice poses), fp16 coffee particles and surfaces/hold_plan.json, re-simulated with this code; the source of the suite's ground truth"
+    }
+  },
+  "canonical_suites": {
+    "pcve_coffee_ice_drop_suite": {
+      "target": "renders/pcve_suites/pcve_coffee_ice_drop_suite",
+      "public_case_ids": {
+        "coffee_ice_drop_baseline": "source",
+        "edit_low_density_coffee": "edit_low_density_coffee",
+        "edit_high_viscosity_coffee": "edit_high_viscosity_coffee",
+        "edit_delete_ice": "edit_delete_ice",
+        "edit_delete_coffee": "edit_delete_coffee"
+      },
+      "case_video_sha256": {
+        "coffee_ice_drop_baseline": "4cacce51144fc84f400bd76f7bc8a40374147d89f28deff81abcd2765d6fdf19",
+        "edit_low_density_coffee": "e2f9969418a5aad4ac9c3067c1b172b2b3acb171291d5c398c54ce06244cd988",
+        "edit_high_viscosity_coffee": "013e5acdb1769371d4e4edb71b099059cc9cb91d0da26d39214d1c8ef631d01d",
+        "edit_delete_ice": "e95e7367014ee8ccafba2dde45b01414b0f98d6f92be5cb1938376e31a534576",
+        "edit_delete_coffee": "ce638a5e8a6ce936f25e024cf871ac6e060d1d02a553380a8a0b7aba23066137"
+      }
+    }
+  }
+}

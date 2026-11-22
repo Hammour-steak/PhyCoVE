@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "scene_id": "glass_bottle_water_balloon_true_coupled",
+  "interaction_category": "elastic_fluid",
+  "entry_points": {
+    "simulate": "simulate_glass_bottle_water_balloon_true_coupled.py",
+    "render": "render_glass_bottle_water_balloon_true_coupled.py",
+    "build_pcve": "build_pcve_glass_bottle_water_balloon_true_coupled.py"
+  },
+  "configuration": [
+    "balloon_config.py",
+    "scene_spec.json",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "glass_jar_water_balloon_source",
+    "edit_high_flow",
+    "edit_tap_off_from_start",
+    "edit_hard_balloon"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_glass_bottle_water_balloon_true_coupled_suite": {
+      "target": "renders/pcve_suites/pcve_glass_bottle_water_balloon_true_coupled_suite",
+      "case_video_sha256": {
+        "glass_jar_water_balloon_source": "8647c694f91c91d81fb7b100c627eb637b14c6d31256140cbc9cf285885b2b3d",
+        "edit_high_flow": "61867f34c0f9f9718d2b7fe3ebdb2e630865736622b057281aa9e51f606ba545",
+        "edit_tap_off_from_start": "e82015df430724d781d6a08cf2572496265fb35cc3c1b1044d73b8350e1d9064",
+        "edit_hard_balloon": "d1ad8d8320759eca0c31591e57cc5432b8df196d9ba8e62a4e401fa48a19f321",
+        "edit_delete_balloon": "987f012b619efb2aa6ec742f84c170a362de19edce285d5643307cdfc76075f8"
+      },
+      "public_case_ids": {
+        "glass_jar_water_balloon_source": "source",
+        "edit_high_flow": "edit_high_flow",
+        "edit_tap_off_from_start": "edit_tap_off_from_start",
+        "edit_hard_balloon": "edit_hard_balloon"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_balloon": "987f012b619efb2aa6ec742f84c170a362de19edce285d5643307cdfc76075f8",
+        "edit_hard_balloon": "d1ad8d8320759eca0c31591e57cc5432b8df196d9ba8e62a4e401fa48a19f321",
+        "edit_high_flow": "61867f34c0f9f9718d2b7fe3ebdb2e630865736622b057281aa9e51f606ba545",
+        "edit_tap_off_from_start": "e82015df430724d781d6a08cf2572496265fb35cc3c1b1044d73b8350e1d9064",
+        "source": "8647c694f91c91d81fb7b100c627eb637b14c6d31256140cbc9cf285885b2b3d"
+      }
+    }
+  }
+}

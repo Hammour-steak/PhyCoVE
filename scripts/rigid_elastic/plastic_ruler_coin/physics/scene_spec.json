@@ -1,0 +1,107 @@
+{
+  "scene_id": "plastic_ruler_coin",
+  "duration_s": 4.0,
+  "fps": 24,
+  "baseline": {
+    "coin_mass_kg": 0.0075,
+    "coin_radius_m": 0.011625,
+    "coin_thickness_m": 0.00233,
+    "coin_initial_location_m": [
+      0.113,
+      0.0,
+      0.812765
+    ],
+    "coin_initial_rotation_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ruler_young_modulus_pa": 2400000000.0,
+    "ruler_density_kg_m3": 1200.0,
+    "ruler_width_m": 0.031,
+    "ruler_thickness_m": 0.0016,
+    "ruler_free_length_m": 0.14,
+    "ruler_clamped_length_m": 0.1775,
+    "ruler_midplane_z_m": 0.7608,
+    "ruler_modal_damping_ratio": 0.07,
+    "coin_present": [
+      1
+    ],
+    "second_coin_present": [
+      0
+    ],
+    "second_coin_initial_location_m": [
+      0.068,
+      0.0,
+      0.762765
+    ],
+    "second_coin_initial_rotation_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "second_coin_mass_kg": 0.0075,
+    "second_coin_radius_m": 0.011625,
+    "second_coin_thickness_m": 0.00233,
+    "friction_coefficient": 0.3,
+    "contact_stiffness_n_m": 1280000.0,
+    "contact_damping_ratio": 0.12,
+    "gravity_m_s2": 9.81,
+    "book_mass_kg": 1.6
+  },
+  "diagnostics": {
+    "book_footprint_length_m": 0.19,
+    "note": "Length of the book resting on the desk, used only for the reported hold-down moment (book weight x half this length). It never entered the dynamics; the accepted v5 solves record it inside their physics block under its former key."
+  },
+  "solver": {
+    "type": "planar geometrically exact inextensible Kirchhoff beam, Galerkin reduction, finite rigid cylinders",
+    "modes": 8,
+    "quadrature_stations": 121,
+    "reference_fem_elements": 80,
+    "time_step_s": 1.0416666666666666e-05,
+    "high_rate_hz": 2400,
+    "contact_samples_per_face": 13,
+    "integration": "velocity Verlet with dissipative force evaluated at half velocity",
+    "rendering": "native states at i/24, i=0..95; 4 s endpoint diagnostic only; no interpolation or retiming"
+  },
+  "cases": {
+    "source": {
+      "dsl": null,
+      "label_zh": "原场景"
+    },
+    "coin_mass_x02": {
+      "dsl": "SET coin.mass TIMES 0.2",
+      "label_zh": "硬币质量 ×0.2"
+    },
+    "ruler_modulus_x025": {
+      "dsl": "SET ruler.young_modulus TIMES 0.25",
+      "label_zh": "尺子杨氏模量 ×0.25"
+    },
+    "ruler_modulus_x8": {
+      "dsl": "SET ruler.young_modulus TIMES 8",
+      "label_zh": "尺子杨氏模量 ×8"
+    },
+    "delete_coin": {
+      "dsl": "DELETE coin",
+      "label_zh": "删除下落硬币"
+    },
+    "add_second_coin": {
+      "dsl": "ADD second_coin AT PRESET resting_on_ruler",
+      "label_zh": "增加一枚尺面上的硬币"
+    }
+  },
+  "material_calibrated": false,
+  "accepted_benchmark_gt": false,
+  "editable_physical_properties": [
+    "coin.mass",
+    "ruler.young_modulus"
+  ],
+  "fixed_dissipation_parameters": [
+    "ruler_modal_damping_ratio",
+    "contact_damping_ratio",
+    "friction_coefficient"
+  ],
+  "width": 1280,
+  "height": 720,
+  "video_frames": 96
+}

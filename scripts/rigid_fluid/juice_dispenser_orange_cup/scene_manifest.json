@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "scene_id": "juice_dispenser_orange_cup",
+  "interaction_category": "rigid_fluid",
+  "description": {
+    "event": "Orange juice flows continuously from the metal outlet inside the dispenser nozzle into a stationary transparent glass, impacts the rigid interior, and accumulates.",
+    "units": {
+      "length": "meter",
+      "mass": "kilogram",
+      "time": "second",
+      "up_axis": "+Z"
+    },
+    "coupling": "The dispenser is a prescribed inflow. The glass and tray use static effectors; liquid forces are not fed back into a rigid-body solve.",
+    "appearance": {
+      "dispenser_height_m": 0.63,
+      "receiving_glass_outer_diameter_m": 0.078,
+      "receiving_glass_height_m": 0.116,
+      "nozzle": "The transparent outer shell remains visible with restrained optical influence; juice originates at the metal outlet inside it.",
+      "orange_juice_shader": "Turbid pulp-style Principled surface with subsurface colour and wet coat.",
+      "environment": "Warm café counter with plaster walls, fine limestone, framed wall art, and three real-scale orange props.",
+      "lighting": "Broad neutral photographic softboxes with restrained warm ambience.",
+      "orange_props": "Three grounded 7 cm citrus fruits with non-uniform silhouettes, peel pores, calyx, stems, and leaves."
+    }
+  },
+  "entry_points": {
+    "simulate": "simulate_juice_dispenser_orange_cup.py",
+    "render": "render_juice_dispenser_orange_cup.py",
+    "build_pcve": "build_pcve_juice_dispenser_orange_cup.py"
+  },
+  "supported_cases": [
+    "juice_dispenser_orange_cup_source",
+    "edit_stop_flow_at_2s",
+    "edit_high_flow_speed",
+    "edit_low_flow_speed",
+    "edit_high_viscosity",
+    "edit_paste_like_viscosity",
+    "edit_delete_orange_juice"
+  ],
+  "workflows": {},
+  "configuration": {
+    "simulation": {
+      "solver": "Blender 4.3.2 Mantaflow FLIP; prescribed inflow against static rigid effectors (no two-way coupling)",
+      "domain_resolution": 160,
+      "timesteps": [
+        8,
+        16
+      ],
+      "flip_ratio": 0.92,
+      "mesh_upres": 2,
+      "particles_per_cell": 3,
+      "inlet": "fixed 3.5 mm aperture (3.8503e-5 m^2 at resolution 160), outlet velocity (0, 0, -1.20) m/s; particles born from the integrated supply A*v*dt, level set corrected before pressure and meshing (appearance/flux_boundary.py)",
+      "baseline_physics": {
+        "orange_juice_density_kg_m3": 1040.0,
+        "orange_juice_kinematic_viscosity_m2_s": 4e-06,
+        "nozzle_speed_m_s": 1.2,
+        "pour_start_sec": 0.0,
+        "pour_end_sec": 4.0,
+        "gravity_m_s2": 9.81
+      },
+      "paste_like_preset": "edit_paste_like_viscosity: domain resolution 96, PIC (FLIP ratio 0), fractional inlet of the same area, implicit coupled strain-rate viscosity (physics/coupled_viscosity.py, CG 1e-7, SciPy 1.11.4 in assets/solver_vendor)",
+      "timed_stop": "edit_stop_flow_at_2s stops the outlet at t = 2.0 s (Blender control frame 49); Mantaflow frame k is the state at k/24 s, so the edit applies from video frame 48"
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 32,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96,
+      "color_management": "AgX Medium High Contrast"
+    }
+  },
+  "assets": {
+    "scene_template": {
+      "path": "assets/scenes/juice_dispenser_orange_cup/scene_template.blend",
+      "sha256": "8fb1435167b7bd3e2ed55a050dae70b9dba3e460ffbbf10905514428ea5f8f80"
+    },
+    "external": [
+      {
+        "name": "Juice Dispenser",
+        "author": "dg samples",
+        "license": "CC BY 4.0",
+        "source": "https://sketchfab.com/3d-models/juice-dispenser-42f33cfdfc694e46b96a9ff168e4cae9"
+      }
+    ]
+  },
+  "data": {
+    "native_runs": "renders/pcve_suites/pcve_juice_dispenser_orange_cup_suite/inputs/ (one directory per accepted bake)"
+  },
+  "canonical_suites": {
+    "pcve_juice_dispenser_orange_cup_suite": {
+      "target": "renders/pcve_suites/pcve_juice_dispenser_orange_cup_suite",
+      "public_case_ids": {
+        "juice_dispenser_orange_cup_source": "source",
+        "edit_stop_flow_at_2s": "edit_stop_flow_at_2s",
+        "edit_high_flow_speed": "edit_high_flow_speed",
+        "edit_low_flow_speed": "edit_low_flow_speed",
+        "edit_high_viscosity": "edit_high_viscosity",
+        "edit_paste_like_viscosity": "edit_paste_like_viscosity",
+        "edit_delete_orange_juice": "edit_delete_orange_juice"
+      },
+      "case_video_sha256": {
+        "juice_dispenser_orange_cup_source": "c966c7ef350a4f4b621976a857703ab938e9efcd17eaa1f17f66e3ca105b9812",
+        "edit_stop_flow_at_2s": "717ecaf7e4d5ca4e53da60c798a80edbe97f125eddb48d7c0966b2320473edad",
+        "edit_high_flow_speed": "abeb5e65b5edb95706d5f8171f9396d1874f2873ce4321fafcd3b10c7d55c950",
+        "edit_low_flow_speed": "2ffcfcc6b5dd4df32e36025f50610bd55c83721f12439dc43e4bd18c2409226d",
+        "edit_high_viscosity": "dff99363cc94d0910ae813324940a7d2cc0bd234ba0ebf948bf8704e02e5d0df",
+        "edit_paste_like_viscosity": "26f78998e6d6b48d220495c1a5b013cd05f387a27edf92b89748df2211d8ecd2",
+        "edit_delete_orange_juice": "8d7e23d4f2204d06242f9f460867190f44cca3a13f40c5c3def7c3eb479ce00b"
+      }
+    }
+  }
+}

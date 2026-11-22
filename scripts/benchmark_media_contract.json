@@ -1,0 +1,14 @@
+{
+  "contract_id": "pcve-main-720p-4s-24fps",
+  "description": "Canonical PhyCoVE video delivery format: 1280x720, 24 fps, 96 frames (4.0 s) at 1.0x playback speed without frame interpolation or automatic retiming.",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "duration_s": 4.0,
+  "frames": 96,
+  "sample_start_s": 0.0,
+  "sample_stop_exclusive_s": 4.0,
+  "playback_speed": 1.0,
+  "frame_interpolation": false,
+  "automatic_retiming": false
+}

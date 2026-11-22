@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scene_id": "home_basketball_door",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_home_basketball_door.py",
+    "render": "render_home_basketball_door.py",
+    "build_pcve": "build_pcve_home_basketball_door.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "home_basketball_door_baseline",
+    "edit_light_ball",
+    "edit_heavy_door",
+    "edit_stiff_hinge",
+    "edit_slow_throw",
+    "edit_stiff_hinge_late",
+    "edit_delete_ball"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_home_basketball_door_suite": {
+      "target": "renders/pcve_suites/pcve_home_basketball_door_suite",
+      "case_video_sha256": {
+        "edit_delete_ball": "ed7b181ae738e0b0e2245f163310bbac318943f10f71b6d12420b193ba05c930",
+        "edit_heavy_door": "a9b5f08cf0a690a7def97d5521a9a6952948676e6d8525b7963e833df235a704",
+        "edit_light_ball": "33e17925041e6b3c02cc7bb1038be246fe05dec227a5633c79e0f03eec6fe325",
+        "edit_slow_throw": "660de633140407bf3a6b268132c5d8f4fb30994fffc253aeb986cd88ced3a97f",
+        "edit_stiff_hinge": "456f9214cfb6f7f0e3eb3132195aceedde86ae190dcca0c6369911a4e23ede47",
+        "edit_stiff_hinge_late": "174ae4953a727b2d4a138bf752ca09e905e9435db8da8209f94cd6d09ef1ecbf",
+        "home_basketball_door_baseline": "b5df8ae130c62dcde84d0f4c00118764746742610721bd0d71e7d4f61b9e12ae"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "home_basketball_door_baseline": "source",
+        "edit_light_ball": "edit_light_ball",
+        "edit_heavy_door": "edit_heavy_door",
+        "edit_stiff_hinge": "edit_stiff_hinge",
+        "edit_slow_throw": "edit_slow_throw",
+        "edit_stiff_hinge_late": "edit_stiff_hinge_late"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_ball": "ed7b181ae738e0b0e2245f163310bbac318943f10f71b6d12420b193ba05c930",
+        "edit_heavy_door": "a9b5f08cf0a690a7def97d5521a9a6952948676e6d8525b7963e833df235a704",
+        "edit_light_ball": "33e17925041e6b3c02cc7bb1038be246fe05dec227a5633c79e0f03eec6fe325",
+        "edit_slow_throw": "660de633140407bf3a6b268132c5d8f4fb30994fffc253aeb986cd88ced3a97f",
+        "edit_stiff_hinge": "456f9214cfb6f7f0e3eb3132195aceedde86ae190dcca0c6369911a4e23ede47",
+        "edit_stiff_hinge_late": "174ae4953a727b2d4a138bf752ca09e905e9435db8da8209f94cd6d09ef1ecbf",
+        "source": "b5df8ae130c62dcde84d0f4c00118764746742610721bd0d71e7d4f61b9e12ae"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/home_basketball_door",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/door_basketball_collision",
+      "polyhaven/home_basketball_door",
+      "scenes/home_basketball_door"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

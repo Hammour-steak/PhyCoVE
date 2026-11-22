@@ -1,0 +1,126 @@
+{
+  "scene_id": "silicone_bag_can_kitchen",
+  "fps": 24,
+  "duration_s": 4.0,
+  "baseline": {
+    "can_mass_kg": 0.34,
+    "can_radius_m": 0.034,
+    "can_height_m": 0.08,
+    "can_initial_location_m": [
+      0.012,
+      -0.145,
+      1.095
+    ],
+    "can_initial_quaternion_xyzw": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "can_initial_angular_velocity_rad_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bag_young_modulus_pa": 1050000,
+    "bag_poisson_ratio": 0.46,
+    "bag_density_kg_m3": 1080,
+    "bag_thickness_m": 0.0014,
+    "bag_handle_thickness_m": 0.0024,
+    "bag_contact_envelope_thickness_m": 0.0024,
+    "bag_rayleigh_mass_damping_s_inv": 6.0,
+    "bag_width_m": 0.24,
+    "bag_depth_m": 0.15,
+    "bag_bottom_z_m": 0.655,
+    "bag_mouth_z_m": 0.875,
+    "bag_center_y_m": -0.145,
+    "contact_friction": 0.38,
+    "floor_restitution": 0.3,
+    "floor_height_m": 0.04,
+    "gravity_m_s2": 9.81,
+    "bag_present": true,
+    "second_can_present": false,
+    "second_can_preload_seed_location_m": [
+      -0.035,
+      -0.145,
+      0.72
+    ],
+    "second_can_mass_kg": 0.34,
+    "second_can_radius_m": 0.034,
+    "second_can_height_m": 0.08
+  },
+  "simulation": {
+    "dt_s": 0.0005208333333333333,
+    "angular_resolution": 80,
+    "height_resolution": 36,
+    "contact_d_hat_m": 0.00025,
+    "newton_velocity_tolerance_m_s": 0.02,
+    "newton_max_iterations": 512
+  },
+  "cases": [
+    "source",
+    "can_mass_x2",
+    "bag_young_x0_25",
+    "bag_young_x5",
+    "delete_bag",
+    "add_second_can"
+  ],
+  "labels_zh": {
+    "source": "原场景",
+    "can_mass_x2": "罐头质量 ×2",
+    "delete_bag": "删除硅胶袋",
+    "add_second_can": "增加一只已在袋内的罐头",
+    "bag_young_x0_25": "袋体杨氏模量 ×0.25",
+    "bag_young_x5": "袋体杨氏模量 ×5"
+  },
+  "static_collision_boxes": [
+    {
+      "id": "cabinet_carcass",
+      "center_m": [
+        0,
+        0.405,
+        0.4645
+      ],
+      "dimensions_m": [
+        2.24,
+        0.49,
+        0.809
+      ]
+    },
+    {
+      "id": "cabinet_fronts",
+      "center_m": [
+        0,
+        0.13,
+        0.491
+      ],
+      "dimensions_m": [
+        2.24,
+        0.054,
+        0.738
+      ]
+    },
+    {
+      "id": "countertop",
+      "center_m": [
+        0,
+        0.34,
+        0.89
+      ],
+      "dimensions_m": [
+        2.3,
+        0.64,
+        0.04
+      ]
+    }
+  ],
+  "material_scope": "Uncalibrated effective silicone shell. E=1.05 MPa is near a one-point incompressible Neo-Hookean fit to SORTA-Clear 40 manufacturer 100%-strain nominal stress (90 psi), not a claimed measurement of a retail tote. Wall thickness 1.4 mm; reinforced handles 2.4 mm, with a molded transition. Membrane and bending both derive from the same E, nu and local thickness. C=6*M s^-1 is a declared effective Rayleigh damping model, not Young's modulus or measured silicone viscosity. Floor restitution e=0.30 is a common effective pair property, not measured can/wood calibration.",
+  "preload_authorization": {
+    "date": "2026-11-02",
+    "quote": "增加罐头可以考虑第二个罐头开始就放到袋子里，但是要重新算袋子的初始状态",
+    "scope": "add_second_can only: gravity/contact-derived initial deformation of the existing bag with a newly added body; original falling can initial transform and all fixed anchors remain unchanged"
+  },
+  "status": "pending_new_two_case_simulation_and_render",
+  "revision": "modulus_edits",
+  "revision_request": "你把杨氏模量的编辑变大一点，例如0.25和5倍，现在运动不够明显"
+}

@@ -1,0 +1,564 @@
+{
+  "schema_version": 9,
+  "scene": "ball_box_rebound",
+  "geometry": "Measured furnished activity corner with the user-supplied white paneled wooden chest, original star-patterned toy ball and stitched football.",
+  "textures": {
+    "license": "CC0-1.0",
+    "license_url": "https://polyhaven.com/license",
+    "assets": [
+      {
+        "id": "plywood",
+        "source": "https://polyhaven.com/a/plywood",
+        "author": "Rob Tuytel",
+        "tile_width_m": 0.5
+      },
+      {
+        "id": "rough_linen",
+        "source": "https://polyhaven.com/a/rough_linen",
+        "authors": [
+          "Rico Cilliers",
+          "colormass"
+        ],
+        "tile_width_m": 0.3
+      }
+    ],
+    "files": [
+      {
+        "asset": "plywood",
+        "map": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_diff_1k.jpg",
+        "path": "plywood/plywood_diff_1k.jpg",
+        "bytes": 882059,
+        "sha256": "800905650fc6cab2fe7c77c41851f8ea89669f1287ad5ce67c48f435654c0af8"
+      },
+      {
+        "asset": "plywood",
+        "map": "rough",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_rough_1k.jpg",
+        "path": "plywood/plywood_rough_1k.jpg",
+        "bytes": 729997,
+        "sha256": "c4600551fa90bf1222de07b5d92e09456501f0449a4f315c203770bfcbd97aaf"
+      },
+      {
+        "asset": "plywood",
+        "map": "disp",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/plywood/plywood_disp_1k.jpg",
+        "path": "plywood/plywood_disp_1k.jpg",
+        "bytes": 621786,
+        "sha256": "e7c57f120ec5fbf2dbee03c0f7fdc15bf92a97a1a892c2bf07512109f8e7a0bf"
+      },
+      {
+        "asset": "rough_linen",
+        "map": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_diff_1k.jpg",
+        "path": "rough_linen/rough_linen_diff_1k.jpg",
+        "bytes": 835801,
+        "sha256": "04897d7611d7390ddf5b2c6f7273f448dfc48341fdbd1f4f207fa30b331d7f57"
+      },
+      {
+        "asset": "rough_linen",
+        "map": "rough",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_rough_1k.jpg",
+        "path": "rough_linen/rough_linen_rough_1k.jpg",
+        "bytes": 1083725,
+        "sha256": "734ad6718841a6e296aacaa6e9ee2e1686eed5f62bb8d71c915c5605e162bcb4"
+      },
+      {
+        "asset": "rough_linen",
+        "map": "disp",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/rough_linen/rough_linen_disp_1k.jpg",
+        "path": "rough_linen/rough_linen_disp_1k.jpg",
+        "bytes": 882066,
+        "sha256": "38b1cd43b45e5ef0c09df779787ef18a6bcf3c7665f78c7d698d755f5305ac65"
+      }
+    ],
+    "base_directory": "assets/scenes/ball_box_rebound/material_textures"
+  },
+  "required_asset_root": "assets (PCVE_ASSETS_DIR override supported)",
+  "collision_policy": "Eight independent edits change only declared restitution, launch speed, per-ball lateral friction or football lifecycle. Timed removal is applied at t=2 in the same solver world; no camera or path changes.",
+  "packed_blend_embeds_all_used_images": true,
+  "models": [
+    {
+      "name": "Plastic Container",
+      "author": "Poly Haven",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/be248a58-1f7b-4c4d-bdd2-2079123d9591/",
+      "asset_base_id": "be248a58-1f7b-4c4d-bdd2-2079123d9591",
+      "asset_version_id": "9ed32e3c-dddc-4426-a92c-b74d6b0ff781",
+      "license": "CC0-1.0",
+      "is_free": true,
+      "source_blender_version": "1.0",
+      "source_file": "assets/blenderkit/plastic_container/plastic_container.glb",
+      "bytes": 499060,
+      "sha256": "6df55da8a4d3f88b259be2ac6907931c0d5b6a04c0e73c0c60c18cb0761e5b90",
+      "license_reference": "https://polyhaven.com/license",
+      "redistribution": "CC0 asset may be redistributed.",
+      "asset_key": "blenderkit/plastic_container",
+      "use_and_modifications": "Visible blue weighted bin. Official compatible 4K-textured GLB; envelope normalized to 72 x 44 x 40 cm, broad impact panel made planar, blue pigment remapped while retaining normal and roughness maps.",
+      "original_author": "PierreB3D",
+      "original_source": "https://polyhaven.com/a/plastic_container",
+      "import_format": "glTF 2.0 with embedded diffuse, normal and roughness images at 4096x4096",
+      "compatibility": "Blender 4.3.2 imports the official glTF asset. The unused newer native blend file is not required."
+    },
+    {
+      "name": "Wooden children's table with chairs",
+      "author": "Alexandr Droid",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/7267c846-0548-4a76-be55-e98933f62d51/",
+      "asset_base_id": "7267c846-0548-4a76-be55-e98933f62d51",
+      "asset_version_id": "69aac476-ce48-4d27-8aac-5a7754f726f4",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "3.2.2",
+      "source_file": "assets/blenderkit/kids_table_chairs/kids_table_chairs.blend",
+      "bytes": 406407,
+      "sha256": "7654dce41a7c5a03bf21f95b0fd0cb0e91490ca4c015c12b2e33b3e15b6aa517",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/kids_table_chairs",
+      "use_and_modifications": "Construction-helper input of an earlier look layer; no visible instance remains in the final render."
+    },
+    {
+      "name": "Playroom kids set",
+      "author": "Demycs",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/eb1a4758-e22f-4236-aec5-229a066413b9/",
+      "asset_base_id": "eb1a4758-e22f-4236-aec5-229a066413b9",
+      "asset_version_id": "3ebc11a6-2ae6-457d-8a5c-a981fb415df6",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "4.5.1",
+      "source_file": "assets/blenderkit/playroom/playroom.blend",
+      "bytes": 59225440,
+      "sha256": "36b4c75ee3378525a9c8f65eb3cbbbb4ea97725d265705d2d912d42d0ea0ecb8",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/playroom",
+      "use_and_modifications": "Construction dependency; the original licensed drawing atlas is also reused on a curved three-dimensional paper sheet pinned to the wall."
+    },
+    {
+      "name": "Stuffed Toy Penguin",
+      "author": "Mad Lobster Workshop Dolzall",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/fb4b04ae-41b2-414c-9cd9-4c8e4f578c01/",
+      "asset_base_id": "fb4b04ae-41b2-414c-9cd9-4c8e4f578c01",
+      "asset_version_id": "c70e79be-a8d7-4d88-80e4-911e1c9d286c",
+      "license": "royalty_free",
+      "is_free": true,
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Render in a project; do not redistribute the raw model as a standalone asset or asset pack.",
+      "source_blender_version": "3.6.22",
+      "source_file": "assets/blenderkit/stuffed_penguin/stuffed_penguin.blend",
+      "bytes": 48401879,
+      "sha256": "f3ff3163d1758bbccb6d4b7bfecb7c264c9314a15460ffe567c38ffb82119648",
+      "asset_key": "blenderkit/stuffed_penguin",
+      "use_and_modifications": "Construction-helper input of an earlier look layer; no visible instance remains in the final render."
+    },
+    {
+      "name": "Rally Toy Car  Race",
+      "author": "Dope Render",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/41a8c92b-f1cb-40d3-9ae0-e9f0091d9aa0/",
+      "asset_base_id": "41a8c92b-f1cb-40d3-9ae0-e9f0091d9aa0",
+      "asset_version_id": "b34c9295-4b0c-4172-bab2-6fbc452a0340",
+      "license": "royalty_free",
+      "is_free": true,
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Render in a project; do not redistribute the raw model as a standalone asset or asset pack.",
+      "source_blender_version": "4.4.3",
+      "source_file": "assets/blenderkit/rally_toy_car/rally_toy_car.blend",
+      "bytes": 9351874,
+      "sha256": "68f00470bea07c0321bf5ccf278738b7a88d6da124d9608b2dc05cc8ca54561b",
+      "asset_key": "blenderkit/rally_toy_car",
+      "use_and_modifications": "Construction-helper input of an earlier look layer; no visible instance remains in the final render."
+    },
+    {
+      "name": "Cosmic Kids Bedroom",
+      "author": "nova 3d blender",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/82749d70-8cdd-4be0-b79f-6d999a1ec6bf/",
+      "asset_base_id": "82749d70-8cdd-4be0-b79f-6d999a1ec6bf",
+      "asset_version_id": "f546dfe3-abd6-4d02-9543-4f76d14bf156",
+      "license": "royalty_free",
+      "is_free": true,
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Render in a project; do not redistribute the raw model as a standalone asset or asset pack.",
+      "source_blender_version": "3.6.23",
+      "source_file": "assets/blenderkit/cosmic_kids_bedroom/cosmic_kids_bedroom.blend",
+      "bytes": 45312899,
+      "sha256": "cdca76070597295f3d129f4ed451aec73889f58ed2d2d861e329bef332b81ab3",
+      "asset_key": "blenderkit/cosmic_kids_bedroom",
+      "use_and_modifications": "Pleated curtain geometry; other imported construction-helper props are replaced before rendering."
+    },
+    {
+      "name": "Noos DUO Kids` table and chairs",
+      "author": "Flareworks Studio",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/7d31f8f7-f636-4c3d-ba5b-4765220fbb2a/",
+      "asset_base_id": "7d31f8f7-f636-4c3d-ba5b-4765220fbb2a",
+      "asset_version_id": "9df95717-da48-47d1-840c-9436ce7d0a81",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "3.6.3",
+      "source_file": "assets/blenderkit/noos_kids_table/noos_kids_table.blend",
+      "bytes": 22822682,
+      "sha256": "844b5eef09d03ccf6e52aee30c8dbec92cc3a77e2bb89f6c85a3fca27c680395",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/noos_kids_table",
+      "use_and_modifications": "Native child-scale wood and white MDF table/chairs with original printed paper, drawing implements and wood textures; no arbitrary miniaturization."
+    },
+    {
+      "name": "Modern and Cozy Living Room 3D Model Set",
+      "author": "Russo 3D",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/81b8f1c8-bd73-436f-b248-c54be10806b7/",
+      "asset_base_id": "81b8f1c8-bd73-436f-b248-c54be10806b7",
+      "asset_version_id": "e4d8784d-d5be-4a76-927f-9734c7c80a9a",
+      "license": "royalty_free",
+      "is_free": true,
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Render in a project; do not redistribute the raw model as a standalone asset or asset pack.",
+      "source_blender_version": "4.2.0",
+      "source_file": "assets/blenderkit/cozy_living_room/cozy_living_room.blend",
+      "bytes": 86950955,
+      "sha256": "99a504f2c470b0af33ca85e4924e70eb91127e051f0882fc83b3e40a02c2995a",
+      "asset_key": "blenderkit/cozy_living_room",
+      "use_and_modifications": "Printed books, static fabric cushion and garden foliage; the full original room is not used."
+    },
+    {
+      "name": "Small Storage Cabinet",
+      "author": "Klo Works",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/005570a4-a7e1-4e4d-9570-f51d527869b7/",
+      "asset_base_id": "005570a4-a7e1-4e4d-9570-f51d527869b7",
+      "asset_version_id": "addfc08c-047a-4581-95f9-2121e1c0c0f6",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "3.3.1",
+      "source_file": "assets/blenderkit/small_storage_cabinet/small_storage_cabinet.blend",
+      "bytes": 27092791,
+      "sha256": "bb280cd512468c8725a84433efb77799292d80ab83b57e63a05ef25ced708257",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/small_storage_cabinet",
+      "use_and_modifications": "Native 79 cm wide domestic low cabinet; original materials and manufacturing radii retained."
+    },
+    {
+      "name": "Children's Bookshelf",
+      "author": "Ibrohim Toxirov",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/7b4c3f7c-b1fe-4bc9-9964-5d604a4fb598/",
+      "asset_base_id": "7b4c3f7c-b1fe-4bc9-9964-5d604a4fb598",
+      "asset_version_id": "b9a1c829-bfac-4ef9-8650-d6fc540a19fa",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "4.1.0",
+      "source_file": "assets/blenderkit/childrens_bookshelf/childrens_bookshelf.blend",
+      "bytes": 3672068,
+      "sha256": "e72463b80a68ab70c21adeffe7fc37d8d94cf32f37f8f1582060b291c7fc3baa",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/childrens_bookshelf",
+      "use_and_modifications": "Native 40 x 30 x 120 cm arched bookcase; repainted pale sage, furnished with independently posed books."
+    },
+    {
+      "name": "Wicker Basket",
+      "author": "Poly Haven",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/26771dbc-29eb-43a3-b22d-16fe4b3c0b93/",
+      "asset_base_id": "26771dbc-29eb-43a3-b22d-16fe4b3c0b93",
+      "asset_version_id": "44bf4de1-d5c9-45d4-ba5c-aefdb5c07925",
+      "license": "CC0-1.0",
+      "is_free": true,
+      "source_blender_version": "1.0",
+      "source_file": "assets/blenderkit/wicker_basket/wicker_basket.blend",
+      "bytes": 233156564,
+      "sha256": "8662c5e481953c9250d7730af6fd14eaf1769aa8d30069e571beaa2f571138d0",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "CC0 asset may be redistributed.",
+      "asset_key": "blenderkit/wicker_basket",
+      "use_and_modifications": "Construction-helper input of an earlier look layer; no visible instance remains in the final render."
+    },
+    {
+      "name": "White and rattan rug",
+      "author": "Joris LM",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/a75d7672-92f8-4982-a330-0ed5c81d56c2/",
+      "asset_base_id": "a75d7672-92f8-4982-a330-0ed5c81d56c2",
+      "asset_version_id": "3a85bb30-0154-40ae-a4cb-cbd5b57cbb2e",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "4.2.1",
+      "source_file": "assets/blenderkit/woven_rug/woven_rug.blend",
+      "bytes": 5969382,
+      "sha256": "55f0484e924015b26de87c949fd4850e00715f3bdb3d0218f9773368a0d464c6",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/woven_rug",
+      "use_and_modifications": "Native 160 x 230 cm textured woven rug with bound edge; settled millimetric edge variation. Outside all swept collision volumes."
+    },
+    {
+      "name": "Wood Train Toy Set",
+      "author": "Tomasz Bartkowiak-Ketzler",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/862d26f6-d371-4227-a4e4-d109f837e164/",
+      "asset_base_id": "862d26f6-d371-4227-a4e4-d109f837e164",
+      "asset_version_id": "3fe7edd0-c01f-4af3-982a-646708be1037",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "3.6.0",
+      "source_file": "assets/blenderkit/wood_train_set/wood_train_set.blend",
+      "bytes": 5218748,
+      "sha256": "4179677f6e62e591a669ceb4c7d7a6962f1bd337b95df91bebdf421d2ee6a271",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/wood_train_set",
+      "use_and_modifications": "Native wooden toy set uniformly scaled 0.48, laid on the rug beyond the ball path."
+    },
+    {
+      "name": "Wooden Rocking Horse",
+      "author": "Remnants of Eden Pierre",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/fb98088b-2b2f-4146-9f4b-51515d61617d/",
+      "asset_base_id": "fb98088b-2b2f-4146-9f4b-51515d61617d",
+      "asset_version_id": "7591c14d-a5d6-4402-966d-baeff03fa3d0",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "2.90.1",
+      "source_file": "assets/blenderkit/rocking_horse/rocking_horse.blend",
+      "bytes": 8212323,
+      "sha256": "b7edeb66561bb566f7bb6ff0be34b58b0536d53973e65abfd93aab4c91f0de3c",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/rocking_horse",
+      "use_and_modifications": "Native wooden rocking horse at 0.90 uniform scale, standing on the floor behind the activity table."
+    },
+    {
+      "name": "Vintage Fiat 500",
+      "author": "cgi Moon",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/864f2a5a-c328-4fb3-85bb-473112600dad/",
+      "asset_base_id": "864f2a5a-c328-4fb3-85bb-473112600dad",
+      "asset_version_id": "5b4065a9-b82d-4954-bfd8-30f77606e0ab",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "2.83.0",
+      "source_file": "assets/blenderkit/vintage_fiat_500/vintage_fiat_500.blend",
+      "bytes": 1794007,
+      "sha256": "35fb6036f1f3445de5f4480d10e4edebc10b4497bd123063f13934867d3a91b6",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/vintage_fiat_500",
+      "modifications": "Uniformly scale complete static model to 0.20 m long; rest tyres on cabinet. Original materials and proportions retained.",
+      "role": "Scale-model car on the cabinet (complete four wheels; number plate blank paint, badge plain metal)."
+    },
+    {
+      "name": "Soccer ball with stitches",
+      "author": "Zoltán Péter Fáth",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/e63280cd-b75a-466d-8c3b-8a1582cc4603/",
+      "asset_base_id": "e63280cd-b75a-466d-8c3b-8a1582cc4603",
+      "asset_version_id": "ccc9fb06-d689-48c5-87ab-2b94c0aca6c2",
+      "license": "CC0-1.0",
+      "is_free": true,
+      "source_blender_version": "3.6.4",
+      "source_file": "assets/blenderkit/stitched_soccer_ball/stitched_soccer_ball.blend",
+      "bytes": 3241807,
+      "sha256": "4f3a20fc5db49c018c173d67abf314f8cf2a404ebc692812cea148d5ad228466",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "CC0 asset may be redistributed.",
+      "asset_key": "blenderkit/stitched_soccer_ball",
+      "modifications": "Evaluate the complete source mesh, uniformly scale to a 22 cm spherical envelope with <=0.65 mm panel relief. Keep separate stitches. Replace the source dirt image materials with original restrained procedural pebbled leather; source textures.com dirt maps are not used or distributed."
+    },
+    {
+      "name": "Wooden box",
+      "author": "Blaž Mraz",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/1294ce74-8310-4f8f-9006-01329f3968d7/",
+      "asset_base_id": "1294ce74-8310-4f8f-9006-01329f3968d7",
+      "asset_version_id": "36c6bc6a-4704-48f5-9eeb-7ae9f0dcc153",
+      "license": "royalty_free",
+      "is_free": true,
+      "source_blender_version": "2.92.0",
+      "source_file": "assets/blenderkit/dovetail_toy_chest/dovetail_toy_chest.blend",
+      "bytes": 49981604,
+      "sha256": "fa9c0514239133ccbe262b6f6f3aa9a82a55deedc7964a039d43fa77def24e4a",
+      "license_reference": "https://www.blenderkit.com/docs/licenses/licensing-faq/",
+      "redistribution": "Project renders and embedded project only; no standalone asset redistribution.",
+      "asset_key": "blenderkit/dovetail_toy_chest",
+      "role": "Dovetail toy chest (actual dovetail geometry, frame-and-panel lid and hinges) built by an earlier look layer and removed before rendering; the visible chest is the Toy Box by Hayley Jacka."
+    },
+    {
+      "name": "Toy Box",
+      "author": "Hayley Jacka",
+      "source": "https://sketchfab.com/3d-models/toy-box-8ce01f03c4c54c1bb69f6ba47a590586",
+      "license": "CC-BY-4.0",
+      "license_reference": "https://creativecommons.org/licenses/by/4.0/",
+      "is_free": true,
+      "source_file": "assets/sketchfab/hayley_toy_box/toy_box.glb",
+      "bytes": 16032032,
+      "sha256": "3c711686442bb53df0758ce4d17e1d3c8ba672fa1aa47ffc99ed88ad8602623f",
+      "asset_key": "sketchfab/hayley_toy_box",
+      "import_format": "glTF 2.0; user-supplied GLB with embedded 2048px PBR atlases",
+      "acquisition": "Provided by the user as toy_box.glb; attribution and license embedded in glTF asset.extras.",
+      "redistribution": "CC BY 4.0 permits sharing and adaptation with attribution and changes identified.",
+      "modifications": "Extract the supplied Box_Base, Box_Lid and Ball1 meshes directly. Retain the original white box finish and original pink-red/pale-pink star-ball colors, UVs, roughness and normal maps. Normalize to the existing collision dimensions, close the lid with a 2 mm seam, ease painted edges, refine the ball silhouette while preserving its atlas UVs. Disable shared-atlas transparency/emission on these opaque solids. Do not import the source room or other props."
+    }
+  ],
+  "photographic_surfaces_and_daylight": {
+    "provider": "Poly Haven",
+    "license": "CC0-1.0",
+    "files": [
+      {
+        "asset": "linoleum_brown",
+        "map": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/linoleum_brown/linoleum_brown_diff_2k.jpg",
+        "path": "linoleum_brown/linoleum_brown_diff_2k.jpg",
+        "bytes": 2805910,
+        "sha256": "8ef8462f319087f59ca05754ca30cf2e3d93d53121156976bb10c402bd8dda3b",
+        "source": "https://polyhaven.com/a/linoleum_brown"
+      },
+      {
+        "asset": "linoleum_brown",
+        "map": "rough",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/linoleum_brown/linoleum_brown_rough_2k.jpg",
+        "path": "linoleum_brown/linoleum_brown_rough_2k.jpg",
+        "bytes": 2525417,
+        "sha256": "e42343eb11ec46000ce1167c49cbf00e9f1844d558b785d12218a6d5fdc2ba41",
+        "source": "https://polyhaven.com/a/linoleum_brown"
+      },
+      {
+        "asset": "linoleum_brown",
+        "map": "nor_gl",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/linoleum_brown/linoleum_brown_nor_gl_2k.jpg",
+        "path": "linoleum_brown/linoleum_brown_nor_gl_2k.jpg",
+        "bytes": 2489623,
+        "sha256": "8a5c6b16511013eaecd8e9307d884a92ba795938bd72a5a87bde685e8d982857",
+        "source": "https://polyhaven.com/a/linoleum_brown"
+      },
+      {
+        "asset": "white_plaster_02",
+        "map": "diff",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_diff_2k.jpg",
+        "path": "white_plaster_02/white_plaster_02_diff_2k.jpg",
+        "bytes": 2568315,
+        "sha256": "0ca5245ba70777d3e41ff4566c9f8d363855461891802c55cb7dc0f6f85f084e",
+        "source": "https://polyhaven.com/a/white_plaster_02"
+      },
+      {
+        "asset": "white_plaster_02",
+        "map": "rough",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_rough_2k.jpg",
+        "path": "white_plaster_02/white_plaster_02_rough_2k.jpg",
+        "bytes": 1604444,
+        "sha256": "a3dc1911f6e25d88fdb0031fe0cfb602eec5496084c508774c60691bed087417",
+        "source": "https://polyhaven.com/a/white_plaster_02"
+      },
+      {
+        "asset": "white_plaster_02",
+        "map": "nor_gl",
+        "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_nor_gl_2k.jpg",
+        "path": "white_plaster_02/white_plaster_02_nor_gl_2k.jpg",
+        "bytes": 3379814,
+        "sha256": "083579b03a8f31ec1886512e5972f3b893610bf26a2098f97910e0f46745cdc9",
+        "source": "https://polyhaven.com/a/white_plaster_02"
+      },
+      {
+        "asset": "kloofendal_overcast_puresky",
+        "map": "hdri",
+        "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_overcast_puresky_2k.hdr",
+        "path": "kloofendal_overcast_puresky/kloofendal_overcast_puresky_2k.hdr",
+        "bytes": 4335717,
+        "sha256": "312b1b04b7f10057a4f1418abc59d1166c8933cc93fc72051502edaf8d6b2fcd",
+        "source": "https://polyhaven.com/a/kloofendal_overcast_puresky"
+      }
+    ],
+    "base_directory": "assets/scenes/ball_box_rebound/room_surfaces",
+    "asset_dimensions_m": {
+      "linoleum_brown": 2,
+      "white_plaster_02": 1
+    },
+    "modifications": {
+      "linoleum_brown": "Diffuse luminance retinted light grey; image roughness remapped for satin sheet linoleum; normal strength 0.12; no geometric displacement. Applied by an earlier look layer; the final floor appearance is polyhaven/wood_floor.",
+      "white_plaster_02": "Warm off-white albedo remap, micro bump limited to 25 micrometres.",
+      "kloofendal_overcast_puresky": "2K unclipped HDRI; rotation 120 degrees; strength 1.0; scene exposure +3.5 stops; actual aperture and glazing geometry."
+    },
+    "assets": [
+      {
+        "id": "linoleum_brown",
+        "authors": [
+          "Rob Tuytel"
+        ],
+        "source": "https://polyhaven.com/a/linoleum_brown",
+        "tile_width_m": 2
+      },
+      {
+        "id": "white_plaster_02",
+        "authors": [
+          "Rob Tuytel"
+        ],
+        "source": "https://polyhaven.com/a/white_plaster_02",
+        "tile_width_m": 1
+      },
+      {
+        "id": "kloofendal_overcast_puresky",
+        "authors": [
+          "Greg Zaal"
+        ],
+        "source": "https://polyhaven.com/a/kloofendal_overcast_puresky"
+      }
+    ]
+  },
+  "directional_daylight": {
+    "provider": "Poly Haven",
+    "license": "CC0-1.0",
+    "base_directory": "assets/scenes/ball_box_rebound/window_sky",
+    "assets": [
+      {
+        "id": "kloofendal_48d_partly_cloudy_puresky",
+        "source": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
+        "authors": [
+          "Greg Zaal",
+          "Jarod Guest"
+        ]
+      }
+    ],
+    "files": [
+      {
+        "asset": "kloofendal_48d_partly_cloudy_puresky",
+        "map": "hdri",
+        "path": "kloofendal_48d_partly_cloudy_puresky/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+        "bytes": 5451493,
+        "sha256": "5244534e9cf5b606f2ff513aa00ddb161b0a4826ffd88a0d3bd03ac29247d198",
+        "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+        "source": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky"
+      }
+    ],
+    "modifications": "2K unclipped measured sky at 195 degrees; strength 1.0; exposure +3.0 stops; actual glazing and window apertures."
+  },
+  "unused_research_candidates": [
+    "moulded_storage_box",
+    "plastic_toy_box",
+    "lego_storage_box",
+    "plastic_container_hires (newer incompatible native format)",
+    "childrens_drawing (same atlas already provided by the retained playroom source)"
+  ],
+  "appearance": {
+    "preset": "documentary_playroom",
+    "summary": "Directional window daylight, washed linen curtains, photographed oak cabinet with slate paint, nonmetallic sage shelf, restrained Noos wood and the sewn cushion in the reading corner; scanned oak plank floor appearance; pad-printed star ball; football use marks; text-free props.",
+    "registered_assets_used_for_finish": [
+      {
+        "id": "polyhaven/wood_floor",
+        "source": "https://polyhaven.com/a/wood_floor",
+        "author": "Dimitrios Savva",
+        "license": "CC0",
+        "files": [
+          "wood_floor_diff_4k.jpg",
+          "wood_floor_nor_gl_4k.jpg",
+          "wood_floor_rough_4k.jpg"
+        ],
+        "tile_m": 1.7,
+        "use": "Floor appearance only: world-metre mapping, planks parallel to the window wall, saturation 0.88, value 1.12, roughness 0.24-0.52, 0.10 satin coat; floor plane, height, restitution and friction are those of physics.floor."
+      }
+    ],
+    "source_assets_reused": [
+      "stitched_soccer_ball (its own soccer_dirtmap scuff image)",
+      "material_textures/rough_linen (bookcloth weave)",
+      "sketchfab/hayley_toy_box (star-ball mesh only)"
+    ],
+    "generated_in_scene": [
+      "B01 equirectangular star pad print (2048x1024 coverage mask computed per texel from 14 evenly spaced five-pointed stars; packed in each project)"
+    ],
+    "removed_or_neutralised": [
+      "Printed stock covers (titles, publisher text, watermark) on the shelf and cabinet books -> plain bookcloth",
+      "Floor picture book with printed title removed",
+      "Scale car number-plate text and badge -> blank paint / plain metal"
+    ],
+    "deletion_visuals": "Remove hierarchy at t=0 or hide every football child at frame 49, including shadow/reflections",
+    "framing": "Original camera retained; edited bodies may leave view by explicit user request"
+  }
+}

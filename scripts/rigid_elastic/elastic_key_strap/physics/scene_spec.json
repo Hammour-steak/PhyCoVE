@@ -1,0 +1,47 @@
+{
+  "scene_id": "elastic_key_strap",
+  "duration_s": 4.0,
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "baseline": {
+    "strap_young_modulus_pa": 450000.0,
+    "strap_viscosity_pa_s": 2200.0,
+    "strap_density_kg_m3": 1070.0,
+    "strap_length_m": 0.216,
+    "strap_width_m": 0.01,
+    "strap_thickness_m": 0.0008,
+    "strap_present": [
+      1
+    ],
+    "keys_mass_kg": 0.027,
+    "fob_present": [
+      0
+    ],
+    "fob_mass_kg": 0.022,
+    "fob_initial_location_m": [
+      0.0,
+      0.101,
+      1.08
+    ],
+    "anchor_m": [
+      0.0,
+      0.09,
+      1.28
+    ],
+    "cabinet_top_m": 0.86,
+    "initial_lift_m": 0.035,
+    "initial_lateral_m": 0.009,
+    "ring_radius_m": 0.012,
+    "ring_mass_kg": 0.0035,
+    "mesh_rows": 25,
+    "dt_s": 1.3020833333333333e-06
+  },
+  "cases": [
+    "source",
+    "keys_mass_5x",
+    "strap_soft",
+    "strap_stiff",
+    "remove_strap"
+  ]
+}

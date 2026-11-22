@@ -1,0 +1,5 @@
+# Python packages for the shared tools in scripts/ (Python 3.10 or newer).
+# Scene solvers and renderers run in the environment each scene README names;
+# many scenes keep their own requirements.txt. scripts/pcve_verify_video.py
+# calls ffmpeg and ffprobe, which must be on PATH.
+numpy             # scripts/pcve_ground_truth.py

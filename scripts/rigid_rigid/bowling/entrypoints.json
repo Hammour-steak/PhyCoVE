@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "scene": "bowling",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_bowling.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--case",
+        "--scenario-overrides-json",
+        "--substeps"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_bowling.py",
+      "runtime": "blender",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--physics-json",
+        "--asset-root",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--appearance-json",
+        "--skip-existing"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_bowling.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--threads-native",
+        "--device",
+        "--skip-existing",
+        "--reuse-physics-root"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "source",
+        "edit_light_ball",
+        "edit_heavy_P01",
+        "edit_remove_P01",
+        "edit_grippy_P01"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Three independent free pins in a 30 cm equilateral triangle; a rolling 5 kg ball at 4 m/s; one initial velocity assignment, compound convex pin proxies, actual solver poses, source-gated per-object edits. No hidden forces, fixed pin bases, authored tipping or reconstructed spin.",
+  "implementation_files": [
+    "build_pcve_bowling.py",
+    "edit_vocab.py",
+    "physics/graybox_bowling.py",
+    "appearance/look_bowling.py",
+    "appearance/appearance_venue.json",
+    "render_bowling.py",
+    "tools/render_queue.py",
+    "scene_config.py",
+    "simulate_bowling.py",
+    "physics/validate_bowling.py"
+  ],
+  "appearance_preset": "bowling_venue",
+  "appearance_configuration": "appearance/appearance_venue.json"
+}

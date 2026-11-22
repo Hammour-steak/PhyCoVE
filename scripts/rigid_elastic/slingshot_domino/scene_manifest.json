@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scene_id": "slingshot_domino",
+  "interaction_category": "rigid_elastic",
+  "case_number": 19,
+  "look": "sunlit_home_making_table",
+  "entry_points": {
+    "simulate": "simulate_slingshot_domino.py",
+    "render": "render_slingshot_domino.py",
+    "build_pcve": "build_pcve_slingshot_domino.py"
+  },
+  "configuration": [
+    "physics/config.py",
+    "physics/vocabulary.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "soft_bands",
+    "heavy_ball",
+    "heavy_domino",
+    "heavy_domino_at_frame_12",
+    "delete_domino"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/slingshot_domino",
+    "accepted_native_delivery": "renders/slingshot_domino/delivery/accepted",
+    "timed_edit_run": "renders/slingshot_domino/timed_mass10_frame12",
+    "rebuild_output": "renders/slingshot_domino/<new folder>"
+  },
+  "canonical_suites": {
+    "pcve_slingshot_domino_suite": {
+      "target": "renders/pcve_suites/pcve_slingshot_domino_suite",
+      "look": "sunlit_home_making_table",
+      "case_video_sha256": {
+        "source": "22bfab05f93980b722aa549747b50aa2392c6bc3f753214237f6aa620ebe7c7c",
+        "soft_bands": "5b26cb97dde5b685c4682e44e80295a5ed09e7c6c419ef85ba14fadcc5532a0b",
+        "heavy_ball": "70eb6c283d3de559ed95ba7857e530522704d8309915188bf9ce8eb5e615eedd",
+        "heavy_domino": "a715e393dcf759a39b8d1f911edb10392ef0d8540476a64f5a65e292572b39e7",
+        "heavy_domino_at_frame_12": "657cd3e23551baf69c03909ebeccfa41e7cab5ed9a83266692a049af2feaf499",
+        "delete_domino": "c5cf0a0407b822c22dd14fc190e2e40e8b341c7ff7d63304c11d8fe2f280099a",
+        "edit_delete_ball": "47ed311830b19e15403c45e0f4498adfb798adc7843a24463644161326e181b5"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), from the native trajectory caches"
+}

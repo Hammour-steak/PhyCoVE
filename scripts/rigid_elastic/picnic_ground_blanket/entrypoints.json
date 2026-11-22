@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "scene": "picnic_ground_blanket",
+  "category": "rigid_elastic",
+  "case_number": 2,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_picnic_ground_blanket.py",
+      "runtime": "python",
+      "native_options": [
+        "--case-id",
+        "--case",
+        "--out",
+        "--source-cache",
+        "--gpu-uuid",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "mass_double",
+        "faster",
+        "stiffer",
+        "delete_actor",
+        "mass_double_at_frame_12"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_picnic_ground_blanket.py",
+      "runtime": "python",
+      "native_options": [
+        "--case-id",
+        "--case",
+        "--out",
+        "--simulation",
+        "--scene",
+        "--samples",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--device",
+        "--cycles-backend",
+        "--frame-start",
+        "--frame-end",
+        "--still-frame"
+      ],
+      "cases": [
+        "source",
+        "mass_double",
+        "faster",
+        "stiffer",
+        "delete_actor",
+        "mass_double_at_frame_12"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_picnic_ground_blanket.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--gpu-uuid",
+        "--blender-bin",
+        "--cpu-threads",
+        "--reuse-native"
+      ],
+      "cases": [
+        "source",
+        "mass_double",
+        "faster",
+        "stiffer",
+        "delete_actor",
+        "mass_double_at_frame_12"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/picnic_ground_blanket",
+  "implementation_policy": "Physics: libuipc CUDA IPC solve (physics/simulate.py) of a mandarin orange (affine rigid body on its scanned closed mesh) rolling over a freely laid Baraff-Witkin thin-shell cotton blanket with discrete shell bending, resting on a compressible rooted grass layer modelled as a StableNeoHookean FEM volume; the native metric and dihedral viscosity extension (scripts/pcve_native_viscosity.cu; prebuilt module under tools/ at the repository root, PCVE_NATIVE_RUNTIME overrides) is solved in the same Newton/IPC system. Every case starts from the common accepted warm start, runs dt 1/2400 s for 4 s and is sampled at i/24 s (96 states); edits change only their DSL-resolved parameter (DELETE removes the orange from the solve). The timed edit restores the complete source state of frame 12 from the source cache (--source-cache), doubles the orange's mass and solves on to 4 s; frames 1-11 are the source states. The accepted native states of the whole-clip cases are kept in assets/scenes/picnic_ground_blanket/native/<case>/; a new solve runs on Linux with a CUDA GPU through tools/worker_run.py. Render: Blender 4.3.2 Cycles (appearance/render_replay.py) replays the native cloth vertices and rigid transforms into the packed scene (assets packed_scene.blend), clears its stale shape-key animation and checks the evaluated cloth against the cache within 2 um every frame; grass blades are render proxies that follow the solved support surface, and far_meadow.py continues the same scanned turf to the horizon. appearance/look.py sets the look: Poly Haven CC0 partly cloudy sky with its own sun as a lamp, shade of park trees standing outside the picture, lawn colour variation, gingham cotton with a folded hem, brushed-steel thermos and static border tufts whose layout is derived from the six accepted native states of the asset store. The camera is fixed (scene_manifest.json camera). tools/finalize.py encodes video and masks and exports GT (tools/export_ground_truth.py, pcve_ground_truth/1) from the native state; tools/publish_suite.py assembles renders/pcve_suites/pcve_picnic_ground_blanket_suite with prompts from the builder catalog; tools/verify.py (--stage verify) checks suite videos, prompts and GT against the native inputs. Material parameters are effective values, not calibrated against a measured blanket or lawn.",
+  "implementation_files": [
+    "simulate_picnic_ground_blanket.py",
+    "render_picnic_ground_blanket.py",
+    "build_pcve_picnic_ground_blanket.py",
+    "edit_vocab.py",
+    "scene_inputs.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/simulate.py",
+    "physics/geometry.py",
+    "physics/edit_vocab.py",
+    "physics/scene_specs.json",
+    "physics/viscosity.py",
+    "appearance/render_replay.py",
+    "appearance/look.py",
+    "appearance/far_meadow.py",
+    "tools/worker_run.py",
+    "tools/finalize.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/verify.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_picnic_ground_blanket.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

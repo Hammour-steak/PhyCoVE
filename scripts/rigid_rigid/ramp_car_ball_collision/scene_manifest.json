@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scene_id": "ramp_car_ball_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_ramp_car_ball_collision.py",
+    "render": "render_ramp_car_ball_collision.py",
+    "build_pcve": "build_pcve_ramp_car_ball_collision.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_heavy_ball",
+    "edit_low_restitution",
+    "edit_remove_ball",
+    "edit_light_ball",
+    "edit_remove_car",
+    "edit_remove_car_at_2s"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_ramp_car_ball_collision_suite": {
+      "target": "renders/pcve_suites/pcve_ramp_car_ball_collision_suite",
+      "case_video_sha256": {
+        "source": "45abc43d2760ff558e77b43578f216d7162f17079db74bb63e66376f8c0eef83",
+        "edit_heavy_ball": "d6fc60e81bfbf96ec427fa82229929fc0a320a27d84ea69f9667e5eaac9e5cba",
+        "edit_low_restitution": "bed0391d938bf2b68f0ffb7776aeed0057dbda38609de4c0209d98ad69b59a85",
+        "edit_remove_ball": "22ce5d4d26d0f4616321a91ab879a30083853df897f4b117a79f0ed40f4c050d",
+        "edit_light_ball": "8e95c0330e7f33ab2e0c75ff3ad0a0e858409ec103ec970dc7cc8bf1ccfcb481",
+        "edit_remove_car": "c62c4463f284384ed9fdee64eca1ff275b03d5562fb2461f3958674f67fd4262",
+        "edit_remove_car_at_2s": "363e9e8e14c8c0fd7406d7be5f6585a05493f3e041c3168a68acbf7a44abc22e"
+      }
+    }
+  }
+}

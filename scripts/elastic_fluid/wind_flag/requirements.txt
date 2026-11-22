@@ -1,0 +1,4 @@
+genesis-world==1.4.3
+pyuipc==0.0.29
+polyscope==2.5.0
+numpy>=1.26,<3

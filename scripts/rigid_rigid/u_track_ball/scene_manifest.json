@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "scene_id": "u_track_ball",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_u_track_ball.py",
+    "render": "render_u_track_ball.py",
+    "build_pcve": "build_pcve_u_track_ball.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "u_track_ball_baseline",
+    "edit_lower_release",
+    "edit_shallow_release",
+    "edit_fast_launch",
+    "edit_heavy_ball",
+    "edit_box_vanishes_before_impact",
+    "edit_delete_ball"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_u_track_ball_suite": {
+      "target": "renders/pcve_suites/pcve_u_track_ball_suite",
+      "case_video_sha256": {
+        "edit_box_vanishes_before_impact": "b8ab22dc745f03b2271dd0c2c0056dc7e22f3bb6b62d102111efb079e865ebca",
+        "edit_delete_ball": "862ea1e7a52c24ea03d414715c988e3aff9a0775fb1b7f27b8f99f0f541deb59",
+        "edit_fast_launch": "2267e4ae9958bb11d62b0e1c3320ca5708dba4052bfffc4ab4995ea369d35c9e",
+        "edit_heavy_ball": "6074294788bb83663de3efba5ea78e8c61642d811b657f0fe9f1fb282f604d73",
+        "edit_lower_release": "889db039095167b584effb451ad5c3f4fd6b75a2100faa5d95880f33e2f6b863",
+        "edit_shallow_release": "01bbfdfd65b36c7ed3061c2aa505b5c63dd132abea8b9db882529eed64e6b545",
+        "u_track_ball_baseline": "5ca459f08041d5a059fda6b8bfce43a7e23396edba52257ae9b9b436ac34bf9d"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "u_track_ball_baseline": "source",
+        "edit_lower_release": "edit_lower_release",
+        "edit_shallow_release": "edit_shallow_release",
+        "edit_fast_launch": "edit_fast_launch",
+        "edit_heavy_ball": "edit_heavy_ball",
+        "edit_box_vanishes_before_impact": "edit_box_vanishes_before_impact"
+      },
+      "public_case_video_sha256": {
+        "edit_box_vanishes_before_impact": "b8ab22dc745f03b2271dd0c2c0056dc7e22f3bb6b62d102111efb079e865ebca",
+        "edit_delete_ball": "862ea1e7a52c24ea03d414715c988e3aff9a0775fb1b7f27b8f99f0f541deb59",
+        "edit_fast_launch": "2267e4ae9958bb11d62b0e1c3320ca5708dba4052bfffc4ab4995ea369d35c9e",
+        "edit_heavy_ball": "6074294788bb83663de3efba5ea78e8c61642d811b657f0fe9f1fb282f604d73",
+        "edit_lower_release": "889db039095167b584effb451ad5c3f4fd6b75a2100faa5d95880f33e2f6b863",
+        "edit_shallow_release": "01bbfdfd65b36c7ed3061c2aa505b5c63dd132abea8b9db882529eed64e6b545",
+        "source": "5ca459f08041d5a059fda6b8bfce43a7e23396edba52257ae9b9b436ac34bf9d"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/u_track_ball",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "polyhaven/u_track_ball"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

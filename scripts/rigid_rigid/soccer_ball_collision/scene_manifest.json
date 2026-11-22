@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "scene_id": "soccer_ball_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_soccer_ball_collision.py",
+    "render": "render_soccer_ball_collision.py",
+    "build_pcve": "build_pcve_soccer_ball_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "soccer_ball_collision_baseline",
+    "edit_fast_driver",
+    "edit_heavy_receiver",
+    "edit_dead_receiver",
+    "edit_add_midpoint_ball",
+    "edit_overspin_receiver_timed",
+    "edit_delete_ball_a",
+    "edit_delete_ball_b"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_soccer_ball_collision_suite": {
+      "target": "renders/pcve_suites/pcve_soccer_ball_collision_suite",
+      "case_video_sha256": {
+        "edit_add_midpoint_ball": "b59867239651799d82c28595509ddbeb443b8cfadd6fb5d0e54b479f30547376",
+        "edit_dead_receiver": "ab35da6cc0c51f8154626d60ef7f62e7dba1608dd3173da5d3729f4030bd7e0b",
+        "edit_delete_ball_a": "c60bec9520726e1b163bd69b833ed7d60e19a9f833ca96f76f3c5883a3acb46a",
+        "edit_delete_ball_b": "2ed2bc36ff98ad44a112f421c8343bc7cfd8e236b8c85a6f321d5cc06577ca0e",
+        "edit_fast_driver": "45e122268a643c431b73bf84bb7e72cb446559d8acc9101a2a740fd03a53762e",
+        "edit_heavy_receiver": "bb9ec14eab00b2905fe357672f4a8b8e8c9221aeda6f2941c31b4ccafb4baff9",
+        "edit_overspin_receiver_timed": "610f5053a2ff13bb03899452f786eb13d0b5e5eaacdcca543e4584aca486da2d",
+        "soccer_ball_collision_baseline": "51d8c73acde480303a8340d8341198b9490e8d3c803b21151f671720cb80f1f4"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "soccer_ball_collision_baseline": "source",
+        "edit_fast_driver": "edit_fast_driver",
+        "edit_heavy_receiver": "edit_heavy_receiver",
+        "edit_dead_receiver": "edit_dead_receiver",
+        "edit_add_midpoint_ball": "edit_add_midpoint_ball",
+        "edit_overspin_receiver_timed": "edit_overspin_receiver_timed"
+      },
+      "public_case_video_sha256": {
+        "edit_add_midpoint_ball": "b59867239651799d82c28595509ddbeb443b8cfadd6fb5d0e54b479f30547376",
+        "edit_dead_receiver": "ab35da6cc0c51f8154626d60ef7f62e7dba1608dd3173da5d3729f4030bd7e0b",
+        "edit_delete_ball_a": "c60bec9520726e1b163bd69b833ed7d60e19a9f833ca96f76f3c5883a3acb46a",
+        "edit_delete_ball_b": "2ed2bc36ff98ad44a112f421c8343bc7cfd8e236b8c85a6f321d5cc06577ca0e",
+        "edit_fast_driver": "45e122268a643c431b73bf84bb7e72cb446559d8acc9101a2a740fd03a53762e",
+        "edit_heavy_receiver": "bb9ec14eab00b2905fe357672f4a8b8e8c9221aeda6f2941c31b4ccafb4baff9",
+        "edit_overspin_receiver_timed": "610f5053a2ff13bb03899452f786eb13d0b5e5eaacdcca543e4584aca486da2d",
+        "source": "51d8c73acde480303a8340d8341198b9490e8d3c803b21151f671720cb80f1f4"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/soccer_ball_collision",
+  "assets": {
+    "models": [
+      "cheap_soccer_ball.glb"
+    ],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/soccer_ball_collision",
+      "scenes/soccer_ball_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

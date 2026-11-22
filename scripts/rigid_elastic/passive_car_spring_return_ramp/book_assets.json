@@ -1,0 +1,263 @@
+{
+  "source": "https://polyhaven.com/a/decorative_book_set_01",
+  "license": "CC0",
+  "model_author": "James Ray Cock",
+  "object_names": [
+    "book_hardcover_01_cover87",
+    "book_softcover_01_cover04",
+    "catalogue_softcover_01_cover26",
+    "book_hardcover_01_cover66",
+    "book_hardcover_01_cover06",
+    "book_softcover_01_cover86",
+    "book_hardcover_01_cover29"
+  ],
+  "downloads": [
+    {
+      "path": "decorative_book_set_01_2k.blend",
+      "size": 5129562,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/decorative_book_set_01/decorative_book_set_01_2k.blend",
+      "md5": "924ce3404cae6f150bc3960cf53c84f8",
+      "sha256": "ce13d6eefa6f012f53cd0b883e46cf71d3ce3d5faa50e2d6191b03b1a7e0a4b9"
+    },
+    {
+      "image_stem": "book_hardcover_01_cover29",
+      "path": "textures/book_hardcover_01_cover29_2k.png",
+      "size": 3581886,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover29_2k.png",
+      "md5": "fb8b12998ddd23185217548ddb1b288c",
+      "sha256": "3cf81669a06db51927a7e350a1948f1f78d3e5d8db38037e8b9c805a690446c8"
+    },
+    {
+      "image_stem": "book_hardcover_01_cover66",
+      "path": "textures/book_hardcover_01_cover66_2k.png",
+      "size": 1679148,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover66_2k.png",
+      "md5": "2da37f906f7b8eb0e74bcbc38b9de358",
+      "sha256": "8d5ab0c49edecc5f1f0476f09b51a6e624620530bb0d8bf335bf87c8bb9ce7a8"
+    },
+    {
+      "image_stem": "book_hardcover_01_cover87",
+      "path": "textures/book_hardcover_01_cover87_2k.png",
+      "size": 5140154,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover87_2k.png",
+      "md5": "9c8d8be5197839aebeec99b225e9314a",
+      "sha256": "af38e60c7079e6af9b5618762bd2f7a773d414123e2c7349eac3e5ed1eb03e56"
+    },
+    {
+      "image_stem": "book_hardcover_01_diff",
+      "path": "textures/book_hardcover_01_diff_2k.jpg",
+      "size": 624422,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_hardcover_01_diff_2k.jpg",
+      "md5": "9e5a0e4890d6fd5837d22d6d82329d6d",
+      "sha256": "7eb44b50e00da2236828c54edb58cd4b9983fa52abf86e9112ad9d8e66751819"
+    },
+    {
+      "image_stem": "book_hardcover_01_mask01",
+      "path": "textures/book_hardcover_01_mask01_2k.png",
+      "size": 75502,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_mask01_2k.png",
+      "md5": "0dac0373794e8f0ef03e945f8c76cebd",
+      "sha256": "90ff6dff1c951942bec418681571b6aeb06afa475b1974c984ba340ea342c3d8"
+    },
+    {
+      "image_stem": "book_hardcover_01_mask02",
+      "path": "textures/book_hardcover_01_mask02_2k.png",
+      "size": 6014,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_mask02_2k.png",
+      "md5": "ef7104c5bf8207c24dc5888a1f80361a",
+      "sha256": "f4386c4aaadac90cc3814c6ca81428f13e6c8db57fb4157c4715449107659412"
+    },
+    {
+      "image_stem": "book_hardcover_01_mask03",
+      "path": "textures/book_hardcover_01_mask03_2k.png",
+      "size": 79358,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_mask03_2k.png",
+      "md5": "fff569c0abc0afa8168ad9d7fc66a3bb",
+      "sha256": "b67e83681f84d41dc00a0db20de0beaa855472ca95a7bad0dd8eea6561bb00f3"
+    },
+    {
+      "image_stem": "book_hardcover_01_nor_gl",
+      "path": "textures/book_hardcover_01_nor_gl_2k.exr",
+      "size": 2936269,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/decorative_book_set_01/book_hardcover_01_nor_gl_2k.exr",
+      "md5": "eed56953081001b4e367b819fe18dd6e",
+      "sha256": "3d1d9108313d66953014d32c42fd2aeda7a3b56c8ce0f6137ce12f2ab1f5e9e4"
+    },
+    {
+      "image_stem": "book_hardcover_01_roughness",
+      "path": "textures/book_hardcover_01_roughness_2k.jpg",
+      "size": 420455,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_hardcover_01_roughness_2k.jpg",
+      "md5": "5e0514c70bf25bc4f67c73890ec19bd0",
+      "sha256": "79d2a53f3ed718c6acedf54327b91e122309235df52b5587a1ad1cfe9f1afff5"
+    },
+    {
+      "image_stem": "book_softcover_01_cover04",
+      "path": "textures/book_softcover_01_cover04_2k.png",
+      "size": 1605175,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_cover04_2k.png",
+      "md5": "e43fbc94611c4a1193e463892c374e43",
+      "sha256": "803fa4a9da1d96a56690978a5704f118b400ab808ad6628c907d886400280fd8"
+    },
+    {
+      "image_stem": "book_hardcover_01_cover06",
+      "path": "textures/book_hardcover_01_cover06_2k.png",
+      "size": 1549740,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover06_2k.png",
+      "md5": "c997a860e2fc96dbd8066b9a8061573f",
+      "sha256": "2f0ceb949603035944ea154a8eb0fc22961abe0386caf3fe4475824d06018580"
+    },
+    {
+      "image_stem": "book_softcover_01_cover86",
+      "path": "textures/book_softcover_01_cover86_2k.png",
+      "size": 2407814,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_cover86_2k.png",
+      "md5": "015b784092811469bccc8cf91ab29cb1",
+      "sha256": "7a30f18ae58d52d8bda9afdedff66727eec400e384498a198b58103e0add83aa"
+    },
+    {
+      "image_stem": "book_softcover_01_diff",
+      "path": "textures/book_softcover_01_diff_2k.jpg",
+      "size": 603468,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_softcover_01_diff_2k.jpg",
+      "md5": "7dbb20f54f1d21d8d9b2514e8c81f275",
+      "sha256": "9a2033eed3b9133b7d6c22042e2e88330bb36247dfbbf2dfeada49a8e8a6f6a2"
+    },
+    {
+      "image_stem": "book_softcover_01_mask01",
+      "path": "textures/book_softcover_01_mask01_2k.png",
+      "size": 65580,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_mask01_2k.png",
+      "md5": "addec8975161b91adea093ced886ac7e",
+      "sha256": "bb871efbfa8687092e9598f1a5ad87576e589ef1538344b652050c03b894d765"
+    },
+    {
+      "image_stem": "book_softcover_01_mask02",
+      "path": "textures/book_softcover_01_mask02_2k.png",
+      "size": 5905,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_mask02_2k.png",
+      "md5": "dae8303b5598debf21f1eba3ac488c7b",
+      "sha256": "2e09af8a94925fe699b7687b4025c4651f305ed354b7a79eea87263b18149c18"
+    },
+    {
+      "image_stem": "book_softcover_01_mask03",
+      "path": "textures/book_softcover_01_mask03_2k.png",
+      "size": 76258,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_mask03_2k.png",
+      "md5": "1a8f818f23cc721c252497ca1170b1b0",
+      "sha256": "6c04ed7059e5108278d0cfbd751c5b68b1727dc359a62e86310f1832878b84b7"
+    },
+    {
+      "image_stem": "book_softcover_01_nor_gl",
+      "path": "textures/book_softcover_01_nor_gl_2k.exr",
+      "size": 2817178,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/decorative_book_set_01/book_softcover_01_nor_gl_2k.exr",
+      "md5": "55d07437bb3fe48818da41da54f4390e",
+      "sha256": "2224e57d3639384f4822d4af1da58b647b62d39e3e8666de11907943c4243080"
+    },
+    {
+      "image_stem": "book_softcover_01_roughness",
+      "path": "textures/book_softcover_01_roughness_2k.jpg",
+      "size": 419380,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_softcover_01_roughness_2k.jpg",
+      "md5": "773882b282d8187e00873ced6d38896a",
+      "sha256": "8bc08e2e65b4b5440449c07667e917a7e12638dc8b0e8b0ce9c7e2ab145154e0"
+    },
+    {
+      "image_stem": "catalogue_softcover_01_cover26",
+      "path": "textures/catalogue_softcover_01_cover26_2k.png",
+      "size": 1178727,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/catalogue_softcover_01_cover26_2k.png",
+      "md5": "e1634e717e2e5b409f711e91ffa2b9f9",
+      "sha256": "749ea325bac575b7143ed6b44f5ad8408fdc3cc7058c8bf29dc2026faa7fccb7"
+    },
+    {
+      "image_stem": "catalogue_softcover_01_diff",
+      "path": "textures/catalogue_softcover_01_diff_2k.jpg",
+      "size": 605571,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/catalogue_softcover_01_diff_2k.jpg",
+      "md5": "34feeda4124d1af0107fb3071329e27b",
+      "sha256": "38683d6ae3422c549023373e0aba9c1b3b4d95a463b435e917a2327cb1deb92a"
+    },
+    {
+      "image_stem": "catalogue_softcover_01_mask01",
+      "path": "textures/catalogue_softcover_01_mask01_2k.png",
+      "size": 45655,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/catalogue_softcover_01_mask01_2k.png",
+      "md5": "cf81b4d0d5d4d7d9530a76531c634c58",
+      "sha256": "817c358c7a5a0106b0d1d6e09e5ee449c58ea629b72b2d5fbba2010069a6f05f"
+    },
+    {
+      "image_stem": "catalogue_softcover_01_mask02",
+      "path": "textures/catalogue_softcover_01_mask02_2k.png",
+      "size": 6164,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/catalogue_softcover_01_mask02_2k.png",
+      "md5": "9909d31a6d33f2af13157c81e600eaa9",
+      "sha256": "bfdf8c0b2dd6fcd553aecd29606b0aa16d56cbeac13f4bcb2156bb524be6f855"
+    },
+    {
+      "image_stem": "catalogue_softcover_01_mask03",
+      "path": "textures/catalogue_softcover_01_mask03_2k.png",
+      "size": 17654,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/catalogue_softcover_01_mask03_2k.png",
+      "md5": "71aac23e9ff3f3c703ddafd7f51ae204",
+      "sha256": "9ae1607be5d4c19495fceb78ffd9fc195620ac9daa431be0b32855418de901d2"
+    },
+    {
+      "image_stem": "catalogue_softcover_01_nor_gl",
+      "path": "textures/catalogue_softcover_01_nor_gl_2k.exr",
+      "size": 2664358,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/decorative_book_set_01/catalogue_softcover_01_nor_gl_2k.exr",
+      "md5": "9aa5c8d2b9a0a4ebfef35ce950c62074",
+      "sha256": "096ab943ab6c5d51841b8fa352c3895e84636ee1eb85402ce40cc558c4d1bbf5"
+    },
+    {
+      "image_stem": "catalogue_softcover_01_roughness",
+      "path": "textures/catalogue_softcover_01_roughness_2k.jpg",
+      "size": 455430,
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/catalogue_softcover_01_roughness_2k.jpg",
+      "md5": "c2db518b98bd1c4c12ca05487d8fab7a",
+      "sha256": "42dd889b7f8a35d9cc47427ae1b91f05fc93b258b96e16480d965b5eb526f711"
+    }
+  ],
+  "cover_credits": {
+    "book_hardcover_01_cover87": {
+      "title": "Willow Wobbles",
+      "author": "Hans Josef Cla\u00dfen"
+    },
+    "book_softcover_01_cover04": {
+      "title": "Cats and their humans",
+      "author": "John Malcolm"
+    },
+    "catalogue_softcover_01_cover26": {
+      "title": "Fluffy Doggo",
+      "author": "Johnny Matthews"
+    },
+    "book_hardcover_01_cover66": {
+      "title": "Space Walk",
+      "author": "Andrzej Siejenski"
+    },
+    "book_hardcover_01_cover29": {
+      "title": "Sun",
+      "author": "Andrzej Siejenski"
+    },
+    "book_hardcover_01_cover06": {
+      "title": "Chrysanthemum",
+      "author": "Xiaohong Zhao"
+    },
+    "book_softcover_01_cover86": {
+      "title": "weather untamable force",
+      "author": "Blender Wizard"
+    }
+  },
+  "license_reference": "https://polyhaven.com/license",
+  "normalization": "Source evaluated mesh world-space bounding box normalized to the explicit dimensions in library_shelf_books; source UV, geometry details and material structure retained",
+  "source_shader_overrides": {
+    "damage_amount": 0.22,
+    "stains": 0.12,
+    "bump_strength": 0.28,
+    "folds": 0.35,
+    "roughness_hardcover": 0.47,
+    "roughness_softcover": 0.62
+  }
+}

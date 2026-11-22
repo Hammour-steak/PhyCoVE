@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "scene": "toy_car_ramp_pool_genesis",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_toy_car_ramp_pool_genesis.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--water-state",
+        "--frames",
+        "--dx",
+        "--steps-per-frame",
+        "--substeps",
+        "--settle-frames",
+        "--fluid-damping",
+        "--preview-frames",
+        "--water-height"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_toy_car_ramp_pool_genesis.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--input-blend",
+        "--run",
+        "--out-dir",
+        "--preview-frames",
+        "--resolution",
+        "--samples",
+        "--engine",
+        "--reuse-existing-frames",
+        "--mesh-dir-name",
+        "--camera-preset",
+        "--render-spray-particles",
+        "--spray-radius",
+        "--spray-speed-threshold",
+        "--secondary-dir-name",
+        "--lighting-preset",
+        "--background-yaw-degrees",
+        "--hdri-yaw-degrees",
+        "--environment-hdri",
+        "--clip-water-to-pool-liner",
+        "--pool-clip-margin",
+        "--pool-clip-z",
+        "--hide-genesis-fluid",
+        "--disable-pool-shadow",
+        "--remove-pool-valves",
+        "--contact-fill-energy",
+        "--sun-angle-degrees",
+        "--sun-yaw-offset-degrees",
+        "--blue-pool-bottom"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_toy_car_ramp_pool_genesis.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--input-blend",
+        "--out-root",
+        "--stage",
+        "--python",
+        "--blender",
+        "--threads",
+        "--gpu",
+        "--dry-run"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source"
+      ]
+    }
+  },
+  "workflows": {
+    "current-source": {
+      "file": "reproduce_current.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--kind",
+        "--plan",
+        "--stage",
+        "--dry-run"
+      ],
+      "resource_flags": {},
+      "stage_semantics": "selector",
+      "prefix_args": [
+        "--kind",
+        "source"
+      ],
+      "python_runtime": ".venv-genesis-mpm-sph/bin/python",
+      "cases": [
+        "source"
+      ],
+      "description": "Original staged current pipeline, including its original cache selection and review gates; uses a fresh workspace."
+    },
+    "current-edits": {
+      "file": "reproduce_current.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--kind",
+        "--plan",
+        "--stage",
+        "--dry-run"
+      ],
+      "resource_flags": {},
+      "stage_semantics": "selector",
+      "prefix_args": [
+        "--kind",
+        "edits"
+      ],
+      "python_runtime": ".venv-genesis-mpm-sph/bin/python",
+      "cases": [
+        "no_car",
+        "heavy_car_x3",
+        "low_density_div4",
+        "high_viscosity_x20000",
+        "mass_after_2s_x3"
+      ],
+      "description": "Original staged current pipeline, including its original cache selection and review gates; uses a fresh workspace."
+    }
+  },
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_toy_car_ramp_pool_genesis.py",
+    "edit_vocab.py",
+    "edits/bake_edit_boundaries.py",
+    "edits/bounded_geometry.py",
+    "edits/check_physics.py",
+    "edits/environment_realism.py",
+    "edits/geometry_helpers.py",
+    "edits/launch_physics.py",
+    "edits/lighting_profiles.py",
+    "edits/pipeline_edits.py",
+    "edits/refine_scene.py",
+    "edits/render_animation.py",
+    "edits/render_edit.py",
+    "edits/repair_pool_water.py",
+    "edits/restart_at_2s.py",
+    "edits/simulate_timed_mass.py",
+    "edits/surface_edits.py",
+    "edits/verify_edit_native.py",
+    "edits/water_presence.py",
+    "appearance/render_genesis_toy_car_pool.py",
+    "render_toy_car_ramp_pool_genesis.py",
+    "reproduce_current.py",
+    "physics/simulate_genesis_toy_car_pool.py",
+    "simulate_toy_car_ramp_pool_genesis.py",
+    "source/bake_edit_boundaries.py",
+    "source/bounded_geometry.py",
+    "source/environment_realism.py",
+    "source/geometry_helpers.py",
+    "source/initialize_source.py",
+    "source/lighting_profiles.py",
+    "source/pipeline_source.py",
+    "source/refine_scene.py",
+    "source/render_animation.py",
+    "source/render_edit.py",
+    "source/repair_pool_water.py",
+    "source/surface_edits.py",
+    "source/verify_edit_native.py",
+    "source/water_presence.py",
+    "physics/surface_genesis_toy_car_pool.py",
+    "surface_toy_car_ramp_pool_genesis.py",
+    "scene_manifest.json"
+  ]
+}

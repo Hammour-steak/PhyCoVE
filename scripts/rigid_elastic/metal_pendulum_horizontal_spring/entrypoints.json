@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "scene": "metal_pendulum_horizontal_spring",
+  "category": "rigid_elastic",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_metal_pendulum_horizontal_spring.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--case",
+        "--frames",
+        "--substeps",
+        "--young-modulus",
+        "--reuse-cache"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "soft_spring",
+        "stiff_spring",
+        "heavy_ball",
+        "delete_spring"
+      ],
+      "python_runtime": ".venv-genesis-mpm-sph/bin/python"
+    },
+    "render": {
+      "file": "render_metal_pendulum_horizontal_spring.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--run",
+        "--out",
+        "--frame-list",
+        "--samples",
+        "--save-blend",
+        "--skip-existing"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "soft_spring",
+        "stiff_spring",
+        "heavy_ball",
+        "delete_spring"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_metal_pendulum_horizontal_spring.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--cases",
+        "--stage",
+        "--python",
+        "--blender",
+        "--gpu",
+        "--threads"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "soft_spring",
+        "stiff_spring",
+        "heavy_ball",
+        "delete_spring"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_files": [
+    "appearance/__init__.py",
+    "appearance/joinery.py",
+    "appearance/photo_finish.py",
+    "appearance/renderer.py",
+    "appearance/room.py",
+    "appearance/surfaces.py",
+    "asset_tools/__init__.py",
+    "asset_tools/prepare.py",
+    "build_pcve_metal_pendulum_horizontal_spring.py",
+    "edit_vocab.py",
+    "edits/__init__.py",
+    "edits/presets.py",
+    "model/__init__.py",
+    "model/dynamics.py",
+    "model/mesh.py",
+    "model/simulation.py",
+    "pipeline/__init__.py",
+    "pipeline/build.py",
+    "render_metal_pendulum_horizontal_spring.py",
+    "scene_config.py",
+    "scene_paths.py",
+    "simulate_metal_pendulum_horizontal_spring.py",
+    "tools/__init__.py",
+    "tools/export_playback.py",
+    "validation/physics.py",
+    "validation/static.py",
+    "validation/video.py",
+    "asset_manifest.json",
+    "asset_tools/catalogs/base_wood.json",
+    "asset_tools/catalogs/room_props.json",
+    "asset_tools/catalogs/surface_scans.json",
+    "asset_tools/catalogs/wood_finish.json",
+    "scene_manifest.json"
+  ],
+  "implementation_policy": "One current scene-owned implementation: thin canonical CLI entries, explicit edit presets, native hinge/slider/contact dynamics, full room and PBR appearance, pinned asset reproduction, isolated stage orchestration and independent validation. No code-version aliases or one-off calibration runners in the live scene.",
+  "default_output": "outputs/metal_pendulum_horizontal_spring_run",
+  "published_suite": "renders/pcve_suites/pcve_metal_pendulum_horizontal_spring_suite"
+}

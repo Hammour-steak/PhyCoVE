@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "scene_id": "spring_scale_weight_drop",
+  "interaction_category": "rigid_elastic",
+  "case_number": 18,
+  "native_dataset_id": "steel_ball_silicone_cup",
+  "entry_points": {
+    "simulate": "simulate_spring_scale_weight_drop.py",
+    "render": "render_spring_scale_weight_drop.py",
+    "build_pcve": "build_pcve_spring_scale_weight_drop.py"
+  },
+  "configuration": [
+    "physics/scene.py",
+    "edit_vocab.py",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "heavy",
+    "soft",
+    "damped",
+    "remove_weight",
+    "heavy_at_frame_48"
+  ],
+  "workflows": {},
+  "camera": {
+    "description": "Fixed camera of every case, built by appearance/render_spring.py and recorded in each render_report.json; ground truth reads it from the source render report",
+    "location_m": [
+      0.74,
+      -1.82,
+      0.94
+    ],
+    "aim_m": [
+      0.025,
+      0.0,
+      0.5
+    ],
+    "lens_mm": 40,
+    "sensor_width_mm": 36,
+    "fstop": 9.0,
+    "focus": "distance to (0, 0, 0.55) m",
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  "data": {
+    "assets": "assets/scenes/spring_scale_weight_drop",
+    "realism_assets": "assets/scenes/spring_scale_weight_drop/realism",
+    "accepted_native_delivery": "renders/spring_scale_weight_drop/delivery/accepted",
+    "native_caches": "<accepted_native_delivery>/cases/<case>/{native_dynamics.npz,physics.json}",
+    "timed_native_solve": "renders/pcve_suites/pcve_spring_scale_weight_drop_suite/cases/edit_heavy_at_frame_48/native_metadata",
+    "rebuild_output": "renders/spring_scale_weight_drop/rebuild",
+    "solver_work": "renders/spring_scale_weight_drop/work",
+    "launch_records": "renders/spring_scale_weight_drop/launches"
+  },
+  "canonical_suites": {
+    "pcve_spring_scale_weight_drop_suite": {
+      "target": "renders/pcve_suites/pcve_spring_scale_weight_drop_suite",
+      "look": "daylit school physics bench (appearance/realism.py over appearance/render_spring.py), 128 samples",
+      "public_case_ids": {
+        "source": "source",
+        "heavy": "edit_heavy",
+        "soft": "edit_soft",
+        "damped": "edit_damped",
+        "remove_weight": "edit_remove_weight",
+        "heavy_at_frame_48": "edit_heavy_at_frame_48"
+      },
+      "case_video_sha256": {
+        "source": "53b025d4329678547b728b89c54c8ec8cbf252e610eaaefd4287eb4ac7f1cbc8",
+        "heavy": "1791746e5483df09a67308e4c34aaa84dd1a4c70402e778ca2accb8fb1f911a9",
+        "soft": "a43bdeea493eef45deb475f7b28817353da8b46ed24ada7a4fd7d99377770cfd",
+        "damped": "a74a2df863f3c521ccb3b3556a23917f3f1c177c6f01cc776a10a0d3f7ae9022",
+        "remove_weight": "e37d1fe13983a4f0f86a3e1947588eb1822856ea02b335e41827cf4c742094f4",
+        "heavy_at_frame_48": "0db8c0385d60919b85576162c0b2e35dca7e156b3ca853aa53fcf769228f8c78",
+        "edit_remove_spring": "ea40afcf1bc000a80ece56f7fcb44f156dfc799b1ef05ff6382e77dca3c5e1a4"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "heavy": "cases/edit_heavy/video.mp4",
+        "soft": "cases/edit_soft/video.mp4",
+        "damped": "cases/edit_damped/video.mp4",
+        "remove_weight": "cases/edit_remove_weight/video.mp4",
+        "heavy_at_frame_48": "cases/edit_heavy_at_frame_48/video.mp4"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s; the 97th native state (t = 4 s) stays in the cache"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), from the native caches by tools/export_ground_truth.py"
+}

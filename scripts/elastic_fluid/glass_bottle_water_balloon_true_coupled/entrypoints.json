@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "scene": "glass_bottle_water_balloon_true_coupled",
+  "category": "elastic_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_glass_bottle_water_balloon_true_coupled.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out",
+        "--out-dir",
+        "--frames",
+        "--flow-l-min",
+        "--pump-start-frame",
+        "--edge-stiffness",
+        "--bend-stiffness",
+        "--elastic-modulus-scale",
+        "--settle-seconds",
+        "--latex-areal-density",
+        "--damping",
+        "--substeps",
+        "--segments",
+        "--ring-dz",
+        "--neck-rest-r",
+        "--body-half-width",
+        "--body-half-depth",
+        "--body-length",
+        "--level-every",
+        "--no-volume",
+        "--timed-edits-json",
+        "--open-mouth",
+        "--sealed",
+        "--water-retention"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_glass_bottle_water_balloon_true_coupled.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--case-dir"
+      },
+      "native_options": [
+        "--case-dir",
+        "--blender",
+        "--kitchen",
+        "--gpu",
+        "--skip-existing",
+        "--dry-run"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender",
+        "gpu": "--gpu"
+      },
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_glass_bottle_water_balloon_true_coupled.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--suite-root",
+        "--stage",
+        "--cases",
+        "--python",
+        "--blender",
+        "--kitchen",
+        "--gpu",
+        "--skip-existing",
+        "--dry-run"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu"
+      },
+      "cases": [
+        "glass_jar_water_balloon_source",
+        "edit_high_flow",
+        "edit_tap_off_from_start",
+        "edit_hard_balloon"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Project XPBD latex membrane with a hydrostatic retained-water volume (NumPy, CPU), membrane and water surfaces reconstructed for Blender 5.1.2 Cycles",
+  "implementation_files": [
+    "appearance/look_glass_bottle_water_balloon_true_coupled.py",
+    "appearance/overflow_glass_bottle_water_balloon_true_coupled.py",
+    "appearance/scene_glass_bottle_water_balloon_true_coupled.py",
+    "balloon_config.py",
+    "build_pcve_glass_bottle_water_balloon_true_coupled.py",
+    "edit_vocab.py",
+    "physics/validate_glass_bottle_water_balloon_true_coupled.py",
+    "render_glass_bottle_water_balloon_true_coupled.py",
+    "simulate_glass_bottle_water_balloon_true_coupled.py",
+    "surface_glass_bottle_water_balloon_true_coupled.py",
+    "scene_spec.json",
+    "scene_manifest.json"
+  ]
+}

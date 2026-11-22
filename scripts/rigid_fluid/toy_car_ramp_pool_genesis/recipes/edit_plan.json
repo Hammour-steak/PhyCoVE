@@ -1,0 +1,106 @@
+{
+  "root": "renders/pcve_toy_car_edits",
+  "work": "work/toy_car_edits",
+  "baseline": "renders/pcve_toy_car_source",
+  "source_scene": "assets/scenes/toy_car_ramp_pool_genesis/scene_pool_corrected.blend",
+  "cases": [
+    {
+      "id": "no_car",
+      "prompt_zh": "从第 1 帧开始,把玩具小车从场景中删除。",
+      "root": "renders/pcve_toy_car_edits/cases/no_car",
+      "physics": {
+        "car_present": false,
+        "car_mass_kg": 0.42,
+        "water_density_kg_m3": 998.0,
+        "water_kinematic_viscosity_m2_s": 1.004e-06
+      },
+      "substeps": 4,
+      "event_time_s": null
+    },
+    {
+      "id": "heavy_car_x3",
+      "prompt_zh": "从第 1 帧开始,把玩具小车的质量增加到原来的 3 倍。",
+      "root": "renders/pcve_toy_car_edits/cases/heavy_car_x3",
+      "physics": {
+        "car_present": true,
+        "car_mass_kg": 1.26,
+        "water_density_kg_m3": 998.0,
+        "water_kinematic_viscosity_m2_s": 1.004e-06
+      },
+      "substeps": 4,
+      "event_time_s": null
+    },
+    {
+      "id": "low_density_div4",
+      "prompt_zh": "从第 1 帧开始,把池水的密度减少到原来的 0.25 倍。",
+      "root": "renders/pcve_toy_car_edits/cases/low_density_div4",
+      "physics": {
+        "car_present": true,
+        "car_mass_kg": 0.42,
+        "water_density_kg_m3": 249.5,
+        "water_kinematic_viscosity_m2_s": 1.004e-06
+      },
+      "substeps": 4,
+      "event_time_s": null
+    },
+    {
+      "id": "high_viscosity_x20000",
+      "prompt_zh": "从第 1 帧开始,把池水的运动黏度增加到原来的 20000 倍。",
+      "root": "renders/pcve_toy_car_edits/cases/high_viscosity_x20000",
+      "physics": {
+        "car_present": true,
+        "car_mass_kg": 0.42,
+        "water_density_kg_m3": 998.0,
+        "water_kinematic_viscosity_m2_s": 0.02008
+      },
+      "substeps": 32,
+      "event_time_s": null
+    },
+    {
+      "id": "mass_after_2s_x3",
+      "prompt_zh": "从第 49 帧开始,把玩具小车的质量增加到原来的 3 倍。",
+      "root": "renders/pcve_toy_car_edits/cases/mass_after_2s_x3",
+      "physics": {
+        "car_present": true,
+        "car_mass_kg": 0.42,
+        "water_density_kg_m3": 998.0,
+        "water_kinematic_viscosity_m2_s": 1.004e-06
+      },
+      "substeps": 4,
+      "event_time_s": 2.0
+    }
+  ],
+  "render": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "samples": 32,
+    "fps": 24,
+    "frames": 96,
+    "duration_s": 4
+  },
+  "simulation_quality": {
+    "dx_m": 0.01,
+    "steps_per_frame": 8,
+    "base_substeps": 4,
+    "high_viscosity_substeps": 32
+  },
+  "timed_edit_restart": {
+    "frame": 49,
+    "time_s": 2.0,
+    "source_state": "renders/pcve_toy_car_source/simulation/run/particles/frame_0049.npz",
+    "prefix_frames_reused": [
+      1,
+      49
+    ],
+    "after_event": "Free two-way rigid/SPH integration with mass and inertia x3",
+    "limitations": "Particle velocities in the recorded source cache have float16 storage precision; DFSPH solver auxiliary fields are recomputed on restart. A constant-mass restart control is required."
+  },
+  "preserve_previous_sources_and_edits": true,
+  "appearance": {
+    "approved_source": "renders/pcve_toy_car_source",
+    "camera_lighting_environment_pool_uv": "frozen",
+    "approved_scene": "assets/scenes/toy_car_ramp_pool_genesis/scene_pool_corrected.blend"
+  }
+}

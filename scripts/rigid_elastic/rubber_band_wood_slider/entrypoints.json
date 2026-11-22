@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "scene": "rubber_band_wood_slider",
+  "category": "rigid_elastic",
+  "case_number": 15,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_rubber_band_wood_slider.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--python-runtime",
+        "--mujoco-runtime",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "young_x0p5",
+        "mass_x3",
+        "friction_x2",
+        "delete_band",
+        "add_stop"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python-runtime",
+        "threads": "--cpu-threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_rubber_band_wood_slider.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--frames",
+        "--samples",
+        "--device",
+        "--gpu-uuid",
+        "--render-threads",
+        "--blender-bin",
+        "--revision",
+        "--save-blend",
+        "--no-encode"
+      ],
+      "cases": [
+        "source",
+        "young_x0p5",
+        "mass_x3",
+        "friction_x2",
+        "delete_band",
+        "add_stop"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_rubber_band_wood_slider.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--native",
+        "--revision",
+        "--archive-as"
+      ],
+      "cases": [
+        "source",
+        "young_x0p5",
+        "mass_x3",
+        "friction_x2",
+        "delete_band",
+        "add_stop"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "A 300 mm handmade wooden guide holds a 36 g wooden slider (55 x 42 x 24 mm) that a closed rubber band pulls back: the band (200 mm natural loop, 1.6 x 0.6 mm section, E = 1.2 MPa) is fixed by a finite material arc to the clamp at the left end and by another arc to the peg on the slider, stretched about 28 %, and the slider is released at 0.5 s. Physics (physics/physics.py): the band is an incompressible plane-stress neo-Hookean shell (160 x 2 mesh) with geometric dihedral bending, two objective Maxwell branches and Kelvin viscosity, coupled through the exact rigid Jacobian to a prismatic slider; MuJoCo 3.17.0 on the CPU resolves contact, friction (slider-guide 0.20, band-wood 0.65) and self-contact; dt = 1/384000 s, states at 480 Hz over 4.000 s, all six cases start from one shared prepared state. The accepted states are the native solves in the increment (assets/scenes/rubber_band_wood_slider/native/accepted_increment.zip); nothing is re-solved for rendering. Blender 4.3.2 Cycles (appearance/render_scene.py with the look appearance/realism.py: an OSB workshop bench, the small-workshop HDRI plus low window sun, a walnut slider block, hand plane, shavings, offcuts and pencil as props) rebuilds the toy, keys the slider from the solver trace and the band as one shape key per native state with 9 deformation samples per shutter, and renders frame i at t = (i - 1)/24 s, 1280x720, 24 fps, 96 frames, fixed 58 mm camera. Five edits change one thing each (band Young's modulus x0.5, slider mass x3, slider-guide friction x2, delete the band, add a fixed two-block wooden stop at x = 15 mm) and pass the shared edit-DSL policy. tools/export_ground_truth.py writes per-frame ground truth from the native states and the render camera; tools/publish_suite.py encodes and publishes a suite in the current PCVE formats.",
+  "implementation_files": [
+    "simulate_rubber_band_wood_slider.py",
+    "render_rubber_band_wood_slider.py",
+    "build_pcve_rubber_band_wood_slider.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_spec.json",
+    "scene_manifest.json",
+    "physics/physics.py",
+    "appearance/render_scene.py",
+    "appearance/render_base.py",
+    "appearance/realism.py",
+    "tools/retained_delivery.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/render_queue.py"
+  ],
+  "assets": "assets/scenes/rubber_band_wood_slider",
+  "edit_catalog": {
+    "file": "build_pcve_rubber_band_wood_slider.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

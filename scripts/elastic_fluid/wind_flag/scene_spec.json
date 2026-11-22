@@ -1,0 +1,17 @@
+{
+  "scene_id": "wind_flag", "interaction_category": "elastic_fluid", "units": "m, kg, s, Pa",
+  "physics": {
+    "young_modulus_pa": 1000000, "poisson_ratio": 0.3, "density_kg_m3": 100,
+    "full_thickness_m": 0.001, "wind_reference_speed_m_s": 2,
+    "gravity_m_s2": [0, 0, -9.81],
+    "flag_width_m": 1.5, "flag_height_m": 1.0, "flag_top_z_m": 3.63,
+    "pole_collision_proxy_radius_m": 0.0141, "pole_visual_radius_m": 0.0100562196,
+    "pole_height_m": 3.65, "hoist_x_m": 0.0231,
+    "air_density_kg_m3": 1.225, "normal_Cd": 1.2, "tangential_Cd": 0.03
+  },
+  "simulation_quality": {"nx":61,"nz":41,"fps":24,"frames":96,"steps_per_frame":8,"source_settle_seconds":3,"seed":4090,"dt_s":0.005208333333333333,"pin_audit_tolerance_m":0.000001},
+  "appearance": {"asset":"BlenderKit UN ceremonial flag by Demycs","camera_and_lighting":"frozen accepted rooftop look","render_cloth_full_thickness_m":0.001,"render_subdivision":1},
+  "render": {"resolution":[1280,720],"fps":24,"frames":96,"duration_sec":4,"engine":"BLENDER_EEVEE_NEXT","samples":64,"motion_blur":true},
+  "approved_edits": {"flow_6mps":{"wind_reference_speed_m_s":6},"young_stiff":{"young_modulus_pa":100000000},"wind_drop_at_2s":{"time_s":2,"wind_reference_speed_after_m_s":0.5},"flow_0p5mps":{"wind_reference_speed_m_s":0.5},"flow_0mps":{"wind_reference_speed_m_s":0}},
+  "coupling": {"method":"one-way prescribed relative-air triangle force on a native FEM shell","two_way_cfd":false,"material":"hypothetical isotropic shell, not measured woven fabric"}
+}

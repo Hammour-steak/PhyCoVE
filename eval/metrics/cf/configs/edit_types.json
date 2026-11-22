@@ -1,0 +1,3200 @@
+[
+  {
+    "split": "sim",
+    "scene": "apple_drop_kitchen_basin",
+    "case": "edit_delete_apple",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "apple_drop_kitchen_basin",
+    "case": "edit_delete_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "apple_drop_kitchen_basin",
+    "case": "edit_delete_water_at_2s",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "apple_drop_kitchen_basin",
+    "case": "edit_heavy_apple",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "apple_drop_kitchen_basin",
+    "case": "edit_high_density_liquid",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "apple_drop_kitchen_basin",
+    "case": "edit_viscous_liquid",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_block_building",
+    "case": "edit_delete_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_block_building",
+    "case": "edit_delete_block_01",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_block_building",
+    "case": "edit_fast_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_block_building",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_block_building",
+    "case": "edit_low_block_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_block_building",
+    "case": "edit_stronger_gravity_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_fast_initial_velocity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_high_ball_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_high_football_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_high_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_low_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_remove_football",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_remove_football_at_2s",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_remove_star_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_remove_toy_chest",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ball_box_rebound",
+    "case": "edit_slow_initial_velocity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_corner_rebound",
+    "case": "edit_fast_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_corner_rebound",
+    "case": "edit_low_gravity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_corner_rebound",
+    "case": "edit_slick_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_corner_rebound",
+    "case": "edit_slow_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_corner_rebound",
+    "case": "edit_spin_midway",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_court_bounce",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_court_bounce",
+    "case": "edit_high_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_court_bounce",
+    "case": "edit_low_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_court_bounce",
+    "case": "edit_remove_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_court_bounce",
+    "case": "edit_restitution_at_1s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_cup_collision",
+    "case": "edit_delete_basketball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_cup_collision",
+    "case": "edit_delete_bottle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_cup_collision",
+    "case": "edit_fast_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_cup_collision",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_cup_collision",
+    "case": "edit_heavy_bottle",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_cup_collision",
+    "case": "edit_heavy_gravity_after_impact",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_rim_roll_in",
+    "case": "edit_aim_high",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_rim_roll_in",
+    "case": "edit_aim_left",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_rim_roll_in",
+    "case": "edit_bouncier",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_rim_roll_in",
+    "case": "edit_delete_backboard",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_rim_roll_in",
+    "case": "edit_fast_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "basketball_rim_roll_in",
+    "case": "edit_gravity_midway",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_sink_duck_neospace",
+    "case": "edit_delete_duck",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_sink_duck_neospace",
+    "case": "edit_delete_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_sink_duck_neospace",
+    "case": "edit_high_flow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_sink_duck_neospace",
+    "case": "edit_soft_core_duck",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_sink_duck_neospace",
+    "case": "edit_stiff_duck",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_sink_duck_neospace",
+    "case": "edit_stop_flow_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_stool_rebound",
+    "case": "edit_fast_spin",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_stool_rebound",
+    "case": "edit_fast_throw",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_stool_rebound",
+    "case": "edit_frictionless_floor_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_stool_rebound",
+    "case": "edit_remove_bathtub",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_tennis_throw",
+    "case": "edit_aim_north",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_tennis_throw",
+    "case": "edit_aim_south",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_tennis_throw",
+    "case": "edit_bouncier_bathroom",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_tennis_throw",
+    "case": "edit_heavy_gravity_after_impact",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bathroom_tennis_throw",
+    "case": "edit_slow_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "beach_ball_hammock_mpm",
+    "case": "edit_delete_beach_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "beach_ball_hammock_mpm",
+    "case": "edit_delete_hammock",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "beach_ball_hammock_mpm",
+    "case": "edit_hammock_young_1500pa",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "beach_ball_hammock_mpm",
+    "case": "edit_young_15000_to_1500pa_at_2_5s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "beach_ball_hammock_mpm",
+    "case": "edit_young_70000pa_hard",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "book_pillow_bedroom",
+    "case": "edit_add_bedside_book",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "book_pillow_bedroom",
+    "case": "edit_firm_pillow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "book_pillow_bedroom",
+    "case": "edit_heavy_book",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "book_pillow_bedroom",
+    "case": "edit_remove_book",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "book_pillow_bedroom",
+    "case": "edit_remove_pillow",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "book_pillow_bedroom",
+    "case": "edit_soft_pillow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling",
+    "case": "edit_grippy_P01",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling",
+    "case": "edit_heavy_P01",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling",
+    "case": "edit_light_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling",
+    "case": "edit_remove_B01",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling",
+    "case": "edit_remove_P01",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling_ball_pool_drop",
+    "case": "edit_delete_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling_ball_pool_drop",
+    "case": "edit_delete_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling_ball_pool_drop",
+    "case": "edit_high_density_liquid",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling_ball_pool_drop",
+    "case": "edit_light_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling_ball_pool_drop",
+    "case": "edit_light_ball_after_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "bowling_ball_pool_drop",
+    "case": "edit_viscous_liquid",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cabinet_towel_pinch",
+    "case": "edit_delete_door",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "cabinet_towel_pinch",
+    "case": "edit_delete_towel",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "cabinet_towel_pinch",
+    "case": "edit_friction_x0_01",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cabinet_towel_pinch",
+    "case": "edit_hinge_torque_x0_03",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cabinet_towel_pinch",
+    "case": "edit_young_modulus_x30",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "chalk_box_stack",
+    "case": "edit_delete_bottom_box",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "chalk_box_stack",
+    "case": "edit_delete_eraser",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "chalk_box_stack",
+    "case": "edit_fast_eraser",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "chalk_box_stack",
+    "case": "edit_frictionless_midway",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "chalk_box_stack",
+    "case": "edit_slick_eraser",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "chalk_box_stack",
+    "case": "edit_slippery_boxes",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "chalk_box_stack",
+    "case": "edit_slow_eraser",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "coffee_ice_drop",
+    "case": "edit_delete_coffee",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "coffee_ice_drop",
+    "case": "edit_delete_ice",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "coffee_ice_drop",
+    "case": "edit_high_viscosity_coffee",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "coffee_ice_drop",
+    "case": "edit_low_density_coffee",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cooking_oil_pan",
+    "case": "edit_decrease_at_1s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cooking_oil_pan",
+    "case": "edit_decrease_flow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cooking_oil_pan",
+    "case": "edit_delete_pan",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "cooking_oil_pan",
+    "case": "edit_increase_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cooking_oil_pan",
+    "case": "edit_increase_flow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cooking_oil_pan",
+    "case": "edit_increase_viscosity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cotton_tshirt_sofa",
+    "case": "edit_heavy_shirt",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cotton_tshirt_sofa",
+    "case": "edit_low_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cotton_tshirt_sofa",
+    "case": "edit_low_friction_at_frame_10",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cotton_tshirt_sofa",
+    "case": "edit_remove_seat",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "cotton_tshirt_sofa",
+    "case": "edit_stiff_shirt",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cup_water_drop",
+    "case": "edit_delete_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "cup_water_drop",
+    "case": "edit_heavy_cup",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cup_water_drop",
+    "case": "edit_high_viscosity_water",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "cup_water_drop",
+    "case": "edit_low_density_water",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "curling_collision",
+    "case": "edit_add_green_stone_midpoint",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "curling_collision",
+    "case": "edit_blue_mass_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "curling_collision",
+    "case": "edit_delete_blue_stone",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "curling_collision",
+    "case": "edit_delete_red_stone",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "curling_collision",
+    "case": "edit_delete_yellow_stone",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "curling_collision",
+    "case": "edit_red_mass_x1p1",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "curtain_doraemon_drape",
+    "case": "edit_delete_figurine",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "curtain_doraemon_drape",
+    "case": "edit_density_x0_5",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "curtain_doraemon_drape",
+    "case": "edit_friction_x0_1",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "curtain_doraemon_drape",
+    "case": "edit_friction_x0_1_at_frame_8",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "curtain_doraemon_drape",
+    "case": "edit_young_modulus_x10",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "domino_chain",
+    "case": "edit_heavy_D01",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "domino_chain",
+    "case": "edit_heavy_D03",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "domino_chain",
+    "case": "edit_heavy_D04",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "domino_chain",
+    "case": "edit_remove_D01",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "domino_chain",
+    "case": "edit_remove_D01_after_contact",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "domino_chain",
+    "case": "edit_remove_D03",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "door_basketball_collision",
+    "case": "edit_fast_door",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "door_basketball_collision",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "door_basketball_collision",
+    "case": "edit_heavy_door",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "door_basketball_collision",
+    "case": "edit_remove_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "door_basketball_collision",
+    "case": "edit_remove_door",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "door_basketball_collision",
+    "case": "edit_stiff_hinge_midway",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "egg_dough",
+    "case": "edit_delete_dough",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "egg_dough",
+    "case": "edit_delete_egg",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "egg_dough",
+    "case": "edit_heavy_egg",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "egg_dough",
+    "case": "edit_light_egg",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "egg_dough",
+    "case": "edit_soft_dough_e5",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_fluid_duck",
+    "case": "edit_delete_duck",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_fluid_duck",
+    "case": "edit_delete_water_contact_fixed",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_fluid_duck",
+    "case": "edit_heavy_duck",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_fluid_duck",
+    "case": "edit_low_density_liquid_after_float_185_f73",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_fluid_duck",
+    "case": "edit_low_density_liquid_slow_sink_185",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_fluid_duck",
+    "case": "edit_viscous_liquid",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_key_strap",
+    "case": "edit_keys_mass_5x",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_key_strap",
+    "case": "edit_keys_mass_5x_at_frame_24",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_key_strap",
+    "case": "edit_remove_keyring",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_key_strap",
+    "case": "edit_remove_strap",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_key_strap",
+    "case": "edit_strap_soft",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "elastic_key_strap",
+    "case": "edit_strap_stiff",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "entryway_eva_slippers",
+    "case": "edit_add_shoe_tray",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "entryway_eva_slippers",
+    "case": "edit_light_falling",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "entryway_eva_slippers",
+    "case": "edit_remove_falling_slipper",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "entryway_eva_slippers",
+    "case": "edit_remove_resting",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "entryway_eva_slippers",
+    "case": "edit_slippery_floor",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "entryway_eva_slippers",
+    "case": "edit_stiff_falling",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "faucet_sink",
+    "case": "edit_high_flow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "faucet_sink",
+    "case": "edit_high_viscosity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "faucet_sink",
+    "case": "edit_low_flow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "faucet_sink",
+    "case": "edit_stop_flow_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "fish_tank_toy",
+    "case": "edit_delete_toy_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "fish_tank_toy",
+    "case": "edit_delete_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "fish_tank_toy",
+    "case": "edit_dense_water_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "fish_tank_toy",
+    "case": "edit_dense_water_float_rock",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "fish_tank_toy",
+    "case": "edit_gel_water",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "fish_tank_toy",
+    "case": "edit_light_toy_car",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "flatbed_speed_bump",
+    "case": "edit_brake_before_bump",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "flatbed_speed_bump",
+    "case": "edit_delete_speed_bump",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "flatbed_speed_bump",
+    "case": "edit_fast_truck",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "flatbed_speed_bump",
+    "case": "edit_high_bump",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "flatbed_speed_bump",
+    "case": "edit_low_bump",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "flatbed_speed_bump",
+    "case": "edit_slippery_cargo",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "football_goal_net",
+    "case": "edit_mass_double",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "football_goal_net",
+    "case": "edit_mass_double_at_frame_8",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "football_goal_net",
+    "case": "edit_remove_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "football_goal_net",
+    "case": "edit_remove_net",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "football_goal_net",
+    "case": "edit_speed_half",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "football_goal_net",
+    "case": "edit_young_tenth",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "glass_bottle_water_balloon_true_coupled",
+    "case": "edit_delete_balloon",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "glass_bottle_water_balloon_true_coupled",
+    "case": "edit_hard_balloon",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "glass_bottle_water_balloon_true_coupled",
+    "case": "edit_high_flow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "glass_bottle_water_balloon_true_coupled",
+    "case": "edit_tap_off_from_start",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "gym_landing_mat",
+    "case": "edit_add_path_obstacle",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "gym_landing_mat",
+    "case": "edit_delete_actor",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "gym_landing_mat",
+    "case": "edit_delete_landing_mat",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "gym_landing_mat",
+    "case": "edit_faster",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "gym_landing_mat",
+    "case": "edit_mass_double",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "gym_landing_mat",
+    "case": "edit_young_modulus_rebound",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "home_basketball_door",
+    "case": "edit_delete_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "home_basketball_door",
+    "case": "edit_heavy_door",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "home_basketball_door",
+    "case": "edit_light_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "home_basketball_door",
+    "case": "edit_slow_throw",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "home_basketball_door",
+    "case": "edit_stiff_hinge",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "home_basketball_door",
+    "case": "edit_stiff_hinge_late",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "honey_spoon_toast",
+    "case": "edit_lower_viscosity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "honey_spoon_toast",
+    "case": "edit_remove_bread",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "honey_spoon_toast",
+    "case": "edit_remove_honey",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "honey_spoon_toast",
+    "case": "edit_remove_honey_at_frame_51",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "juice_dispenser_orange_cup",
+    "case": "edit_delete_orange_juice",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "juice_dispenser_orange_cup",
+    "case": "edit_high_flow_speed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "juice_dispenser_orange_cup",
+    "case": "edit_high_viscosity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "juice_dispenser_orange_cup",
+    "case": "edit_low_flow_speed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "juice_dispenser_orange_cup",
+    "case": "edit_paste_like_viscosity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "juice_dispenser_orange_cup",
+    "case": "edit_stop_flow_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_bowl_fall",
+    "case": "edit_bouncier_kitchen",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_bowl_fall",
+    "case": "edit_gravity_off_after_impact",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_bowl_fall",
+    "case": "edit_heavy_bowl",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_bowl_fall",
+    "case": "edit_remove_falling_bowl",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_bowl_fall",
+    "case": "edit_remove_tableware",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_bowl_fall",
+    "case": "edit_strong_gravity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_can_collision",
+    "case": "edit_heavy_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_can_collision",
+    "case": "edit_heavy_receiver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_can_collision",
+    "case": "edit_remove_receiver",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_can_collision",
+    "case": "edit_remove_rolling_can",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_can_collision",
+    "case": "edit_rough_cans",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_can_collision",
+    "case": "edit_slippery_table",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_orange_collision",
+    "case": "edit_delete_cut_orange",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_orange_collision",
+    "case": "edit_delete_driver_orange",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_orange_collision",
+    "case": "edit_fast_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_orange_collision",
+    "case": "edit_heavy_cut",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_orange_collision",
+    "case": "edit_heavy_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_orange_collision",
+    "case": "edit_midframe_surge",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_orange_collision",
+    "case": "edit_rear_queue",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tableware_collision",
+    "case": "edit_fast_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tableware_collision",
+    "case": "edit_frictionless_counter_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tableware_collision",
+    "case": "edit_heavy_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tableware_collision",
+    "case": "edit_no_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tableware_collision",
+    "case": "edit_remove_bowl_a",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tableware_collision",
+    "case": "edit_remove_receiver",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tin_collision",
+    "case": "edit_heavy_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tin_collision",
+    "case": "edit_heavy_receiver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tin_collision",
+    "case": "edit_receiver_friction_drop",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tin_collision",
+    "case": "edit_remove_driver_can",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "kitchen_tin_collision",
+    "case": "edit_remove_receiver",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "metal_pendulum_horizontal_spring",
+    "case": "edit_delete_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "metal_pendulum_horizontal_spring",
+    "case": "edit_delete_spring",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "metal_pendulum_horizontal_spring",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "metal_pendulum_horizontal_spring",
+    "case": "edit_soft_spring",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "metal_pendulum_horizontal_spring",
+    "case": "edit_stiff_spring",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "metro_security_bag_curtain",
+    "case": "edit_belt_speed_x2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "metro_security_bag_curtain",
+    "case": "edit_delete_bag",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "metro_security_bag_curtain",
+    "case": "edit_delete_curtain",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "metro_security_bag_curtain",
+    "case": "edit_delete_curtain_at_frame_12",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "metro_security_bag_curtain",
+    "case": "edit_friction_x0p02",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "metro_security_bag_curtain",
+    "case": "edit_young_modulus_x100",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "milk_pitcher_glass",
+    "case": "edit_delete_milk",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "milk_pitcher_glass",
+    "case": "edit_high_flow_speed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "milk_pitcher_glass",
+    "case": "edit_low_flow_speed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "milk_pitcher_glass",
+    "case": "edit_stop_after_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "newtons_cradle",
+    "case": "edit_dead_bounce_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "newtons_cradle",
+    "case": "edit_delete_inner_right_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "newtons_cradle",
+    "case": "edit_delete_middle_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "newtons_cradle",
+    "case": "edit_high_release",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "newtons_cradle",
+    "case": "edit_low_release",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "office_desk_kettle_tip",
+    "case": "edit_heavy_kettle",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "office_desk_kettle_tip",
+    "case": "edit_heavy_pen_holder",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "office_desk_kettle_tip",
+    "case": "edit_remove_kettle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "office_desk_kettle_tip",
+    "case": "edit_remove_pen",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "office_desk_kettle_tip",
+    "case": "edit_remove_pen_holder",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "opposing_pendulum_collision",
+    "case": "edit_heavy_left",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "opposing_pendulum_collision",
+    "case": "edit_low_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "opposing_pendulum_collision",
+    "case": "edit_remove_left_rope",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "opposing_pendulum_collision",
+    "case": "edit_remove_right",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "passive_car_spring_return_ramp",
+    "case": "edit_delete_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "passive_car_spring_return_ramp",
+    "case": "edit_delete_spring",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "passive_car_spring_return_ramp",
+    "case": "edit_heavy_car",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "passive_car_spring_return_ramp",
+    "case": "edit_high_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "passive_car_spring_return_ramp",
+    "case": "edit_soft_spring",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "passive_car_spring_return_ramp",
+    "case": "edit_stiff_spring",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pendulum_box_collision",
+    "case": "edit_delete_bob",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "pendulum_box_collision",
+    "case": "edit_delete_wooden_block",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "pendulum_box_collision",
+    "case": "edit_fast_block",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pendulum_box_collision",
+    "case": "edit_heavy_block",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pendulum_box_collision",
+    "case": "edit_heavy_bob",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pendulum_box_collision",
+    "case": "edit_soft_bounce_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pendulum_box_collision",
+    "case": "edit_still_bob",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "phone_sofa_drop",
+    "case": "edit_added_pillow",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "phone_sofa_drop",
+    "case": "edit_heavy_phone",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "phone_sofa_drop",
+    "case": "edit_remove_cushion",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "phone_sofa_drop",
+    "case": "edit_remove_phone",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "phone_sofa_drop",
+    "case": "edit_soft_e_div2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "phone_sofa_drop",
+    "case": "edit_stiff_x100",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "picnic_ground_blanket",
+    "case": "edit_delete_actor",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "picnic_ground_blanket",
+    "case": "edit_delete_cotton_blanket",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "picnic_ground_blanket",
+    "case": "edit_faster",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "picnic_ground_blanket",
+    "case": "edit_mass_double",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "picnic_ground_blanket",
+    "case": "edit_mass_double_at_frame_12",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "picnic_ground_blanket",
+    "case": "edit_stiffer",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "plastic_ruler_coin",
+    "case": "edit_add_second_coin",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "plastic_ruler_coin",
+    "case": "edit_coin_mass_x02",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "plastic_ruler_coin",
+    "case": "edit_delete_coin",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "plastic_ruler_coin",
+    "case": "edit_delete_ruler",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "plastic_ruler_coin",
+    "case": "edit_ruler_modulus_x025",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "plastic_ruler_coin",
+    "case": "edit_ruler_modulus_x8",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pool_break",
+    "case": "edit_cut_left",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pool_break",
+    "case": "edit_cut_right",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pool_break",
+    "case": "edit_dead_rack_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pool_break",
+    "case": "edit_delete_apex_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "pool_break",
+    "case": "edit_delete_cue_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "pool_break",
+    "case": "edit_light_cue",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pool_break",
+    "case": "edit_power_break",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pot_lid_drop",
+    "case": "edit_add_bowl_at_landing",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "pot_lid_drop",
+    "case": "edit_bouncy_lid",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pot_lid_drop",
+    "case": "edit_light_gravity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pot_lid_drop",
+    "case": "edit_slick_rim",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "pot_lid_drop",
+    "case": "edit_zero_gravity_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ramp_car_ball_collision",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ramp_car_ball_collision",
+    "case": "edit_light_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ramp_car_ball_collision",
+    "case": "edit_low_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "ramp_car_ball_collision",
+    "case": "edit_remove_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ramp_car_ball_collision",
+    "case": "edit_remove_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "ramp_car_ball_collision",
+    "case": "edit_remove_car_at_2s",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "rubber_band_wood_slider",
+    "case": "edit_add_stop",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "rubber_band_wood_slider",
+    "case": "edit_delete_band",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "rubber_band_wood_slider",
+    "case": "edit_friction_x2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "rubber_band_wood_slider",
+    "case": "edit_mass_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "rubber_band_wood_slider",
+    "case": "edit_young_x0p5",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "scarf_chair_slip",
+    "case": "edit_add_landing_book",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "scarf_chair_slip",
+    "case": "edit_delete_chair",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "scarf_chair_slip",
+    "case": "edit_density_x2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "scarf_chair_slip",
+    "case": "edit_friction_x0_2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "scarf_chair_slip",
+    "case": "edit_young_modulus_x10",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_bag_can",
+    "case": "edit_add_second_can",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_bag_can",
+    "case": "edit_bag_young_x0_25",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_bag_can",
+    "case": "edit_bag_young_x5",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_bag_can",
+    "case": "edit_can_mass_x2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_bag_can",
+    "case": "edit_delete_bag",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_bag_can",
+    "case": "edit_delete_can",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_block_chain",
+    "case": "edit_light_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_block_chain",
+    "case": "edit_light_ball_at_frame_8",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_block_chain",
+    "case": "edit_remove_foam",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_block_chain",
+    "case": "edit_remove_steel_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_block_chain",
+    "case": "edit_stiff_foam",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "silicone_block_chain",
+    "case": "edit_viscous_foam",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "slingshot_domino",
+    "case": "edit_delete_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "slingshot_domino",
+    "case": "edit_delete_domino",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "slingshot_domino",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "slingshot_domino",
+    "case": "edit_heavy_domino",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "slingshot_domino",
+    "case": "edit_heavy_domino_at_frame_12",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "slingshot_domino",
+    "case": "edit_soft_bands",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_ball_collision",
+    "case": "edit_add_midpoint_ball",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_ball_collision",
+    "case": "edit_dead_receiver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_ball_collision",
+    "case": "edit_delete_ball_a",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_ball_collision",
+    "case": "edit_delete_ball_b",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_ball_collision",
+    "case": "edit_fast_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_ball_collision",
+    "case": "edit_heavy_receiver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_ball_collision",
+    "case": "edit_overspin_receiver_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_step_collision",
+    "case": "edit_basketball_mass_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_step_collision",
+    "case": "edit_delete_basketball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_step_collision",
+    "case": "edit_delete_soccer",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_step_collision",
+    "case": "edit_soccer_mass_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_step_collision",
+    "case": "edit_soccer_speed_halved_midrun",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_step_collision",
+    "case": "edit_soccer_speed_x05",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "soccer_step_collision",
+    "case": "edit_step_height_x2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_block_step",
+    "case": "edit_add_block",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_block_step",
+    "case": "edit_friction_half",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_block_step",
+    "case": "edit_mass_half",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_block_step",
+    "case": "edit_remove_block",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_block_step",
+    "case": "edit_remove_spring",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_block_step",
+    "case": "edit_young_quarter",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_car_collision",
+    "case": "edit_add_block",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_car_collision",
+    "case": "edit_heavier_block",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_car_collision",
+    "case": "edit_remove_block",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_car_collision",
+    "case": "edit_remove_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_car_collision",
+    "case": "edit_remove_spring",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_car_collision",
+    "case": "edit_stiffer_spring",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_scale_weight_drop",
+    "case": "edit_damped",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_scale_weight_drop",
+    "case": "edit_heavy",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_scale_weight_drop",
+    "case": "edit_heavy_at_frame_48",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_scale_weight_drop",
+    "case": "edit_remove_spring",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_scale_weight_drop",
+    "case": "edit_remove_weight",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "spring_scale_weight_drop",
+    "case": "edit_soft",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_fast_initial_velocity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_high_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_high_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_high_rolling_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_low_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_low_rolling_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_low_sliding_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "stair_ball_bounce",
+    "case": "edit_slow_initial_velocity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "steel_ball_tensioned_membrane",
+    "case": "edit_add_second_ball",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "steel_ball_tensioned_membrane",
+    "case": "edit_ball_mass_heavy",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "steel_ball_tensioned_membrane",
+    "case": "edit_membrane_soft",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "steel_ball_tensioned_membrane",
+    "case": "edit_membrane_stiff",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "steel_ball_tensioned_membrane",
+    "case": "edit_remove_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "steel_ball_tensioned_membrane",
+    "case": "edit_remove_membrane",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_bottle_collision",
+    "case": "edit_add_lane_bottle",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_bottle_collision",
+    "case": "edit_fast_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_bottle_collision",
+    "case": "edit_heavy_bottles",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_bottle_collision",
+    "case": "edit_heavy_bottles_midfall",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_bottle_collision",
+    "case": "edit_remove_far_bottle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_bottle_collision",
+    "case": "edit_remove_tennis_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_net_hit",
+    "case": "edit_ball_speed_div5",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_net_hit",
+    "case": "edit_ball_speed_x2",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_net_hit",
+    "case": "edit_net_young_div10",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_net_hit",
+    "case": "edit_net_young_x10",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_net_hit",
+    "case": "edit_remove_entire_net",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "tennis_net_hit",
+    "case": "edit_remove_tennis_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "thomas_dual_spring_train",
+    "case": "edit_add_wood_block",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "thomas_dual_spring_train",
+    "case": "edit_delete_right_spring",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "thomas_dual_spring_train",
+    "case": "edit_delete_train",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "thomas_dual_spring_train",
+    "case": "edit_mass_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "thomas_dual_spring_train",
+    "case": "edit_right_young_x025",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "thomas_dual_spring_train",
+    "case": "edit_rolling_x4",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "tilted_cup_table_pour",
+    "case": "edit_delete_cup",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "tilted_cup_table_pour",
+    "case": "edit_delete_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "tilted_cup_table_pour",
+    "case": "edit_high_viscosity_water",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_boat_pool_glide",
+    "case": "edit_fast_push",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_boat_pool_glide",
+    "case": "edit_heavy_boat",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_boat_pool_glide",
+    "case": "edit_heavy_boat_mid_glide",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_boat_pool_glide",
+    "case": "edit_light_water",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_boat_pool_glide",
+    "case": "edit_remove_boat",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_boat_pool_glide",
+    "case": "edit_slow_push",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_boat_pool_glide",
+    "case": "edit_viscous_water",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_bottle",
+    "case": "edit_add_midpoint_bottle",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_bottle",
+    "case": "edit_delete_bottle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_bottle",
+    "case": "edit_delete_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_bottle",
+    "case": "edit_fast_car",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_bottle",
+    "case": "edit_fast_car_midflight",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_bottle",
+    "case": "edit_heavy_bottle",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_bottle",
+    "case": "edit_slippery_bottle",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_collision",
+    "case": "edit_delete_car_a",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_collision",
+    "case": "edit_delete_receiver",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_collision",
+    "case": "edit_driver_friction_quarter",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_collision",
+    "case": "edit_driver_mass_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_collision",
+    "case": "edit_driver_speed_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_collision",
+    "case": "edit_receiver_speed_boost_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_float_bathtub",
+    "case": "edit_density_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_float_bathtub",
+    "case": "edit_heavy_car",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_float_bathtub",
+    "case": "edit_low_density",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_float_bathtub",
+    "case": "edit_no_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_float_bathtub",
+    "case": "edit_no_float",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_ramp_pool_genesis",
+    "case": "edit_delete_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_ramp_pool_genesis",
+    "case": "edit_heavy_car_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_ramp_pool_genesis",
+    "case": "edit_high_viscosity_x20000",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_ramp_pool_genesis",
+    "case": "edit_low_density_div4",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_ramp_pool_genesis",
+    "case": "edit_mass_after_2s_x3",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_ramp_pool_genesis",
+    "case": "edit_no_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_silicone_bridge",
+    "case": "edit_delete_bridge",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_silicone_bridge",
+    "case": "edit_delete_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_silicone_bridge",
+    "case": "edit_heavy_car",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_silicone_bridge",
+    "case": "edit_soft_bridge",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_silicone_bridge",
+    "case": "edit_stiff_bridge",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_track_jump",
+    "case": "edit_high_friction_near_lip",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_track_jump",
+    "case": "edit_high_friction_uphill",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_track_jump",
+    "case": "edit_initial_speed_double",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_track_jump",
+    "case": "edit_initial_speed_half",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "toy_car_track_jump",
+    "case": "edit_remove_car",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "traditional_tea_pour",
+    "case": "edit_remove_tea",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "traditional_tea_pour",
+    "case": "edit_speed_0p5x",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "traditional_tea_pour",
+    "case": "edit_speed_2x",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "traditional_tea_pour",
+    "case": "edit_stop_flow_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_pendulum_collision",
+    "case": "edit_heavy_driver",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_pendulum_collision",
+    "case": "edit_high_drag",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_pendulum_collision",
+    "case": "edit_large_amplitude",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_pendulum_collision",
+    "case": "edit_remove_driver",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_pendulum_collision",
+    "case": "edit_remove_receiver",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_pendulum_collision",
+    "case": "edit_remove_receiver_after_impact",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_ramp_collision",
+    "case": "edit_heavy_left",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_ramp_collision",
+    "case": "edit_low_restitution",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_ramp_collision",
+    "case": "edit_remove_left",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "twin_ramp_collision",
+    "case": "edit_remove_right",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "u_track_ball",
+    "case": "edit_box_vanishes_before_impact",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "u_track_ball",
+    "case": "edit_delete_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "u_track_ball",
+    "case": "edit_fast_launch",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "u_track_ball",
+    "case": "edit_heavy_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "u_track_ball",
+    "case": "edit_lower_release",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "u_track_ball",
+    "case": "edit_shallow_release",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "uneven_ground_ball",
+    "case": "edit_braking_timed",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "uneven_ground_ball",
+    "case": "edit_fast_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "uneven_ground_ball",
+    "case": "edit_high_rolling_resistance",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "uneven_ground_ball",
+    "case": "edit_low_friction",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "uneven_ground_ball",
+    "case": "edit_slow_ball",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "volleyball_corner_rebound",
+    "case": "edit_friction_x05",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "volleyball_corner_rebound",
+    "case": "edit_gravity_x25_at24",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "volleyball_corner_rebound",
+    "case": "edit_restitution_x03",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "volleyball_corner_rebound",
+    "case": "edit_speed_x15",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "volleyball_corner_rebound",
+    "case": "edit_wall_restitution_x04",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wall_clock_drop",
+    "case": "edit_bouncier_room",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wall_clock_drop",
+    "case": "edit_gravity_off_after_impact",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wall_clock_drop",
+    "case": "edit_heavy_clock",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wall_clock_drop",
+    "case": "edit_remove_clock",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "wall_clock_drop",
+    "case": "edit_remove_crate",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "wall_clock_drop",
+    "case": "edit_strong_gravity",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wind_flag",
+    "case": "edit_wind_0mps",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wind_flag",
+    "case": "edit_wind_0p5mps",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wind_flag",
+    "case": "edit_wind_6mps",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wind_flag",
+    "case": "edit_wind_drop_at_2s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wind_flag",
+    "case": "edit_young_modulus_100mpa",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wine_pour",
+    "case": "edit_delete_wine",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "wine_pour",
+    "case": "edit_high_flow_rate",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wine_pour",
+    "case": "edit_high_viscosity_wine",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wine_pour",
+    "case": "edit_low_flow_rate",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wine_pour",
+    "case": "edit_stop_flow_at_1s",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wood_block_rubber_stop",
+    "case": "edit_add_mid_block",
+    "edit_type": "Add"
+  },
+  {
+    "split": "sim",
+    "scene": "wood_block_rubber_stop",
+    "case": "edit_fast_block",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wood_block_rubber_stop",
+    "case": "edit_heavy_block",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "wood_block_rubber_stop",
+    "case": "edit_remove_bumper",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "wood_block_rubber_stop",
+    "case": "edit_remove_wood_block",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "wood_block_rubber_stop",
+    "case": "edit_soft_010",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "yoga_mat_rolled_edge",
+    "case": "edit_delete_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "yoga_mat_rolled_edge",
+    "case": "edit_delete_mat",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "sim",
+    "scene": "yoga_mat_rolled_edge",
+    "case": "edit_mass_x0p25",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "yoga_mat_rolled_edge",
+    "case": "edit_mass_x0p25_at_frame_16",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "yoga_mat_rolled_edge",
+    "case": "edit_speed_x0p5",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "sim",
+    "scene": "yoga_mat_rolled_edge",
+    "case": "edit_young_x4",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "real",
+    "scene": "apple_drop_cot_package",
+    "case": "edit_remove_yellow_package",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "apple_sink_water_flow",
+    "case": "edit_increase_water_flow",
+    "edit_type": "Modify"
+  },
+  {
+    "split": "real",
+    "scene": "apple_sink_water_flow",
+    "case": "edit_remove_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "basketball_fridge_door",
+    "case": "edit_remove_basketball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "basketball_trash_bin_drop",
+    "case": "edit_remove_trash_bin",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "blue_box_bottle_cluster",
+    "case": "edit_remove_cup_and_open_bottle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "bottle_cup_knockdown",
+    "case": "edit_remove_red_bottle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "bottle_notebook_cushion",
+    "case": "edit_remove_notebook",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "bottle_target_collision",
+    "case": "edit_remove_bottle_and_toy",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "bottle_target_collision",
+    "case": "edit_remove_toy",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "capybara_plush_drop",
+    "case": "edit_add_paddle",
+    "edit_type": "Add"
+  },
+  {
+    "split": "real",
+    "scene": "capybara_plush_drop",
+    "case": "edit_remove_large_plush",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "cup_two_bottle_collision",
+    "case": "edit_remove_both_bottles",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "cup_two_bottle_collision",
+    "case": "edit_remove_right_bottle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "notebook_toy_umbrella",
+    "case": "edit_add_umbrella",
+    "edit_type": "Add"
+  },
+  {
+    "split": "real",
+    "scene": "orange_ball_book_bounce",
+    "case": "edit_remove_book",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "orange_ball_cup_water",
+    "case": "edit_add_water",
+    "edit_type": "Add"
+  },
+  {
+    "split": "real",
+    "scene": "orange_ball_ramp_collision",
+    "case": "edit_remove_stationary_ball",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "orange_ball_ramp_sponge",
+    "case": "edit_remove_sponge",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "pingpong_paddle_tissue_packet",
+    "case": "edit_remove_paddle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "plush_chair_cushion_drop",
+    "case": "edit_remove_seat_cushion",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "rolling_bottle_apple_target",
+    "case": "edit_remove_apple",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "rolling_bottle_apple_target",
+    "case": "edit_remove_apple_and_bottle",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "sink_bottle_water_pair",
+    "case": "edit_remove_water",
+    "edit_type": "Remove"
+  },
+  {
+    "split": "real",
+    "scene": "sink_bottle_water_removal",
+    "case": "edit_remove_water",
+    "edit_type": "Remove"
+  }
+]

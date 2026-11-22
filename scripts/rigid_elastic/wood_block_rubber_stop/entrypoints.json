@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "scene": "wood_block_rubber_stop",
+  "category": "rigid_elastic",
+  "case_number": 8,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_wood_block_rubber_stop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--case",
+        "--out",
+        "--duration",
+        "--dt",
+        "--newton-max-iterations",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--python-runtime"
+      ],
+      "cases": [
+        "source",
+        "fast_block",
+        "heavy_block",
+        "soft_010",
+        "remove_bumper",
+        "add_mid_block"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "python": "--python-runtime",
+        "threads": "--cpu-threads"
+      }
+    },
+    "render": {
+      "file": "render_wood_block_rubber_stop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--case",
+        "--cache",
+        "--out",
+        "--samples",
+        "--width",
+        "--exposure",
+        "--device",
+        "--no-encode",
+        "--cache-record",
+        "--preview-frame",
+        "--gpu-uuid",
+        "--render-threads",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "fast_block",
+        "heavy_block",
+        "soft_010",
+        "remove_bumper",
+        "add_mid_block"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "blender": "--blender-bin",
+        "threads": "--render-threads"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_wood_block_rubber_stop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--suite-root",
+        "--rerun",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "fast_block",
+        "heavy_block",
+        "soft_010",
+        "remove_bumper",
+        "add_mid_block"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender-bin"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "One frictional IPC scene in libuipc 0.0.28 (CUDA): a fixed z=0 floor, a fixed 105 x 120 x 790 mm table-leg cuboid, one or two affine-body wooden blocks and a completely unrestrained 160 x 150 x 120 mm sponge meshed as 36,288 Stable Neo-Hookean tetrahedra (E=320 kPa, nu=0.30, 48 kg/m3). The 2 kg block starts 1.16 m from the sponge at 2.8 m/s and decelerates on a sealed oak floor (mu=0.20) before striking the sponge, which slides across an 8 mm gap into the leg; nothing is keyframed. dt=1/1200 s (1/2400 s and 600 Newton iterations for fast_block and soft_010); states are saved at 240 Hz over 0-4.000 s and every case is solved twice to check repeatability. Blender 4.3.2 Cycles replays the cache (appearance/render.py: blocks keyed from the ABD transforms, the sponge as one shape key per FEM state; appearance/room.py: dining-room corner from Poly Haven CC0 scans, window sun and sky, fixed 45 mm camera 0.42 m above the floor), 256 samples, OIDN, 1/96 s motion blur; the video takes every 10th native state (t_i=i/24 s, i=0..95) at 1280x720 / 24 FPS / 96 frames. Five edits change one parameter or object each (speed x1.5, mass x10, sponge E x0.1, delete the sponge, add a 1.25 kg block at the midpoint of the block-to-sponge line) and are audited by the shared edit DSL. tools/export_ground_truth.py writes per-frame ground truth from each cache and the camera of the case's scene.blend; tools/publish_suite.py encodes, compares the two solves and builds a suite in the current PCVE formats; --stage prompts / --export-prompts write the builder catalog prompts into the published suite.",
+  "implementation_files": [
+    "simulate_wood_block_rubber_stop.py",
+    "render_wood_block_rubber_stop.py",
+    "build_pcve_wood_block_rubber_stop.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_spec.json",
+    "scene_manifest.json",
+    "physics/simulate.py",
+    "appearance/render.py",
+    "appearance/room.py",
+    "tools/run_selected.py",
+    "tools/audit_cache.py",
+    "tools/audit_contact_volume.py",
+    "tools/compare_native_prefix.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "current_real_time_media_contract": "pcve-main-720p-4s-24fps",
+  "assets": "assets/scenes/wood_block_rubber_stop",
+  "edit_catalog": {
+    "file": "build_pcve_wood_block_rubber_stop.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]",
+      "--stage prompts"
+    ],
+    "case_count": 6
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "scene_id": "bathroom_tennis_throw",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_bathroom_tennis_throw.py",
+    "render": "render_bathroom_tennis_throw.py",
+    "build_pcve": "build_pcve_bathroom_tennis_throw.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "bathroom_tennis_throw_baseline",
+    "edit_slow_ball",
+    "edit_aim_south",
+    "edit_aim_north",
+    "edit_bouncier_bathroom",
+    "edit_heavy_gravity_after_impact"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py",
+    "asset_export": "tools/export_bathroom_colliders.py"
+  },
+  "canonical_suites": {
+    "pcve_bathroom_tennis_throw_suite": {
+      "target": "renders/pcve_suites/pcve_bathroom_tennis_throw_suite",
+      "case_video_sha256": {
+        "bathroom_tennis_throw_baseline": "6291077081c6627ced45f453935c05e7b8cbddeb75320bae2c1dd0a52ae856e5",
+        "edit_aim_north": "37ea1bbbccb45ca7749fe25ba0fefdfa411952db9fe80d1eb01a7993f5382631",
+        "edit_aim_south": "d0e658685e94509bae572989dd6d1f4997b89cd9123a0a4b1b9b36acf8591af3",
+        "edit_bouncier_bathroom": "635cd95f01791c7eaded7be547a34d1f83280d3a83fe7592e42018b0bcc93b11",
+        "edit_heavy_gravity_after_impact": "d9a07a5ae4cfdb3a3ff1512499b6a1a76d0e955d4e76feb65e73de22e0bf4c63",
+        "edit_slow_ball": "fcdd1a23cab13dd6c557680d581f2a9d4a988120ecdc482a1264a33a847af708"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "bathroom_tennis_throw_baseline": "source",
+        "edit_slow_ball": "edit_slow_ball",
+        "edit_aim_south": "edit_aim_south",
+        "edit_aim_north": "edit_aim_north",
+        "edit_bouncier_bathroom": "edit_bouncier_bathroom",
+        "edit_heavy_gravity_after_impact": "edit_heavy_gravity_after_impact"
+      },
+      "public_case_video_sha256": {
+        "source": "6291077081c6627ced45f453935c05e7b8cbddeb75320bae2c1dd0a52ae856e5",
+        "edit_aim_north": "37ea1bbbccb45ca7749fe25ba0fefdfa411952db9fe80d1eb01a7993f5382631",
+        "edit_aim_south": "d0e658685e94509bae572989dd6d1f4997b89cd9123a0a4b1b9b36acf8591af3",
+        "edit_bouncier_bathroom": "635cd95f01791c7eaded7be547a34d1f83280d3a83fe7592e42018b0bcc93b11",
+        "edit_heavy_gravity_after_impact": "d9a07a5ae4cfdb3a3ff1512499b6a1a76d0e955d4e76feb65e73de22e0bf4c63",
+        "edit_slow_ball": "fcdd1a23cab13dd6c557680d581f2a9d4a988120ecdc482a1264a33a847af708"
+      }
+    }
+  },
+  "source_provenance": "authored in this repository from assets/models/big_project.glb",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/bathroom_tennis_throw",
+      "scenes/bathroom_tennis_throw"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

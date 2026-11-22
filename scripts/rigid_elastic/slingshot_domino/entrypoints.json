@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "scene": "slingshot_domino",
+  "category": "rigid_elastic",
+  "case_number": 19,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_slingshot_domino.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--all",
+        "--segments",
+        "--steps-per-frame",
+        "--out",
+        "--stop-time"
+      ],
+      "cases": [
+        "source",
+        "soft_bands",
+        "heavy_ball",
+        "heavy_domino",
+        "heavy_domino_at_frame_12",
+        "delete_domino"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_slingshot_domino.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--simulation",
+        "--out",
+        "--samples",
+        "--slow",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--threads"
+      ],
+      "cases": [
+        "source",
+        "soft_bands",
+        "heavy_ball",
+        "heavy_domino",
+        "delete_domino"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_slingshot_domino.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--accepted-root"
+      ],
+      "cases": [
+        "source",
+        "soft_bands",
+        "heavy_ball",
+        "heavy_domino",
+        "heavy_domino_at_frame_12",
+        "delete_domino"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/slingshot_domino",
+  "implementation_policy": "CPU solve (physics/physics.py through physics/simulate_cli.py): PyBullet rigid 6-DOF bodies (plastic ball 1.85 g, r = 7.5 mm; wooden domino 12 x 35 x 75 mm, 16 g; light rigid leather pouch) and two extensible neo-Hookean flat rubber bands (40 segments, 9 cm x 4 mm x 0.18 mm, E = 1 MPa, Kelvin viscosity, weak strip bending) with finite-width contact against the exact Y-frame profile, 4800 substeps per frame (19200 for heavy_ball); release at 0.5 s, 4 s recorded at 24 Hz (frame k = t (k-1)/24 s) plus a separate 72 Hz slow series. The timed edit heavy_domino_at_frame_12 changes the domino mass and inertia x10 with PyBullet changeDynamics at t = 11/24 s inside the running solve, so frames 1-11 equal the source. appearance/render_scene.py replays the native states in Blender 4.3.2 (Cycles, CUDA); the published look adds appearance/realism_overlay.py through one audited hook. --stage verify checks the accepted native delivery (renders/slingshot_domino/delivery/accepted) and the published timed edit. Materials are plausible SI values, not calibrated on a real specimen.",
+  "implementation_files": [
+    "simulate_slingshot_domino.py",
+    "render_slingshot_domino.py",
+    "build_pcve_slingshot_domino.py",
+    "edit_vocab.py",
+    "appearance/realism.py",
+    "appearance/realism_overlay.py",
+    "appearance/render_scene.py",
+    "appearance/ribbon_frames.py",
+    "physics/config.py",
+    "physics/fork_geometry.py",
+    "physics/fork_profile.py",
+    "physics/physics.py",
+    "physics/ribbon_physics.py",
+    "physics/simulate_cli.py",
+    "physics/vocabulary.py",
+    "tools/encode_on_worker.py",
+    "tools/retained_delivery.py",
+    "tools/worker_run.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_slingshot_domino.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

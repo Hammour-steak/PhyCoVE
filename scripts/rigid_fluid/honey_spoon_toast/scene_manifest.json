@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "scene_id": "honey_spoon_toast",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_honey_spoon_toast.py",
+    "render": "render_honey_spoon_toast.py",
+    "build_pcve": "build_pcve_honey_spoon_toast.py"
+  },
+  "supported_cases": [
+    "source",
+    "remove_bread",
+    "remove_honey",
+    "lower_viscosity",
+    "remove_honey_at_frame_51"
+  ],
+  "workflows": {},
+  "configuration": {
+    "reservoir": {
+      "solver": "Genesis 1.4.3 DFSPH",
+      "particles": 5210,
+      "particle_spacing_m": 0.0015,
+      "initial_volume_ml": 14.067,
+      "honey_density_kg_m3": 1420.0,
+      "honey_kinematic_viscosity_m2_s": 0.008,
+      "surface_tension_solver_units": 0.0005,
+      "spoon_tilt_deg": 15.0,
+      "spoon_motion": "fixed for all 96 frames",
+      "fps": 24,
+      "frames": 96,
+      "steps_per_frame": 8,
+      "substeps": 549,
+      "time_scale": 1.0,
+      "seed": 20261024
+    },
+    "thread": {
+      "model": "3D discrete viscous rope (Trouton stretching 3*mu*A and viscous bending 3*mu*I, implicit) fed from the lip through a meniscus buffer",
+      "nozzle_radius_m": 0.0025,
+      "meniscus_relaxation_s": 0.2,
+      "edge_length_range_m": [
+        0.0003,
+        0.001
+      ],
+      "break_radius_m": 5e-05,
+      "lateral_noise_m": 2e-05,
+      "capillary_tension_N_m": 0.0,
+      "dt_s": 0.0001,
+      "seed": 0,
+      "landing_height_m": 0.7995
+    },
+    "puddle": {
+      "model": "lubrication thin film h_t = div(rho g h^3 / (3 mu) grad h)",
+      "cell_m": 0.0004
+    },
+    "surface": {
+      "thread_voxel_m": 0.00015,
+      "smooth_min_blend_m": 0.0004,
+      "bulk": "splashsurf, cube size factor 0.7, iso threshold 0.4, 24 smoothing iterations (meshes_smooth)"
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 32,
+      "denoising": true,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96,
+      "camera_lens_mm": 90.0,
+      "aperture_fstop": 11.0,
+      "codec": "libx264",
+      "crf": 18,
+      "template": "assets/scenes/honey_spoon_toast/scene_template.blend"
+    },
+    "edits": {
+      "remove_bread": {
+        "edit_dsl": "DELETE bread",
+        "landing_height_m": 0.7749954462051392
+      },
+      "remove_honey": {
+        "edit_dsl": "DELETE honey"
+      },
+      "lower_viscosity": {
+        "edit_dsl": "SET honey.viscosity TIMES 0.0125",
+        "honey_kinematic_viscosity_m2_s": 0.0001,
+        "solver": "full 3D Genesis DFSPH (edits/simulate_honey_reservoir.py)",
+        "particle_spacing_m": 0.001,
+        "steps_per_frame": 32,
+        "substeps": 137
+      },
+      "remove_honey_at_frame_51": {
+        "edit_dsl": "DELETE honey AT FRAME 51",
+        "event_time_s": 2.0833333333333335,
+        "method": "exact: frames 1-50 are the source run's states, every honey component is empty from frame 51; all 96 frames rendered"
+      }
+    }
+  },
+  "results": {
+    "source": {
+      "first_lip_transfer_frame": 20,
+      "first_contact_frame": 45,
+      "breakup_events": 0,
+      "final_deposited_volume_ml": 1.548,
+      "final_puddle_max_height_m": 0.0073,
+      "final_puddle_wet_radius_m": 0.0118
+    }
+  },
+  "data": {
+    "native_runs": {
+      "path": "renders/pcve_suites/pcve_honey_spoon_toast_suite/inputs/04_realtime_runs",
+      "runs": {
+        "reservoir_ts1": "spoon reservoir",
+        "rope_source": "source thread model with bulk and thread meshes",
+        "rope_plate": "remove_bread thread model",
+        "lowvisc_ts1": "lower_viscosity full 3D DFSPH run with surface",
+        "timed_51": "derived cache of remove_honey_at_frame_51"
+      }
+    },
+    "edit_scenes": "renders/pcve_suites/pcve_honey_spoon_toast_suite/inputs/02_honey_spoon_toast_edits/<case>/scene.blend"
+  },
+  "canonical_suites": {
+    "pcve_honey_spoon_toast_suite": {
+      "target": "renders/pcve_suites/pcve_honey_spoon_toast_suite",
+      "public_case_ids": {
+        "source": "source",
+        "remove_bread": "edit_remove_bread",
+        "remove_honey": "edit_remove_honey",
+        "lower_viscosity": "edit_lower_viscosity",
+        "remove_honey_at_frame_51": "edit_remove_honey_at_frame_51"
+      },
+      "case_video_sha256": {
+        "source": "faedb2281bd65e26ca07438ad7c638592ed07b01d5aa96acd5f6268776bd066a",
+        "remove_bread": "d2d70b31011a8e1a8332cd1681a3115727ee5a2403044cede5286847492d0ac3",
+        "remove_honey": "bbcddfd3e3aabc581298975aee31cc51328b918ae1f52c272dc9624a6c875a83",
+        "lower_viscosity": "c2dc4b5480d348976a666e4486c3b97e4bd43873bbd2366c4d8c6096336f33a7",
+        "remove_honey_at_frame_51": "d7c6b6cef9323273529404443743602b23006bd4bd2eb7381581cc0dc44d303d"
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "scene": "cabinet_towel_pinch",
+  "category": "rigid_elastic",
+  "case_number": 21,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_cabinet_towel_pinch.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "friction_x0_01",
+        "hinge_torque_x0_03",
+        "young_modulus_x30",
+        "delete_door"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_cabinet_towel_pinch.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--look",
+        "--out",
+        "--frames",
+        "--samples",
+        "--device",
+        "--scene",
+        "--cache",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "friction_x0_01",
+        "hinge_torque_x0_03",
+        "young_modulus_x30",
+        "delete_door"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_cabinet_towel_pinch.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "friction_x0_01",
+        "hinge_torque_x0_03",
+        "young_modulus_x30",
+        "delete_door"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "libuipc CUDA IPC solve (pyuipc 0.0.29) of a cotton hand towel as a strain-limiting Baraff-Witkin thin shell with discrete-shell bending, frictional self-contact and quadratic air drag, coupled to a 2.4 kg affine-body cabinet door on a revolute joint that a closing torque with rotary damping drives; the door is held open at 45 degrees by a stiff torque spring for the first 0.5 s and then released, so no motion is prescribed and no cloth vertex is pinned. All five cases start from the same pre-settled native state (assets initial_state/cache.npz) and the same layout recorded with it; each edit changes only its DSL-resolved parameter (towel friction, towel Young's modulus, hinge closing torque) or removes the door body and hinge. appearance/render_replay.py is the accepted renderer that builds the kitchen around the native collider, keys every native towel state as an exact shape key and the native door transforms, and saved each case's scene.blend (assets native/<case>/scene.blend); appearance/realism.py, the current look, opens that saved scene and only restyles static room geometry, lights and materials, so towel shapes, rigid transforms, camera and frame timing are those of the native solve. tools/export_ground_truth.py writes each case's ground truth from its native cache and the fixed camera; --stage verify checks the accepted delivery, the native inputs and the published suite. Effective material parameters, not fitted to a measured towel.",
+  "implementation_files": [
+    "simulate_cabinet_towel_pinch.py",
+    "render_cabinet_towel_pinch.py",
+    "build_pcve_cabinet_towel_pinch.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/simulate.py",
+    "physics/geometry.py",
+    "physics/common.py",
+    "physics/edit_vocab.py",
+    "appearance/render_replay.py",
+    "appearance/surface_detail.py",
+    "appearance/render_view.py",
+    "appearance/realism.py",
+    "tools/worker.py",
+    "tools/retained_delivery.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "assets": "assets/scenes/cabinet_towel_pinch",
+  "edit_catalog": {
+    "file": "build_pcve_cabinet_towel_pinch.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

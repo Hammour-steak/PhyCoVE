@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "room": {
+    "x_min": -2.5,
+    "x_max": 3.0,
+    "y_min": -3.8,
+    "y_back": 1.175,
+    "ceiling_z": 3.1,
+    "ceiling_color": [0.80, 0.79, 0.76],
+    "plaster": {
+      "folder": "polyhaven/painted_plaster_wall",
+      "prefix": "painted_plaster_wall",
+      "res": "2k",
+      "tile_m": 2.0,
+      "saturation": 0.6,
+      "value": 1.0,
+      "tint": [0.86, 0.84, 0.80],
+      "roughness": [0.75, 0.95],
+      "normal": 0.6,
+      "replaces": ["warm mineral plaster"]
+    }
+  },
+  "light": {
+    "hdri": "polyhaven/kloofendal_48d_partly_cloudy_puresky/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+    "hdri_rotation_deg": 0.0,
+    "hdri_strength": 1.0,
+    "window": {"x": -2.42, "y0": -2.75, "y1": 0.395, "z0": 0.8, "z1": 2.66},
+    "sun_strength": 4.0,
+    "sun_angle_deg": 1.5,
+    "sun_color": [1.0, 0.95, 0.88],
+    "sun_direction": [0.8, 0.25, -0.5]
+  },
+  "materials": {
+    "upholstery": {
+      "keep_original": true,
+      "folder": "polyhaven/rough_linen",
+      "prefix": "rough_linen",
+      "res": "2k",
+      "uv_scale": 5.0,
+      "saturation": 0.35,
+      "value": 1.0,
+      "tint": [0.92, 0.90, 0.86],
+      "roughness": [0.78, 0.95],
+      "normal": 0.7,
+      "sheen": 0.35,
+      "sheen_roughness": 0.45,
+      "mottle": 0.035,
+      "mottle_scale": 3.0
+    },
+    "pillow": {
+      "folder": "polyhaven/waffle_pique_cotton",
+      "prefix": "waffle_pique_cotton",
+      "res": "1k",
+      "uv_scale": 3.0,
+      "saturation": 0.0,
+      "value": 1.0,
+      "tint": [0.40, 0.47, 0.54],
+      "roughness": [0.82, 0.96],
+      "normal": 1.2,
+      "sheen": 0.45,
+      "sheen_roughness": 0.45,
+      "mottle": 0.05,
+      "mottle_scale": 4.0,
+      "mottle_coords": "UV",
+      "crumple": {"scale": 15.0, "strength": 0.3, "distance": 0.003, "distortion": 1.5}
+    },
+    "phone": {
+      "back_color": [0.030, 0.032, 0.036],
+      "back_roughness": 0.36,
+      "back_coat": 0.35,
+      "back_coat_roughness": 0.22,
+      "screen_color": [0.004, 0.005, 0.006],
+      "screen_roughness": 0.05,
+      "camera_module": {
+        "hide": ["Куб.001", "Цилиндр.003"],
+        "plate": {"x": [-0.0300, -0.0110], "y": [0.0215, 0.0680], "z": [0.0037, 0.0058], "corner_radius": 0.0094, "color": [0.022, 0.024, 0.027], "roughness": 0.18},
+        "move": {},
+        "flash": {"x": -0.0050, "y": 0.0600, "z": [0.0035, 0.0041], "radius": 0.0022, "color": [0.82, 0.79, 0.70]}
+      }
+    },
+    "mug": {"color": [0.80, 0.78, 0.74], "roughness": 0.08, "coat": 0.5}
+  },
+  "cushion_render_contact": {
+    "enabled": true,
+    "body_x": [-0.0345, 0.0361],
+    "body_y": [-0.0764, 0.0702],
+    "bottom_z": -0.0045,
+    "top_z": 0.0038,
+    "overhang_m": 0.012,
+    "margin_m": 0.0015,
+    "clearance_m": 0.0005,
+    "spread_rings": 12,
+    "ring_decay": 0.85
+  },
+  "cushion_render_smoothing": {
+    "enabled": true,
+    "body_x": [-0.0345, 0.0361],
+    "body_y": [-0.0764, 0.0702],
+    "radius_m": 0.06,
+    "falloff_fraction": 0.4,
+    "iterations": 20,
+    "lambda": 0.5
+  },
+  "render": {
+    "samples": 256,
+    "adaptive_threshold": 0.01,
+    "seed": 17,
+    "filter_glossy": 0.5,
+    "clamp_indirect": 10.0,
+    "look": "AgX - Base Contrast",
+    "exposure": 1.0,
+    "vignette": 0.12
+  }
+}

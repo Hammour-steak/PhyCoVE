@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "scene": "phone_sofa_drop",
+  "category": "rigid_elastic",
+  "case_number": 4,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_phone_sofa_drop.py",
+      "runtime": "python",
+      "python_runtime": "python3",
+      "native_options": [
+        "--case",
+        "--stage",
+        "--window",
+        "--out"
+      ],
+      "output": {
+        "flag": "--out"
+      },
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "remove_cushion",
+        "added_pillow",
+        "stiff_x100",
+        "soft_e_div2",
+        "heavy_phone"
+      ]
+    },
+    "render": {
+      "file": "render_phone_sofa_drop.py",
+      "runtime": "python",
+      "python_runtime": "python3",
+      "native_options": [
+        "--case",
+        "--stage",
+        "--out",
+        "--frames",
+        "--device",
+        "--gpu",
+        "--blender-bin",
+        "--render-threads"
+      ],
+      "output": {
+        "flag": "--out"
+      },
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu",
+        "blender": "--blender-bin",
+        "threads": "--render-threads"
+      },
+      "cases": [
+        "source",
+        "remove_cushion",
+        "added_pillow",
+        "stiff_x100",
+        "soft_e_div2",
+        "heavy_phone"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_phone_sofa_drop.py",
+      "runtime": "python",
+      "python_runtime": "python3",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--render-root",
+        "--require-standard"
+      ],
+      "output": {
+        "flag": "--out"
+      },
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "remove_cushion",
+        "added_pillow",
+        "stiff_x100",
+        "soft_e_div2",
+        "heavy_phone"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "The phone is an ABD rigid body and the middle sofa cushion a Stable Neo-Hookean tetrahedral FEM solid with Newton-coupled Kelvin-Voigt viscosity (E 1 kPa, nu 0.15, 35 kg/m^3), coupled by IPC contact in libuipc 0.0.28 (CUDA, BDF1, dt 1/1200 s, gravity 5 m/s^2, fixed contact stiffness), each case starting from its own settled equilibrium; the removed-cushion edit is a PyBullet 6-DoF rigid solve on the upholstered deck at 4800 Hz, and the added pillow is a second FEM body. Each edit changes one declared physical parameter (DELETE cushion, ADD pillow preset, cushion E x100 / x0.5, phone mass x10); no pose or trajectory is authored. The registered 0-4 s caches come from re-running every case's original solver from t = 0 to 4 s with all physical settings unchanged, only the 3 s duration guard raised to 4 s (states at 240 Hz). Blender 4.3.2 replays those states in the packed scenes (cushion through fixed tetrahedral shape functions, phone as keyed rigid transforms) on a 24 FPS clock, appearance/realism_look.py applies the current look (closed room lit by sun and sky through the window, scanned materials, no logos, a plain dual-camera module), appearance/cushion_smoothing.py smooths the rendered cushion around the phone and keeps it out of the phone body (render only; caches and ground truth unchanged), Cycles renders 1280x720 frames and the builder encodes, writes ground truth from the solver states and publishes the suite.",
+  "implementation_files": [
+    "simulate_phone_sofa_drop.py",
+    "render_phone_sofa_drop.py",
+    "build_pcve_phone_sofa_drop.py",
+    "edit_vocab.py",
+    "scene_spec.json",
+    "scene_manifest.json",
+    "appearance/retime_packed_scene.py",
+    "appearance/realism_look.py",
+    "appearance/appearance.json",
+    "appearance/cushion_smoothing.py",
+    "appearance/render_frames.py",
+    "tools/scene_common.py",
+    "tools/suite.py",
+    "tools/export_ground_truth.py",
+    "tools/match_embedding_order.py"
+  ],
+  "assets": "assets/scenes/phone_sofa_drop",
+  "asset_groups": [
+    "scenes/phone_sofa_drop",
+    "polyhaven/kloofendal_48d_partly_cloudy_puresky",
+    "polyhaven/painted_plaster_wall",
+    "polyhaven/waffle_pique_cotton"
+  ],
+  "runtimes": {
+    "python": "python3 (standard library) for verify/package; .venv-rigid-elastic for ground truth (numpy) and physics",
+    "blender": "Blender 4.3.2 (tools/blender-4.3.2-linux-x64/blender, $BLENDER or --blender)",
+    "encoder": "ffmpeg / ffprobe on PATH"
+  },
+  "solver_rerun": "none in this repository: the original solver producers and their inputs are not included; the registered 0-4 s caches are the reproduction inputs",
+  "edit_catalog": {
+    "file": "build_pcve_phone_sofa_drop.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

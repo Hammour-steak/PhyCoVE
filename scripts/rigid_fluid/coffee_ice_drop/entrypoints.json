@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "scene": "coffee_ice_drop",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_coffee_ice_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--geom",
+        "--out",
+        "--particle",
+        "--mu",
+        "--gamma",
+        "--coffee-density",
+        "--ice-density",
+        "--ice-side",
+        "--ice-xyz",
+        "--ice-euler",
+        "--gravity",
+        "--fps",
+        "--frames",
+        "--steps-per-frame",
+        "--substeps",
+        "--settle-sec",
+        "--coup-softness",
+        "--sdf-cell",
+        "--no-ice",
+        "--no-coffee",
+        "--implicit-nu",
+        "--domain-top",
+        "--max-density-error",
+        "--max-divergence-error",
+        "--xsph",
+        "--xsph-mode",
+        "--div-nmin",
+        "--domain-half",
+        "--surface-friction",
+        "--dump-pressure",
+        "--no-props",
+        "--ghost-mode",
+        "--ghost-layers",
+        "--psi-scale",
+        "--ghost-spacing",
+        "--friction",
+        "--floor-gap",
+        "--keep-double-gravity",
+        "--rigid-response",
+        "--fill-z",
+        "--rest-spacing"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_coffee_ice_drop.py",
+      "runtime": "blender",
+      "output": {
+        "position": 2
+      },
+      "native_options": [],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_coffee_ice_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--suite-root",
+        "--input-blend",
+        "--ice-asset",
+        "--geometry",
+        "--blender",
+        "--python",
+        "--publish-root",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "coffee_ice_drop_baseline",
+        "edit_low_density_coffee",
+        "edit_high_viscosity_coffee",
+        "edit_delete_ice",
+        "edit_delete_coffee"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_coffee_ice_drop.py",
+    "physics/cavity_coffee_ice_drop.py",
+    "physics/dfsph_coffee_ice_drop.py",
+    "edit_vocab.py",
+    "appearance/geometry_coffee_ice_drop.py",
+    "physics/ice_coupling_coffee_ice_drop.py",
+    "render_coffee_ice_drop.py",
+    "simulate_coffee_ice_drop.py",
+    "surface_coffee_ice_drop.py",
+    "scene_manifest.json"
+  ]
+}

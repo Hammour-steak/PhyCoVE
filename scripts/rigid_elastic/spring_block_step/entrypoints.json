@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "scene": "spring_block_step",
+  "category": "rigid_elastic",
+  "case_number": 24,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_spring_block_step.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "native_options": [
+        "--cases",
+        "--dt",
+        "--convergence",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "mass_half",
+        "young_quarter",
+        "friction_half",
+        "remove_spring",
+        "add_block"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_spring_block_step.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--frames",
+        "--samples",
+        "--device",
+        "--gpu",
+        "--threads",
+        "--blender-bin",
+        "--native",
+        "--no-blend"
+      ],
+      "cases": [
+        "source",
+        "mass_half",
+        "young_quarter",
+        "friction_half",
+        "remove_spring",
+        "add_block"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_spring_block_step.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--suite-root",
+        "--rerun",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "mass_half",
+        "young_quarter",
+        "friction_half",
+        "remove_spring",
+        "add_block"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--suite-root"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Native PyBullet 3.2.5 rigid-body scene (CPU, dt=1/192000 s, 160 solver iterations, cone friction): a fixed 1.8 x 0.9 m tabletop at z=0, a 450 x 270 x 25 mm board on two 40 mm risers (top 65 mm), a free 74 x 64 x 50 mm, 145 g wooden block and a 2 mm push plate on a prismatic guide driven by a passive Hooke spring (steel wire 1.65 mm, coil 38 mm, 20 active turns, E=200 GPa, k=G d^4/(8 D^3 n) = 64.9 N/m, 75 mm precompression) with 0.12 N s/m viscous and 0.040 N dry guide friction; a fixed latch holds the plate until t=0.375 s, nothing is keyframed or launched. Board-block friction 0.22, table-block 0.24. States are saved at 240 Hz and at the 96 video instants t=i/24 s; a half-step run checks convergence (5 mm / 5 deg gates). Five edits change one parameter or object each (block mass x0.5, spring Young's modulus x0.25, table friction x0.5, delete the spring with its plate and moving guide, add a free 150 g block at rest on the table at the midpoint between a wooden bowl and a roll of tape, where the source block stops) and are audited by the shared edit DSL. Blender 4.3.2 Cycles replays the registered states (appearance/render.py + base_scene.py build the mechanism, block, board and table and key every body from the 240 Hz states; appearance/realism.py is the current look) at 1280x720 / 24 FPS / 96 frames from one fixed camera. tools/export_ground_truth.py writes per-frame ground truth from the native states and the camera; tools/publish_suite.py builds a suite in the current PCVE formats; --stage prompts / --export-prompts write the builder catalog prompts into the published suite.",
+  "implementation_files": [
+    "simulate_spring_block_step.py",
+    "render_spring_block_step.py",
+    "build_pcve_spring_block_step.py",
+    "scene_common.py",
+    "edit_vocab.py",
+    "scene_manifest.json",
+    "physics/simulate.py",
+    "appearance/base_scene.py",
+    "appearance/render.py",
+    "appearance/realism.py",
+    "tools/render_case.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/validate_physics.py",
+    "tools/compare_states.py"
+  ],
+  "assets": "assets/scenes/spring_block_step",
+  "edit_catalog": {
+    "file": "build_pcve_spring_block_step.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]",
+      "--stage prompts"
+    ],
+    "case_count": 6
+  }
+}

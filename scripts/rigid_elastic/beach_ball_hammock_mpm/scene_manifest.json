@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "scene_id": "beach_ball_hammock_mpm",
+  "interaction_category": "rigid_elastic",
+  "entry_points": {
+    "simulate": "simulate_beach_ball_hammock_mpm.py",
+    "render": "render_beach_ball_hammock_mpm.py",
+    "build_pcve": "build_pcve_beach_ball_hammock_mpm.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "appearance/appearance.json",
+    "requirements.txt"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_hammock_young_1500pa",
+    "edit_young_15000_to_1500pa_at_2_5s",
+    "edit_young_70000pa_hard"
+  ],
+  "workflows": {},
+  "cases": {
+    "selection": "one case per output root, chosen by the simulator flags after --simulation-args (edit_vocab.SHARED_FLAGS plus the case's flags)",
+    "native_variant_ids": {
+      "source": "source_young_15000pa_preroll12",
+      "edit_hammock_young_1500pa": "edit_hammock_young_1500pa",
+      "edit_young_15000_to_1500pa_at_2_5s": "edit_young_15000_to_1500pa_at_2_5s",
+      "edit_young_70000pa_hard": "edit_young_70000pa_hard"
+    },
+    "same_run": "source and edit_young_15000_to_1500pa_at_2_5s come from one --cpu-threads 1 run with --source-branch-work-dir (frames 1-61 identical)"
+  },
+  "data": {
+    "assets": "assets/scenes/beach_ball_hammock_mpm",
+    "base_scene": "assets/scenes/beach_ball_hammock_mpm/beach_ball_hammock_base.blend",
+    "suite": "renders/pcve_suites/pcve_beach_ball_hammock_mpm_suite"
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "video frame i = cache row i - 1, t = (i - 1)/24 s"
+  },
+  "camera": {
+    "description": "camera.override of appearance/appearance.json, applied by appearance/look_beach.py",
+    "location_m": [
+      5.135,
+      -11.781,
+      4.6
+    ],
+    "rotation_deg_xyz": [
+      86.0,
+      0.0,
+      56.8225
+    ],
+    "lens_mm": 40.0,
+    "sensor_width_mm": 36.0,
+    "fstop": 8.0
+  },
+  "ground_truth": "cases/<case_id>/ground_truth_transforms.json in the suite (pcve_ground_truth/1)",
+  "canonical_suites": {
+    "pcve_beach_ball_hammock_mpm_suite": {
+      "target": "renders/pcve_suites/pcve_beach_ball_hammock_mpm_suite",
+      "public_case_ids": {
+        "source": "source",
+        "edit_hammock_young_1500pa": "edit_hammock_young_1500pa",
+        "edit_young_15000_to_1500pa_at_2_5s": "edit_young_15000_to_1500pa_at_2_5s",
+        "edit_young_70000pa_hard": "edit_young_70000pa_hard"
+      },
+      "case_video_sha256": {
+        "source": "1d759163a3aee278042efe64749cf44a789812c47029da55ca2a6d2129a1edef",
+        "edit_hammock_young_1500pa": "e6132da6727675947f892fc804705b0bfdc59ac74c4810d3c432961a40405bfd",
+        "edit_young_15000_to_1500pa_at_2_5s": "b2a3329498d0d196e17cc0622b82232b887e42a64380d094fbcca0d494c33932",
+        "edit_young_70000pa_hard": "16e69ca09c46be57d52c518aa293cf7b298a1f5f58d31cd74952c2072a56ff97",
+        "edit_delete_beach_ball": "27f9f4252031445f7bb33a1398e497ccf7723d4dd4633a5e94ebf0fad4b61748",
+        "edit_delete_hammock": "4dfc481a6f849f129eb451455b46ba3a26a2cca3c9ce05cc5121c909283b5bc5"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "edit_hammock_young_1500pa": "cases/edit_hammock_young_1500pa/video.mp4",
+        "edit_young_15000_to_1500pa_at_2_5s": "cases/edit_young_15000_to_1500pa_at_2_5s/video.mp4",
+        "edit_young_70000pa_hard": "cases/edit_young_70000pa_hard/video.mp4"
+      }
+    }
+  }
+}

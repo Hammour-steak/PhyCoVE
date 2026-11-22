@@ -1,0 +1,132 @@
+{
+  "schema_version": 11,
+  "scene_id": "free_kitchen_sponge_table_leg",
+  "revision": "accepted_look",
+  "revision_note": "accepted_look: block-floor friction 0.58 -> 0.20 (sealed oak floor), block start 0.58 m further from the sponge (x -0.72 -> -1.30 m), initial speed 3.2 -> 2.8 m/s (fast_block 4.8 -> 4.2 m/s, still x1.5), preset added block on the exact midpoint (x -0.35 -> -0.635 m); sponge, leg, masses, solver settings unchanged; motion lasts about 2.5x longer",
+  "interaction_category": "rigid_elastic",
+  "fps": 240,
+  "display_fps": 24,
+  "duration_s": 4.0,
+  "playback_time_scale": 1.0,
+  "media_contract": "pcve-main-720p-4s-24fps",
+  "baseline": {
+    "block_present": true,
+    "block_dimensions_m": [
+      0.18,
+      0.13,
+      0.095
+    ],
+    "block_initial_center_m": [
+      -1.3,
+      0.0,
+      0.049
+    ],
+    "block_mass_kg": 2.0,
+    "block_initial_velocity_m_s": [
+      2.8,
+      0.0,
+      0.0
+    ],
+    "bumper_present": true,
+    "bumper_dimensions_m": [
+      0.16,
+      0.15,
+      0.12
+    ],
+    "bumper_center_xy_m": [
+      0.03,
+      0.0
+    ],
+    "bumper_bottom_z_m": 0.002,
+    "bumper_fixed_boundary": "none",
+    "bumper_young_modulus_pa": 320000.0,
+    "bumper_poisson_ratio": 0.3,
+    "bumper_density_kg_m3": 48.0,
+    "contact_friction": 0.68,
+    "floor_friction": 0.2,
+    "sponge_floor_friction": 0.64,
+    "gravity_m_s2": 9.81,
+    "backstop_dimensions_m": [
+      0.105,
+      0.12,
+      0.79
+    ],
+    "backstop_center_m": [
+      0.1705,
+      0.0,
+      0.3951
+    ],
+    "backstop_density_kg_m3": 2813.9506172839506,
+    "table_assembly_effective_mass_kg": 28.0,
+    "backstop_fixed": true,
+    "added_block_present": false,
+    "added_block_dimensions_m": [
+      0.14,
+      0.12,
+      0.085
+    ],
+    "added_block_initial_center_m": [
+      -0.635,
+      0.0,
+      0.044
+    ],
+    "added_block_mass_kg": 1.25,
+    "added_block_initial_velocity_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "simulation": {
+    "dt_s": 0.0008333333333333334,
+    "contact_d_hat_m": 0.0007,
+    "contact_resistance": 10000000000.0,
+    "newton_max_iterations": 300,
+    "grid_cells": [
+      24,
+      14,
+      18
+    ]
+  },
+  "cases": {
+    "source": {},
+    "fast_block": {
+      "block_initial_velocity_m_s": [
+        4.2,
+        0.0,
+        0.0
+      ]
+    },
+    "heavy_block": {
+      "block_mass_kg": 20.0
+    },
+    "soft_010": {
+      "bumper_young_modulus_pa": 32000.0
+    },
+    "remove_bumper": {
+      "bumper_present": false
+    },
+    "add_mid_block": {
+      "added_block_present": true
+    }
+  },
+  "edit_multipliers": {
+    "soft_010": 0.1
+  },
+  "reference_basis": {
+    "product_geometry": "A recognizable 160 mm yellow open-cell household sponge with a green fibrous scouring layer starts 8 mm clear of the left face of a full-height wooden table leg. There is no hidden plate, pedestal, adhesive strip, or rear restraint.",
+    "material": "Effective 0.32 MPa, 48 kg/m3 open-cell polyurethane-like foam, nu=0.30, represented by Stable Neo-Hookean tetrahedral FEM. This is a benchmark-scale effective model selected for observable flexible-foam response, not a proprietary foam calibration or a full crushable-foam law.",
+    "mounting": "The sponge has zero constrained FEM vertices and rests freely on the floor. The wood block first strikes the sponge; the translated sponge then closes an 8 mm gap and contacts the fixed table leg. The 105 x 120 x 790 mm proxy represents the contacted leg of a fixed 28 kg table assembly and touches the floor.",
+    "heavy_edit": "The benchmark edit changes only the rigid-body mass parameter from 2 kg to 20 kg. Geometry and visible material remain unchanged.",
+    "floor_contact": "The rendered lacquered oak plank floor is the fixed z=0 collision plane. Block-floor kinetic friction mu=0.20 (smooth finished wood on a sealed wood floor; textbook wood-on-wood kinetic value); sponge-floor friction mu=0.64. Both contacts are solved inside the same frictional IPC scene."
+  },
+  "asset_basis": {
+    "floor": "Poly Haven Wood Floor (wood_floor) 4K CC0 oak planks, 1.7 m metric UV, planks along the direction of travel, thin lacquer coat; bump only, the contact plane stays at z=0.",
+    "wall": "Poly Haven White Plaster 02 4K CC0 scan under an opaque off-white paint coat, 1 m metric UV, with broad trowel undulation.",
+    "table": "Poly Haven Wooden Table 02 CC0, 4K glTF; its front-left leg face is registered on the 105 x 120 x 790 mm fixed collision cuboid (x=0.118 m).",
+    "block": "Exact collision box with a 3 mm render-only edge radius; Poly Haven dark_wood 2K CC0 (toned down) with the grain along the block, procedural growth rings on the saw-cut ends, worn arrises and dings.",
+    "sponge": "Native FEM surface with a yellow open-cell foam body and a green non-woven scouring layer; procedural pores and fibres follow the deforming FEM surface.",
+    "room": "Back wall 1.05 m behind the path with skirting; props from Poly Haven (CC0): wooden_display_shelves_01, wooden_stool_02, wicker_basket_02, fancy_picture_frame_01 (leaning, back outwards), potted_plant_01; daylight from a window in the left wall (sun + kloofendal_48d_partly_cloudy_puresky sky)."
+  },
+  "model_scope": "A fixed full-table assembly represented at contact by a solid table-leg proxy, a sealed oak plank floor, one or two affine rigid wooden blocks, and a completely unrestrained open-cell sponge coupled in one frictional IPC scene. The sequence is block-to-sponge followed by moving sponge-to-leg contact. The foam law is selected for clearly observable elastic compression and recovery, not for product-specific force-displacement prediction."
+}

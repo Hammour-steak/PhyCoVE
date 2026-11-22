@@ -1,0 +1,661 @@
+{
+  "accepted": false,
+  "formal_suite_completed": false,
+  "source_common_model_sha256": "dbce6fa7d8556357118f4f7845b63cef9c1d4b9311bc7bb9a09ed2aebc9f52c8",
+  "baseline_physics": {
+    "ball_mass_kg": 0.43,
+    "ball_horizontal_velocity_mps": 16.0,
+    "ball_initial_vertical_velocity_mps": 1.0,
+    "ball_radius_m": 0.11,
+    "ball_initial_center_m": [
+      0.58,
+      -0.6,
+      1.14
+    ],
+    "ball_initial_quaternion_wxyz": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ball_initial_omega_radps": [
+      -8.0,
+      0.5,
+      1.5
+    ],
+    "net_axial_young_modulus_Pa": 84415781.81594129,
+    "axial_viscosity_Pas": 4000.0,
+    "junction_cosine_viscosity_Nms": 0.0006,
+    "net_present": [
+      1
+    ],
+    "training_rebound_board_present": [
+      0
+    ],
+    "training_rebound_board_panel_center_m": [
+      0.58,
+      0.35,
+      0.7
+    ],
+    "training_rebound_board_panel_dimensions_xyz_m": [
+      1.8,
+      0.04,
+      1.2
+    ],
+    "training_rebound_board_panel_quaternion_wxyz": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "training_rebound_board_upright_left_center_m": [
+      -0.12,
+      0.4,
+      0.406
+    ],
+    "training_rebound_board_upright_left_dimensions_xyz_m": [
+      0.06,
+      0.06,
+      0.788
+    ],
+    "training_rebound_board_upright_left_quaternion_wxyz": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "training_rebound_board_upright_right_center_m": [
+      1.28,
+      0.4,
+      0.406
+    ],
+    "training_rebound_board_upright_right_dimensions_xyz_m": [
+      0.06,
+      0.06,
+      0.788
+    ],
+    "training_rebound_board_upright_right_quaternion_wxyz": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "training_rebound_board_foot_left_center_m": [
+      -0.12,
+      0.4,
+      0.006
+    ],
+    "training_rebound_board_foot_left_dimensions_xyz_m": [
+      0.2,
+      0.28,
+      0.012
+    ],
+    "training_rebound_board_foot_left_quaternion_wxyz": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "training_rebound_board_foot_right_center_m": [
+      1.28,
+      0.4,
+      0.006
+    ],
+    "training_rebound_board_foot_right_dimensions_xyz_m": [
+      0.2,
+      0.28,
+      0.012
+    ],
+    "training_rebound_board_foot_right_quaternion_wxyz": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "media_contract": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "physical_duration_s": 4,
+    "frames": 96
+  },
+  "material_mapping": {
+    "mesh_axial_stiffness": "k = E*pi*(0.004/2)^2/L0; scale only manufactured hex-strand material",
+    "mesh_bending": "EI and derived bending coefficients scale with the same E at fixed braid factor and geometry",
+    "support_and_boundary_cords": "separate unchanged support material",
+    "viscosities": "unchanged; never renamed Young modulus",
+    "thin_shell_ball_inertia": "I=2*m*R^2/3"
+  },
+  "initial_state_policy": "All source/edit existing actors use exactly the same common initial physical cache and poses; changing E at t0 may produce subsequent physical relaxation. Do not separately resettle or move an edited net.",
+  "edits": [
+    {
+      "case_id": "young_tenth",
+      "dsl": "SET net.young_modulus TIMES 0.1",
+      "prompt_zh": "从第 1 帧开始,把球门网的杨氏模量减少到原来的 0.1 倍。",
+      "prompt_en": "From frame 1 onwards, reduce the goal net's Young's modulus to 0.1 times its original value.",
+      "resolved_overrides_SI": {
+        "net_axial_young_modulus_Pa": 8441578.182
+      },
+      "resolved_physics": {
+        "ball_mass_kg": 0.43,
+        "ball_horizontal_velocity_mps": 16.0,
+        "ball_initial_vertical_velocity_mps": 1.0,
+        "ball_radius_m": 0.11,
+        "ball_initial_center_m": [
+          0.58,
+          -0.6,
+          1.14
+        ],
+        "ball_initial_quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ball_initial_omega_radps": [
+          -8.0,
+          0.5,
+          1.5
+        ],
+        "net_axial_young_modulus_Pa": 8441578.182,
+        "axial_viscosity_Pas": 4000.0,
+        "junction_cosine_viscosity_Nms": 0.0006,
+        "net_present": [
+          1
+        ],
+        "training_rebound_board_present": [
+          0
+        ],
+        "training_rebound_board_panel_center_m": [
+          0.58,
+          0.35,
+          0.7
+        ],
+        "training_rebound_board_panel_dimensions_xyz_m": [
+          1.8,
+          0.04,
+          1.2
+        ],
+        "training_rebound_board_panel_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_left_center_m": [
+          -0.12,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_left_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_right_center_m": [
+          1.28,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_right_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_left_center_m": [
+          -0.12,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_left_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_right_center_m": [
+          1.28,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_right_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "strict_shared_policy_audit": {
+        "scenario_override_checked": true,
+        "allowed_parameter_keys": [
+          "net_axial_young_modulus_Pa"
+        ]
+      },
+      "same_initial_existing_poses": true,
+      "new_simulation_completed": false,
+      "new_render_completed": false,
+      "visible_motion_difference_verified": false
+    },
+    {
+      "case_id": "mass_double",
+      "dsl": "SET ball.mass TIMES 2",
+      "prompt_zh": "从第 1 帧开始,把足球的质量增加到原来的 2 倍。",
+      "prompt_en": "From frame 1 onwards, increase the football's mass to 2 times its original value.",
+      "resolved_overrides_SI": {
+        "ball_mass_kg": 0.86
+      },
+      "resolved_physics": {
+        "ball_mass_kg": 0.86,
+        "ball_horizontal_velocity_mps": 16.0,
+        "ball_initial_vertical_velocity_mps": 1.0,
+        "ball_radius_m": 0.11,
+        "ball_initial_center_m": [
+          0.58,
+          -0.6,
+          1.14
+        ],
+        "ball_initial_quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ball_initial_omega_radps": [
+          -8.0,
+          0.5,
+          1.5
+        ],
+        "net_axial_young_modulus_Pa": 84415781.81594129,
+        "axial_viscosity_Pas": 4000.0,
+        "junction_cosine_viscosity_Nms": 0.0006,
+        "net_present": [
+          1
+        ],
+        "training_rebound_board_present": [
+          0
+        ],
+        "training_rebound_board_panel_center_m": [
+          0.58,
+          0.35,
+          0.7
+        ],
+        "training_rebound_board_panel_dimensions_xyz_m": [
+          1.8,
+          0.04,
+          1.2
+        ],
+        "training_rebound_board_panel_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_left_center_m": [
+          -0.12,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_left_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_right_center_m": [
+          1.28,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_right_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_left_center_m": [
+          -0.12,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_left_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_right_center_m": [
+          1.28,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_right_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "strict_shared_policy_audit": {
+        "scenario_override_checked": true,
+        "allowed_parameter_keys": [
+          "ball_mass_kg"
+        ]
+      },
+      "same_initial_existing_poses": true,
+      "new_simulation_completed": false,
+      "new_render_completed": false,
+      "visible_motion_difference_verified": false
+    },
+    {
+      "case_id": "speed_half",
+      "dsl": "SET ball.horizontal_velocity TIMES 0.5",
+      "prompt_zh": "从第 1 帧开始,把足球的水平初速度减少到原来的 0.5 倍。",
+      "prompt_en": "From frame 1 onwards, reduce the football's initial horizontal velocity to 0.5 times its original value.",
+      "resolved_overrides_SI": {
+        "ball_horizontal_velocity_mps": 8.0
+      },
+      "resolved_physics": {
+        "ball_mass_kg": 0.43,
+        "ball_horizontal_velocity_mps": 8.0,
+        "ball_initial_vertical_velocity_mps": 1.0,
+        "ball_radius_m": 0.11,
+        "ball_initial_center_m": [
+          0.58,
+          -0.6,
+          1.14
+        ],
+        "ball_initial_quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ball_initial_omega_radps": [
+          -8.0,
+          0.5,
+          1.5
+        ],
+        "net_axial_young_modulus_Pa": 84415781.81594129,
+        "axial_viscosity_Pas": 4000.0,
+        "junction_cosine_viscosity_Nms": 0.0006,
+        "net_present": [
+          1
+        ],
+        "training_rebound_board_present": [
+          0
+        ],
+        "training_rebound_board_panel_center_m": [
+          0.58,
+          0.35,
+          0.7
+        ],
+        "training_rebound_board_panel_dimensions_xyz_m": [
+          1.8,
+          0.04,
+          1.2
+        ],
+        "training_rebound_board_panel_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_left_center_m": [
+          -0.12,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_left_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_right_center_m": [
+          1.28,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_right_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_left_center_m": [
+          -0.12,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_left_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_right_center_m": [
+          1.28,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_right_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "strict_shared_policy_audit": {
+        "scenario_override_checked": true,
+        "allowed_parameter_keys": [
+          "ball_horizontal_velocity_mps"
+        ]
+      },
+      "same_initial_existing_poses": true,
+      "new_simulation_completed": false,
+      "new_render_completed": false,
+      "visible_motion_difference_verified": false
+    },
+    {
+      "case_id": "remove_net",
+      "dsl": "DELETE net",
+      "prompt_zh": "从第 1 帧开始,把球门网从场景中删除。",
+      "prompt_en": "From frame 1 onwards, remove the goal net from the scene.",
+      "resolved_overrides_SI": {
+        "net_present": [
+          0
+        ]
+      },
+      "resolved_physics": {
+        "ball_mass_kg": 0.43,
+        "ball_horizontal_velocity_mps": 16.0,
+        "ball_initial_vertical_velocity_mps": 1.0,
+        "ball_radius_m": 0.11,
+        "ball_initial_center_m": [
+          0.58,
+          -0.6,
+          1.14
+        ],
+        "ball_initial_quaternion_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ball_initial_omega_radps": [
+          -8.0,
+          0.5,
+          1.5
+        ],
+        "net_axial_young_modulus_Pa": 84415781.81594129,
+        "axial_viscosity_Pas": 4000.0,
+        "junction_cosine_viscosity_Nms": 0.0006,
+        "net_present": [
+          0
+        ],
+        "training_rebound_board_present": [
+          0
+        ],
+        "training_rebound_board_panel_center_m": [
+          0.58,
+          0.35,
+          0.7
+        ],
+        "training_rebound_board_panel_dimensions_xyz_m": [
+          1.8,
+          0.04,
+          1.2
+        ],
+        "training_rebound_board_panel_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_left_center_m": [
+          -0.12,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_left_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_upright_right_center_m": [
+          1.28,
+          0.4,
+          0.406
+        ],
+        "training_rebound_board_upright_right_dimensions_xyz_m": [
+          0.06,
+          0.06,
+          0.788
+        ],
+        "training_rebound_board_upright_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_left_center_m": [
+          -0.12,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_left_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_left_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "training_rebound_board_foot_right_center_m": [
+          1.28,
+          0.4,
+          0.006
+        ],
+        "training_rebound_board_foot_right_dimensions_xyz_m": [
+          0.2,
+          0.28,
+          0.012
+        ],
+        "training_rebound_board_foot_right_quaternion_wxyz": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "strict_shared_policy_audit": {
+        "scenario_override_checked": true,
+        "allowed_parameter_keys": [
+          "net_present"
+        ]
+      },
+      "same_initial_existing_poses": true,
+      "new_simulation_completed": false,
+      "new_render_completed": false,
+      "visible_motion_difference_verified": false
+    }
+  ],
+  "required_next_checks": [
+    "Contact-aware source static equilibrium and unforced hold.",
+    "Physical source plus five caches, hard-scene response for DELETE and ADD, and preserved initial states.",
+    "Visible trajectory/deformation differences for each edit; modify a multiplier only by recomputing the affected run.",
+    "Remote scene binding, actual renders, shared media and packager preflight; this plan is not output approval."
+  ]
+}

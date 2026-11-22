@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "scene_id": "kitchen_tin_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_kitchen_tin_collision.py",
+    "render": "render_kitchen_tin_collision.py",
+    "build_pcve": "build_pcve_kitchen_tin_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "kitchen_tin_collision_baseline",
+    "edit_heavy_driver",
+    "edit_heavy_receiver",
+    "edit_remove_receiver",
+    "edit_receiver_friction_drop",
+    "edit_remove_driver_can"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_kitchen_tin_collision_suite": {
+      "target": "renders/pcve_suites/pcve_kitchen_tin_collision_suite",
+      "case_video_sha256": {
+        "kitchen_tin_collision_baseline": "d759472af1db97becbc7285f6af26502184da3cba4fd0118f25de89beb91ebc3",
+        "edit_heavy_driver": "e6f2dab7257405ec9fa6598d69ae9b266364dfa0260c886d27fbcbcb00ecf13a",
+        "edit_heavy_receiver": "534d8f6ef6231dc3294f01aa664c5aa892a2fe27ca5de41b69c44dbf03b9c7a1",
+        "edit_remove_receiver": "a11b3c9be0503fe8561f54a609d045a3c41aa887b37f10af3fad7a81dcbf9313",
+        "edit_receiver_friction_drop": "f2e41f34ae47990a28098d8c3d34f6890b7e8f30730b5a39de9cebb646500a09",
+        "edit_remove_driver_can": "30e9beff81283838c91601c8c8b814477cf71e9adf9cc018e5a46e2eb634887f"
+      },
+      "last_render": {
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 24,
+        "frames": 96,
+        "samples": 256,
+        "engine": "Cycles",
+        "backend": "CUDA",
+        "denoiser": "OpenImageDenoise"
+      },
+      "distribution_schema_version": 3,
+      "prompts_complete": true,
+      "public_case_ids": {
+        "kitchen_tin_collision_baseline": "source",
+        "edit_heavy_driver": "edit_heavy_driver",
+        "edit_heavy_receiver": "edit_heavy_receiver",
+        "edit_remove_receiver": "edit_remove_receiver",
+        "edit_receiver_friction_drop": "edit_receiver_friction_drop"
+      },
+      "public_case_video_sha256": {
+        "source": "d759472af1db97becbc7285f6af26502184da3cba4fd0118f25de89beb91ebc3",
+        "edit_heavy_driver": "e6f2dab7257405ec9fa6598d69ae9b266364dfa0260c886d27fbcbcb00ecf13a",
+        "edit_heavy_receiver": "534d8f6ef6231dc3294f01aa664c5aa892a2fe27ca5de41b69c44dbf03b9c7a1",
+        "edit_remove_receiver": "a11b3c9be0503fe8561f54a609d045a3c41aa887b37f10af3fad7a81dcbf9313",
+        "edit_receiver_friction_drop": "f2e41f34ae47990a28098d8c3d34f6890b7e8f30730b5a39de9cebb646500a09",
+        "edit_remove_driver_can": "30e9beff81283838c91601c8c8b814477cf71e9adf9cc018e5a46e2eb634887f"
+      }
+    }
+  },
+  "source_provenance": "authored in this repository (no clean_scripts counterpart)",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/kitchen_tin_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "scene": "spring_scale_weight_drop",
+  "category": "rigid_elastic",
+  "case_number": 18,
+  "native_dataset_id": "steel_ball_silicone_cup",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_spring_scale_weight_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--case",
+        "--output-dir",
+        "--verify-cache",
+        "--source-cache"
+      ],
+      "resource_flags": {},
+      "stage_semantics": "none",
+      "cases": [
+        "source",
+        "heavy",
+        "soft",
+        "damped",
+        "remove_weight",
+        "heavy_at_frame_48"
+      ]
+    },
+    "render": {
+      "file": "render_spring_scale_weight_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--case",
+        "--output-dir",
+        "--input-root",
+        "--look",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--render-threads",
+        "--samples",
+        "--wait-idle"
+      ],
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads"
+      },
+      "stage_semantics": "none",
+      "cases": [
+        "source",
+        "heavy",
+        "soft",
+        "damped",
+        "remove_weight",
+        "heavy_at_frame_48"
+      ]
+    },
+    "build_pcve": {
+      "file": "build_pcve_spring_scale_weight_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--output-dir",
+        "--input-root",
+        "--look",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--render-threads",
+        "--wait-idle"
+      ],
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads"
+      },
+      "stage_semantics": "selector",
+      "cases": [
+        "source",
+        "heavy",
+        "soft",
+        "damped",
+        "remove_weight",
+        "heavy_at_frame_48"
+      ]
+    }
+  },
+  "workflows": {},
+  "stages": [
+    "prepare",
+    "simulate",
+    "render",
+    "verify",
+    "all"
+  ],
+  "implementation_policy": "Distributed, massive helical extension spring reduced to 28 axial turn segments (open coils: small-helix-angle torsion theory E -> G -> k; closed coils: initial tension and coil contact; internal segment damping), a guided rigid carriage with its pan, and a freely falling 100 g calibration weight; passive unilateral pad contact with compression-only damping; fixed-step RK4 at 1/48000 s in Numba on the CPU (physics/simulate_spring.py, parameters in physics/scene.py, edits in edit_vocab.py). The state vector is cached at 24 Hz: video frame i is the native state at t=(i-1)/24 s. The timed edit restores the complete state vector of the accepted source cache at its frame and integrates on with the edited parameters. Blender 4.3.2 Cycles replays the caches (appearance/render_spring.py, base look); the render entry (by default) and the published suite use the appearance/realism.py overlay on it, 128 samples. Contact and damping values are effective parameters, not a calibrated instrument. tools/export_ground_truth.py writes pcve_ground_truth/1 from the caches.",
+  "implementation_files": [
+    "simulate_spring_scale_weight_drop.py",
+    "render_spring_scale_weight_drop.py",
+    "build_pcve_spring_scale_weight_drop.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/scene.py",
+    "physics/simulate_spring.py",
+    "appearance/render_spring.py",
+    "appearance/render_helpers.py",
+    "appearance/realism.py",
+    "tools/worker_run.py",
+    "tools/export_ground_truth.py"
+  ],
+  "assets": "assets/scenes/spring_scale_weight_drop",
+  "delivery": "renders/spring_scale_weight_drop/delivery/accepted",
+  "edit_catalog": {
+    "file": "build_pcve_spring_scale_weight_drop.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

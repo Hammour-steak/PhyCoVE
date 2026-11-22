@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "scene_id": "ball_box_rebound",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_ball_box_rebound.py",
+    "render": "render_ball_box_rebound.py",
+    "build_pcve": "build_pcve_ball_box_rebound.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_high_restitution",
+    "edit_low_restitution",
+    "edit_fast_initial_velocity",
+    "edit_slow_initial_velocity",
+    "edit_high_ball_friction",
+    "edit_high_football_friction",
+    "edit_remove_football",
+    "edit_remove_football_at_2s"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_ball_box_rebound_suite": {
+      "target": "renders/pcve_suites/pcve_ball_box_rebound_suite",
+      "case_video_sha256": {
+        "source": "149dd824d3c4c84af8ccb395c094666bbe2cd18343200ee526f29f6d28e91f6c",
+        "edit_high_restitution": "c64f4c2582c06a69bc5b644488ec42e183e7279874ae14f6b7398fa3fd06ffb8",
+        "edit_low_restitution": "31e261a2b8db2158a12e53ba27d52f82fa3b242bc0438cef058c83c0391a1d3d",
+        "edit_fast_initial_velocity": "0e9c1b8ef532f2aa1b756ac5600914379dca30518a99d10de4c7e67e0cbd45a1",
+        "edit_slow_initial_velocity": "0dedc3550d4f8bd3507fcc15b669056e52272201ee1d67990a502089523e6167",
+        "edit_high_ball_friction": "8e4388973cf2550a4d2db44bbed2f5f958bcd64345a32a5bead1f8c23e2f9f90",
+        "edit_high_football_friction": "308f710a7fd03946ea18fd8716aed699fd5a6483910285d22374182dbeb009b8",
+        "edit_remove_football": "a28149542cd57d6733bebe8436c4415a32e0f1d88732d10b5d3c5ec9b798982b",
+        "edit_remove_football_at_2s": "97725bf125bbcce68bcdebb181be612dc91cdba0e2f651496235a75edaae81ce",
+        "edit_remove_star_ball": "016a2b1cd402132a8c92f11144cc6de15d779ecb1ce0bc4c14e885d2d79d622f",
+        "edit_remove_toy_chest": "7ec489dfd79e5353069b9823488046d63f6ea6cc952a45784dffc9ccc98c4ce7"
+      }
+    }
+  }
+}

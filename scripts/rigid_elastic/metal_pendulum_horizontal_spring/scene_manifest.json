@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scene_id": "metal_pendulum_horizontal_spring",
+  "interaction_category": "rigid_elastic",
+  "entry_points": {
+    "simulate": "simulate_metal_pendulum_horizontal_spring.py",
+    "render": "render_metal_pendulum_horizontal_spring.py",
+    "build_pcve": "build_pcve_metal_pendulum_horizontal_spring.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edits/presets.py",
+    "edit_vocab.py",
+    "asset_manifest.json"
+  ],
+  "supported_cases": [
+    "source",
+    "soft_spring",
+    "stiff_spring",
+    "heavy_ball",
+    "delete_spring"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_metal_pendulum_horizontal_spring_suite": {
+      "target": "renders/pcve_suites/pcve_metal_pendulum_horizontal_spring_suite",
+      "case_video_sha256": {
+        "source": "0a0d0914eaff663131629bc9701f83f9f9ee48ac5fe82f2c78b573f4dff8313d",
+        "soft_spring": "84e91d6bd5cb8a3764a6606a62b97bb7d9ee79d77349c58354cdca7db9974038",
+        "stiff_spring": "e5c2acf698dbc0fee8ff0f8aa5809651b1e8e5493cef510f07ef892ef43e4266",
+        "heavy_ball": "109e2a132fc8afcc6a13d90be0e0f72ba628f977f724206857fc12d41d7ebd31",
+        "delete_spring": "baa080c0bf6affee4057c8e2406723803f4f1c29bccb86e6585d848e00d09e7e",
+        "edit_delete_ball": "4567a4b11950252ad75eb6df81acf62a59c7f454c18e19d4871f554fab8ad8ec"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "soft_spring": "edit_soft_spring",
+        "stiff_spring": "edit_stiff_spring",
+        "heavy_ball": "edit_heavy_ball",
+        "delete_spring": "edit_delete_spring"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_ball": "4567a4b11950252ad75eb6df81acf62a59c7f454c18e19d4871f554fab8ad8ec",
+        "edit_delete_spring": "baa080c0bf6affee4057c8e2406723803f4f1c29bccb86e6585d848e00d09e7e",
+        "edit_heavy_ball": "109e2a132fc8afcc6a13d90be0e0f72ba628f977f724206857fc12d41d7ebd31",
+        "edit_soft_spring": "84e91d6bd5cb8a3764a6606a62b97bb7d9ee79d77349c58354cdca7db9974038",
+        "edit_stiff_spring": "e5c2acf698dbc0fee8ff0f8aa5809651b1e8e5493cef510f07ef892ef43e4266",
+        "source": "0a0d0914eaff663131629bc9701f83f9f9ee48ac5fe82f2c78b573f4dff8313d"
+      }
+    }
+  }
+}

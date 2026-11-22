@@ -1,0 +1,44 @@
+"""Generate reproducible parameter variants, each with all five edits."""
+# PCVE_UNIFIED_ENTRY_BEGIN
+
+# Resolve the shared scripts directory, then this scene's module folders.
+import sys as _clean_sys
+from pathlib import Path as _CleanPath
+_clean_scene_dir = _CleanPath(__file__).resolve().parents[1]
+_scripts_dir = _clean_scene_dir.parents[1]
+_PCVE_PROJECT_ROOT = next(p for p in _clean_scene_dir.parents if (p / "assets").is_dir())
+if str(_scripts_dir) not in _clean_sys.path:
+    _clean_sys.path.insert(0, str(_scripts_dir))
+if str(_clean_scene_dir) not in _clean_sys.path:
+    _clean_sys.path.insert(0, str(_clean_scene_dir))
+# Shared modules live in scripts/; scene-local modules live in this directory and
+# its physics/, appearance/ and tools/ subdirectories.
+for _scene_sub in ("", "physics", "appearance", "tools"):
+    _scene_sub_dir = _clean_scene_dir / _scene_sub if _scene_sub else _clean_scene_dir
+    if _scene_sub_dir.is_dir() and str(_scene_sub_dir) not in _clean_sys.path:
+        _clean_sys.path.insert(1, str(_scene_sub_dir))
+# PCVE_UNIFIED_ENTRY_END
+
+
+import argparse,json,random,subprocess,sys
+from pathlib import Path
+from scene_config import defaults,PHYSICS_LIMITS
+from pcve_scene_runtime import ROOT
+
+def main():
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--count',type=int,default=3);p.add_argument('--seed',type=int,default=0)
+ p.add_argument('--out-root',type=Path,default=ROOT/'renders/basketball_cup_batch');p.add_argument('--simulate-only',action='store_true');a=p.parse_args()
+ if a.count<1:raise ValueError('count')
+ rng=random.Random(a.seed)
+ # Sample inside the scene's own limits (PHYSICS_LIMITS), so validate() accepts
+ # every sample.
+ low,high=PHYSICS_LIMITS['initial_velocity'];top=min(high,low+.6)
+ for i in range(a.count):
+  folder=a.out_root/f'sample_{i:03d}';folder.mkdir(parents=True,exist_ok=True);s=defaults();s['seed']=a.seed+i
+  s['physics'].update(initial_velocity=round(rng.uniform(low,top),4),bottle_mass=.32)
+  file=folder/'scenario.json';file.write_text(json.dumps(s,indent=2),encoding='utf-8')
+  # This file lives in tools/, so the builder is one directory up.
+  cmd=[sys.executable,str(_clean_scene_dir/'build_pcve_basketball_cup_collision.py'),'--out-root',str(folder),'--scenario-json',str(file)]
+  if a.simulate_only:cmd+=['--simulate-only']
+  subprocess.run(cmd,check=True)
+if __name__=='__main__':main()

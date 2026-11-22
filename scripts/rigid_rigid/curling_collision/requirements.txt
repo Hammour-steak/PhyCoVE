@@ -1,0 +1,2 @@
+# Simulation and orchestration require only the Python 3 standard library.
+# Rendering: Blender 4.3.2 with Cycles; encoding and validation: ffmpeg/ffprobe.

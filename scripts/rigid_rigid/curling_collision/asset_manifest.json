@@ -1,0 +1,141 @@
+{
+  "schema_version": 5,
+  "scene": "curling_collision",
+  "external_files": [
+    {
+      "registry_id": "sketchfab/curling_stone_filinmx",
+      "source": "https://sketchfab.com/3d-models/curling-stone-436c3ebc3eb14cdb92c83adb9190b34e",
+      "author": "FilinMX",
+      "license": "CC BY-NC 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "download": "manual",
+      "files": {
+        "ATTRIBUTION.md": {
+          "sha256": "344c39c1c4607016f102341ae582dd01f430df33db44f14281a14656c7f825ef",
+          "bytes": 1506,
+          "derived": "Prepared/recorded from source.glb by tools/prepare_sketchfab_asset.py; see ATTRIBUTION.md."
+        },
+        "LICENSE.txt": {
+          "sha256": "7e80843db8dfb539b517f9db2a2d89f8d14a0b2e1c0e5f2c944ac556e3ff539b",
+          "bytes": 193,
+          "derived": "License identifier and links to the official Creative Commons deed and legal code."
+        },
+        "gltf_manifest.json": {
+          "sha256": "9841e7cdc60616cc71c8a827ce3ed69ed6689c5d8dcc3f720bdef10646567c36",
+          "bytes": 4656,
+          "derived": "Original JSON chunk extracted from source.glb without modification."
+        },
+        "normalized_stone.blend": {
+          "sha256": "ab46106cbbaf0c1bcf4bc61bde1ecbae7f5fd761513edb2b3dcec7b86bf61285",
+          "bytes": 6687134,
+          "derived": "Prepared/recorded from source.glb by tools/prepare_sketchfab_asset.py; see ATTRIBUTION.md."
+        },
+        "normalized_stone.normalization.json": {
+          "sha256": "1058938d7c40cc2a4a2a1903bc5894119082c80032ef99fd5d1129ef23861c8b",
+          "bytes": 2763,
+          "derived": "Prepared/recorded from source.glb by tools/prepare_sketchfab_asset.py; see ATTRIBUTION.md."
+        },
+        "source.glb": {
+          "sha256": "4395792301a6b11ef9e5c27a7aea85d489cb84335f87155324cd19d1818e4112",
+          "bytes": 6183068,
+          "manual": true
+        }
+      },
+      "instructions": "Download Curling Stone by FilinMX from https://sketchfab.com/3d-models/curling-stone-436c3ebc3eb14cdb92c83adb9190b34e using the official Sketchfab download, save as source.glb, then run tools/prepare_sketchfab_asset.py as documented in the scene README. The user-provided source and normalized dependency are bundled with the project assets.",
+      "redistribution": "CC BY-NC 4.0: retain attribution, source, license and modification notice; noncommercial use.",
+      "scenes": [
+        "rigid_rigid/curling_collision"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "name": "granite_stone_and_handle",
+      "registry_id": "sketchfab/curling_stone_filinmx",
+      "dimensions_m": [
+        0.2900000065565109,
+        0.28999997675418854,
+        0.18461018055677414
+      ],
+      "count": 3,
+      "original_mesh_preserved": false,
+      "normalization": "Original GLB baked, uniformly scaled to a measured 29 cm maximum horizontal diameter, centered in XY and grounded at Z=0. The scene then keeps the cap and handle islands with two subdivision levels and replaces the 24-sided body with a 192-segment lathe through the same measured profile.",
+      "license": "CC BY-NC 4.0",
+      "finish_modifications": {
+        "atlas_used": false,
+        "logos_removed": true,
+        "granite": "Procedural interlocking mineral cells in stone-local metres, mirror-polished shoulders with handling scuffs (roughness 0.16-0.22), narrow matte chipped striking band, independent pattern per stone",
+        "polymer": "Plain handle pigment with satin roughness and a thin gloss coat; yellow pigment (0.90, 0.60, 0.00) linear"
+      }
+    },
+    {
+      "name": "two_sheet_indoor_curling_club",
+      "source": "Original 3D geometry and procedural ice in appearance/look_curling_collision.py, scanned dependencies listed in background_dependencies",
+      "dimensions_reference_m": {
+        "sheet_width": 4.75,
+        "sheet_length": 44.5,
+        "house_diameter": 3.66,
+        "far_board_y": 7.65,
+        "rear_wall_y": 10.05,
+        "ceiling_height": 5.5
+      },
+      "components": [
+        "continuous pebbled ice, buried paint and house, centre, tee, back and hog lines, paint mottling and sparse broom debris",
+        "seeded wear map of stone tracks, lane wear and sweep scuffs",
+        "painted scanned concrete block walls with running-bond courses",
+        "low charcoal foam perimeter bumper",
+        "rubber-matted walkway with slatted benches, towel, waste bin and brooms",
+        "gallery opening with reveal, glazing, blinds and the club bar interior with every label, menu and screen picture flattened or removed",
+        "two rows of framed team photographs, conduit and switch box",
+        "service door with kick plate, push bar and vision pane, unlettered twin-head emergency light and label-free fire extinguisher",
+        "closed end and near walls, roof purlins, ventilation, ceiling battens and walkway downlights"
+      ],
+      "no_text_policy": "No lettering, figures, menus, logos or brand marks anywhere in the rendered room",
+      "license": "Original project-authored geometry/materials",
+      "external_background_images": [],
+      "visual_reference_page": "https://curl-aberdeen.co.uk/about/"
+    }
+  ],
+  "reproduction": "Requires the registered normalized_stone.blend; all original maps are packed. Source GLB and normalization tool included. Set PCVE_ASSETS_DIR to the bundled assets root. Saved scene is self-contained.",
+  "revision_scope": "Appearance only: lathed stone body, polished procedural granite and plain polymer handles, glossy pebbled ice with seeded wear map, paint mottling and broom debris, closed room with scanned block surfaces, club bar interior behind a real window opening with every label flattened, low foam bumper on the far side line, rubber-matted walkway with benches, bin and brooms, two rows of team photographs, service door, conduit and uneven lighting; no lettering or brand marks; low 0.78 m camera at 66 mm and f/3.2 with a compositor-only camera finish (lateral colour, bloom, vignette) and a 0.25-frame shutter. Physical parameters, 480 Hz samples, frame poses and contact events do not depend on the appearance.",
+  "visual_reference_pages": [
+    {
+      "url": "https://www.kaysscotland.com/curling-stones",
+      "usage": "Appearance reference only; no copied image included"
+    },
+    {
+      "url": "https://www.nms.ac.uk/discover-catalogue/the-roaring-game-scotlands-curling-stone-island",
+      "usage": "Mineral color/texture reference only; optical parameters are qualitative, not experimentally measured"
+    }
+  ],
+  "optical_model": "Opaque frosted ice base under a full-strength glossy coat, two pebble droplet sizes (5.5 mm nominal spacing, 300 micrometre height), slow reflection-wobbling undulation and a seeded wear map. Painted markings use a haze approximation. Not a measured or volumetric ice model.",
+  "reference_policy": "Reference photographs inspected separately; none used as a texture, background or included in deliverable archives.",
+  "background_dependencies": [
+    {
+      "registry_id": "polyhaven/concrete_block_wall",
+      "use": "Painted rear and side wall block",
+      "source": "https://polyhaven.com/a/concrete_block_wall",
+      "license": "CC0"
+    },
+    {
+      "registry_id": "polyhaven/plywood",
+      "use": "Benches, window sill, photo frames",
+      "source": "https://polyhaven.com/a/plywood",
+      "license": "CC0 1.0"
+    },
+    {
+      "registry_id": "blenderkit/cafe_interior_loft_bar",
+      "use": "Club bar seen through the gallery window; clipped at the wall plane, textures reduced to 512 px; every label, menu and screen texture is flattened to its mean colour and the till is removed",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/7318c56a-505e-4a37-a9bc-ea0880ceabf4/",
+      "license": "royalty_free",
+      "redistribution": "Render in a project; do not redistribute the raw model."
+    },
+    {
+      "registry_id": "blenderkit/kitchen_towel",
+      "use": "Towel on a bench",
+      "source": "https://www.blenderkit.com/asset-gallery-detail/d444e2d9-42c1-423e-aec8-16eb754d6535/",
+      "license": "royalty_free",
+      "redistribution": "Render in a project; do not redistribute the raw model."
+    }
+  ]
+}

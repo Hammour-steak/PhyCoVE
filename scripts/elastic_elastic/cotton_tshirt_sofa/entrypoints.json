@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "scene": "cotton_tshirt_sofa",
+  "category": "elastic_elastic",
+  "case_number": 25,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_cotton_tshirt_sofa.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--source-cache",
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--pool-audit"
+      ],
+      "cases": [
+        "source",
+        "stiff_shirt",
+        "heavy_shirt",
+        "low_friction",
+        "remove_seat",
+        "low_friction_at_frame_10"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_cotton_tshirt_sofa.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--cache",
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--pool-audit",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "stiff_shirt",
+        "heavy_shirt",
+        "low_friction",
+        "remove_seat",
+        "low_friction_at_frame_10"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_cotton_tshirt_sofa.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "stiff_shirt",
+        "heavy_shirt",
+        "low_friction",
+        "remove_seat",
+        "low_friction_at_frame_10"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/cotton_tshirt_sofa",
+  "implementation_policy": "libuipc 0.0.28 CUDA IPC solve (tools/native/simulate.py) of an ivory cotton T-shirt (24,150-vertex sewn shell, strain-limiting Baraff-Witkin membrane plus discrete shell bending, effective E 0.3 MPa, 400 kg/m^3 x 0.45 mm = 180 g/m^2, friction 0.6) released from a gravity-prepared state with its lowest point 0.82 m above the floor onto the right Stable Neo-Hookean foam seat cushion (E 12 kPa, 35 kg/m^3, bottom 18 mm attached) of a fixed sofa; passive quadratic air drag is an external force, dt 1/240 s, 96 states at (k-1)/24 s plus three solver states per frame for a 1/60 s exposure (shutter_positions.npz). The four edits change only their DSL-bound parameter (tools/native/edit_vocab.py); the timed edit low_friction_at_frame_10 restores the shirt and seat FEM positions and velocities of frame 10 from the source cache (--source-cache) and continues with the edited friction, frames 1-9 being the source samples. tools/native/render.py replays the native states and exposure samples in Blender Cycles (camera from assets presentation.json); tools/native/realism.py is the published look over it (afternoon sun, room material wear). simulate/render entries launch through tools/native/pool_job.py (GPU policy ranking, lease, UUID binding, receipt under renders/cotton_tshirt_sofa/). build_pcve verifies the accepted delivery (tools/retained_delivery.py: native states bound to their render reports) and the timed edit's merged cache in the published suite; tools/export_ground_truth.py writes pcve_ground_truth/1. Effective material parameters, not fitted to a measured product.",
+  "implementation_files": [
+    "simulate_cotton_tshirt_sofa.py",
+    "render_cotton_tshirt_sofa.py",
+    "build_pcve_cotton_tshirt_sofa.py",
+    "edit_vocab.py",
+    "scene_driver.py",
+    "scene_manifest.json",
+    "tools/retained_delivery.py",
+    "tools/export_ground_truth.py",
+    "tools/native/common.py",
+    "tools/native/edit_vocab.py",
+    "tools/native/scene_spec.json",
+    "tools/native/simulate.py",
+    "tools/native/pool_job.py",
+    "tools/native/render.py",
+    "tools/native/room.py",
+    "tools/native/textiles.py",
+    "tools/native/photographic.py",
+    "tools/native/realism.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_cotton_tshirt_sofa.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

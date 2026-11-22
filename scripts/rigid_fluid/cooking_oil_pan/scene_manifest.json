@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "scene_id": "cooking_oil_pan",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_cooking_oil_pan.py",
+    "render": "render_cooking_oil_pan.py",
+    "build_pcve": "build_pcve_cooking_oil_pan.py"
+  },
+  "supported_cases": [
+    "cooking_oil_pan_baseline",
+    "edit_increase_flow",
+    "edit_decrease_flow",
+    "edit_increase_at_2s",
+    "edit_decrease_at_1s",
+    "edit_increase_viscosity"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_cooking_oil_pan_suite": {
+      "target": "renders/pcve_suites/pcve_cooking_oil_pan_suite",
+      "case_video_sha256": {
+        "cooking_oil_pan_baseline": "24dee53db1b634d553852d7b6fd9e3ecbddee55fbf12a7738e2f3033d3342f08",
+        "edit_increase_flow": "2022d60d620ddd41301dd313fafbc170481cd29cdbab3c3a34e714b3cea9b931",
+        "edit_decrease_flow": "79e7b29036f246e77289284ee7713b70597f690c300b21f2a72d2fb28d9ccafb",
+        "edit_increase_at_2s": "e5036cb9f5a512de3343844d07b8c7dbc9dfa15f410993c57c4943d7618b7b23",
+        "edit_decrease_at_1s": "27123cc08a9603522a9c921dd22b9e0e29920327c02cd478ddbc88f8497555a6",
+        "edit_increase_viscosity": "406c9f9a12a770f5ce228680e39ed2195f1ea8dfbb9b47c164dbe92280bcc1e5",
+        "edit_delete_pan": "fea6ce62104e0e890806dac8d2f837c853a2211a0b184070396c4c230f2bf115"
+      },
+      "public_case_ids": {
+        "cooking_oil_pan_baseline": "source",
+        "edit_increase_flow": "edit_increase_flow",
+        "edit_decrease_flow": "edit_decrease_flow",
+        "edit_increase_at_2s": "edit_increase_at_2s",
+        "edit_decrease_at_1s": "edit_decrease_at_1s",
+        "edit_increase_viscosity": "edit_increase_viscosity"
+      }
+    }
+  }
+}

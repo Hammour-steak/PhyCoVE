@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scene_id": "spring_block_step",
+  "interaction_category": "rigid_elastic",
+  "review_status": "published_suite_pending_visual_review",
+  "entry_points": {
+    "simulate": "simulate_spring_block_step.py",
+    "render": "render_spring_block_step.py",
+    "build_pcve": "build_pcve_spring_block_step.py"
+  },
+  "supported_cases": [
+    "source",
+    "mass_half",
+    "young_quarter",
+    "friction_half",
+    "remove_spring",
+    "add_block"
+  ],
+  "canonical_suites": {
+    "pcve_spring_block_step_suite": {
+      "target": "renders/pcve_suites/pcve_spring_block_step_suite",
+      "case_video_sha256": {
+        "source": "c3a2964e7e64c9cc4d08d704eabd74c5b854f4589ef866c01c8e43b6f15ae848",
+        "mass_half": "daa3ec953d15a6ebb1d777283aa38a9ab4e92c719387d06345d763b366e98ccc",
+        "young_quarter": "a4a393e9368597415985ca203c1d5d857416bcfca10eb91c12606a4e82e96d10",
+        "friction_half": "20e887dfcb5cec6b5c5e3a8a00a7b8765ccc04b828a75bcb2a28ab47eaaca0fd",
+        "remove_spring": "3f82d4b2469680c8a6bfc930dd1276e2f1caa8eafd6f37d0aa4c7c3cc412629e",
+        "add_block": "7b59e1230ce96842334e685d55ed59b853d1d1a23923c5bf2aae41d981235f90",
+        "edit_remove_block": "b7b8fbbade849dacd7b37229be50b005efdf8ed474aad668d05ad3c2d95340cf"
+      }
+    }
+  },
+  "native_outputs": {
+    "state_root": "assets/scenes/spring_block_step/native_states",
+    "audit_root": "renders/spring_block_step/physics_audit/pcve_spring_block_step_suite/cases",
+    "render_root": "renders/spring_block_step/accepted/render",
+    "render_case_dir": "{case}",
+    "render_record": "render_report.json",
+    "note": "<state_root>/<case>/ holds the accepted PyBullet states (registered in assets.json); <audit_root>/<case>/physics_audit.json is the solver report with the half-step convergence check; <render_root>/<case>/render_report.json is the render record of the published video (a new render also writes the 96 PNG frames, scene.blend with relative texture paths and the ground-truth camera, and video.mp4 there)."
+  },
+  "case_state_sha256": {
+    "source": "c2c7349b2925f3adb85f4f1ad35b66b488aff25f548bb332a8e1391a376b4d71",
+    "mass_half": "3570054b989b39e4eec5d60ebbaf82f1f65624b4e7644b482b25f61a7edb359b",
+    "young_quarter": "57e4357b69a7dbe0f4a519a83a0a67ee842208fb3d58ee7720196c4ff92a715b",
+    "friction_half": "24bdf4e80faeff2b260961c1da6de1bb674f3e1dddfbfa12209f4a6a26adaa9a",
+    "remove_spring": "fb8031d27488c17c92e201d4695609d967b87b6488eae41026dd583e4c930f02",
+    "add_block": "2851443eccda35bfd44c2e305a304d4576605e1cec71c64ce3b4a69d575e359d"
+  },
+  "accepted_render": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "cycles_samples": 256,
+    "adaptive_threshold": 0.01,
+    "denoiser": "OpenImageDenoise",
+    "motion_blur_shutter_frames": 0.25,
+    "appearance": "appearance/realism.py on appearance/render.py + base_scene.py",
+    "devices": {
+      "source": "OPTIX NVIDIA GeForce RTX 4090",
+      "mass_half": "OPTIX NVIDIA GeForce RTX 4090",
+      "young_quarter": "OPTIX NVIDIA GeForce RTX 4090",
+      "friction_half": "OPTIX NVIDIA GeForce RTX 4090",
+      "remove_spring": "OPTIX NVIDIA GeForce RTX 4090",
+      "add_block": "OPTIX NVIDIA GeForce RTX 4090"
+    },
+    "media_contract": "pcve-main-720p-4s-24fps"
+  }
+}

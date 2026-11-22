@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scene_id": "bowling",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_bowling.py",
+    "render": "render_bowling.py",
+    "build_pcve": "build_pcve_bowling.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "appearance/appearance_venue.json",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_light_ball",
+    "edit_heavy_P01",
+    "edit_remove_P01",
+    "edit_grippy_P01"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_bowling_suite": {
+      "target": "renders/pcve_suites/pcve_bowling_suite",
+      "case_video_sha256": {
+        "source": "fbb0fbe092fb3e4dd92f4906329ade44080cf18e15b7d5e6a3a2a56574f89b3b",
+        "edit_light_ball": "55a64a3511a343aff668e490b792d46c2e2fbfa7fd47e01b3a37120ecc288eaa",
+        "edit_heavy_P01": "7e3c2e915f2c86dbb168ea06b68de1bb92ed1b4976f0321b47e0d34c8caacd97",
+        "edit_remove_P01": "0a38cec08e6d097419d8c2b0a1f9a7fbb83510a00aacc4f47d49a5bbdc75bae7",
+        "edit_grippy_P01": "d2c86f367a22313c82b2e5e78942aa17fc5ce1cdefa3225e5dc8f939317c12ff",
+        "edit_remove_B01": "1b6ffb0b258ef8add57c4f7d53077a6cf5239216c8f1223c631a5a59748b2afa"
+      }
+    }
+  }
+}

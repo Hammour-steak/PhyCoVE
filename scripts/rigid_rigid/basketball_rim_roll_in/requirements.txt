@@ -1,0 +1,5 @@
+# Simulation environment; Blender's bpy ships with the renderer.
+pybullet==3.2.7
+# Only for the shot search scripts outside this folder; the scene itself is
+# plain Python + pybullet.
+numpy

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scene_id": "toy_car_silicone_bridge",
+  "interaction_category": "rigid_elastic",
+  "entry_points": {
+    "simulate": "simulate_toy_car_silicone_bridge.py",
+    "render": "render_toy_car_silicone_bridge.py",
+    "build_pcve": "build_pcve_toy_car_silicone_bridge.py"
+  },
+  "configuration": [
+    "physics/bridge_physics.py",
+    "appearance/appearance.json",
+    "edit_vocab.py",
+    "asset_sources.json"
+  ],
+  "supported_cases": [
+    "source",
+    "soft_bridge",
+    "stiff_bridge",
+    "heavy_car",
+    "delete_bridge"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_toy_car_silicone_bridge_suite": {
+      "target": "renders/pcve_suites/pcve_toy_car_silicone_bridge_suite",
+      "case_video_sha256": {
+        "source": "580fd1392616d6a71cee4cd4c9fd73b61e8d11ec59c7186c4197ea138fd0c72f",
+        "soft_bridge": "a3220f3e94c2709bdf8da4dca9d5eb3d89be8a5dff321634ea291b13ffe887fa",
+        "stiff_bridge": "55aa3a43956d33332946141617d79f7e29579f33ddbebc65ab8c8e0c59249ed2",
+        "heavy_car": "9c95870239224f4828cd7e2bc8c4f84f92e38f1f371d6fb1f8898ec41479d776",
+        "delete_bridge": "8804c9a8b449f8194343e42bb5c794a3f1c3550acd996f9c8e71e8cadd288034",
+        "edit_delete_car": "901ff40e20cf8a1ac28fee337113e48218a30b3c6e52a7aa6355ea8019bcf2e6"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "soft_bridge": "edit_soft_bridge",
+        "stiff_bridge": "edit_stiff_bridge",
+        "heavy_car": "edit_heavy_car",
+        "delete_bridge": "edit_delete_bridge"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_bridge": "8804c9a8b449f8194343e42bb5c794a3f1c3550acd996f9c8e71e8cadd288034",
+        "edit_delete_car": "901ff40e20cf8a1ac28fee337113e48218a30b3c6e52a7aa6355ea8019bcf2e6",
+        "edit_heavy_car": "9c95870239224f4828cd7e2bc8c4f84f92e38f1f371d6fb1f8898ec41479d776",
+        "edit_soft_bridge": "a3220f3e94c2709bdf8da4dca9d5eb3d89be8a5dff321634ea291b13ffe887fa",
+        "edit_stiff_bridge": "55aa3a43956d33332946141617d79f7e29579f33ddbebc65ab8c8e0c59249ed2",
+        "source": "580fd1392616d6a71cee4cd4c9fd73b61e8d11ec59c7186c4197ea138fd0c72f"
+      }
+    }
+  }
+}

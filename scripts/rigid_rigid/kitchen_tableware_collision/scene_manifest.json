@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "scene_id": "kitchen_tableware_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_kitchen_tableware_collision.py",
+    "render": "render_kitchen_tableware_collision.py",
+    "build_pcve": "build_pcve_kitchen_tableware_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "kitchen_tableware_collision_baseline",
+    "edit_heavy_driver",
+    "edit_fast_driver",
+    "edit_no_restitution",
+    "edit_remove_receiver",
+    "edit_frictionless_counter_timed",
+    "edit_remove_bowl_a"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_kitchen_tableware_collision_suite": {
+      "target": "renders/pcve_suites/pcve_kitchen_tableware_collision_suite",
+      "case_video_sha256": {
+        "edit_fast_driver": "44a9fd528bab986a06ca92620776bc240091e52095bc4d251f0a9e9aebe74775",
+        "edit_frictionless_counter_timed": "cd9fb2a7e3efccc04e2a63c2bcebcca510f68ea491e7b68eb43820172e97fb0d",
+        "edit_heavy_driver": "881cea10a3df76086c1019db322d179fa5accdb39debfa91c43e8b6d5f00fb92",
+        "edit_no_restitution": "2263ff5f8d86d38ec6c0119b211cea1241d836689976c23cb8a4c973c23bf675",
+        "edit_remove_bowl_a": "71c40f7da4bba105476136a4151379792d373fe062c7b97ac01a7d6e74cb6468",
+        "edit_remove_receiver": "06f265fad08f6af6fe239f92dedd8dc43a5c82201c47c2d503809bf1054adcf7",
+        "kitchen_tableware_collision_baseline": "c733b4c8373c4afd4a3af114ec39ee505ad4829c68777697d2dbd48637299da5"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "kitchen_tableware_collision_baseline": "source",
+        "edit_heavy_driver": "edit_heavy_driver",
+        "edit_fast_driver": "edit_fast_driver",
+        "edit_no_restitution": "edit_no_restitution",
+        "edit_remove_receiver": "edit_remove_receiver",
+        "edit_frictionless_counter_timed": "edit_frictionless_counter_timed"
+      },
+      "public_case_video_sha256": {
+        "edit_fast_driver": "44a9fd528bab986a06ca92620776bc240091e52095bc4d251f0a9e9aebe74775",
+        "edit_frictionless_counter_timed": "cd9fb2a7e3efccc04e2a63c2bcebcca510f68ea491e7b68eb43820172e97fb0d",
+        "edit_heavy_driver": "881cea10a3df76086c1019db322d179fa5accdb39debfa91c43e8b6d5f00fb92",
+        "edit_no_restitution": "2263ff5f8d86d38ec6c0119b211cea1241d836689976c23cb8a4c973c23bf675",
+        "edit_remove_bowl_a": "71c40f7da4bba105476136a4151379792d373fe062c7b97ac01a7d6e74cb6468",
+        "edit_remove_receiver": "06f265fad08f6af6fe239f92dedd8dc43a5c82201c47c2d503809bf1054adcf7",
+        "source": "c733b4c8373c4afd4a3af114ec39ee505ad4829c68777697d2dbd48637299da5"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/kitchen_tableware_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "polyhaven/kitchen_tableware_collision",
+      "scenes/kitchen_tableware_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

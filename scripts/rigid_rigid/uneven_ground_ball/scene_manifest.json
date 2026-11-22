@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "scene_id": "uneven_ground_ball",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_uneven_ground_ball.py",
+    "render": "render_uneven_ground_ball.py",
+    "build_pcve": "build_pcve_uneven_ground_ball.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "uneven_ground_ball_baseline",
+    "edit_slow_ball",
+    "edit_fast_ball",
+    "edit_low_friction",
+    "edit_high_rolling_resistance",
+    "edit_braking_timed"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_uneven_ground_ball_suite": {
+      "target": "renders/pcve_suites/pcve_uneven_ground_ball_suite",
+      "case_video_sha256": {
+        "edit_braking_timed": "929752d6b138f73ee1d8c5d3d8b633ad496588a9f2cf3fef3b0b1ae70507a2c0",
+        "edit_fast_ball": "610d21fd671040d74ab84ed483f2f9caf1431c320c290b28ee30f77198cd356f",
+        "edit_high_rolling_resistance": "1d92f5a9a53e1df727e0c9cb864b5810bc06678b5c8d8862625d712734f1290c",
+        "edit_low_friction": "4f705b95002530cf63ec1d3899fda574854685afe22afcbef71ebbd09e2a4d9b",
+        "edit_slow_ball": "7323ecd189a8597cb5e2e7a0b93dc85ff403a996580a60da492831a5460cab69",
+        "uneven_ground_ball_baseline": "461c7091efc9be9ff15d152a8c058fe90d119a6525a3dd1dd50e749fbcb3811c"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "uneven_ground_ball_baseline": "source",
+        "edit_slow_ball": "edit_slow_ball",
+        "edit_fast_ball": "edit_fast_ball",
+        "edit_low_friction": "edit_low_friction",
+        "edit_high_rolling_resistance": "edit_high_rolling_resistance",
+        "edit_braking_timed": "edit_braking_timed"
+      },
+      "public_case_video_sha256": {
+        "edit_braking_timed": "929752d6b138f73ee1d8c5d3d8b633ad496588a9f2cf3fef3b0b1ae70507a2c0",
+        "edit_fast_ball": "610d21fd671040d74ab84ed483f2f9caf1431c320c290b28ee30f77198cd356f",
+        "edit_high_rolling_resistance": "1d92f5a9a53e1df727e0c9cb864b5810bc06678b5c8d8862625d712734f1290c",
+        "edit_low_friction": "4f705b95002530cf63ec1d3899fda574854685afe22afcbef71ebbd09e2a4d9b",
+        "edit_slow_ball": "7323ecd189a8597cb5e2e7a0b93dc85ff403a996580a60da492831a5460cab69",
+        "source": "461c7091efc9be9ff15d152a8c058fe90d119a6525a3dd1dd50e749fbcb3811c"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/uneven_ground_ball",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/uneven_ground_ball"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "scene_id": "office_desk_kettle_tip",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_office_desk_kettle_tip.py",
+    "render": "render_office_desk_kettle_tip.py",
+    "build_pcve": "build_pcve_office_desk_kettle_tip.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "office_desk_kettle_tip_baseline",
+    "edit_heavy_kettle",
+    "edit_heavy_pen_holder",
+    "edit_remove_pen",
+    "edit_remove_pen_holder",
+    "edit_remove_kettle"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_office_desk_kettle_tip_suite": {
+      "target": "renders/pcve_suites/pcve_office_desk_kettle_tip_suite",
+      "case_video_sha256": {
+        "office_desk_kettle_tip_baseline": "d130ec7af09630bc33ee0724c2c55d28899da7762149f75a005a2aa928973204",
+        "edit_heavy_kettle": "85883576843ed55b909dfecd0f47c0e62d25d9d581a65fb8402375d66cacf344",
+        "edit_heavy_pen_holder": "e0bc73903bf91b530f79b4e69736fddd021c2327a169ff0963cd5ddcdfaad99c",
+        "edit_remove_pen": "26ac469784a59588af0d24e3ac5817b0286687eabfdae86e29a6c9b5a552c0b8",
+        "edit_remove_pen_holder": "50a14e626faa9868414c6f9283f4c84f6827546d2074a892ca43e3418de5d117",
+        "edit_remove_kettle": "802cd7034ce6ccbf099a4a4fbabbe8d8914bc9d66f48694f71fad1b40fbfd1e6"
+      },
+      "last_render": {
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 24,
+        "frames": 96,
+        "samples": 256,
+        "engine": "Cycles",
+        "backend": "CUDA",
+        "denoiser": "OpenImageDenoise"
+      },
+      "distribution_schema_version": 3,
+      "prompts_complete": true,
+      "public_case_ids": {
+        "office_desk_kettle_tip_baseline": "source",
+        "edit_heavy_kettle": "edit_heavy_kettle",
+        "edit_heavy_pen_holder": "edit_heavy_pen_holder",
+        "edit_remove_pen": "edit_remove_pen",
+        "edit_remove_pen_holder": "edit_remove_pen_holder"
+      },
+      "public_case_video_sha256": {
+        "source": "d130ec7af09630bc33ee0724c2c55d28899da7762149f75a005a2aa928973204",
+        "edit_heavy_kettle": "85883576843ed55b909dfecd0f47c0e62d25d9d581a65fb8402375d66cacf344",
+        "edit_heavy_pen_holder": "e0bc73903bf91b530f79b4e69736fddd021c2327a169ff0963cd5ddcdfaad99c",
+        "edit_remove_pen": "26ac469784a59588af0d24e3ac5817b0286687eabfdae86e29a6c9b5a552c0b8",
+        "edit_remove_pen_holder": "50a14e626faa9868414c6f9283f4c84f6827546d2074a892ca43e3418de5d117",
+        "edit_remove_kettle": "802cd7034ce6ccbf099a4a4fbabbe8d8914bc9d66f48694f71fad1b40fbfd1e6"
+      }
+    }
+  },
+  "source_provenance": "authored in this repository (modelled on clean_scripts conventions)",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/office_desk_kettle_tip"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

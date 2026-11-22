@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "scene_id": "wood_block_rubber_stop",
+  "interaction_category": "rigid_elastic",
+  "review_status": "published_suite_pending_visual_review",
+  "entry_points": {
+    "simulate": "simulate_wood_block_rubber_stop.py",
+    "render": "render_wood_block_rubber_stop.py",
+    "build_pcve": "build_pcve_wood_block_rubber_stop.py"
+  },
+  "supported_cases": [
+    "source",
+    "fast_block",
+    "heavy_block",
+    "soft_010",
+    "remove_bumper",
+    "add_mid_block"
+  ],
+  "canonical_suites": {
+    "pcve_wood_block_rubber_stop_suite": {
+      "target": "renders/pcve_suites/pcve_wood_block_rubber_stop_suite",
+      "case_video_sha256": {
+        "source": "c57f28f7096416bc2d1f2f2de4c48bbe59e76124ccd9a02f0a4fe677d04cad3c",
+        "fast_block": "1894dd96065b446382a8f18c60cd143deeb2b725b1a9e503d3f8c7064d96b752",
+        "heavy_block": "247f72855f5a36c54eff172efc980ce3fda405e3066f3c4afd25f6d0db158bf7",
+        "soft_010": "eb562987820cd8352a265884370c331b02d3a520ee2adb55a6117e4f748f51be",
+        "remove_bumper": "153ed17a2da4f4df4542d4357df298e316b2d002bf367f7030c6806385fecf97",
+        "add_mid_block": "115ad0682362b86855cb5af8ce3687bb7d0d5e8fe82973e131ba430031e156e0",
+        "edit_remove_wood_block": "22f92293db29dab43bf8d73d72f58b0846b338a6d7167d73d6aafd9af5d630f8"
+      }
+    }
+  },
+  "native_outputs": {
+    "cache_root": "assets/scenes/wood_block_rubber_stop/native_cache",
+    "simulation_root": "renders/wood_block_rubber_stop/accepted/sim",
+    "render_root": "renders/wood_block_rubber_stop/accepted/render",
+    "render_record": "render_report.json",
+    "note": "<render_root>/<case>/render_report.json is the render record of the published video (a new render also writes the 96 PNG frames, scene.blend with relative texture paths and video.mp4 there); <simulation_root>/<case>/ holds the solver configuration and both audits of the registered cache."
+  },
+  "accepted_render": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "cycles_samples": 256,
+    "denoiser": "OpenImageDenoise",
+    "motion_blur_shutter_s": 0.010416666666666666,
+    "appearance": "appearance/render.py + appearance/room.py",
+    "devices": {
+      "source": "CPU",
+      "fast_block": "OPTIX",
+      "heavy_block": "OPTIX",
+      "soft_010": "OPTIX",
+      "remove_bumper": "OPTIX",
+      "add_mid_block": "OPTIX"
+    },
+    "native_sample_hz": 240,
+    "native_frame_stride": 10,
+    "media_contract": "pcve-main-720p-4s-24fps"
+  },
+  "case_cache_sha256": {
+    "source": "c07b96adf157a434aea75152b9b7890ac1ee275850323811b5b00084bb4a122b",
+    "fast_block": "583fd59ef8af578048b737913aedbc27f91080719e027bbc6fc5709f835cdb7a",
+    "heavy_block": "bc015d4bf01e34b8958b3428544f2fd291e15fa3e930ae3c2a6271dd36969403",
+    "soft_010": "dc07cc8104c9db5606afd7695110d52537ce9a1d38dab2344686cc79fe16ef26",
+    "remove_bumper": "94700a890b98fcfff05d12828e7d8e655717f72ce05eba7e8fe59948bc9dd90d",
+    "add_mid_block": "1165bcbac90e8f5345288098c7e00852cf31e6fa28d4002e7e8ce077796c1499"
+  }
+}

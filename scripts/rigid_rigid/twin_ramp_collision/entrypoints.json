@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "scene": "twin_ramp_collision",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_twin_ramp_collision.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--case",
+        "--scenario-overrides-json"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_twin_ramp_collision.py",
+      "runtime": "blender",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--physics-json",
+        "--asset-root",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--skip-existing",
+        "--appearance-json",
+        "--synchronized-cache"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_twin_ramp_collision.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--threads-native",
+        "--device",
+        "--skip-existing"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "source",
+        "edit_heavy_left",
+        "edit_low_restitution",
+        "edit_remove_right"
+      ]
+    }
+  },
+  "workflows": {
+    "realism": {
+      "file": "build_realism_twin_ramp_collision.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--physics-source-root",
+        "--appearance-json",
+        "--stage",
+        "--gpus",
+        "--blender"
+      ],
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "stage_semantics": "selector",
+      "cases": [],
+      "description": "Re-render an existing physics suite with the current look (the appearance and photographic shutter in scene_config.py, or --appearance-json); physics reused byte for byte."
+    }
+  },
+  "implementation_policy": "Simultaneous gravity-only release, zero initial velocities, two free 6-DOF spheres and a fixed continuous symmetric ramp. No external forces, constraints, authored dynamics or post-collision spin resets. Independent source-gated single-property edits.",
+  "implementation_files": [
+    "scene_config.py",
+    "simulate_twin_ramp_collision.py",
+    "physics/graybox_twin_ramp_collision.py",
+    "physics/validate_twin_ramp_collision.py",
+    "appearance/look_twin_ramp_collision.py",
+    "render_twin_ramp_collision.py",
+    "build_pcve_twin_ramp_collision.py",
+    "edit_vocab.py",
+    "physics/audit_twin_ramp_collision.py",
+    "appearance/audit_saved_scenes.py",
+    "physics/render_queue.py",
+    "build_realism_twin_ramp_collision.py",
+    "realism_assets.json"
+  ]
+}

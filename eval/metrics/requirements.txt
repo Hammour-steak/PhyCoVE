@@ -1,0 +1,10 @@
+# CF, Mask IoU and visual fidelity (eval/metrics); the scoring scripts need only numpy and opencv-python.
+numpy>=1.24
+opencv-python>=4.8
+torch>=2.1
+torchvision>=0.16
+lpips>=0.1.4
+# also needed, installed from their own repositories or releases (see README):
+#   SAM 2 (package "sam2") with the hiera large checkpoint
+#   CoTracker3 (package "cotracker") with the offline checkpoint
+#   the Kinetics-400 I3D TorchScript for FVD

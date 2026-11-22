@@ -1,0 +1,133 @@
+{
+  "style": "fresh_kneaded_dough",
+  "environment_type": "baking_bench",
+  "dough_color_linear": [
+    0.7,
+    0.565,
+    0.36
+  ],
+  "dough_roughness": 0.5,
+  "camera_position_m": [
+    0.22,
+    -0.59,
+    0.46
+  ],
+  "camera_target_m": [
+    -0.015,
+    -0.025,
+    0.025
+  ],
+  "camera_focal_length_mm": 38,
+  "camera_fstop": 8,
+  "environment": "A fitted kitchen in a closed room lit only by overcast daylight through a side window: honed light grey engineered-quartz worktop above sage cabinets with nickel pulls, empty undermounted steel sink and curved faucet, glazed white subway-tile backsplash, maple pastry board with flour dusting, flour bowl, rolling pin, bench scraper and a folded linen towel.",
+  "rigid_object": "whole_brown_egg",
+  "rigid_asset": "assets/rigid_egg/normalized_egg.blend",
+  "room": {
+    "left_wall_x_m": -1.2,
+    "right_wall_x_m": 1.75,
+    "front_wall_y_m": -2.6,
+    "ceiling_z_m": 1.65,
+    "window_y_m": [
+      -0.8,
+      0.25
+    ],
+    "window_z_m": [
+      0.12,
+      1.3
+    ],
+    "wall_color": [
+      0.7,
+      0.68,
+      0.63
+    ]
+  },
+  "daylight": {
+    "sky_strength": 8.0,
+    "sky_rotation_deg": 0.0
+  },
+  "render": {
+    "samples": 256,
+    "adaptive_threshold": 0.01,
+    "clamp_indirect": 10.0,
+    "diffuse_bounces": 4,
+    "agx_look": "AgX - Medium High Contrast",
+    "exposure": 1.5,
+    "motion_blur": true,
+    "shutter_frames": 0.25
+  },
+  "worktop": {
+    "color": [
+      0.56,
+      0.56,
+      0.535
+    ],
+    "roughness_min": 0.24,
+    "roughness_max": 0.46
+  },
+  "board": {
+    "tint": [
+      0.88,
+      0.78,
+      0.62
+    ],
+    "flour_radius_m": 0.2,
+    "flour_amount": 0.85,
+    "glue_line_strength": 0.2
+  },
+  "towel": {
+    "color": [
+      0.43,
+      0.39,
+      0.32
+    ],
+    "stripe_color": [
+      0.1,
+      0.15,
+      0.12
+    ]
+  },
+  "dough": {
+    "specular_ior_level": 0.36,
+    "subsurface_weight": 0.3,
+    "subsurface_radius": [
+      1.0,
+      0.62,
+      0.34
+    ],
+    "subsurface_scale_m": 0.003,
+    "roughness_min": 0.36,
+    "roughness_max": 0.5,
+    "lump_bump_m": 0.0008,
+    "flour_amount": 0.85
+  },
+  "egg_shell_treatment": {
+    "light_linear": [
+      0.53,
+      0.3,
+      0.13
+    ],
+    "dark_linear": [
+      0.34,
+      0.165,
+      0.062
+    ],
+    "mottle_scale_per_m": 60,
+    "source_speckle_min": 0.72,
+    "speckle_linear": [
+      0.2,
+      0.075,
+      0.03
+    ],
+    "speckle_scale_per_m": 520,
+    "speckle_strength": 0.45,
+    "roughness_range": [
+      0.52,
+      0.72
+    ],
+    "specular_ior_level": 0.32,
+    "sheen_weight": 0.12,
+    "pore_scale_per_m": 9000,
+    "pore_bump_distance_m": 1.2e-05,
+    "pore_bump_strength": 0.35
+  }
+}

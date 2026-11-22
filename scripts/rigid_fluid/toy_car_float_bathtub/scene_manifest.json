@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "scene_id": "toy_car_float_bathtub",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_toy_car_float_bathtub.py",
+    "render": "render_toy_car_float_bathtub.py",
+    "build_pcve": "build_pcve_toy_car_float_bathtub.py"
+  },
+  "supported_cases": [
+    "toy_car_float_bathtub_baseline",
+    "edit_no_float",
+    "edit_heavy_car",
+    "edit_low_density",
+    "edit_density_at_2s",
+    "edit_no_car"
+  ],
+  "workflows": {},
+  "configuration": {
+    "simulation": {
+      "solver": "Genesis 1.4.3 DFSPH at 6 mm (1.38 M particles); bathtub, float and car are ghost-particle shells with their own pressure; float and car are two-way coupled rigid bodies",
+      "baseline_physics": {
+        "water_density_kg_m3": 998.0,
+        "water_kinematic_viscosity_m2_s": 1e-06,
+        "car_mass_kg": 2.0,
+        "float_mass_kg": 0.15,
+        "drop_height_above_float_m": 0.55,
+        "gravity_m_s2": 9.81
+      },
+      "fps": 24,
+      "frames": 96,
+      "steps_per_frame": 10,
+      "substeps": 8,
+      "surface_tension": 0.02,
+      "start": "accepted settled water and float (assets/scenes/toy_car_float_bathtub/settled/)",
+      "timed_edit": "edit_density_at_2s continues the source run from its frame-49 checkpoint (--resume-from, --resume-frame)",
+      "edit_flags": "edit_vocab.sim_args maps each edit DSL onto simulate_toy_car_float_bathtub.py flags"
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 256,
+      "denoising": true,
+      "motion_blur_shutter_frames": 0.5,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96,
+      "camera": {
+        "position_m": [
+          -1.05,
+          0.8,
+          1.62
+        ],
+        "target_m": [
+          0.02,
+          -0.04,
+          0.56
+        ],
+        "lens_mm": 32
+      }
+    }
+  },
+  "assets": {
+    "scene_assets": "assets/scenes/toy_car_float_bathtub/ (amg_vision_gt, sketchfab_bathroom, procedural_float, settled)",
+    "tub_shell": "geometry/tub_shell.npz"
+  },
+  "data": {
+    "native_runs": "the published videos were re-simulated and re-rendered; their runs (particles, surfaces, sim_log.json) are recorded in each case provenance.json of the suite"
+  },
+  "canonical_suites": {
+    "pcve_toy_car_float_bathtub_suite": {
+      "target": "renders/pcve_suites/pcve_toy_car_float_bathtub_suite",
+      "public_case_ids": {
+        "toy_car_float_bathtub_baseline": "source",
+        "edit_no_float": "edit_no_float",
+        "edit_heavy_car": "edit_heavy_car",
+        "edit_low_density": "edit_low_density",
+        "edit_density_at_2s": "edit_density_at_2s",
+        "edit_no_car": "edit_no_car"
+      },
+      "case_video_sha256": {
+        "toy_car_float_bathtub_baseline": "6c125f1591048d93d591a5b1c8468c283bb88d3b014f5d67ae43a38c9deccca1",
+        "edit_no_float": "b0487be6854054147afcb4d4ce3ac0bcb9c13c3fe20ff07b480b3b31b25c50d9",
+        "edit_heavy_car": "06806f9f39d5217a7fa112019ee34184aa2250c32d5c60c4699043eaa659a536",
+        "edit_low_density": "1b614d97ba13e28361a2607684f224fb374f1828966ba5d1400f35fdc38c0c23",
+        "edit_density_at_2s": "e940afcb625309852d32894a737b8742517496237111ab5917b35f8663f991f6",
+        "edit_no_car": "4bdfca0f20050735883f620b7193502776563c224d983803cdaac1b89e4821c0"
+      }
+    }
+  }
+}

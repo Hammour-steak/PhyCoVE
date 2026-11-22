@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "scene_id": "silicone_block_chain",
+  "interaction_category": "rigid_elastic",
+  "case_number": 17,
+  "look": "workshop panorama light and varied wood stock (appearance/realism.py)",
+  "entry_points": {
+    "simulate": "simulate_silicone_block_chain.py",
+    "render": "render_silicone_block_chain.py",
+    "build_pcve": "build_pcve_silicone_block_chain.py"
+  },
+  "configuration": [
+    "physics/config.py",
+    "physics/rig.py",
+    "edit_vocab.py",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "stiff_foam",
+    "light_ball",
+    "viscous_foam",
+    "remove_foam",
+    "light_ball_at_frame_8"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/silicone_block_chain",
+    "native_caches": "assets/scenes/silicone_block_chain/accepted_solves/physics/<case>",
+    "packed_scenes": "assets/scenes/silicone_block_chain/accepted_solves/packed/<case>.blend",
+    "workshop_template": "assets/scenes/silicone_block_chain/workshop_template/packed/source.blend",
+    "suite_solves": "renders/pcve_suites/pcve_silicone_block_chain_suite/cases/<case_id>/native_metadata (source, light_ball_at_frame_8)",
+    "accepted_native_delivery": "renders/silicone_block_chain/accepted",
+    "rebuild_output": "renders/silicone_block_chain/rebuild"
+  },
+  "camera": {
+    "description": "Fixed camera of the packed scenes (ground truth reads it from there)",
+    "lens_mm": 50.0,
+    "sensor_width_mm": 36.0,
+    "sensor_fit": "AUTO",
+    "shift": [
+      0.0,
+      0.0
+    ],
+    "resolution": [
+      1280,
+      720
+    ],
+    "matrix_world": [
+      [
+        0.9805806875228882,
+        -0.04063695669174194,
+        0.19185979664325714,
+        0.05000000074505806
+      ],
+      [
+        0.1961161494255066,
+        0.20318473875522614,
+        -0.9592989087104797,
+        -0.5
+      ],
+      [
+        3.890181510257662e-09,
+        0.9782967567443848,
+        0.20720858871936798,
+        0.17000000178813934
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "video frame f = native sample 4 (f - 1) of the 96 Hz cache, t = (f - 1)/24 s"
+  },
+  "ground_truth": "cases/<case_id>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), written by tools/export_ground_truth.py",
+  "canonical_suites": {
+    "pcve_silicone_block_chain_suite": {
+      "target": "renders/pcve_suites/pcve_silicone_block_chain_suite",
+      "public_case_ids": {
+        "source": "source",
+        "stiff_foam": "edit_stiff_foam",
+        "light_ball": "edit_light_ball",
+        "viscous_foam": "edit_viscous_foam",
+        "remove_foam": "edit_remove_foam",
+        "light_ball_at_frame_8": "edit_light_ball_at_frame_8"
+      },
+      "case_video_sha256": {
+        "source": "3d763e871ecbfa3c398842683a9717a1ab023be6bf45048a07ac1582b162f555",
+        "stiff_foam": "e9d4b2cc94a420432d00b74c0761ef437343a558ec0b2dca7f0cdc1e10af075e",
+        "light_ball": "32c9f548e2c0908028571e45e8246cb232400e31ed72465e8c09cab1b4236d70",
+        "viscous_foam": "e57c6f4f4538fb43e1ca019871025daafeb283966104bbc565ae6e4618392e40",
+        "remove_foam": "724e0059312859ea080cdf09cc9feda58675757f657c1e0487cd6f1fea9740d3",
+        "light_ball_at_frame_8": "ad076d3223bc296a5351a5ef11c5ad485e5da6ed19387be8c60a665b20f2e243",
+        "edit_remove_steel_ball": "f9436e454bd60698475635302435b04f7d4bba447d2652e12ac43ed21cfabf00"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "stiff_foam": "cases/edit_stiff_foam/video.mp4",
+        "light_ball": "cases/edit_light_ball/video.mp4",
+        "viscous_foam": "cases/edit_viscous_foam/video.mp4",
+        "remove_foam": "cases/edit_remove_foam/video.mp4",
+        "light_ball_at_frame_8": "cases/edit_light_ball_at_frame_8/video.mp4"
+      }
+    }
+  }
+}

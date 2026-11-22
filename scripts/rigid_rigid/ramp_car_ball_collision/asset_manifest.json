@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "scene": "ramp_car_ball_collision",
+  "appearance_preset": "diecast_living_room_garden",
+  "car_asset": {
+    "key": "khronos_models/car_concept",
+    "source": "https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/CarConcept",
+    "license": "CC-BY-4.0",
+    "download": "direct",
+    "attribution": "Car Concept: Eric Chadwick / Darmstadt Graphics Group GmbH, 2024, CC BY 4.0; based on Unity Fan CC0 model. Normalized to a diecast toy, recolored, wheels aligned to native passive axles, body raised with original bonnet silhouette and corrected normals, flush nose trim and wheel clearances added.",
+    "files": {
+      "CarConcept.glb": {
+        "sha256": "c272098089d78c5cd9fd9f24ff50ee8acf8d932c55f2d55fc10adb6c8998966b",
+        "bytes": 11778688,
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/glTF-Binary/CarConcept.glb"
+      },
+      "README.md": {
+        "sha256": "af5f76ead54a5039288924f37081d6e1fcd5ccc5b2628faedb926325a73099cd",
+        "bytes": 20382,
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/README.md"
+      },
+      "LICENSE.md": {
+        "sha256": "e11477f29eab33d1a5c9fc8534f931556faeb2e11a7fee9e4723d917fcfaee50",
+        "bytes": 943,
+        "url": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/LICENSE.md"
+      }
+    },
+    "scenes": [
+      "rigid_rigid/ramp_car_ball_collision"
+    ]
+  },
+  "outdoor_assets": [
+    {
+      "key": "polyhaven_models/potted_plant_02",
+      "source": "https://polyhaven.com/a/potted_plant_02",
+      "license": "CC0"
+    },
+    {
+      "key": "polyhaven_models/grass_medium_01",
+      "source": "https://polyhaven.com/a/grass_medium_01",
+      "license": "CC0"
+    }
+  ],
+  "other_assets": "Living-room sofa, basket, penguin, curtains and scanned floor: see their entries in assets.json.",
+  "previous_car_assets_reused": false,
+  "cars_not_used": "blenderkit/rally_toy_car and the Khronos ToyCar are not used by this scene.",
+  "physics": "Native collision proxies, mass, inertia, forces, time step, solved trajectory samples and contacts are preserved. New car geometry is a visual diecast interpretation of these same proxies.",
+  "model_adaptations": {
+    "source_to_toy_uniform_wheelbase_scale": 0.027153649422901976,
+    "body_vertical_adaptation": 1.45,
+    "wheel_radius_m": 0.014,
+    "wheelbase_m": 0.076,
+    "wheel_width_m": 0.008,
+    "machined_wheel_well_radius_m": 0.0148,
+    "front_contact_face_x_m": 0.061,
+    "front_shape": {
+      "bonnet_lift_m": 0.0,
+      "bonnet_start_x_m": 0.02,
+      "bonnet_full_x_m": 0.04,
+      "lower_activation_z_m": -0.023,
+      "full_activation_z_m": -0.011,
+      "nose_shortening_m": 0.0023,
+      "shorten_start_x_m": 0.04,
+      "shorten_full_x_m": 0.0635,
+      "body_lift_m": 0.007
+    },
+    "front_trim_dimensions_m": [
+      0.001,
+      0.034,
+      0.0035
+    ],
+    "front_trim_center_z_relative_to_com_m": 0.0005
+  },
+  "room_finish": {
+    "assets_used": [
+      {
+        "key": "polyhaven/beige_wall_001",
+        "source": "https://polyhaven.com/a/beige_wall_001",
+        "license": "CC0",
+        "use": "walls and ceiling: normal and roughness maps, tonal unevenness only"
+      },
+      {
+        "key": "polyhaven/rough_linen",
+        "source": "https://polyhaven.com/a/rough_linen",
+        "license": "CC0",
+        "use": "sofa upholstery, the two pillows and the curtains"
+      }
+    ],
+    "lighting": "Only the sky and the sun through the open casement light the room; no hidden helper lamps."
+  }
+}

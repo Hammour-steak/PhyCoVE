@@ -1,0 +1,1221 @@
+{
+  "schema_version": 1,
+  "acquired_date": "2026-10-30",
+  "assets": [
+    {
+      "id": "wood_floor",
+      "api_info": {
+        "name": "Wood Floor",
+        "categories": [
+          "floor",
+          "wood",
+          "man made",
+          "clean"
+        ],
+        "type": 1,
+        "tags": [
+          "wood",
+          "floor",
+          "wooden",
+          "wooden flooring ",
+          "grain",
+          "wood grain",
+          "interior design",
+          "interior",
+          "flooring"
+        ],
+        "authors": {
+          "Dimitrios Savva": "All"
+        },
+        "info": null,
+        "dimensions": [
+          1699.9996900558472,
+          1699.9996900558472
+        ],
+        "date_published": 1698105600,
+        "staging": null,
+        "max_resolution": [
+          8192,
+          8192
+        ],
+        "description": "Free 8K material: warm medium-brown wood floor texture with narrow planks, visible oak grain, subtle seams and a smooth satin finish.",
+        "files_hash": "a44e6375a09ab98780b876e709f2629e7ed30409",
+        "category_id": "a7bb33c4-8575-586e-a502-7094517b10c5",
+        "category": "Wood/Boards & Planks/Finished & Varnished",
+        "attributes": {
+          "surface_use": "floor",
+          "origin": "man_made",
+          "condition": [
+            "clean"
+          ]
+        },
+        "img_version": "4c14fcdb",
+        "download_count": 295076,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wood_floor.png?width=256&height=256&format=webp&v=4c14fcdb"
+      },
+      "provenance": {
+        "id": "wood_floor",
+        "provider": "Poly Haven",
+        "authors": {
+          "Dimitrios Savva": "All"
+        },
+        "source": "https://polyhaven.com/a/wood_floor",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "a44e6375a09ab98780b876e709f2629e7ed30409",
+        "resolution": "2k",
+        "dimensions_mm": [
+          1699.9996900558472,
+          1699.9996900558472
+        ],
+        "reproduce": "python3 fetch_assets.py --assets-dir ./assets/pbr",
+        "files": [
+          {
+            "channel": "Diffuse",
+            "name": "wood_floor_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor/wood_floor_diff_2k.jpg",
+            "bytes": 2983667,
+            "md5": "d209b7416b022ed06093aef068c7fe23",
+            "sha256": "7c3ff1164c8dd0758ef2c048e9a266d28174120de01052ec40e6ca486177345c",
+            "relative_path": "wood_floor_diff_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "Rough",
+            "name": "wood_floor_rough_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor/wood_floor_rough_2k.jpg",
+            "bytes": 2267559,
+            "md5": "325868b3352d71059753498b1c94385b",
+            "sha256": "297eda0d75f2020cc541dbf242e1f5fd058053249567f49a4506fc2c5b1a172b",
+            "relative_path": "wood_floor_rough_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "nor_gl",
+            "name": "wood_floor_nor_gl_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor/wood_floor_nor_gl_2k.jpg",
+            "bytes": 1863576,
+            "md5": "e1d8a588c1fc3d62cc60da1e4cd1a689",
+            "sha256": "eff2e4db46bab930dc05997faf5085157eec4fd652cdfc6cd01fa11edd56ef10",
+            "relative_path": "wood_floor_nor_gl_2k.jpg",
+            "format": "jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "white_maple_veneer",
+      "api_info": {
+        "type": 1,
+        "name": "White Maple Veneer",
+        "tags": [
+          "natural grain",
+          "grain",
+          "natural wood grain",
+          "wood grain",
+          "white",
+          "natural wood",
+          "wood",
+          "natural veneer",
+          "natural",
+          "light wood"
+        ],
+        "authors": {
+          "Jenelle van Heerden": "All"
+        },
+        "max_resolution": [
+          8192,
+          8192
+        ],
+        "dimensions": [
+          1000,
+          1000
+        ],
+        "staging": null,
+        "files_hash": "5be8d1761b5664324112e7a911536a8395ff44a1",
+        "description": "Free 8K white maple veneer texture - light, natural wood grain with subtle figure and smooth satin finish; great for furniture, cabinetry and interior scenes.",
+        "category_id": "696337cd-d4c7-5cc4-98f9-cddf9a6c4ee5",
+        "category": "Wood/Veneer/Light Hardwood Veneer",
+        "attributes": {
+          "surface_use": "object",
+          "origin": "man_made",
+          "condition": [
+            "clean"
+          ]
+        },
+        "date_published": 1786448942,
+        "categories": [
+          "wood",
+          "raw wood"
+        ],
+        "vault": "wood",
+        "img_version": "94010e04",
+        "download_count": 6243,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/white_maple_veneer.png?width=256&height=256&format=webp&v=94010e04"
+      },
+      "provenance": {
+        "id": "white_maple_veneer",
+        "provider": "Poly Haven",
+        "authors": {
+          "Jenelle van Heerden": "All"
+        },
+        "source": "https://polyhaven.com/a/white_maple_veneer",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "5be8d1761b5664324112e7a911536a8395ff44a1",
+        "resolution": "2k",
+        "dimensions_mm": [
+          1000,
+          1000
+        ],
+        "reproduce": "python3 fetch_assets.py --assets-dir ./assets/pbr",
+        "files": [
+          {
+            "channel": "Diffuse",
+            "name": "white_maple_veneer_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_maple_veneer/white_maple_veneer_diff_2k.jpg",
+            "bytes": 1768512,
+            "md5": "3a4572664bea18b46c801d04ff82f2b2",
+            "sha256": "45ee4e8def749bdb41401f98277313b632e52c901d9deb62ca32578347063105",
+            "relative_path": "white_maple_veneer_diff_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "Rough",
+            "name": "white_maple_veneer_rough_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_maple_veneer/white_maple_veneer_rough_2k.jpg",
+            "bytes": 2958169,
+            "md5": "7f25e842a72ddcf8658a0913ffcab7d4",
+            "sha256": "1184ebdeb279f7450852d5a5ce648bc96a045470acfa98aa3001dd38b65cfb51",
+            "relative_path": "white_maple_veneer_rough_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "nor_gl",
+            "name": "white_maple_veneer_nor_gl_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_maple_veneer/white_maple_veneer_nor_gl_2k.jpg",
+            "bytes": 1288607,
+            "md5": "a61302105f0631a55b5bf13b68ac7599",
+            "sha256": "c70d14bdb6a0953ab4a9f23af16c07324f94c597e30d058c7cd33d14d2d4fb59",
+            "relative_path": "white_maple_veneer_nor_gl_2k.jpg",
+            "format": "jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "fabric_pattern_07",
+      "api_info": {
+        "scale": "30x30 cm",
+        "type": 1,
+        "date_published": 1590729315,
+        "name": "Fabric Pattern 07",
+        "old_id": 261,
+        "authors": {
+          "Rob Tuytel": "All"
+        },
+        "dimensions": [
+          400.0000059604645,
+          400.00003576278687
+        ],
+        "sponsors": [
+          "7934315",
+          "11167855",
+          "20953239"
+        ],
+        "max_resolution": [
+          8192,
+          8192
+        ],
+        "categories": [
+          "fabric",
+          "cotton"
+        ],
+        "files_hash": "af042f95980f6ccc87285c3bc23e11671a5fecde",
+        "tags": [
+          "towel",
+          "plain",
+          "cloth",
+          "checkered",
+          "woven",
+          "textile",
+          "picnic"
+        ],
+        "description": "Free 8K texture of red-and-cream woven cotton: coarse towel-like checkered weave with visible yarns, soft matte surface and subtle fiber variation.",
+        "category_id": "1df887de-c667-575d-9f55-cd044384317c",
+        "category": "Textiles & Leather/Woven/Plaid & Check",
+        "attributes": {
+          "surface_use": "object",
+          "origin": "man_made",
+          "condition": [
+            "clean"
+          ]
+        },
+        "img_version": "8bf5bc82",
+        "download_count": 336879,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/fabric_pattern_07.png?width=256&height=256&format=webp&v=8bf5bc82"
+      },
+      "provenance": {
+        "id": "fabric_pattern_07",
+        "provider": "Poly Haven",
+        "authors": {
+          "Rob Tuytel": "All"
+        },
+        "source": "https://polyhaven.com/a/fabric_pattern_07",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "af042f95980f6ccc87285c3bc23e11671a5fecde",
+        "resolution": "2k",
+        "dimensions_mm": [
+          400.0000059604645,
+          400.00003576278687
+        ],
+        "reproduce": "python3 fetch_assets.py --assets-dir ./assets/pbr",
+        "files": [
+          {
+            "channel": "col_2",
+            "name": "fabric_pattern_07_col_2_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fabric_pattern_07/fabric_pattern_07_col_2_2k.jpg",
+            "bytes": 2997908,
+            "md5": "8d9501ad73d16593c2bec5872c88c2a1",
+            "sha256": "1e5a2205ae89bce96bb95599566f4c484f870dd07156dad7a518d7b7b7be60b2",
+            "relative_path": "fabric_pattern_07_col_2_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "Rough",
+            "name": "fabric_pattern_07_rough_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fabric_pattern_07/fabric_pattern_07_rough_2k.jpg",
+            "bytes": 1657764,
+            "md5": "96906a97616405b0e664b9d18638d4f9",
+            "sha256": "be3e311614ee6f31d4cb4a774ed678b7a64189d3e1a55ad71033142185da270a",
+            "relative_path": "fabric_pattern_07_rough_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "nor_gl",
+            "name": "fabric_pattern_07_nor_gl_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fabric_pattern_07/fabric_pattern_07_nor_gl_2k.jpg",
+            "bytes": 2572375,
+            "md5": "bf1eb2488da43265bd49e42778b6ae51",
+            "sha256": "84f15ee5f6b63e7e224051a22426c751cc1fe15a794efd001ebfdb5f84828602",
+            "relative_path": "fabric_pattern_07_nor_gl_2k.jpg",
+            "format": "jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "kloofendal_48d_partly_cloudy",
+      "api_info": {
+        "evs_cap": 21,
+        "type": 0,
+        "whitebalance": 5400,
+        "tags": [
+          "sun",
+          "grass",
+          "rock",
+          "view"
+        ],
+        "date_published": 1553814000,
+        "name": "Kloofendal 48d Partly Cloudy",
+        "old_id": 361,
+        "date_taken": 1553262240,
+        "coords": [
+          -26.14066228,
+          27.89984354
+        ],
+        "authors": {
+          "Greg Zaal": "All"
+        },
+        "files_hash": "fd743a9dcd720f92d04e74a4e360236287e7807e",
+        "categories": [
+          "outdoor",
+          "skies",
+          "nature",
+          "midday",
+          "partly cloudy",
+          "high contrast",
+          "natural light",
+          "collection: verdant_trail"
+        ],
+        "max_resolution": [
+          16384,
+          8192
+        ],
+        "sponsors": [
+          "3567764",
+          "100707845"
+        ],
+        "description": "Free 16K, unclipped HDRI capturing a high-contrast midday sky with sun, scattered cumulus clouds and warm directional light over grassy, rocky hills.",
+        "category_id": "36cc9767-3e14-5715-99f9-3937957ec767",
+        "category": "Mountains & Hills/Hilltops & Viewpoints/Grassland Hilltops",
+        "collections": [
+          "verdant_trail"
+        ],
+        "attributes": {
+          "time_of_day": "midday",
+          "weather": "partly_cloudy",
+          "light_type": "natural",
+          "contrast": "high",
+          "environment": "outdoor",
+          "sky_view": "open"
+        },
+        "img_version": "ecb05ad7",
+        "download_count": 206003,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/kloofendal_48d_partly_cloudy.png?width=256&height=256&format=webp&v=ecb05ad7"
+      },
+      "provenance": {
+        "id": "kloofendal_48d_partly_cloudy",
+        "provider": "Poly Haven",
+        "authors": {
+          "Greg Zaal": "All"
+        },
+        "source": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "fd743a9dcd720f92d04e74a4e360236287e7807e",
+        "resolution": "2k",
+        "dimensions_mm": null,
+        "reproduce": "python3 fetch_assets.py --assets-dir ./assets/pbr",
+        "files": [
+          {
+            "channel": "hdri",
+            "name": "kloofendal_48d_partly_cloudy_2k.hdr",
+            "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/kloofendal_48d_partly_cloudy_2k.hdr",
+            "bytes": 6480797,
+            "md5": "72b472b131798b3eb5fc67fce3ab672e",
+            "sha256": "3fbd33f279f29bd64925c1dd3214fd46c627493d21f1100248b6b1098da4d06e",
+            "relative_path": "kloofendal_48d_partly_cloudy_2k.hdr",
+            "format": "hdr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "wicker_basket_01",
+      "api_info": {
+        "donated": true,
+        "date_published": 1672963200,
+        "name": "Wicker Basket 01",
+        "type": 2,
+        "staging": null,
+        "info": null,
+        "authors": {
+          "Kuutti Siitonen": "All"
+        },
+        "categories": [
+          "containers",
+          "decorative",
+          "collection: the_shed"
+        ],
+        "tags": [
+          "wood",
+          "wicker",
+          "twine",
+          "basket",
+          "picnic",
+          "outdoor",
+          "kitchen",
+          "dining",
+          "table",
+          "shed",
+          "farm"
+        ],
+        "max_resolution": [
+          8192,
+          8192
+        ],
+        "polycount": 22276,
+        "texel_density": 7264.531424070384,
+        "dimensions": [
+          383.2242637872696,
+          295.01520097255707,
+          117.42293369024992
+        ],
+        "sponsors": [
+          "3237733"
+        ],
+        "files_hash": "49f624a285b5e5dc8fe4b75ad18cf5d18d8cdca1",
+        "description": "Free 8K wicker basket model with hand-woven twine, dark weathered wood tones, tight rectangular weave, braided rim and realistic grain with subtle wear.",
+        "category_id": "a7259375-6f0a-5f0d-99ff-ee1751ea792e",
+        "category": "Containers & Storage/Baskets & Buckets/Baskets",
+        "collections": [
+          "the_shed"
+        ],
+        "attributes": {
+          "condition": [
+            "weathered"
+          ],
+          "material": [
+            "wood"
+          ]
+        },
+        "img_version": "a8ab4dd6",
+        "download_count": 16537,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/wicker_basket_01.png?width=256&height=256&format=webp&v=a8ab4dd6"
+      },
+      "provenance": {
+        "id": "wicker_basket_01",
+        "provider": "Poly Haven",
+        "authors": {
+          "Kuutti Siitonen": "All"
+        },
+        "source": "https://polyhaven.com/a/wicker_basket_01",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "49f624a285b5e5dc8fe4b75ad18cf5d18d8cdca1",
+        "resolution": "2k",
+        "dimensions_mm": [
+          383.2242637872696,
+          295.01520097255707,
+          117.42293369024992
+        ],
+        "reproduce": "python3 fetch_assets.py --assets-dir ./assets/pbr",
+        "files": [
+          {
+            "channel": "gltf",
+            "name": "wicker_basket_01_2k.gltf",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/wicker_basket_01/wicker_basket_01_2k.gltf",
+            "bytes": 2792,
+            "md5": "64ca4270124821310ee6c3cd89a08959",
+            "sha256": "bd02a364acb48039355642f69349f63d0fe9c635a33b4a57c44e6e24d672cb35",
+            "relative_path": "wicker_basket_01_2k.gltf",
+            "format": "gltf"
+          },
+          {
+            "channel": "wicker_basket_01_arm_2k",
+            "name": "wicker_basket_01_arm_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wicker_basket_01/wicker_basket_01_arm_2k.jpg",
+            "bytes": 2893672,
+            "md5": "2bb587bda456310426332b5c502f6921",
+            "sha256": "b1932ee1cd909fde89d4cd73b69b33d9c62b9bebf10063a37133461164f9e672",
+            "relative_path": "textures/wicker_basket_01_arm_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "wicker_basket_01",
+            "name": "wicker_basket_01.bin",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wicker_basket_01/wicker_basket_01.bin",
+            "bytes": 624920,
+            "md5": "154e2cd9157175591e3585e706925fa9",
+            "sha256": "8e96025ffcdc64a7e75d1aa980f2491b1219912a4554272cd1e192a966c399f8",
+            "relative_path": "wicker_basket_01.bin",
+            "format": "bin"
+          },
+          {
+            "channel": "wicker_basket_01_nor_gl_2k",
+            "name": "wicker_basket_01_nor_gl_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wicker_basket_01/wicker_basket_01_nor_gl_2k.jpg",
+            "bytes": 2229761,
+            "md5": "113d914fb3f1ff9eba2e497860005af9",
+            "sha256": "74eb1bd455ff66f6dd00abe26fa5ad9669a5b67217f394be981d9b04d3e9e774",
+            "relative_path": "textures/wicker_basket_01_nor_gl_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "wicker_basket_01_diff_2k",
+            "name": "wicker_basket_01_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wicker_basket_01/wicker_basket_01_diff_2k.jpg",
+            "bytes": 2606521,
+            "md5": "b5fa48725aabd3ae05b4be3091e3ac40",
+            "sha256": "ffc48a6f829f36d6baf7461cbe8d0b71971893315840d93c0e50f3c8b95a9dce",
+            "relative_path": "textures/wicker_basket_01_diff_2k.jpg",
+            "format": "jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rubber_duck_toy",
+      "api_info": {
+        "donated": true,
+        "date_published": 1680048000,
+        "name": "Rubber Duck Toy",
+        "type": 2,
+        "staging": null,
+        "authors": {
+          "Plat251": "All"
+        },
+        "info": null,
+        "sponsors": [
+          "78546118"
+        ],
+        "categories": [
+          "props",
+          "decorative",
+          "collection: the_shed"
+        ],
+        "tags": [
+          "shed",
+          "toy",
+          "bathroom",
+          "child",
+          "home",
+          "fun",
+          "kids",
+          "play",
+          "float",
+          "plastic",
+          "cute",
+          "animal"
+        ],
+        "max_resolution": [
+          4096,
+          4096
+        ],
+        "polycount": 4288,
+        "texel_density": 7289.496739617577,
+        "dimensions": [
+          213.5048285126686,
+          300.00218749046326,
+          285.52286326885223
+        ],
+        "files_hash": "00cce7478ed6c66264d09711f2ce55c1fc7b096c",
+        "description": "Free 4K model: cute yellow rubber duck with glossy plastic, bright red beak, simple cartoon eyes and light scuffs/grime for a slightly worn, playful look.",
+        "category_id": "4b07c553-3d92-564a-9755-95f6b6a4e9ea",
+        "category": "Leisure/Games & Toys/Toys",
+        "collections": [
+          "the_shed"
+        ],
+        "attributes": {
+          "condition": [
+            "worn"
+          ],
+          "material": [
+            "rubber",
+            "plastic"
+          ]
+        },
+        "img_version": "ba366507",
+        "download_count": 50634,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/rubber_duck_toy.png?width=256&height=256&format=webp&v=ba366507"
+      },
+      "provenance": {
+        "id": "rubber_duck_toy",
+        "provider": "Poly Haven",
+        "authors": {
+          "Plat251": "All"
+        },
+        "source": "https://polyhaven.com/a/rubber_duck_toy",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "00cce7478ed6c66264d09711f2ce55c1fc7b096c",
+        "resolution": "2k",
+        "dimensions_mm": [
+          213.5048285126686,
+          300.00218749046326,
+          285.52286326885223
+        ],
+        "reproduce": "python3 fetch_assets.py --assets-dir ./assets/pbr",
+        "files": [
+          {
+            "channel": "gltf",
+            "name": "rubber_duck_toy_2k.gltf",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/rubber_duck_toy/rubber_duck_toy_2k.gltf",
+            "bytes": 3180,
+            "md5": "0422903fb9822f207257261858393c82",
+            "sha256": "d10f8a5f4d7416c62d67cb5d8cd480d93d5750c5cc911128729ae47c5ee05466",
+            "relative_path": "rubber_duck_toy_2k.gltf",
+            "format": "gltf"
+          },
+          {
+            "channel": "rubber_duck_toy_arm_2k",
+            "name": "rubber_duck_toy_arm_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/rubber_duck_toy/rubber_duck_toy_arm_2k.jpg",
+            "bytes": 1098944,
+            "md5": "587baf41a375418f9cc841cb49405afb",
+            "sha256": "87cd18f544e579fb9a5bb42076abf731a5dcd629486d2cdd34f3378716e1eeda",
+            "relative_path": "textures/rubber_duck_toy_arm_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "rubber_duck_toy",
+            "name": "rubber_duck_toy.bin",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/rubber_duck_toy/rubber_duck_toy.bin",
+            "bytes": 105376,
+            "md5": "2ab5ea380067b76e3ba7e8db8ad0844a",
+            "sha256": "381e1373b99a4ff23d5ee02cb66bfb5e7d897eaa280581f19b652c38ffd83314",
+            "relative_path": "rubber_duck_toy.bin",
+            "format": "bin"
+          },
+          {
+            "channel": "rubber_duck_toy_nor_gl_2k",
+            "name": "rubber_duck_toy_nor_gl_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/rubber_duck_toy/rubber_duck_toy_nor_gl_2k.jpg",
+            "bytes": 170721,
+            "md5": "7947d883be44c7488a49f813b4be3c35",
+            "sha256": "2c2cdbaa3a46a1d3f577d510ba3bc999c4fbfd188985ee65e851b6c9b2bbd231",
+            "relative_path": "textures/rubber_duck_toy_nor_gl_2k.jpg",
+            "format": "jpg"
+          },
+          {
+            "channel": "rubber_duck_toy_diff_2k",
+            "name": "rubber_duck_toy_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/rubber_duck_toy/rubber_duck_toy_diff_2k.jpg",
+            "bytes": 789401,
+            "md5": "8ab1c742d2a4543a7e4cd588cfb6fe28",
+            "sha256": "6abc199fd0249ff906ddb977510c6f6527887aadc976dbede2ec67bda64b0f92",
+            "relative_path": "textures/rubber_duck_toy_diff_2k.jpg",
+            "format": "jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "decorative_book_set_01",
+      "api_info": {
+        "type": 2,
+        "tags": [
+          "bookshelf",
+          "books",
+          "reading",
+          "library",
+          "collection"
+        ],
+        "name": "Decorative Book Set 01",
+        "categories": [
+          "props",
+          "decorative",
+          "books"
+        ],
+        "authors": {
+          "James Ray Cock": "All"
+        },
+        "date_published": 1625156355,
+        "staging": null,
+        "sponsors": [
+          "44302755",
+          "9910225"
+        ],
+        "info": "These books are intended to be used as environment props in a medium to close range.\\n\\nThere are 87 unique and original cover designs, all [created by our community](https://blog.polyhaven.com/book-magazine-cover-design-contest/). The covers are also licensed as [CC0](https://polyhaven.com/license).\\n\\nAuthor credits for each design can be seen by hovering over the thumbnails to the left.\\n\\nThe customizable shader allows you to adjust the damage and age of each book independently. For this reason a GLTF version is not currently available.",
+        "max_resolution": [
+          4096,
+          4096
+        ],
+        "polycount": 112560,
+        "texel_density": 14440.679481690548,
+        "dimensions": [
+          2505.232434719801,
+          321.111761033535,
+          285.6543071102351
+        ],
+        "files_hash": "17b60199f281591c470612a06a05afa38780b4eb",
+        "description": "Free model - a realistic decorative book set with varied paperback and hardcover spines, colors and sizes. Ideal for bookshelves, libraries, and scene dressing. All covers are CC0 and free to use.",
+        "category_id": "69489d99-3ce8-5187-8be1-9a7ef5cdaa94",
+        "category": "Office & Stationery/Books & Documents/Books",
+        "attributes": {
+          "condition": [
+            "clean"
+          ],
+          "material": [
+            "paper",
+            "fabric"
+          ]
+        },
+        "img_version": "20bf3277",
+        "download_count": 66839,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/decorative_book_set_01.png?width=256&height=256&format=webp&v=20bf3277"
+      },
+      "selected_objects": [
+        "book_hardcover_01_cover06",
+        "book_hardcover_01_cover07",
+        "book_hardcover_01_cover15",
+        "book_hardcover_01_cover23",
+        "book_hardcover_01_cover34",
+        "book_hardcover_01_cover62",
+        "book_hardcover_01_cover83",
+        "book_softcover_01_cover11",
+        "book_softcover_01_cover39",
+        "book_softcover_01_cover70",
+        "book_softcover_01_cover05"
+      ],
+      "provenance": {
+        "id": "decorative_book_set_01",
+        "provider": "Poly Haven",
+        "authors": {
+          "James Ray Cock": "All"
+        },
+        "source": "https://polyhaven.com/a/decorative_book_set_01",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "17b60199f281591c470612a06a05afa38780b4eb",
+        "resolution": "2k",
+        "dimensions_mm": [
+          2505.232434719801,
+          321.111761033535,
+          285.6543071102351
+        ],
+        "files": [
+          {
+            "channel": "Blend",
+            "relative_path": "decorative_book_set_01_2k.blend",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/decorative_book_set_01/decorative_book_set_01_2k.blend",
+            "md5": "924ce3404cae6f150bc3960cf53c84f8",
+            "bytes": 5129562,
+            "format": "blend",
+            "sha256": "ce13d6eefa6f012f53cd0b883e46cf71d3ce3d5faa50e2d6191b03b1a7e0a4b9",
+            "name": "decorative_book_set_01_2k.blend"
+          },
+          {
+            "channel": "textures/book_hardcover_01_cover06_2k.png",
+            "relative_path": "textures/book_hardcover_01_cover06_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover06_2k.png",
+            "md5": "c997a860e2fc96dbd8066b9a8061573f",
+            "bytes": 1549740,
+            "format": "png",
+            "sha256": "2f0ceb949603035944ea154a8eb0fc22961abe0386caf3fe4475824d06018580",
+            "name": "book_hardcover_01_cover06_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_cover07_2k.png",
+            "relative_path": "textures/book_hardcover_01_cover07_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover07_2k.png",
+            "md5": "bc7a244975d907ddca5b134c45809908",
+            "bytes": 3546553,
+            "format": "png",
+            "sha256": "f797c6ed8cf606fad44bcf020a48bb8e7c1715884ce518823dadbf32c17da091",
+            "name": "book_hardcover_01_cover07_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_cover15_2k.png",
+            "relative_path": "textures/book_hardcover_01_cover15_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover15_2k.png",
+            "md5": "04e072c689cf0c280fcbb9d8138aa488",
+            "bytes": 710159,
+            "format": "png",
+            "sha256": "c58d67377cca42e20ff2f81751a5c211b6987ba0d5275fb254fe2fd0fa12d276",
+            "name": "book_hardcover_01_cover15_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_cover23_2k.png",
+            "relative_path": "textures/book_hardcover_01_cover23_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover23_2k.png",
+            "md5": "d774d21ceefb4b09195c2b876dd81a38",
+            "bytes": 442804,
+            "format": "png",
+            "sha256": "ff111027c0dc8561648979fea7ecc037af29ab35be74c17e44601f0c5137a9fa",
+            "name": "book_hardcover_01_cover23_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_cover34_2k.png",
+            "relative_path": "textures/book_hardcover_01_cover34_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover34_2k.png",
+            "md5": "f54b02e04de1a6d13ff812b11b65b7f7",
+            "bytes": 1632467,
+            "format": "png",
+            "sha256": "0c4be359aec2ca216325ebe62e36de75d6eb6d7e4ccced7d87e9a543849af774",
+            "name": "book_hardcover_01_cover34_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_cover62_2k.png",
+            "relative_path": "textures/book_hardcover_01_cover62_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover62_2k.png",
+            "md5": "f69695f0f3868dea5deb07e65057170b",
+            "bytes": 885724,
+            "format": "png",
+            "sha256": "1e40126994f9523b4c72f9a069b66f6447ac5ab18336ee588ff003dee174854c",
+            "name": "book_hardcover_01_cover62_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_cover83_2k.png",
+            "relative_path": "textures/book_hardcover_01_cover83_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_cover83_2k.png",
+            "md5": "539893e120e60ebaf3ea6c0dc9252833",
+            "bytes": 2948272,
+            "format": "png",
+            "sha256": "1463544b815a4354a2869cb371ccbf29758acaa65650717bccdc7166af4a9ba8",
+            "name": "book_hardcover_01_cover83_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_diff_2k.jpg",
+            "relative_path": "textures/book_hardcover_01_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_hardcover_01_diff_2k.jpg",
+            "md5": "9e5a0e4890d6fd5837d22d6d82329d6d",
+            "bytes": 624422,
+            "format": "jpg",
+            "sha256": "7eb44b50e00da2236828c54edb58cd4b9983fa52abf86e9112ad9d8e66751819",
+            "name": "book_hardcover_01_diff_2k.jpg"
+          },
+          {
+            "channel": "textures/book_hardcover_01_mask01_2k.png",
+            "relative_path": "textures/book_hardcover_01_mask01_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_mask01_2k.png",
+            "md5": "0dac0373794e8f0ef03e945f8c76cebd",
+            "bytes": 75502,
+            "format": "png",
+            "sha256": "90ff6dff1c951942bec418681571b6aeb06afa475b1974c984ba340ea342c3d8",
+            "name": "book_hardcover_01_mask01_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_mask02_2k.png",
+            "relative_path": "textures/book_hardcover_01_mask02_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_mask02_2k.png",
+            "md5": "ef7104c5bf8207c24dc5888a1f80361a",
+            "bytes": 6014,
+            "format": "png",
+            "sha256": "f4386c4aaadac90cc3814c6ca81428f13e6c8db57fb4157c4715449107659412",
+            "name": "book_hardcover_01_mask02_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_mask03_2k.png",
+            "relative_path": "textures/book_hardcover_01_mask03_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_hardcover_01_mask03_2k.png",
+            "md5": "fff569c0abc0afa8168ad9d7fc66a3bb",
+            "bytes": 79358,
+            "format": "png",
+            "sha256": "b67e83681f84d41dc00a0db20de0beaa855472ca95a7bad0dd8eea6561bb00f3",
+            "name": "book_hardcover_01_mask03_2k.png"
+          },
+          {
+            "channel": "textures/book_hardcover_01_nor_gl_2k.exr",
+            "relative_path": "textures/book_hardcover_01_nor_gl_2k.exr",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/decorative_book_set_01/book_hardcover_01_nor_gl_2k.exr",
+            "md5": "eed56953081001b4e367b819fe18dd6e",
+            "bytes": 2936269,
+            "format": "exr",
+            "sha256": "3d1d9108313d66953014d32c42fd2aeda7a3b56c8ce0f6137ce12f2ab1f5e9e4",
+            "name": "book_hardcover_01_nor_gl_2k.exr"
+          },
+          {
+            "channel": "textures/book_hardcover_01_roughness_2k.jpg",
+            "relative_path": "textures/book_hardcover_01_roughness_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_hardcover_01_roughness_2k.jpg",
+            "md5": "5e0514c70bf25bc4f67c73890ec19bd0",
+            "bytes": 420455,
+            "format": "jpg",
+            "sha256": "79d2a53f3ed718c6acedf54327b91e122309235df52b5587a1ad1cfe9f1afff5",
+            "name": "book_hardcover_01_roughness_2k.jpg"
+          },
+          {
+            "channel": "textures/book_softcover_01_cover05_2k.png",
+            "relative_path": "textures/book_softcover_01_cover05_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_cover05_2k.png",
+            "md5": "94d536b77919a37e096cc303c7e6f664",
+            "bytes": 1578547,
+            "format": "png",
+            "sha256": "6a0a96610bb4129ddaf76212d8b407ace89d1e9e75339d7544feb951d8fe5e10",
+            "name": "book_softcover_01_cover05_2k.png"
+          },
+          {
+            "channel": "textures/book_softcover_01_cover11_2k.png",
+            "relative_path": "textures/book_softcover_01_cover11_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_cover11_2k.png",
+            "md5": "c210183b150528170fb21e9e0a668a98",
+            "bytes": 925286,
+            "format": "png",
+            "sha256": "87c52efb5ca2ef8d3b6d6550dd2fc19a6003e7addd41069f649bf4ac4815ac6e",
+            "name": "book_softcover_01_cover11_2k.png"
+          },
+          {
+            "channel": "textures/book_softcover_01_cover39_2k.png",
+            "relative_path": "textures/book_softcover_01_cover39_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_cover39_2k.png",
+            "md5": "d5488c991b85df83bac299e44d3fe087",
+            "bytes": 1445529,
+            "format": "png",
+            "sha256": "2b8ec2f8554a11aa2690e1149ccc72fa3a8dbf21366a23a1d7214999c626ca9a",
+            "name": "book_softcover_01_cover39_2k.png"
+          },
+          {
+            "channel": "textures/book_softcover_01_cover70_2k.png",
+            "relative_path": "textures/book_softcover_01_cover70_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_cover70_2k.png",
+            "md5": "de6b5169098010ffaebc699b695c7b0b",
+            "bytes": 3629151,
+            "format": "png",
+            "sha256": "4d827c0ff512a106ab097ee5a4470b841c45a7703ebcf2d9bdf83efdb7908a56",
+            "name": "book_softcover_01_cover70_2k.png"
+          },
+          {
+            "channel": "textures/book_softcover_01_diff_2k.jpg",
+            "relative_path": "textures/book_softcover_01_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_softcover_01_diff_2k.jpg",
+            "md5": "7dbb20f54f1d21d8d9b2514e8c81f275",
+            "bytes": 603468,
+            "format": "jpg",
+            "sha256": "9a2033eed3b9133b7d6c22042e2e88330bb36247dfbbf2dfeada49a8e8a6f6a2",
+            "name": "book_softcover_01_diff_2k.jpg"
+          },
+          {
+            "channel": "textures/book_softcover_01_mask01_2k.png",
+            "relative_path": "textures/book_softcover_01_mask01_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_mask01_2k.png",
+            "md5": "addec8975161b91adea093ced886ac7e",
+            "bytes": 65580,
+            "format": "png",
+            "sha256": "bb871efbfa8687092e9598f1a5ad87576e589ef1538344b652050c03b894d765",
+            "name": "book_softcover_01_mask01_2k.png"
+          },
+          {
+            "channel": "textures/book_softcover_01_mask02_2k.png",
+            "relative_path": "textures/book_softcover_01_mask02_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_mask02_2k.png",
+            "md5": "dae8303b5598debf21f1eba3ac488c7b",
+            "bytes": 5905,
+            "format": "png",
+            "sha256": "2e09af8a94925fe699b7687b4025c4651f305ed354b7a79eea87263b18149c18",
+            "name": "book_softcover_01_mask02_2k.png"
+          },
+          {
+            "channel": "textures/book_softcover_01_mask03_2k.png",
+            "relative_path": "textures/book_softcover_01_mask03_2k.png",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/decorative_book_set_01/book_softcover_01_mask03_2k.png",
+            "md5": "1a8f818f23cc721c252497ca1170b1b0",
+            "bytes": 76258,
+            "format": "png",
+            "sha256": "6c04ed7059e5108278d0cfbd751c5b68b1727dc359a62e86310f1832878b84b7",
+            "name": "book_softcover_01_mask03_2k.png"
+          },
+          {
+            "channel": "textures/book_softcover_01_nor_gl_2k.exr",
+            "relative_path": "textures/book_softcover_01_nor_gl_2k.exr",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/decorative_book_set_01/book_softcover_01_nor_gl_2k.exr",
+            "md5": "55d07437bb3fe48818da41da54f4390e",
+            "bytes": 2817178,
+            "format": "exr",
+            "sha256": "2224e57d3639384f4822d4af1da58b647b62d39e3e8666de11907943c4243080",
+            "name": "book_softcover_01_nor_gl_2k.exr"
+          },
+          {
+            "channel": "textures/book_softcover_01_roughness_2k.jpg",
+            "relative_path": "textures/book_softcover_01_roughness_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/decorative_book_set_01/book_softcover_01_roughness_2k.jpg",
+            "md5": "773882b282d8187e00873ced6d38896a",
+            "bytes": 419380,
+            "format": "jpg",
+            "sha256": "8bc08e2e65b4b5440449c07667e917a7e12638dc8b0e8b0ce9c7e2ab145154e0",
+            "name": "book_softcover_01_roughness_2k.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "white_oak_veneer",
+      "api_info": {
+        "type": 1,
+        "name": "White Oak Veneer",
+        "tags": [
+          "raw",
+          "veneer",
+          "veneer wood",
+          "grain",
+          "wood grain",
+          "oak",
+          "white oak",
+          "natural wood",
+          "timber",
+          "natural veneer"
+        ],
+        "authors": {
+          "Jenelle van Heerden": "All"
+        },
+        "dimensions": [
+          500,
+          500
+        ],
+        "staging": null,
+        "max_resolution": [
+          8192,
+          8192
+        ],
+        "files_hash": "26c153c913feebf19d0ce09ce70dcd3b2b7443b5",
+        "description": "Free 8K texture of white oak veneer with fine, natural grain and subtle pores - smooth raw wood finish ideal for furniture, cabinetry, and interior renders.",
+        "category_id": "a7545d0c-e237-514e-b4b4-63aa17dae153",
+        "category": "Wood/Veneer/Oak Veneer",
+        "attributes": {
+          "surface_use": "object",
+          "origin": "man_made",
+          "condition": [
+            "clean"
+          ]
+        },
+        "date_published": 1786448942,
+        "categories": [
+          "wood",
+          "raw wood"
+        ],
+        "vault": "wood",
+        "img_version": "771476d1",
+        "download_count": 6846,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/white_oak_veneer.png?width=256&height=256&format=webp&v=771476d1"
+      },
+      "provenance": {
+        "id": "white_oak_veneer",
+        "provider": "Poly Haven",
+        "authors": {
+          "Jenelle van Heerden": "All"
+        },
+        "source": "https://polyhaven.com/a/white_oak_veneer",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "26c153c913feebf19d0ce09ce70dcd3b2b7443b5",
+        "resolution": "2k",
+        "dimensions_mm": [
+          500,
+          500
+        ],
+        "files": [
+          {
+            "channel": "Diffuse",
+            "relative_path": "white_oak_veneer_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_oak_veneer/white_oak_veneer_diff_2k.jpg",
+            "md5": "38d61468709c2bcd17ae9efbef8b0ad0",
+            "bytes": 2537257,
+            "format": "jpg",
+            "sha256": "00e09e2f901fb76c6d206e7a0197f257f8a9d5f662d3cd863c2258c9b287131e",
+            "name": "white_oak_veneer_diff_2k.jpg"
+          },
+          {
+            "channel": "Rough",
+            "relative_path": "white_oak_veneer_rough_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_oak_veneer/white_oak_veneer_rough_2k.jpg",
+            "md5": "4a1afc3c517096ca9cfea6a397494f2b",
+            "bytes": 2352922,
+            "format": "jpg",
+            "sha256": "1e325ebc77729c09afb9a2c6ed3bf51b2f0b3f8c1731642dca39b197c79097f0",
+            "name": "white_oak_veneer_rough_2k.jpg"
+          },
+          {
+            "channel": "Normal",
+            "relative_path": "white_oak_veneer_nor_gl_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_oak_veneer/white_oak_veneer_nor_gl_2k.jpg",
+            "md5": "23e481c227af299f5a7a0526372a7b38",
+            "bytes": 2840866,
+            "format": "jpg",
+            "sha256": "262b2c0b9020e34abbba2f3d02a5d7184d5ef008f12499c5350187125929b053",
+            "name": "white_oak_veneer_nor_gl_2k.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "white_plaster_02",
+      "api_info": {
+        "type": 1,
+        "tags": [
+          "smooth",
+          "flat",
+          "even"
+        ],
+        "date_published": 1531287574,
+        "name": "White Plaster 02",
+        "old_id": 147,
+        "categories": [
+          "plaster-concrete",
+          "wall",
+          "man made",
+          "outdoor",
+          "indoor",
+          "clean",
+          "floor"
+        ],
+        "authors": {
+          "Rob Tuytel": "All"
+        },
+        "scale": "1.5M x 1.5M",
+        "dimensions": [
+          1000,
+          1000
+        ],
+        "max_resolution": [
+          8192,
+          8192
+        ],
+        "sponsors": [
+          "20953239",
+          "77433244"
+        ],
+        "files_hash": "508068441dd24eb06ef6d269a43f6ea7c8bade6b",
+        "description": "Free 8K plaster texture: smooth, flat white plaster with a soft matte finish, fine micro-roughness and subtle dirt speckling across the surface.",
+        "category_id": "ebaa964c-b45c-52e2-bd50-892d64616d87",
+        "category": "Concrete/Plaster & Stucco/Bare Plaster",
+        "attributes": {
+          "surface_use": "wall",
+          "condition": [
+            "clean"
+          ],
+          "origin": "man_made",
+          "setting": "either"
+        },
+        "img_version": "fa5c48d2",
+        "download_count": 228475,
+        "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/white_plaster_02.png?width=256&height=256&format=webp&v=fa5c48d2"
+      },
+      "provenance": {
+        "id": "white_plaster_02",
+        "provider": "Poly Haven",
+        "authors": {
+          "Rob Tuytel": "All"
+        },
+        "source": "https://polyhaven.com/a/white_plaster_02",
+        "license": "CC0-1.0",
+        "license_url": "https://polyhaven.com/license",
+        "files_hash": "508068441dd24eb06ef6d269a43f6ea7c8bade6b",
+        "resolution": "2k",
+        "dimensions_mm": [
+          1000,
+          1000
+        ],
+        "files": [
+          {
+            "channel": "Diffuse",
+            "relative_path": "white_plaster_02_diff_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_diff_2k.jpg",
+            "md5": "35f9c96c16aa0d934da7884b232f6d07",
+            "bytes": 2568315,
+            "format": "jpg",
+            "sha256": "0ca5245ba70777d3e41ff4566c9f8d363855461891802c55cb7dc0f6f85f084e",
+            "name": "white_plaster_02_diff_2k.jpg"
+          },
+          {
+            "channel": "Rough",
+            "relative_path": "white_plaster_02_rough_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_rough_2k.jpg",
+            "md5": "47f989e9fd3e69e667244ff4b9f406f8",
+            "bytes": 1604444,
+            "format": "jpg",
+            "sha256": "a3dc1911f6e25d88fdb0031fe0cfb602eec5496084c508774c60691bed087417",
+            "name": "white_plaster_02_rough_2k.jpg"
+          },
+          {
+            "channel": "Normal",
+            "relative_path": "white_plaster_02_nor_gl_2k.jpg",
+            "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_nor_gl_2k.jpg",
+            "md5": "a9fa643c4a200686ad89598b545b2adc",
+            "bytes": 3379814,
+            "format": "jpg",
+            "sha256": "083579b03a8f31ec1886512e5972f3b893610bf26a2098f97910e0f46745cdc9",
+            "name": "white_plaster_02_nor_gl_2k.jpg"
+          }
+        ]
+      }
+    }
+  ],
+  "original_car_design": {
+    "id": "original_modern_hatchback",
+    "source": "scene_geometry.py build_car",
+    "reproduce": "render_toy_car_silicone_bridge.py builds measured native mesh at render time",
+    "external_car_downloads": false
+  },
+  "original_silicone_finish": {
+    "source": "scene_geometry.py:moulded_silicone_materials",
+    "version": "metric_moulded_satin",
+    "texture_coordinates": "rest-pose material UV, 1 UV unit per metre",
+    "external_bitmaps": false,
+    "physical_mesh_displacement": false
+  },
+  "room_book_selection": [
+    "book_hardcover_01_cover06",
+    "book_hardcover_01_cover07",
+    "book_hardcover_01_cover15",
+    "book_hardcover_01_cover23",
+    "book_hardcover_01_cover34",
+    "book_hardcover_01_cover62",
+    "book_hardcover_01_cover83",
+    "book_softcover_01_cover11",
+    "book_softcover_01_cover39",
+    "book_softcover_01_cover70",
+    "book_softcover_01_cover05"
+  ]
+}

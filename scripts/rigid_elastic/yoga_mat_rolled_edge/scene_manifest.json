@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "scene_id": "yoga_mat_rolled_edge",
+  "interaction_category": "rigid_elastic",
+  "case_number": 10,
+  "entry_points": {
+    "simulate": "simulate_yoga_mat_rolled_edge.py",
+    "render": "render_yoga_mat_rolled_edge.py",
+    "build_pcve": "build_pcve_yoga_mat_rolled_edge.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "physics/scene_spec.json",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "delete_mat",
+    "ball_speed_slow",
+    "mat_stiff",
+    "ball_mass_light",
+    "mass_x0p25_at_frame_16"
+  ],
+  "workflows": {},
+  "camera": {
+    "description": "Low contact view of render_source_review.py, recorded in every case's render_report.json; ground truth uses it",
+    "matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.3499999940395355
+      ],
+      [
+        0.0,
+        0.08460120111703873,
+        -0.9964148998260498,
+        -2.6500000953674316
+      ],
+      [
+        0.0,
+        0.9964148998260498,
+        0.08460120111703873,
+        0.27000001072883606
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "lens_mm": 55.0,
+    "sensor_width_mm": 36.0,
+    "sensor_fit": "AUTO",
+    "shift": [
+      0.0,
+      0.0
+    ],
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_sec": 4.0,
+    "encoder": "libx264 crf 17, yuv420p, faststart"
+  },
+  "data": {
+    "assets": "assets/scenes/yoga_mat_rolled_edge",
+    "settled_initial_state": "assets/scenes/yoga_mat_rolled_edge/settled_state.npz",
+    "viscosity_plugin": "assets/scenes/yoga_mat_rolled_edge/native",
+    "native_caches": "renders/pcve_suites/pcve_yoga_mat_rolled_edge_suite/cases/<case>/native_metadata",
+    "rebuild_output": "renders/yoga_mat_rolled_edge"
+  },
+  "ground_truth": {
+    "format_version": "pcve_ground_truth/1",
+    "tool": "tools/export_ground_truth.py",
+    "objects": {
+      "ball": "rigid, native affine transform",
+      "mat": "deformable, centroid of the shell vertices (absent in delete_mat)"
+    }
+  },
+  "canonical_suites": {
+    "pcve_yoga_mat_rolled_edge_suite": {
+      "target": "renders/pcve_suites/pcve_yoga_mat_rolled_edge_suite",
+      "public_case_ids": {
+        "source": "source",
+        "delete_mat": "edit_delete_mat",
+        "ball_speed_slow": "edit_speed_x0p5",
+        "mat_stiff": "edit_young_x4",
+        "ball_mass_light": "edit_mass_x0p25",
+        "mass_x0p25_at_frame_16": "edit_mass_x0p25_at_frame_16"
+      },
+      "case_video_sha256": {
+        "source": "f5e1907c87d7f0ba8d2e7c639855b199a82ea16260102661e44cdc62a2e8de03",
+        "delete_mat": "9bf1dceac167c77d302b1eb84fa03039c607bb45b6c9ee37d7dddc62fd6a5f39",
+        "ball_speed_slow": "78cfc33968771577aaa612cefc3b631a34f7f559f326d9231c1edd2c2608783f",
+        "mat_stiff": "d809673cdaee2b0a95af61c987e8173455bb24e4ca56aaa2c1e8320516a396a2",
+        "ball_mass_light": "113597f97cf567a48a13179f4ad063befe2ca431eb8695b8ff4ce16f64af23d0",
+        "mass_x0p25_at_frame_16": "f30ef9b5eed34e9553b7bd9a1894646e0a8dd0313b10eb3d14bf8cf7d118fe80",
+        "edit_delete_ball": "f2baf3adc05839a6a6db36e97e1323207c0c0d814eaa83ff0353a3dec70b163a"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "delete_mat": "cases/edit_delete_mat/video.mp4",
+        "ball_speed_slow": "cases/edit_speed_x0p5/video.mp4",
+        "mat_stiff": "cases/edit_young_x4/video.mp4",
+        "ball_mass_light": "cases/edit_mass_x0p25/video.mp4",
+        "mass_x0p25_at_frame_16": "cases/edit_mass_x0p25_at_frame_16/video.mp4"
+      }
+    }
+  }
+}

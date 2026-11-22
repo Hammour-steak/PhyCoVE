@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scene_id": "twin_ramp_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_twin_ramp_collision.py",
+    "render": "render_twin_ramp_collision.py",
+    "build_pcve": "build_pcve_twin_ramp_collision.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edit_vocab.py",
+    "realism_assets.json"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_heavy_left",
+    "edit_low_restitution",
+    "edit_remove_right"
+  ],
+  "workflows": {
+    "realism": "build_realism_twin_ramp_collision.py"
+  },
+  "canonical_suites": {
+    "pcve_twin_ramp_collision_suite": {
+      "target": "renders/pcve_suites/pcve_twin_ramp_collision_suite",
+      "case_video_sha256": {
+        "source": "70654296a8f4c16998df27eddc2cd1d44dba1ee428c7b0c58625da39ad702279",
+        "edit_heavy_left": "8f7e4812c99c9d24a59b177dd6c7d3dfde095e0c9153432d354dda1235438387",
+        "edit_low_restitution": "5116e3798a36d79e5c463b6f9d4b7092d08aae0cb2033564bd82b4e52cb20355",
+        "edit_remove_right": "3fa3dd91b98eace1808687f7faaf3fbf1a421fa63dc5ff8e7ca17911101a2e9a",
+        "edit_remove_left": "b6a036651531de7a4f0bd8579525f74908de04fc9a0ebb714053981c3cd3324f"
+      }
+    }
+  }
+}

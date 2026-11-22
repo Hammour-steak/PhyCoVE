@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "scene": "tennis_net_hit",
+  "category": "rigid_elastic",
+  "case_number": 3,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_tennis_net_hit.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--case",
+        "--out",
+        "--threads"
+      ],
+      "resource_flags": {
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "ball_speed_div5",
+        "ball_speed_x2",
+        "net_young_div10",
+        "net_young_x10",
+        "remove_entire_net"
+      ],
+      "stage_semantics": "none"
+    },
+    "render": {
+      "file": "render_tennis_net_hit.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--case-id",
+        "--case",
+        "--cache",
+        "--out",
+        "--gpu-uuid",
+        "--render-threads",
+        "--blender-bin",
+        "--ffmpeg",
+        "--start-frame",
+        "--end-frame",
+        "--samples",
+        "--device",
+        "--audit-only",
+        "--pool"
+      ],
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--render-threads",
+        "blender": "--blender-bin"
+      },
+      "cases": [
+        "source",
+        "ball_speed_div5",
+        "ball_speed_x2",
+        "net_young_div10",
+        "net_young_x10",
+        "remove_entire_net"
+      ],
+      "stage_semantics": "none"
+    },
+    "build_pcve": {
+      "file": "build_pcve_tennis_net_hit.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--accepted-root",
+        "--suite"
+      ],
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "ball_speed_div5",
+        "ball_speed_x2",
+        "net_young_div10",
+        "net_young_x10",
+        "remove_entire_net"
+      ],
+      "stage_semantics": "selector"
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/tennis_net_hit",
+  "implementation_policy": "Coupled native solve of a 57.6 g tennis ball (rigid sphere, r = 33.5 mm, 8 m/s forward) striking a tensioned 12.8 m tennis net: 3.5 mm polyethylene strands on a 45 mm mesh as a float64 tensile centreline beam network with finite bending stiffness and Kelvin-Voigt loss (effective E = 25 MPa; geometry fixed, so EA and EI scale with E), a pretensioned steel headline (finite-compliance XPBD) inside the bound headband, bottom and laced side bindings, and a finite folded 45 mm PET centre strap with an implicit strip material, anchored at the court socket; hard unilateral ball/strand and band-triangle contacts are solved in the same constrained Newton step, advanced at dt = 1/153600 s on the CPU with the frozen contact library (assets scenes/tennis_net_hit/frozen/webbing_revision.so, sha-pinned in physics/common.py) and recorded at 3840 Hz. The source runs 0-4 s from the common gravity-prebalanced packet; each edit restores the bit-exact float64 state of its own accepted 0-3 s solve and continues to 4 s with only its DSL-resolved change (ball forward speed x0.2 / x2, net strand modulus x0.1 / x10); DELETE removes net, strap and anchors and solves the free ball against the court/fence triangles (court_collision/rigid_with_court.so). physics/qualify.py checks frame clocks, protected inputs, contacts and court clearance and writes render_cache.npz. appearance/render.py replays the 96 genuine frame-centre states and the linear 3840 Hz shutter samples in the packed court scene (fixed camera, 1/480 s centred shutter) within 1 um; appearance/realism.py applies the current look through one audited hook. --stage verify checks the accepted native delivery (renders/tennis_net_hit/accepted) and the published suite named in scene_manifest.json. Materials are effective values, not calibrated against a measured net.",
+  "implementation_files": [
+    "simulate_tennis_net_hit.py",
+    "render_tennis_net_hit.py",
+    "build_pcve_tennis_net_hit.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "appearance/realism.py",
+    "appearance/render.py",
+    "physics/audit_contacts.py",
+    "physics/audit_court.py",
+    "physics/checkpoint_io.py",
+    "physics/common.py",
+    "physics/owner_adapter.py",
+    "physics/playback_math.py",
+    "physics/qualify.py",
+    "physics/simulate.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/render_split.py",
+    "tools/worker_run.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_tennis_net_hit.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "apple_drop_kitchen_basin": {
+    "mode": "body"
+  },
+  "bathroom_sink_duck_neospace": {
+    "mode": "body"
+  },
+  "bowling_ball_pool_drop": {
+    "mode": "body"
+  },
+  "coffee_ice_drop": {
+    "mode": "body"
+  },
+  "cooking_oil_pan": {
+    "mode": "pour",
+    "exclude": [
+      [
+        220,
+        0,
+        335,
+        100
+      ]
+    ]
+  },
+  "cup_water_drop": {
+    "mode": "body"
+  },
+  "elastic_fluid_duck": {
+    "mode": "body"
+  },
+  "faucet_sink": {
+    "mode": "pour",
+    "exclude": []
+  },
+  "fish_tank_toy": {
+    "mode": "body"
+  },
+  "glass_bottle_water_balloon_true_coupled": {
+    "mode": "pour",
+    "exclude": [
+      [
+        270,
+        40,
+        360,
+        302
+      ]
+    ]
+  },
+  "honey_spoon_toast": {
+    "mode": "pour",
+    "exclude": [
+      [
+        140,
+        0,
+        292,
+        88
+      ]
+    ]
+  },
+  "juice_dispenser_orange_cup": {
+    "mode": "pour",
+    "exclude": [
+      [
+        280,
+        60,
+        420,
+        232
+      ]
+    ]
+  },
+  "milk_pitcher_glass": {
+    "mode": "pour",
+    "exclude": [
+      [
+        170,
+        0,
+        370,
+        110
+      ]
+    ]
+  },
+  "tilted_cup_table_pour": {
+    "mode": "pour",
+    "exclude": [
+      [
+        175,
+        100,
+        315,
+        232
+      ]
+    ]
+  },
+  "toy_boat_pool_glide": {
+    "mode": "body"
+  },
+  "toy_car_float_bathtub": {
+    "mode": "body"
+  },
+  "toy_car_ramp_pool_genesis": {
+    "mode": "body"
+  },
+  "traditional_tea_pour": {
+    "mode": "pour",
+    "exclude": [
+      [
+        0,
+        0,
+        285,
+        165
+      ]
+    ]
+  },
+  "wine_pour": {
+    "mode": "pour",
+    "exclude": [
+      [
+        200,
+        0,
+        340,
+        45
+      ]
+    ]
+  }
+}

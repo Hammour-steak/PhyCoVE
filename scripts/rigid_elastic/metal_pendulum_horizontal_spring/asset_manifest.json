@@ -1,0 +1,31 @@
+{
+  "schema_version": 5,
+  "provider": "Poly Haven",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "credit": "Powered by Poly Haven",
+  "source_catalogs": [
+    {
+      "file": "asset_tools/catalogs/base_wood.json",
+      "asset_root": "assets",
+      "sha256": "c25d2eff4d57a5574afa46b383ef12f7633595601d003db0832a676796b1f949"
+    },
+    {
+      "file": "asset_tools/catalogs/room_props.json",
+      "asset_root": "assets/room_dressing",
+      "sha256": "bb0f37c346989c5f5b3553104d8d45318dc3a8e3d761cf0b4a9426dc57db704f"
+    },
+    {
+      "file": "asset_tools/catalogs/surface_scans.json",
+      "asset_root": "assets/wood_surfaces",
+      "sha256": "9fe7ce8e6214f3940dd65431a4f6c80050ce76e8a7301af24e487a7e4b38dadb"
+    },
+    {
+      "file": "asset_tools/catalogs/wood_finish.json",
+      "asset_root": "assets/joinery_wood",
+      "sha256": "a36515739a765c187c194eda4aed58407caa3d40266764fd4f03d3b0534517c6"
+    }
+  ],
+  "reproduction": "python asset_tools/prepare.py; --verify-only performs a read-only payload audit",
+  "procedural_geometry": "SI-scale home window, desk, hardwood pendulum assembly, manufacturing details and guided spring. Potted plant, books and notebook are pinned CC0 models. Source catalogs preserve authors, URLs, sizes and hashes."
+}

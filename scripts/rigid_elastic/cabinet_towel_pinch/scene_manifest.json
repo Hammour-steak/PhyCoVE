@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "scene_id": "cabinet_towel_pinch",
+  "interaction_category": "rigid_elastic",
+  "case_number": 21,
+  "entry_points": {
+    "simulate": "simulate_cabinet_towel_pinch.py",
+    "render": "render_cabinet_towel_pinch.py",
+    "build_pcve": "build_pcve_cabinet_towel_pinch.py"
+  },
+  "supported_cases": [
+    "source",
+    "friction_x0_01",
+    "hinge_torque_x0_03",
+    "young_modulus_x30",
+    "delete_door"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/cabinet_towel_pinch",
+    "native_inputs": "assets/scenes/cabinet_towel_pinch/native",
+    "seed": "assets/scenes/cabinet_towel_pinch/initial_state",
+    "runtime": ".runtime/cabinet_towel_pinch",
+    "accepted_delivery": "renders/cabinet_towel_pinch/accepted/pcve_cabinet_towel_pinch_suite",
+    "rebuild_output": "renders/cabinet_towel_pinch/rebuild"
+  },
+  "canonical_suites": {
+    "pcve_cabinet_towel_pinch_suite": {
+      "target": "renders/pcve_suites/pcve_cabinet_towel_pinch_suite",
+      "look": "appearance/realism.py over the saved native scenes",
+      "case_video_sha256": {
+        "source": "c795a477bba48156534ff9ffc2ff7ac48b72c21178b1484aa8c51d07c56aab35",
+        "friction_x0_01": "00f3f72807ca006a4d3844b17dd9c9e089baa50fdbeffce350f7530d6dba096c",
+        "hinge_torque_x0_03": "2268ea0c92ae71e01404558653cf778fd1d067f324830d4a30f73728c3a6f2cd",
+        "young_modulus_x30": "e10e20f4d136d514b402822c3e848690a6015439b5bc49a5b283a8ca8933951b",
+        "delete_door": "16ce470b33a1a0b92f57bf19e81543735cd7428971b6d0fe2af2bca060677f2a",
+        "edit_delete_towel": "daf4490cdebd4618519c0a0cc8fe5fb2acd16510c48d95d9bdeb8451a5bccac4"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "friction_x0_01": "cases/edit_friction_x0_01/video.mp4",
+        "hinge_torque_x0_03": "cases/edit_hinge_torque_x0_03/video.mp4",
+        "young_modulus_x30": "cases/edit_young_modulus_x30/video.mp4",
+        "delete_door": "cases/edit_delete_door/video.mp4"
+      }
+    }
+  },
+  "accepted_native_delivery": {
+    "target": "renders/cabinet_towel_pinch/accepted/pcve_cabinet_towel_pinch_suite",
+    "case_video_sha256": {
+      "source": "6f01d466d34c7239830a32aee4c9e2fce95bff7daba0b4faa8007a60eefe3dbb",
+      "friction_x0_01": "96a78c1315a76a1e6f6173f2b7a645a1677b5e7df8d6e07358422eb6e51da112",
+      "hinge_torque_x0_03": "08734b5cb4d2862603cdcddb40650b8edb040827264b18e73e44bae0439a3844",
+      "young_modulus_x30": "1a301890025aad8bf68c33e1e3f4f5a89470b6eabcfef735abf029dde8b45289",
+      "delete_door": "8cc0e5e38deec504a424e691b29ffea8225298c74e235c5605527bf2bf74021d"
+    },
+    "note": "Native audits, the delivery's GT, receipts, packaging records and the reference videos (cases/<case>/video.mp4); the native caches and saved scenes it produced are in data.native_inputs. The published look is the canonical suite."
+  },
+  "current_look": "appearance/realism.py"
+}

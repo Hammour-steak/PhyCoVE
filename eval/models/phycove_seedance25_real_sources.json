@@ -1,0 +1,129 @@
+{
+  "dataset": "ccmoony/PhyCoVE",
+  "revision": "3b9de5bbd84f6a5299cc5e9eab044be7581e1790",
+  "path_prefix": "real",
+  "manifest_sha256": "243ff27440e587bf2e682d33984a054353ce4491568cf7dd15035a3c7dc4131b",
+  "source_count": 20,
+  "sources": [
+    {
+      "video": "scenes/notebook_toy_umbrella/cases/source/video.mp4",
+      "video_sha256": "e5d2da5927e6151fbe3839e83829f6817eefa22c233c5a0d63fff775d36213cd",
+      "published_sha256": "e5d2da5927e6151fbe3839e83829f6817eefa22c233c5a0d63fff775d36213cd",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/notebook_toy_umbrella/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/bottle_target_collision/cases/source/video.mp4",
+      "video_sha256": "20fa277c632cfa832c63760cccac2da3d618456856143a0077c7e3f8e6a25861",
+      "published_sha256": "20fa277c632cfa832c63760cccac2da3d618456856143a0077c7e3f8e6a25861",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/bottle_target_collision/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/cup_two_bottle_collision/cases/source/video.mp4",
+      "video_sha256": "394f3076e36471ae43d12f39c421395d44307b69a11c0c4d0e9adb20823b8553",
+      "published_sha256": "394f3076e36471ae43d12f39c421395d44307b69a11c0c4d0e9adb20823b8553",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/cup_two_bottle_collision/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/blue_box_bottle_cluster/cases/source/video.mp4",
+      "video_sha256": "a0786853036e4b60f26a722235f4725802656c134f2ab9e529fb0a0b4fe56782",
+      "published_sha256": "a0786853036e4b60f26a722235f4725802656c134f2ab9e529fb0a0b4fe56782",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/blue_box_bottle_cluster/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/apple_drop_cot_package/cases/source/video.mp4",
+      "video_sha256": "adb2d793815ffab19c885cffb84d4c4be110d9e4653d5f2f1ccb8698a740c0c5",
+      "published_sha256": "adb2d793815ffab19c885cffb84d4c4be110d9e4653d5f2f1ccb8698a740c0c5",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/apple_drop_cot_package/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/bottle_notebook_cushion/cases/source/video.mp4",
+      "video_sha256": "b7f23d512510b7f5c9f5df81177b6cd8e3dd48e403db693a4b347554bc35c5cc",
+      "published_sha256": "b7f23d512510b7f5c9f5df81177b6cd8e3dd48e403db693a4b347554bc35c5cc",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/bottle_notebook_cushion/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/bottle_cup_knockdown/cases/source/video.mp4",
+      "video_sha256": "3e130a00f3d7a29c5ccab53aaf063f4bb42860319e89dc135131e1aa9b508cc6",
+      "published_sha256": "3e130a00f3d7a29c5ccab53aaf063f4bb42860319e89dc135131e1aa9b508cc6",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/bottle_cup_knockdown/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/orange_ball_book_bounce/cases/source/video.mp4",
+      "video_sha256": "7248d5ab408359419aa6331ea7013613c9f864b33add990a1e4d8a47fb18b2a5",
+      "published_sha256": "7248d5ab408359419aa6331ea7013613c9f864b33add990a1e4d8a47fb18b2a5",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/orange_ball_book_bounce/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/orange_ball_cup_water/cases/source/video.mp4",
+      "video_sha256": "e663edf4c159e3c9ad69efa1d9b6824d213f343391fed2a12be62fd16e1c2420",
+      "published_sha256": "e663edf4c159e3c9ad69efa1d9b6824d213f343391fed2a12be62fd16e1c2420",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/orange_ball_cup_water/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/capybara_plush_drop/cases/source/video.mp4",
+      "video_sha256": "4ee2055ff6a4cf6d0ac37ea8d601563a38e4472946504e38c35382983a145c95",
+      "published_sha256": "4ee2055ff6a4cf6d0ac37ea8d601563a38e4472946504e38c35382983a145c95",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/capybara_plush_drop/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/plush_chair_cushion_drop/cases/source/video.mp4",
+      "video_sha256": "3cc797af7806cc9d430b70d783281374657cc6e158aa7128f5d7c37fe7da151f",
+      "published_sha256": "3cc797af7806cc9d430b70d783281374657cc6e158aa7128f5d7c37fe7da151f",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/plush_chair_cushion_drop/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/orange_ball_ramp_collision/cases/source/video.mp4",
+      "video_sha256": "b3b67f58ebc91d1ca1bab9e6659fd3d50789c993d2d93d90f510328c481fc7ef",
+      "published_sha256": "b3b67f58ebc91d1ca1bab9e6659fd3d50789c993d2d93d90f510328c481fc7ef",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/orange_ball_ramp_collision/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/sink_bottle_water_removal/cases/source/video.mp4",
+      "video_sha256": "58223cc28d6d1098b7c3df938a7f9815f52a8c283c20eac14f49cc25b4b03a48",
+      "published_sha256": "58223cc28d6d1098b7c3df938a7f9815f52a8c283c20eac14f49cc25b4b03a48",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/sink_bottle_water_removal/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/basketball_trash_bin_drop/cases/source/video.mp4",
+      "video_sha256": "48fbf74f41362f815808fe89ddf10a0354876a748aaab56bd243074b2db1c20c",
+      "published_sha256": "48fbf74f41362f815808fe89ddf10a0354876a748aaab56bd243074b2db1c20c",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/basketball_trash_bin_drop/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/pingpong_paddle_tissue_packet/cases/source/video.mp4",
+      "video_sha256": "790b7f99c958b4b456e26fc0762dec03bc7516eba54e89276ed5a06327c0d225",
+      "published_sha256": "790b7f99c958b4b456e26fc0762dec03bc7516eba54e89276ed5a06327c0d225",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/pingpong_paddle_tissue_packet/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/basketball_fridge_door/cases/source/video.mp4",
+      "video_sha256": "c79df84fd67b0d990bdb40f885d3bf77b7122f16db0229c54b6406ea7a8ff206",
+      "published_sha256": "c79df84fd67b0d990bdb40f885d3bf77b7122f16db0229c54b6406ea7a8ff206",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/basketball_fridge_door/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/orange_ball_ramp_sponge/cases/source/video.mp4",
+      "video_sha256": "eab1f2991dfd8d8b1a4abb2ab80457280fbf65f4a961634ce6ccb8944be5858a",
+      "published_sha256": "eab1f2991dfd8d8b1a4abb2ab80457280fbf65f4a961634ce6ccb8944be5858a",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/orange_ball_ramp_sponge/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/apple_sink_water_flow/cases/source/video.mp4",
+      "video_sha256": "b8c09c750fbf934dceb5c10c6b811fb84609a04eee0d45d181aced6cbe5c16ef",
+      "published_sha256": "b8c09c750fbf934dceb5c10c6b811fb84609a04eee0d45d181aced6cbe5c16ef",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/apple_sink_water_flow/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/sink_bottle_water_pair/cases/source/video.mp4",
+      "video_sha256": "ce508db5e6201ddb488560c1c6d6d0f579c37032ae8a4cca406ab3f14fbcf182",
+      "published_sha256": "ce508db5e6201ddb488560c1c6d6d0f579c37032ae8a4cca406ab3f14fbcf182",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/sink_bottle_water_pair/cases/source/video.mp4"
+    },
+    {
+      "video": "scenes/rolling_bottle_apple_target/cases/source/video.mp4",
+      "video_sha256": "da4d6285c5c79174b0b1d430f976cf2258bcface39ef6827d84f2afabb4cceb4",
+      "published_sha256": "da4d6285c5c79174b0b1d430f976cf2258bcface39ef6827d84f2afabb4cceb4",
+      "url": "https://huggingface.co/datasets/ccmoony/PhyCoVE/resolve/3b9de5bbd84f6a5299cc5e9eab044be7581e1790/real/scenes/rolling_bottle_apple_target/cases/source/video.mp4"
+    }
+  ]
+}

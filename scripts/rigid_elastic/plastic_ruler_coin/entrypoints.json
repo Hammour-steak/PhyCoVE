@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "scene": "plastic_ruler_coin",
+  "category": "rigid_elastic",
+  "case_number": 11,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_plastic_ruler_coin.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--case",
+        "--out-root",
+        "--out",
+        "--dt",
+        "--modes",
+        "--duration",
+        "--stiffness-scale"
+      ],
+      "cases": [
+        "source",
+        "coin_mass_x02",
+        "ruler_modulus_x025",
+        "ruler_modulus_x8",
+        "delete_coin",
+        "add_second_coin"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "requirements": "Python with numpy, scipy and numba (.venv-rigid-elastic: numpy 1.26.4, scipy 1.15.3, numba 0.65.1); CPU only"
+    },
+    "render": {
+      "file": "render_plastic_ruler_coin.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--case",
+        "--cache-dir",
+        "--out-root",
+        "--out",
+        "--frames",
+        "--samples",
+        "--device",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin",
+        "--save-scene"
+      ],
+      "cases": [
+        "source",
+        "coin_mass_x02",
+        "ruler_modulus_x025",
+        "ruler_modulus_x8",
+        "delete_coin",
+        "add_second_coin"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender-bin",
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "requirements": "Blender 4.3.2 (tools/blender-4.3.2-linux-x64 in the repository root); ffmpeg for the video"
+    },
+    "build_pcve": {
+      "file": "build_pcve_plastic_ruler_coin.py",
+      "runtime": "python",
+      "python_runtime": ".venv-rigid-elastic/bin/python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "coin_mass_x02",
+        "ruler_modulus_x025",
+        "ruler_modulus_x8",
+        "delete_coin",
+        "add_second_coin"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {}
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "CPU solve (numpy/scipy/numba) of a planar, geometrically exact, inextensible Kirchhoff strip (8 Galerkin modes from an 80-element Euler-Bernoulli reference, 121 quadrature stations) clamped at the desk edge under the book, coupled to rigid coin cylinders (translation and pitch) by penalty contact with damping and Coulomb friction sampled on the coin faces; velocity Verlet at 1/96000 s, native states stored at exactly i/24 s, i = 0..96 (physics/physics.py, baseline and the five DSL-bound edits in physics/scene_spec.json and physics/vocabulary.py). The accepted solves (assets scenes/plastic_ruler_coin/accepted/physics) are the reproduction inputs. appearance/realism.py builds the scene in Blender 4.3.2 and moves only the cached states: ruler rest vertices are bent along the cached centreline, coins take the cached (x, z, pitch); video frame f = state f - 1, 1280x720, 24 fps, 96 frames, no interpolation. tools/verify_replay.py re-checks every rendered frame against the cache, tools/export_ground_truth.py writes per-case ground truth from the caches and the render camera, tools/publish_suite.py assembles a suite. Material, contact and damping values are nominal, not calibrated.",
+  "implementation_files": [
+    "simulate_plastic_ruler_coin.py",
+    "render_plastic_ruler_coin.py",
+    "build_pcve_plastic_ruler_coin.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/physics.py",
+    "physics/vocabulary.py",
+    "physics/scene_spec.json",
+    "physics/export_surface.py",
+    "appearance/realism.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py",
+    "tools/verify_replay.py"
+  ],
+  "assets": "assets/scenes/plastic_ruler_coin",
+  "edit_catalog": {
+    "file": "build_pcve_plastic_ruler_coin.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

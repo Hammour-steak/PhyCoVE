@@ -1,0 +1,58 @@
+{
+  "scene_id": "yoga_mat_rolled_edge",
+  "schema_version": 1,
+  "units": "m, kg, s, Pa",
+  "reference_product": {
+    "name": "Manduka PRO standard",
+    "source": "https://www.manduka.com/products/manduka-pro-yoga-mat",
+    "length_m": 1.8,
+    "width_m": 0.66,
+    "thickness_m": 0.006,
+    "mass_kg": 3.4,
+    "material": "high-density closed-cell PVC"
+  },
+  "ball": {
+    "reference_name": "10 lb textured rubber medicine ball",
+    "reference_source": "https://www.roguefitness.com/rogue-rubber-medicine-ball",
+    "diameter_m": 0.2413,
+    "radius_m": 0.12065,
+    "mass_kg": 4.536,
+    "material": "uniformly weighted rubber shell",
+    "surface": "moulded grip tread with printed weight mark"
+  },
+  "mat": {
+    "length_m": 1.8,
+    "width_m": 0.66,
+    "thickness_m": 0.006,
+    "mass_kg": 3.4,
+    "density_kg_m3": 476.9921436588103,
+    "poisson_ratio": 0.46,
+    "effective_young_modulus_pa": 6000000.0,
+    "friction_floor": 0.72,
+    "residual_curl_radius_m": 0.06,
+    "residual_curl_angle_rad": 1.05,
+    "residual_curl_arc_m": 0.063,
+    "midplane_floor_clearance_m": 0.00065
+  },
+  "simulation": {
+    "grid_x": 97,
+    "grid_y": 25,
+    "dt_s": 0.0010416666666666667,
+    "duration_s": 1.5,
+    "sample_hz": 30,
+    "contact_d_hat_m": 0.0005,
+    "newton_max_iterations": 700,
+    "surface_shear_viscosity_pa_s_m": 0.25,
+    "surface_bulk_viscosity_pa_s_m": 0.5,
+    "hinge_bending_viscosity": 0.000008
+  },
+  "calibration_sweep_pa": [3000000.0, 6000000.0, 12000000.0],
+  "acceptance": {
+    "window_s": 0.25,
+    "max_rms_vertex_speed_m_s": 0.002,
+    "max_peak_vertex_speed_m_s": 0.008,
+    "max_tip_height_drift_m": 0.001,
+    "plausible_final_tip_height_m": [0.018, 0.045]
+  },
+  "status": "development calibration; product dimensions and mass are sourced, effective constitutive and friction parameters are bounded priors"
+}

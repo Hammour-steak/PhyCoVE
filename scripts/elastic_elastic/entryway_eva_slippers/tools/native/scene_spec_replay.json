@@ -1,0 +1,114 @@
+{
+  "scene_id": "entryway_eva_slippers",
+  "category": "elastic_elastic",
+  "case_number": 16,
+  "status": "release_and_tray_pilot",
+  "cases": [
+    "source",
+    "stiff_falling",
+    "soft_resting",
+    "heavy_falling",
+    "remove_resting",
+    "add_shoe_tray"
+  ],
+  "fps": 24,
+  "duration_s": 4.0,
+  "width": 1280,
+  "height": 720,
+  "baseline": {
+    "falling_young_modulus_pa": 350000.0,
+    "resting_young_modulus_pa": 350000.0,
+    "falling_poisson_ratio": 0.2,
+    "resting_poisson_ratio": 0.2,
+    "falling_density_kg_m3": 200.0,
+    "resting_density_kg_m3": 200.0,
+    "falling_shear_viscosity_pa_s": 150.0,
+    "resting_shear_viscosity_pa_s": 150.0,
+    "falling_bulk_viscosity_pa_s": 150.0,
+    "resting_bulk_viscosity_pa_s": 150.0,
+    "falling_center_m": [
+      -0.059,
+      0.065,
+      0.43
+    ],
+    "falling_euler_deg": [
+      -27,
+      10,
+      250
+    ],
+    "resting_center_m": [
+      0.0,
+      0.0,
+      0.0004
+    ],
+    "resting_euler_deg": [
+      0.0,
+      0.0,
+      170.0
+    ],
+    "falling_mirror_x": false,
+    "resting_mirror_x": true,
+    "shoe_shoe_friction": 0.65,
+    "floor_friction": 0.55,
+    "gravity_m_s2": 9.81,
+    "resting_present": [
+      1
+    ],
+    "falling_initial_velocity_m_s": [
+      -0.24,
+      0.06,
+      0.0
+    ],
+    "tray_present": [
+      0
+    ],
+    "tray_center_m": [
+      -0.245,
+      0.083,
+      0.0279
+    ],
+    "tray_dimensions_m": [
+      0.34,
+      0.3,
+      0.055
+    ],
+    "tray_deck_height_m": 0.02,
+    "tray_rim_width_m": 0.012,
+    "tray_density_kg_m3": 650.0,
+    "tray_is_fixed": 0,
+    "tray_floor_friction": 0.65
+  },
+  "simulation": {
+    "dt_s": 0.0005208333333333333,
+    "integrator": "bdf2",
+    "contact_d_hat_m": 0.00015,
+    "newton_max_iterations": 150,
+    "geometry": "slipper_production_isotropic.npz",
+    "mesh_level": "production",
+    "velocity_tolerance_m_s": 0.002,
+    "linear_relative_tolerance": 0.0001,
+    "boundary_steiner": false,
+    "tray_affine_orthogonality_kappa_pa": 10000000000.0
+  },
+  "render": {
+    "camera_m": [
+      0.57,
+      -1.37,
+      0.63
+    ],
+    "target_m": [
+      -0.105,
+      0.075,
+      0.22
+    ],
+    "lens_mm": 42.0,
+    "samples": 160
+  },
+  "scope": {
+    "material_calibrated": false,
+    "accepted_benchmark_gt": false,
+    "foam_model": "Effective compressible SNK1 with exact small-strain E/nu adapter; native objective metric viscosity. Validity range monitored from actual strain, no prescribed deformation.",
+    "tray_model": "Finite-mass dynamic affine rigid-body approximation with native floor and shoe IPC contact. No transform is prescribed after release."
+  },
+  "baseline_pose_note": "A hand-height release with a gentle outward carry, heel pitched down and small lateral cant."
+}

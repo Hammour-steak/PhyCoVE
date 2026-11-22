@@ -1,0 +1,595 @@
+{
+  "schema_version": 1,
+  "scenes": [
+    {
+      "category": "rigid_rigid",
+      "scene": "domino_chain",
+      "directory": "scripts/rigid_rigid/domino_chain",
+      "manifest": "scripts/rigid_rigid/domino_chain/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "stair_ball_bounce",
+      "directory": "scripts/rigid_rigid/stair_ball_bounce",
+      "manifest": "scripts/rigid_rigid/stair_ball_bounce/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "bowling",
+      "directory": "scripts/rigid_rigid/bowling",
+      "manifest": "scripts/rigid_rigid/bowling/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "twin_ramp_collision",
+      "directory": "scripts/rigid_rigid/twin_ramp_collision",
+      "manifest": "scripts/rigid_rigid/twin_ramp_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "opposing_pendulum_collision",
+      "directory": "scripts/rigid_rigid/opposing_pendulum_collision",
+      "manifest": "scripts/rigid_rigid/opposing_pendulum_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "ramp_car_ball_collision",
+      "directory": "scripts/rigid_rigid/ramp_car_ball_collision",
+      "manifest": "scripts/rigid_rigid/ramp_car_ball_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "basketball_court_bounce",
+      "directory": "scripts/rigid_rigid/basketball_court_bounce",
+      "manifest": "scripts/rigid_rigid/basketball_court_bounce/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "ball_box_rebound",
+      "directory": "scripts/rigid_rigid/ball_box_rebound",
+      "manifest": "scripts/rigid_rigid/ball_box_rebound/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "toy_car_track_jump",
+      "directory": "scripts/rigid_rigid/toy_car_track_jump",
+      "manifest": "scripts/rigid_rigid/toy_car_track_jump/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "curling_collision",
+      "directory": "scripts/rigid_rigid/curling_collision",
+      "manifest": "scripts/rigid_rigid/curling_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "apple_drop_kitchen_basin",
+      "directory": "scripts/rigid_fluid/apple_drop_kitchen_basin",
+      "manifest": "scripts/rigid_fluid/apple_drop_kitchen_basin/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "bowling_ball_pool_drop",
+      "directory": "scripts/rigid_fluid/bowling_ball_pool_drop",
+      "manifest": "scripts/rigid_fluid/bowling_ball_pool_drop/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "coffee_ice_drop",
+      "directory": "scripts/rigid_fluid/coffee_ice_drop",
+      "manifest": "scripts/rigid_fluid/coffee_ice_drop/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "cooking_oil_pan",
+      "directory": "scripts/rigid_fluid/cooking_oil_pan",
+      "manifest": "scripts/rigid_fluid/cooking_oil_pan/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "cup_water_drop",
+      "directory": "scripts/rigid_fluid/cup_water_drop",
+      "manifest": "scripts/rigid_fluid/cup_water_drop/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "faucet_sink",
+      "directory": "scripts/rigid_fluid/faucet_sink",
+      "manifest": "scripts/rigid_fluid/faucet_sink/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "fish_tank_toy",
+      "directory": "scripts/rigid_fluid/fish_tank_toy",
+      "manifest": "scripts/rigid_fluid/fish_tank_toy/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "honey_spoon_toast",
+      "directory": "scripts/rigid_fluid/honey_spoon_toast",
+      "manifest": "scripts/rigid_fluid/honey_spoon_toast/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "juice_dispenser_orange_cup",
+      "directory": "scripts/rigid_fluid/juice_dispenser_orange_cup",
+      "manifest": "scripts/rigid_fluid/juice_dispenser_orange_cup/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "milk_pitcher_glass",
+      "directory": "scripts/rigid_fluid/milk_pitcher_glass",
+      "manifest": "scripts/rigid_fluid/milk_pitcher_glass/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "tilted_cup_table_pour",
+      "directory": "scripts/rigid_fluid/tilted_cup_table_pour",
+      "manifest": "scripts/rigid_fluid/tilted_cup_table_pour/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "toy_boat_pool_glide",
+      "directory": "scripts/rigid_fluid/toy_boat_pool_glide",
+      "manifest": "scripts/rigid_fluid/toy_boat_pool_glide/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "toy_car_float_bathtub",
+      "directory": "scripts/rigid_fluid/toy_car_float_bathtub",
+      "manifest": "scripts/rigid_fluid/toy_car_float_bathtub/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "toy_car_ramp_pool_genesis",
+      "directory": "scripts/rigid_fluid/toy_car_ramp_pool_genesis",
+      "manifest": "scripts/rigid_fluid/toy_car_ramp_pool_genesis/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "traditional_tea_pour",
+      "directory": "scripts/rigid_fluid/traditional_tea_pour",
+      "manifest": "scripts/rigid_fluid/traditional_tea_pour/entrypoints.json"
+    },
+    {
+      "category": "rigid_fluid",
+      "scene": "wine_pour",
+      "directory": "scripts/rigid_fluid/wine_pour",
+      "manifest": "scripts/rigid_fluid/wine_pour/entrypoints.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "beach_ball_hammock_mpm",
+      "directory": "scripts/rigid_elastic/beach_ball_hammock_mpm",
+      "manifest": "scripts/rigid_elastic/beach_ball_hammock_mpm/entrypoints.json"
+    },
+    {
+      "category": "elastic_fluid",
+      "scene": "bathroom_sink_duck_neospace",
+      "directory": "scripts/elastic_fluid/bathroom_sink_duck_neospace",
+      "manifest": "scripts/elastic_fluid/bathroom_sink_duck_neospace/entrypoints.json"
+    },
+    {
+      "category": "elastic_fluid",
+      "scene": "elastic_fluid_duck",
+      "directory": "scripts/elastic_fluid/elastic_fluid_duck",
+      "manifest": "scripts/elastic_fluid/elastic_fluid_duck/entrypoints.json"
+    },
+    {
+      "category": "elastic_fluid",
+      "scene": "glass_bottle_water_balloon_true_coupled",
+      "directory": "scripts/elastic_fluid/glass_bottle_water_balloon_true_coupled",
+      "manifest": "scripts/elastic_fluid/glass_bottle_water_balloon_true_coupled/entrypoints.json"
+    },
+    {
+      "category": "elastic_fluid",
+      "scene": "wind_flag",
+      "directory": "scripts/elastic_fluid/wind_flag",
+      "manifest": "scripts/elastic_fluid/wind_flag/entrypoints.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "toy_car_silicone_bridge",
+      "directory": "scripts/rigid_elastic/toy_car_silicone_bridge",
+      "manifest": "scripts/rigid_elastic/toy_car_silicone_bridge/entrypoints.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "passive_car_spring_return_ramp",
+      "directory": "scripts/rigid_elastic/passive_car_spring_return_ramp",
+      "manifest": "scripts/rigid_elastic/passive_car_spring_return_ramp/entrypoints.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "metal_pendulum_horizontal_spring",
+      "directory": "scripts/rigid_elastic/metal_pendulum_horizontal_spring",
+      "manifest": "scripts/rigid_elastic/metal_pendulum_horizontal_spring/entrypoints.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "egg_dough",
+      "directory": "scripts/rigid_elastic/egg_dough",
+      "manifest": "scripts/rigid_elastic/egg_dough/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "ball_block_building",
+      "directory": "scripts/rigid_rigid/ball_block_building",
+      "manifest": "scripts/rigid_rigid/ball_block_building/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "basketball_corner_rebound",
+      "directory": "scripts/rigid_rigid/basketball_corner_rebound",
+      "manifest": "scripts/rigid_rigid/basketball_corner_rebound/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "basketball_cup_collision",
+      "directory": "scripts/rigid_rigid/basketball_cup_collision",
+      "manifest": "scripts/rigid_rigid/basketball_cup_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "basketball_rim_roll_in",
+      "directory": "scripts/rigid_rigid/basketball_rim_roll_in",
+      "manifest": "scripts/rigid_rigid/basketball_rim_roll_in/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "bathroom_stool_rebound",
+      "directory": "scripts/rigid_rigid/bathroom_stool_rebound",
+      "manifest": "scripts/rigid_rigid/bathroom_stool_rebound/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "bathroom_tennis_throw",
+      "directory": "scripts/rigid_rigid/bathroom_tennis_throw",
+      "manifest": "scripts/rigid_rigid/bathroom_tennis_throw/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "chalk_box_stack",
+      "directory": "scripts/rigid_rigid/chalk_box_stack",
+      "manifest": "scripts/rigid_rigid/chalk_box_stack/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "door_basketball_collision",
+      "directory": "scripts/rigid_rigid/door_basketball_collision",
+      "manifest": "scripts/rigid_rigid/door_basketball_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "flatbed_speed_bump",
+      "directory": "scripts/rigid_rigid/flatbed_speed_bump",
+      "manifest": "scripts/rigid_rigid/flatbed_speed_bump/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "home_basketball_door",
+      "directory": "scripts/rigid_rigid/home_basketball_door",
+      "manifest": "scripts/rigid_rigid/home_basketball_door/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "kitchen_bowl_fall",
+      "directory": "scripts/rigid_rigid/kitchen_bowl_fall",
+      "manifest": "scripts/rigid_rigid/kitchen_bowl_fall/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "kitchen_can_collision",
+      "directory": "scripts/rigid_rigid/kitchen_can_collision",
+      "manifest": "scripts/rigid_rigid/kitchen_can_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "kitchen_orange_collision",
+      "directory": "scripts/rigid_rigid/kitchen_orange_collision",
+      "manifest": "scripts/rigid_rigid/kitchen_orange_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "kitchen_tableware_collision",
+      "directory": "scripts/rigid_rigid/kitchen_tableware_collision",
+      "manifest": "scripts/rigid_rigid/kitchen_tableware_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "kitchen_tin_collision",
+      "directory": "scripts/rigid_rigid/kitchen_tin_collision",
+      "manifest": "scripts/rigid_rigid/kitchen_tin_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "newtons_cradle",
+      "directory": "scripts/rigid_rigid/newtons_cradle",
+      "manifest": "scripts/rigid_rigid/newtons_cradle/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "office_desk_kettle_tip",
+      "directory": "scripts/rigid_rigid/office_desk_kettle_tip",
+      "manifest": "scripts/rigid_rigid/office_desk_kettle_tip/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "pendulum_box_collision",
+      "directory": "scripts/rigid_rigid/pendulum_box_collision",
+      "manifest": "scripts/rigid_rigid/pendulum_box_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "pool_break",
+      "directory": "scripts/rigid_rigid/pool_break",
+      "manifest": "scripts/rigid_rigid/pool_break/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "pot_lid_drop",
+      "directory": "scripts/rigid_rigid/pot_lid_drop",
+      "manifest": "scripts/rigid_rigid/pot_lid_drop/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "soccer_ball_collision",
+      "directory": "scripts/rigid_rigid/soccer_ball_collision",
+      "manifest": "scripts/rigid_rigid/soccer_ball_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "soccer_step_collision",
+      "directory": "scripts/rigid_rigid/soccer_step_collision",
+      "manifest": "scripts/rigid_rigid/soccer_step_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "tennis_bottle_collision",
+      "directory": "scripts/rigid_rigid/tennis_bottle_collision",
+      "manifest": "scripts/rigid_rigid/tennis_bottle_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "toy_car_bottle",
+      "directory": "scripts/rigid_rigid/toy_car_bottle",
+      "manifest": "scripts/rigid_rigid/toy_car_bottle/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "toy_car_collision",
+      "directory": "scripts/rigid_rigid/toy_car_collision",
+      "manifest": "scripts/rigid_rigid/toy_car_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "twin_pendulum_collision",
+      "directory": "scripts/rigid_rigid/twin_pendulum_collision",
+      "manifest": "scripts/rigid_rigid/twin_pendulum_collision/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "u_track_ball",
+      "directory": "scripts/rigid_rigid/u_track_ball",
+      "manifest": "scripts/rigid_rigid/u_track_ball/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "uneven_ground_ball",
+      "directory": "scripts/rigid_rigid/uneven_ground_ball",
+      "manifest": "scripts/rigid_rigid/uneven_ground_ball/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "volleyball_corner_rebound",
+      "directory": "scripts/rigid_rigid/volleyball_corner_rebound",
+      "manifest": "scripts/rigid_rigid/volleyball_corner_rebound/entrypoints.json"
+    },
+    {
+      "category": "rigid_rigid",
+      "scene": "wall_clock_drop",
+      "directory": "scripts/rigid_rigid/wall_clock_drop",
+      "manifest": "scripts/rigid_rigid/wall_clock_drop/entrypoints.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "book_pillow_bedroom",
+      "directory": "scripts/rigid_elastic/book_pillow_bedroom",
+      "manifest": "scripts/rigid_elastic/book_pillow_bedroom/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_book_pillow_bedroom_suite",
+      "media_manifest": "renders/pcve_suites/pcve_book_pillow_bedroom_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "cabinet_towel_pinch",
+      "directory": "scripts/rigid_elastic/cabinet_towel_pinch",
+      "manifest": "scripts/rigid_elastic/cabinet_towel_pinch/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_cabinet_towel_pinch_suite",
+      "media_manifest": "renders/pcve_suites/pcve_cabinet_towel_pinch_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "curtain_doraemon_drape",
+      "directory": "scripts/rigid_elastic/curtain_doraemon_drape",
+      "manifest": "scripts/rigid_elastic/curtain_doraemon_drape/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_curtain_doraemon_drape_suite",
+      "media_manifest": "renders/pcve_suites/pcve_curtain_doraemon_drape_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "elastic_key_strap",
+      "directory": "scripts/rigid_elastic/elastic_key_strap",
+      "manifest": "scripts/rigid_elastic/elastic_key_strap/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_elastic_key_strap_suite",
+      "media_manifest": "renders/pcve_suites/pcve_elastic_key_strap_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "football_goal_net",
+      "directory": "scripts/rigid_elastic/football_goal_net",
+      "manifest": "scripts/rigid_elastic/football_goal_net/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_football_goal_net_suite",
+      "media_manifest": "renders/pcve_suites/pcve_football_goal_net_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "gym_landing_mat",
+      "directory": "scripts/rigid_elastic/gym_landing_mat",
+      "manifest": "scripts/rigid_elastic/gym_landing_mat/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_gym_landing_mat_suite",
+      "media_manifest": "renders/pcve_suites/pcve_gym_landing_mat_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "metro_security_bag_curtain",
+      "directory": "scripts/rigid_elastic/metro_security_bag_curtain",
+      "manifest": "scripts/rigid_elastic/metro_security_bag_curtain/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_metro_security_bag_curtain_suite",
+      "media_manifest": "renders/pcve_suites/pcve_metro_security_bag_curtain_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "phone_sofa_drop",
+      "directory": "scripts/rigid_elastic/phone_sofa_drop",
+      "manifest": "scripts/rigid_elastic/phone_sofa_drop/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_phone_sofa_drop_suite",
+      "media_manifest": "renders/pcve_suites/pcve_phone_sofa_drop_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "picnic_ground_blanket",
+      "directory": "scripts/rigid_elastic/picnic_ground_blanket",
+      "manifest": "scripts/rigid_elastic/picnic_ground_blanket/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_picnic_ground_blanket_suite",
+      "media_manifest": "renders/pcve_suites/pcve_picnic_ground_blanket_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "plastic_ruler_coin",
+      "directory": "scripts/rigid_elastic/plastic_ruler_coin",
+      "manifest": "scripts/rigid_elastic/plastic_ruler_coin/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_plastic_ruler_coin_suite",
+      "media_manifest": "renders/pcve_suites/pcve_plastic_ruler_coin_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "rubber_band_wood_slider",
+      "directory": "scripts/rigid_elastic/rubber_band_wood_slider",
+      "manifest": "scripts/rigid_elastic/rubber_band_wood_slider/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_rubber_band_wood_slider_suite",
+      "media_manifest": "renders/pcve_suites/pcve_rubber_band_wood_slider_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "scarf_chair_slip",
+      "directory": "scripts/rigid_elastic/scarf_chair_slip",
+      "manifest": "scripts/rigid_elastic/scarf_chair_slip/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_scarf_chair_slip_suite",
+      "media_manifest": "renders/pcve_suites/pcve_scarf_chair_slip_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "silicone_bag_can",
+      "directory": "scripts/rigid_elastic/silicone_bag_can",
+      "manifest": "scripts/rigid_elastic/silicone_bag_can/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_silicone_bag_can_suite",
+      "media_manifest": "renders/pcve_suites/pcve_silicone_bag_can_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "silicone_block_chain",
+      "directory": "scripts/rigid_elastic/silicone_block_chain",
+      "manifest": "scripts/rigid_elastic/silicone_block_chain/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_silicone_block_chain_suite",
+      "media_manifest": "renders/pcve_suites/pcve_silicone_block_chain_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "slingshot_domino",
+      "directory": "scripts/rigid_elastic/slingshot_domino",
+      "manifest": "scripts/rigid_elastic/slingshot_domino/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_slingshot_domino_suite",
+      "media_manifest": "renders/pcve_suites/pcve_slingshot_domino_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "spring_block_step",
+      "directory": "scripts/rigid_elastic/spring_block_step",
+      "manifest": "scripts/rigid_elastic/spring_block_step/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_spring_block_step_suite",
+      "media_manifest": "renders/pcve_suites/pcve_spring_block_step_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "spring_car_collision",
+      "directory": "scripts/rigid_elastic/spring_car_collision",
+      "manifest": "scripts/rigid_elastic/spring_car_collision/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_spring_car_collision_suite",
+      "media_manifest": "renders/pcve_suites/pcve_spring_car_collision_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "spring_scale_weight_drop",
+      "directory": "scripts/rigid_elastic/spring_scale_weight_drop",
+      "manifest": "scripts/rigid_elastic/spring_scale_weight_drop/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_spring_scale_weight_drop_suite",
+      "media_manifest": "renders/pcve_suites/pcve_spring_scale_weight_drop_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "steel_ball_tensioned_membrane",
+      "directory": "scripts/rigid_elastic/steel_ball_tensioned_membrane",
+      "manifest": "scripts/rigid_elastic/steel_ball_tensioned_membrane/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_steel_ball_tensioned_membrane_suite",
+      "media_manifest": "renders/pcve_suites/pcve_steel_ball_tensioned_membrane_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "tennis_net_hit",
+      "directory": "scripts/rigid_elastic/tennis_net_hit",
+      "manifest": "scripts/rigid_elastic/tennis_net_hit/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_tennis_net_hit_suite",
+      "media_manifest": "renders/pcve_suites/pcve_tennis_net_hit_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "thomas_dual_spring_train",
+      "directory": "scripts/rigid_elastic/thomas_dual_spring_train",
+      "manifest": "scripts/rigid_elastic/thomas_dual_spring_train/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_thomas_dual_spring_train_suite",
+      "media_manifest": "renders/pcve_suites/pcve_thomas_dual_spring_train_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "wood_block_rubber_stop",
+      "directory": "scripts/rigid_elastic/wood_block_rubber_stop",
+      "manifest": "scripts/rigid_elastic/wood_block_rubber_stop/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_wood_block_rubber_stop_suite",
+      "media_manifest": "renders/pcve_suites/pcve_wood_block_rubber_stop_suite/suite_manifest.json"
+    },
+    {
+      "category": "rigid_elastic",
+      "scene": "yoga_mat_rolled_edge",
+      "directory": "scripts/rigid_elastic/yoga_mat_rolled_edge",
+      "manifest": "scripts/rigid_elastic/yoga_mat_rolled_edge/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_yoga_mat_rolled_edge_suite",
+      "media_manifest": "renders/pcve_suites/pcve_yoga_mat_rolled_edge_suite/suite_manifest.json"
+    },
+    {
+      "category": "elastic_elastic",
+      "scene": "cotton_tshirt_sofa",
+      "directory": "scripts/elastic_elastic/cotton_tshirt_sofa",
+      "manifest": "scripts/elastic_elastic/cotton_tshirt_sofa/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_cotton_tshirt_sofa_suite",
+      "media_manifest": "renders/pcve_suites/pcve_cotton_tshirt_sofa_suite/suite_manifest.json"
+    },
+    {
+      "category": "elastic_elastic",
+      "scene": "entryway_eva_slippers",
+      "directory": "scripts/elastic_elastic/entryway_eva_slippers",
+      "manifest": "scripts/elastic_elastic/entryway_eva_slippers/entrypoints.json",
+      "media_directory": "renders/pcve_suites/pcve_entryway_eva_slippers_suite",
+      "media_manifest": "renders/pcve_suites/pcve_entryway_eva_slippers_suite/suite_manifest.json"
+    }
+  ]
+}

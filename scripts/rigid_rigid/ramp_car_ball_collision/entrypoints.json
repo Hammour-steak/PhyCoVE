@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "scene": "ramp_car_ball_collision",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_ramp_car_ball_collision.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--case",
+        "--overrides-json",
+        "--configuration-json"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_ramp_car_ball_collision.py",
+      "runtime": "blender",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--physics-json",
+        "--asset-root",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--skip-existing",
+        "--frame-start",
+        "--frame-end",
+        "--input-blend",
+        "--synchronized-cache",
+        "--appearance-json",
+        "--refresh-dynamic-only"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_ramp_car_ball_collision.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--device",
+        "--skip-existing",
+        "--synchronized-cache",
+        "--appearance-json",
+        "--reuse-physics-from",
+        "--configuration-json",
+        "--refresh-dynamic-only"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "source",
+        "edit_heavy_ball",
+        "edit_low_restitution",
+        "edit_remove_ball",
+        "edit_light_ball",
+        "edit_remove_car",
+        "edit_remove_car_at_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Free six-DOF chassis with four independent passive revolute wheel rigid bodies, zero motor force and zero initial velocities. Native Bullet contact and rolling resistance, no runtime velocity resets, no authored driving. Cycles replays solved poses only. Source validation gates all counterfactuals.",
+  "implementation_files": [
+    "scene_config.py",
+    "simulate_ramp_car_ball_collision.py",
+    "physics/validate_ramp_car_ball_collision.py",
+    "physics/graybox_scan.py",
+    "appearance/look_ramp_car_ball_collision.py",
+    "render_ramp_car_ball_collision.py",
+    "build_pcve_ramp_car_ball_collision.py",
+    "edit_vocab.py",
+    "asset_manifest.json",
+    "tools/audit_rendered_frames.py",
+    "tools/audit_saved_scene.py",
+    "tools/object_presence.py",
+    "tools/prepare_diecast.py",
+    "tools/prepare_template_suite.py",
+    "tools/record_visual_review.py",
+    "tools/render_diecast.py",
+    "tools/render_template_suite.py",
+    "tools/review_template_suite.py"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scene_id": "flatbed_speed_bump",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_flatbed_speed_bump.py",
+    "render": "render_flatbed_speed_bump.py",
+    "build_pcve": "build_pcve_flatbed_speed_bump.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "flatbed_speed_bump_baseline",
+    "edit_fast_truck",
+    "edit_low_bump",
+    "edit_high_bump",
+    "edit_slippery_cargo",
+    "edit_brake_before_bump",
+    "edit_delete_speed_bump"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_flatbed_speed_bump_suite": {
+      "target": "renders/pcve_suites/pcve_flatbed_speed_bump_suite",
+      "case_video_sha256": {
+        "edit_brake_before_bump": "af585095988b023dc6a5848734132cb1a58b8afebbc7b83ee99a0548a15ff72b",
+        "edit_delete_speed_bump": "abb4099e298d376358245132419344925f9105c1c577bc3bcb70c5f314e993bf",
+        "edit_fast_truck": "72c3861a0a4b5669cb6ba0be5e1884269aeb722c5c6be30377819de588f077e8",
+        "edit_high_bump": "7635ba91b985e1237898047b9b4795f63c42cc1a0247d7874e9e9a48409ca9c5",
+        "edit_low_bump": "c27b192b3a9102f4e5cee6d9f7ab1d64ab568c70e51406bb86d45c4d6f278312",
+        "edit_slippery_cargo": "245e7fe596925b6c9318e585a4b93174b8fa977ca7b73ef3a763cbb6337cea48",
+        "flatbed_speed_bump_baseline": "d75d79288230c2474b5b50c07f158871f3697fef8d5c70fbe678ffad46cbf6dd"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "flatbed_speed_bump_baseline": "source",
+        "edit_fast_truck": "edit_fast_truck",
+        "edit_low_bump": "edit_low_bump",
+        "edit_high_bump": "edit_high_bump",
+        "edit_slippery_cargo": "edit_slippery_cargo",
+        "edit_brake_before_bump": "edit_brake_before_bump"
+      },
+      "public_case_video_sha256": {
+        "edit_brake_before_bump": "af585095988b023dc6a5848734132cb1a58b8afebbc7b83ee99a0548a15ff72b",
+        "edit_delete_speed_bump": "abb4099e298d376358245132419344925f9105c1c577bc3bcb70c5f314e993bf",
+        "edit_fast_truck": "72c3861a0a4b5669cb6ba0be5e1884269aeb722c5c6be30377819de588f077e8",
+        "edit_high_bump": "7635ba91b985e1237898047b9b4795f63c42cc1a0247d7874e9e9a48409ca9c5",
+        "edit_low_bump": "c27b192b3a9102f4e5cee6d9f7ab1d64ab568c70e51406bb86d45c4d6f278312",
+        "edit_slippery_cargo": "245e7fe596925b6c9318e585a4b93174b8fa977ca7b73ef3a763cbb6337cea48",
+        "source": "d75d79288230c2474b5b50c07f158871f3697fef8d5c70fbe678ffad46cbf6dd"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/flatbed_speed_bump",
+  "assets": {
+    "models": [
+      "flatbed_unity3d.glb"
+    ],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/flatbed_speed_bump"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

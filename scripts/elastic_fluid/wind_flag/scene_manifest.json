@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "scene_id": "wind_flag",
+  "interaction_category": "elastic_fluid",
+  "entry_points": {
+    "simulate": "simulate_wind_flag.py",
+    "render": "render_wind_flag.py",
+    "build_pcve": "build_pcve_wind_flag.py"
+  },
+  "configuration": [
+    "wind_flag_config.py",
+    "scene_spec.json",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "wind_flag_baseline",
+    "edit_wind_6mps",
+    "edit_young_modulus_100mpa",
+    "edit_wind_drop_at_2s",
+    "edit_wind_0p5mps",
+    "edit_wind_0mps"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_wind_flag_suite": {
+      "target": "renders/pcve_suites/pcve_wind_flag_suite",
+      "case_video_sha256": {
+        "wind_flag_baseline": "444f882bb9e41326f84b67a42316886c928653955fc56a0a4b2e7fc40356403a",
+        "edit_wind_6mps": "6491e4decb21d33fb7485819893d62c83ac4e8a9602319eabfd1ae5c3b4b94cb",
+        "edit_young_modulus_100mpa": "845e192cb6f6dc7b29b1fda6736ccef4342fd6be7543e12aecf1fbecb40cfb01",
+        "edit_wind_drop_at_2s": "e99013ffa30c97693ac5dd73e63986d7049df1a5cdcc438ebadcde014df2a72b",
+        "edit_wind_0p5mps": "aaac1430862ff74e9b492cb57378974f874190efffc15e44d1208a4032ff6053",
+        "edit_wind_0mps": "98bb0c10b3a5dd82e8fc9eb3f560a322e79c15e83830ced9831da54479b1266f"
+      },
+      "public_case_ids": {
+        "wind_flag_baseline": "source",
+        "edit_wind_6mps": "edit_wind_6mps",
+        "edit_young_modulus_100mpa": "edit_young_modulus_100mpa",
+        "edit_wind_drop_at_2s": "edit_wind_drop_at_2s",
+        "edit_wind_0p5mps": "edit_wind_0p5mps",
+        "edit_wind_0mps": "edit_wind_0mps"
+      },
+      "public_case_video_sha256": {
+        "edit_wind_0mps": "98bb0c10b3a5dd82e8fc9eb3f560a322e79c15e83830ced9831da54479b1266f",
+        "edit_wind_0p5mps": "aaac1430862ff74e9b492cb57378974f874190efffc15e44d1208a4032ff6053",
+        "edit_wind_6mps": "6491e4decb21d33fb7485819893d62c83ac4e8a9602319eabfd1ae5c3b4b94cb",
+        "edit_wind_drop_at_2s": "e99013ffa30c97693ac5dd73e63986d7049df1a5cdcc438ebadcde014df2a72b",
+        "edit_young_modulus_100mpa": "845e192cb6f6dc7b29b1fda6736ccef4342fd6be7543e12aecf1fbecb40cfb01",
+        "source": "444f882bb9e41326f84b67a42316886c928653955fc56a0a4b2e7fc40356403a"
+      }
+    }
+  },
+  "native_simulate_cases": {
+    "wind_flag_baseline": "source",
+    "edit_wind_6mps": "flow_6mps",
+    "edit_young_modulus_100mpa": "young_stiff",
+    "edit_wind_drop_at_2s": "wind_drop_at_2s",
+    "edit_wind_0p5mps": "flow_0p5mps",
+    "edit_wind_0mps": "flow_0mps"
+  }
+}

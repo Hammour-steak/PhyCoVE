@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "scene_id": "picnic_ground_blanket",
+  "interaction_category": "rigid_elastic",
+  "case_number": 2,
+  "entry_points": {
+    "simulate": "simulate_picnic_ground_blanket.py",
+    "render": "render_picnic_ground_blanket.py",
+    "build_pcve": "build_pcve_picnic_ground_blanket.py"
+  },
+  "configuration": [
+    "physics/scene_specs.json",
+    "scene_inputs.py",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "mass_double",
+    "faster",
+    "stiffer",
+    "delete_actor",
+    "mass_double_at_frame_12"
+  ],
+  "workflows": {},
+  "camera": {
+    "description": "Fixed camera of all cases (object 'Fixed common camera for source and five physical edits' in the packed scene); the renderer checks it every frame and GT export reads it from here",
+    "matrix_world": [
+      [
+        0.9324414730072021,
+        -0.08396963775157928,
+        0.3514285385608673,
+        0.7200000286102295
+      ],
+      [
+        0.3613210618495941,
+        0.2166959047317505,
+        -0.9069123268127441,
+        -1.5
+      ],
+      [
+        -2.2279593281382404e-08,
+        0.9726212024688721,
+        0.23239624500274658,
+        0.46000000834465027
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "lens_mm": 45,
+    "sensor_width_mm": 36,
+    "shift": [
+      0.0,
+      0.0
+    ],
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  "data": {
+    "assets": "assets/scenes/picnic_ground_blanket",
+    "native_inputs": "assets/scenes/picnic_ground_blanket/native/<case>",
+    "accepted_delivery": "renders/picnic_ground_blanket/accepted",
+    "rebuild_output": "renders/picnic_ground_blanket/rebuild"
+  },
+  "canonical_suites": {
+    "pcve_picnic_ground_blanket_suite": {
+      "target": "renders/pcve_suites/pcve_picnic_ground_blanket_suite",
+      "public_case_ids": {
+        "source": "source",
+        "mass_double": "edit_mass_double",
+        "faster": "edit_faster",
+        "stiffer": "edit_stiffer",
+        "delete_actor": "edit_delete_actor",
+        "mass_double_at_frame_12": "edit_mass_double_at_frame_12"
+      },
+      "case_video_sha256": {
+        "source": "ecf3d3b1fdc9b70d699a054b0e0c7cecc8bd37227da020c7a7a43194b77d7344",
+        "mass_double": "8c38a6b0773047d9cb053cfdf4f9ed4aff3d021f1337b74cafd6a406103188f7",
+        "faster": "48c083ef3a90b9ab3622f0596113ddc54c9e6021aef65ae681d323ef10615f77",
+        "stiffer": "dedf3413283977d579eab6261319e0a6a3e75bf5e2d571d662216295fd6649fb",
+        "delete_actor": "a07218e7beac9a54c7e74baa7530be9df81daac929679ac2f298bbdd9f5f1516",
+        "mass_double_at_frame_12": "a387061c66f2d2c5657187cc312d6f005490df4781231aa9e93fab958a936e3d",
+        "edit_delete_cotton_blanket": "3bc194c89f28859a37d2b5226ca13e8c710b4f3376cfde719fd48da610a2f16a"
+      },
+      "case_folders": {
+        "source": "cases/source",
+        "mass_double": "cases/edit_mass_double",
+        "faster": "cases/edit_faster",
+        "stiffer": "cases/edit_stiffer",
+        "delete_actor": "cases/edit_delete_actor",
+        "mass_double_at_frame_12": "cases/edit_mass_double_at_frame_12"
+      },
+      "native_renders": {
+        "source": "source/render",
+        "mass_double": "mass_double/render",
+        "faster": "faster/render",
+        "stiffer": "stiffer/render",
+        "delete_actor": "delete_actor/render"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "mass_double": "cases/edit_mass_double/video.mp4",
+        "faster": "cases/edit_faster/video.mp4",
+        "stiffer": "cases/edit_stiffer/video.mp4",
+        "delete_actor": "cases/edit_delete_actor/video.mp4",
+        "mass_double_at_frame_12": "cases/edit_mass_double_at_frame_12/video.mp4"
+      },
+      "timed_native_metadata": {
+        "mass_double_at_frame_12": "cases/edit_mass_double_at_frame_12/native_metadata"
+      }
+    }
+  }
+}

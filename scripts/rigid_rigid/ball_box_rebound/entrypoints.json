@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "scene": "ball_box_rebound",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_ball_box_rebound.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--config-json",
+        "--case-id"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_ball_box_rebound.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--physics-json",
+        "--out-dir",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--threads-native",
+        "--skip-existing"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "threads": "--threads-native"
+      },
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_ball_box_rebound.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--threads-native",
+        "--device",
+        "--skip-existing",
+        "--config-json",
+        "--reuse-physics-json",
+        "--keyframes"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender",
+        "threads": "--threads-native"
+      },
+      "cases": [
+        "source",
+        "edit_high_restitution",
+        "edit_low_restitution",
+        "edit_fast_initial_velocity",
+        "edit_slow_initial_velocity",
+        "edit_high_ball_friction",
+        "edit_high_football_friction",
+        "edit_remove_football",
+        "edit_remove_football_at_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Source-gated independent PyBullet solves of 8 edits: restitution up/down, initial rolling speed up/down, lateral friction per ball, and football deletion at start or at 2 seconds in the same running world. One appearance shared by all cases (star-ball print, oak floor appearance, text-free props, football use marks, 0.25-frame motion blur). Edited trajectories may leave the frame by user request.",
+  "implementation_files": [
+    "appearance/look_ball_box_rebound.py",
+    "asset_manifest.json",
+    "build_pcve_ball_box_rebound.py",
+    "physics/validate_ball_box_rebound.py",
+    "render_ball_box_rebound.py",
+    "scene_config.py",
+    "simulate_ball_box_rebound.py",
+    "tools/download_blenderkit_assets.py",
+    "tools/render_frozen_frames.py",
+    "tools/render_parallel_cpu.py",
+    "edit_vocab.py",
+    "physics/validate_edits.py"
+  ]
+}

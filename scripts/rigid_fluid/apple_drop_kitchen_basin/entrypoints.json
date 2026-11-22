@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "scene": "apple_drop_kitchen_basin",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_apple_drop_kitchen_basin.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--domain-top",
+        "--out",
+        "--dx",
+        "--substeps",
+        "--divergence-error",
+        "--density-error",
+        "--extra-layers",
+        "--film-band",
+        "--min-sweeps",
+        "--contact-gap",
+        "--warm-start",
+        "--skip-air",
+        "--damping",
+        "--settle-seconds",
+        "--check-seconds",
+        "--water-state",
+        "--ball-mass",
+        "--liquid-density",
+        "--liquid-nu",
+        "--surface-tension",
+        "--frames"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_apple_drop_kitchen_basin.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--run",
+        "--out",
+        "--frames",
+        "--frame-list",
+        "--samples",
+        "--exposure",
+        "--resolution",
+        "--shutter",
+        "--gpu-backend",
+        "--cpu-threads",
+        "--part",
+        "--dry-run"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_apple_drop_kitchen_basin.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--cases",
+        "--render-gpus",
+        "--out-root",
+        "--stage",
+        "--python",
+        "--blender",
+        "--threads",
+        "--gpu",
+        "--dry-run",
+        "--source-run"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "edit_heavy_apple",
+        "edit_high_density_liquid",
+        "edit_viscous_liquid",
+        "delete_water",
+        "delete_water_at_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_apple_drop_kitchen_basin.py",
+    "edit_vocab.py",
+    "physics/calibrate_surface_tension_apple_drop_kitchen_basin.py",
+    "physics/encode_water_removal.py",
+    "appearance/ground_apple_drop_kitchen_basin.py",
+    "tools/package_native.py",
+    "tools/pipeline_apple_drop_kitchen_basin.sh",
+    "physics/remove_water_edits.py",
+    "render_apple_drop_kitchen_basin.py",
+    "tools/render_cpu_apple_drop_kitchen_basin.sh",
+    "tools/render_gpus_apple_drop_kitchen_basin.sh",
+    "scene_apple_drop_kitchen_basin.py",
+    "simulate_apple_drop_kitchen_basin.py",
+    "physics/splash_apple_drop_kitchen_basin.py",
+    "scene_manifest.json"
+  ]
+}

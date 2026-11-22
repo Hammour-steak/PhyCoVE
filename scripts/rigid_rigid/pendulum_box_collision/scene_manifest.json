@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scene_id": "pendulum_box_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_pendulum_box_collision.py",
+    "render": "render_pendulum_box_collision.py",
+    "build_pcve": "build_pcve_pendulum_box_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "pendulum_box_collision_baseline",
+    "edit_heavy_bob",
+    "edit_still_bob",
+    "edit_heavy_block",
+    "edit_fast_block",
+    "edit_soft_bounce_timed",
+    "edit_delete_bob",
+    "edit_delete_wooden_block"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_pendulum_box_collision_suite": {
+      "target": "renders/pcve_suites/pcve_pendulum_box_collision_suite",
+      "case_video_sha256": {
+        "edit_delete_bob": "5f25ec95e7f2d64fa9684bb4bc0ac68216a744dcfaf455571ec10b10b6e1c2db",
+        "edit_delete_wooden_block": "d670ccd76517add013c450cb5c14fb0439a471a54218e3a7ba5c072f98c1e4b6",
+        "edit_fast_block": "3a440286915ec877c20495d89f6c7f3df82fe1d6e5c5edf71cd213b4bbe94c4b",
+        "edit_heavy_block": "81ec85330831ef04e5521c9ffabee4a74167cf404db9ebe428017696e974566e",
+        "edit_heavy_bob": "8b95f2ec2e411f1d185cfbb12d04d2ec87c022154a8e4d54fa6bc5876dbff329",
+        "edit_soft_bounce_timed": "45ae3cb1019a196a5a86fca12604691e48a872f4bd6b786fff2ea253dd0971b2",
+        "edit_still_bob": "420a96a1323dbbca41244676972520c5b3a866598a40d26dda18665529e52bda",
+        "pendulum_box_collision_baseline": "363afbafab6ec01da82f667f7d676f56a98611bc295109a88cc68ba63494027f"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "pendulum_box_collision_baseline": "source",
+        "edit_heavy_bob": "edit_heavy_bob",
+        "edit_still_bob": "edit_still_bob",
+        "edit_heavy_block": "edit_heavy_block",
+        "edit_fast_block": "edit_fast_block",
+        "edit_soft_bounce_timed": "edit_soft_bounce_timed"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_bob": "5f25ec95e7f2d64fa9684bb4bc0ac68216a744dcfaf455571ec10b10b6e1c2db",
+        "edit_delete_wooden_block": "d670ccd76517add013c450cb5c14fb0439a471a54218e3a7ba5c072f98c1e4b6",
+        "edit_fast_block": "3a440286915ec877c20495d89f6c7f3df82fe1d6e5c5edf71cd213b4bbe94c4b",
+        "edit_heavy_block": "81ec85330831ef04e5521c9ffabee4a74167cf404db9ebe428017696e974566e",
+        "edit_heavy_bob": "8b95f2ec2e411f1d185cfbb12d04d2ec87c022154a8e4d54fa6bc5876dbff329",
+        "edit_soft_bounce_timed": "45ae3cb1019a196a5a86fca12604691e48a872f4bd6b786fff2ea253dd0971b2",
+        "edit_still_bob": "420a96a1323dbbca41244676972520c5b3a866598a40d26dda18665529e52bda",
+        "source": "363afbafab6ec01da82f667f7d676f56a98611bc295109a88cc68ba63494027f"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/pendulum_box_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "polyhaven/pendulum_box_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

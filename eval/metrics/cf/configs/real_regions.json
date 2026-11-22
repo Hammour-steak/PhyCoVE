@@ -1,0 +1,56 @@
+{
+  "orange_ball_cup_water__edit_add_water": {
+    "water": [
+      292,
+      250,
+      378,
+      305
+    ]
+  },
+  "apple_sink_water_flow__edit_increase_water_flow": {
+    "flow": [
+      250,
+      0,
+      600,
+      280
+    ]
+  },
+  "apple_sink_water_flow__edit_remove_water": {
+    "flow": [
+      250,
+      0,
+      600,
+      280
+    ],
+    "water": [
+      380,
+      0,
+      480,
+      140
+    ]
+  },
+  "sink_bottle_water_removal__edit_remove_water": {
+    "water": [
+      140,
+      60,
+      560,
+      330
+    ]
+  },
+  "sink_bottle_water_pair__edit_remove_water": {
+    "water": [
+      150,
+      120,
+      520,
+      360
+    ]
+  },
+  "orange_ball_book_bounce__edit_remove_book": {
+    "book": [
+      250,
+      250,
+      520,
+      355
+    ]
+  }
+}

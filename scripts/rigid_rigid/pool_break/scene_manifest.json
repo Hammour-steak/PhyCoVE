@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scene_id": "pool_break",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_pool_break.py",
+    "render": "render_pool_break.py",
+    "build_pcve": "build_pcve_pool_break.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "pool_break_baseline",
+    "edit_power_break",
+    "edit_cut_left",
+    "edit_cut_right",
+    "edit_light_cue",
+    "edit_dead_rack_timed",
+    "edit_delete_apex_ball",
+    "edit_delete_cue_ball"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_pool_break_suite": {
+      "target": "renders/pcve_suites/pcve_pool_break_suite",
+      "case_video_sha256": {
+        "edit_cut_left": "183a7a9263f90ce191e1542280060903982f040d2fa92634c60021b1fa7ba313",
+        "edit_cut_right": "8e56620550a9bfabcb89405a22fe798fd143bbf6d31a5748384f2878ec11e7e1",
+        "edit_dead_rack_timed": "64ad572603a0d41ce734c974d3d9572aea7f410a219770e0159acb00fca3cb6a",
+        "edit_delete_apex_ball": "fd7d5bb164bc620efd784ff4b695010a50ff89dd52f475826b0be61819b9699d",
+        "edit_delete_cue_ball": "60335ed338da88f7644ae9cf7c9c3d5575e6548ccdce69480a9b2242b3b2e7f6",
+        "edit_light_cue": "3c8f8f1ebc1d4a619b323feee350113713ddc3b46a538b78c2b9e8faf5888ddd",
+        "edit_power_break": "8ca3cfd1572724737bb553d3f2393c2d07504b1ab0f55de0b4c1a29bdd10293d",
+        "pool_break_baseline": "81c8b01bd3f43a8b0a876341e78dc3c745fed85bf747810c4713727d14bc1ae5"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "pool_break_baseline": "source",
+        "edit_power_break": "edit_power_break",
+        "edit_cut_left": "edit_cut_left",
+        "edit_cut_right": "edit_cut_right",
+        "edit_light_cue": "edit_light_cue",
+        "edit_dead_rack_timed": "edit_dead_rack_timed"
+      },
+      "public_case_video_sha256": {
+        "edit_cut_left": "183a7a9263f90ce191e1542280060903982f040d2fa92634c60021b1fa7ba313",
+        "edit_cut_right": "8e56620550a9bfabcb89405a22fe798fd143bbf6d31a5748384f2878ec11e7e1",
+        "edit_dead_rack_timed": "64ad572603a0d41ce734c974d3d9572aea7f410a219770e0159acb00fca3cb6a",
+        "edit_delete_apex_ball": "fd7d5bb164bc620efd784ff4b695010a50ff89dd52f475826b0be61819b9699d",
+        "edit_delete_cue_ball": "60335ed338da88f7644ae9cf7c9c3d5575e6548ccdce69480a9b2242b3b2e7f6",
+        "edit_light_cue": "3c8f8f1ebc1d4a619b323feee350113713ddc3b46a538b78c2b9e8faf5888ddd",
+        "edit_power_break": "8ca3cfd1572724737bb553d3f2393c2d07504b1ab0f55de0b4c1a29bdd10293d",
+        "source": "81c8b01bd3f43a8b0a876341e78dc3c745fed85bf747810c4713727d14bc1ae5"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/pool_break",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/pool_break"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

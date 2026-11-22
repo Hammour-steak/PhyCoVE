@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "provider": "Poly Haven",
+  "credit": "Powered by Poly Haven",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "id": "potted_plant_02",
+      "type": "model",
+      "resolution": "2k",
+      "source": "https://polyhaven.com/a/potted_plant_02",
+      "authors": {
+        "Rico Cilliers": "All"
+      },
+      "source_physical_scale": null,
+      "files": [
+        {
+          "relative_path": "potted_plant_02/potted_plant_02_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/potted_plant_02/potted_plant_02_2k.blend",
+          "size": 8110103,
+          "md5": "7d4e3d6877e68c383705d80f8ed00f90",
+          "sha256": "b62ded8ac23b439d2d4457916241f45e029d1455cd792f426ef3b0e5f889589c"
+        },
+        {
+          "relative_path": "potted_plant_02/textures/potted_plant_02_leaves_rough_2k.png",
+          "size": 4823415,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/potted_plant_02/potted_plant_02_leaves_rough_2k.png",
+          "md5": "b69609c05517ef5dc37692d280b77427",
+          "sha256": "cdd55e470604e3aa9028acf51210e73a36f51df27d620ba4ac52195e8e445a04"
+        },
+        {
+          "relative_path": "potted_plant_02/textures/potted_plant_02_pot_nor_gl_2k.png",
+          "size": 14010302,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/potted_plant_02/potted_plant_02_pot_nor_gl_2k.png",
+          "md5": "defc410f6d1a8dcde3b891629990f315",
+          "sha256": "7777ef34cd4bf72280b387b739a553b98856b301ba9323259f2235dd290f1ee6"
+        },
+        {
+          "relative_path": "potted_plant_02/textures/potted_plant_02_pot_rough_2k.png",
+          "size": 4580543,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/potted_plant_02/potted_plant_02_pot_rough_2k.png",
+          "md5": "58c12b03d1f56691df7588518a04e1b3",
+          "sha256": "0d4e9695804d40d44da77dcc9d749d410e8546e8eebd2e40b4e337941347871d"
+        },
+        {
+          "relative_path": "potted_plant_02/textures/potted_plant_02_leaves_alpha_2k.png",
+          "size": 229028,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/potted_plant_02/potted_plant_02_leaves_alpha_2k.png",
+          "md5": "80acd843660a7ae5d23808fd9db2ae11",
+          "sha256": "487f86c1fc838dcd24bf67f9bd99706e3415271cecd34ce2ddaca9021707c781"
+        },
+        {
+          "relative_path": "potted_plant_02/textures/potted_plant_02_leaves_diff_2k.png",
+          "size": 16449773,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/potted_plant_02/potted_plant_02_leaves_diff_2k.png",
+          "md5": "0846ab998f9a31e40c6cd22ee82f8ef7",
+          "sha256": "9b41fa87fc40921c881d7d2978f7f6ccdd2a888d91c70afe7226d51b37c7954b"
+        },
+        {
+          "relative_path": "potted_plant_02/textures/potted_plant_02_leaves_nor_gl_2k.png",
+          "size": 16470559,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/potted_plant_02/potted_plant_02_leaves_nor_gl_2k.png",
+          "md5": "8b16780eb03d7bd840c55c40d1aea64c",
+          "sha256": "59928af6a248559a5b5d6c5f8cb5ff1fc698f34cebe718eeca111b583e9d5ddd"
+        },
+        {
+          "relative_path": "potted_plant_02/textures/potted_plant_02_pot_diff_2k.png",
+          "size": 19344861,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/potted_plant_02/potted_plant_02_pot_diff_2k.png",
+          "md5": "c0fad402fede6819b465aabf0811de74",
+          "sha256": "5c7623b2b337bc9e996446eaa0fb851f441e0f26febe53fb19dde5c03fa89551"
+        }
+      ]
+    },
+    {
+      "id": "book_encyclopedia_set_01",
+      "type": "model",
+      "resolution": "2k",
+      "source": "https://polyhaven.com/a/book_encyclopedia_set_01",
+      "authors": {
+        "John Malcolm": "All"
+      },
+      "source_physical_scale": null,
+      "files": [
+        {
+          "relative_path": "book_encyclopedia_set_01/book_encyclopedia_set_01_2k.blend",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_2k.blend",
+          "size": 1619208,
+          "md5": "f40f2092595762996d21e8bf6bf27ab6",
+          "sha256": "76019d7de4f90fc12aa82c6d9b9b6c89e03e773a3954100910883ed94f55171f"
+        },
+        {
+          "relative_path": "book_encyclopedia_set_01/textures/book_encyclopedia_set_01_paper_roughness_2k.png",
+          "size": 8597,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_roughness_2k.png",
+          "md5": "a44b8ca05d7cd4df7fbd5aaddf34c8bb",
+          "sha256": "034cb60d6a3b75a9ffafd12522837ada345f3a5c9eb189b7414819a6be088982"
+        },
+        {
+          "relative_path": "book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_diff_2k.png",
+          "size": 3727355,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_diff_2k.png",
+          "md5": "cf8b3f56c749f1c07a096b93b60d07a5",
+          "sha256": "9f93800db579470c7ab2f198890d191973b94593a8c797ed825aaa10bc030ad0"
+        },
+        {
+          "relative_path": "book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_nor_gl_2k.png",
+          "size": 62824,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_nor_gl_2k.png",
+          "md5": "2b9b67bae83579524b3e817efa606de3",
+          "sha256": "a734f1dd24a262f29486433469fb1c8d38066ccfe1a2095ac94c19f4c541e519"
+        },
+        {
+          "relative_path": "book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_metallic_2k.png",
+          "size": 70467,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_metallic_2k.png",
+          "md5": "f871c9aa29c3bac12351d80edd4b6edd",
+          "sha256": "d1f9aca3d619f3e7b1b824c6709cc566fc7dd70469442c6dac57b4c8b3655a59"
+        },
+        {
+          "relative_path": "book_encyclopedia_set_01/textures/book_encyclopedia_set_01_cover_roughness_2k.png",
+          "size": 2059998,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_roughness_2k.png",
+          "md5": "026ab031101ef9f34a15ca07f721473a",
+          "sha256": "027ee5965aa46766b6ed1f3a9e8b7e2d912c7056b950bcde09f956cc7b6fc8b5"
+        },
+        {
+          "relative_path": "book_encyclopedia_set_01/textures/book_encyclopedia_set_01_paper_nor_gl_2k.png",
+          "size": 1374815,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_nor_gl_2k.png",
+          "md5": "a1decf76becc5f75e30cea660c2641e2",
+          "sha256": "fc467eb9a4ea4ffc0222513594768c881dbf147cd7a2294814c9cd8deb3c8d3f"
+        },
+        {
+          "relative_path": "book_encyclopedia_set_01/textures/book_encyclopedia_set_01_paper_diff_2k.png",
+          "size": 1041521,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_diff_2k.png",
+          "md5": "80be660cf34e7ed0784896dc638bde30",
+          "sha256": "9ef4c115773d0b3a403b5c887b29cc39277ea7b045608d1343a736dba9a38d91"
+        }
+      ]
+    },
+    {
+      "id": "binder_notebook",
+      "type": "model",
+      "resolution": "2k",
+      "source": "https://polyhaven.com/a/binder_notebook",
+      "authors": {
+        "DaDrood": "All"
+      },
+      "source_physical_scale": null,
+      "files": [
+        {
+          "relative_path": "binder_notebook/binder_notebook_2k.gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/2k/binder_notebook/binder_notebook_2k.gltf",
+          "size": 4309,
+          "md5": "5611fe67e8234a5547dd6be17225e255",
+          "sha256": "a9f9123e51e18643f5097b02ebde320ba2b65bb4a2d2281aaf3d4bab1bc96de7"
+        },
+        {
+          "relative_path": "binder_notebook/textures/binder_notebook_nor_gl_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/binder_notebook/binder_notebook_nor_gl_2k.jpg",
+          "md5": "e61e5a6591d77a16a373c81b0866a0d2",
+          "size": 1211985,
+          "sha256": "4b4631652683f5c60402969ceee4b1f161f2add82a781d2ddd280b47ca1a84c7"
+        },
+        {
+          "relative_path": "binder_notebook/textures/binder_notebook_diff_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/binder_notebook/binder_notebook_diff_2k.jpg",
+          "md5": "724bade04ee8cb9866b652f4ab39082b",
+          "size": 1707438,
+          "sha256": "58b9eb79a1320d8db6498e6dc3d8aa289979bca912568d29e7f20ea2c609737c"
+        },
+        {
+          "relative_path": "binder_notebook/textures/binder_notebook_arm_2k.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/binder_notebook/binder_notebook_arm_2k.jpg",
+          "md5": "e9e0870248c3f9651b5e8202c8c9b93a",
+          "size": 1689226,
+          "sha256": "f66a1521fb48a8f28d96fae661cc1a3189311193ecff8c66945a560afbe42caa"
+        },
+        {
+          "relative_path": "binder_notebook/binder_notebook.bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/binder_notebook/binder_notebook.bin",
+          "md5": "bade6e7ed1349d598b27018c61cf674d",
+          "size": 525488,
+          "sha256": "68e28e6fac708a6e172230c42debd990e48819566fa07f222415467b1034b9c0"
+        }
+      ],
+      "format": "gltf"
+    },
+    {
+      "id": "small_empty_room_1",
+      "type": "hdri",
+      "resolution": "2k",
+      "source": "https://polyhaven.com/a/small_empty_room_1",
+      "authors": {
+        "Sergej Majboroda": "All"
+      },
+      "source_physical_scale": null,
+      "files": [
+        {
+          "relative_path": "small_empty_room_1/small_empty_room_1_2k.exr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/2k/small_empty_room_1_2k.exr",
+          "size": 4405582,
+          "md5": "4e756317f7553dfa2c5aab599a056e3d",
+          "sha256": "767df8f76af1c5befe2d9735223d19c6c80b41fe49a10eee33e8e1ac6c688e3e"
+        }
+      ]
+    },
+    {
+      "id": "oak_veneer_02",
+      "type": "texture",
+      "resolution": "2k",
+      "source": "https://polyhaven.com/a/oak_veneer_02",
+      "authors": {
+        "Jenelle van Heerden": "All"
+      },
+      "source_physical_scale": null,
+      "files": [
+        {
+          "relative_path": "oak_veneer_02/oak_veneer_02_diff_2k.jpg",
+          "role": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_diff_2k.jpg",
+          "md5": "c046feadfb4ec99fe749f1840d8afd64",
+          "size": 2526115,
+          "sha256": "c56ed85b190cdeb6c3656aaacf3b9a33ac76e08e3f47fa7aacc6b923b975455a"
+        },
+        {
+          "relative_path": "oak_veneer_02/oak_veneer_02_rough_2k.jpg",
+          "role": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_rough_2k.jpg",
+          "md5": "b95f4e3abe3407ae0f83a536182e2c0f",
+          "size": 3167619,
+          "sha256": "31dce770142513800781464754bcd248d6f8ac79984dff26c81593195f3f9e6f"
+        },
+        {
+          "relative_path": "oak_veneer_02/oak_veneer_02_nor_gl_2k.jpg",
+          "role": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_nor_gl_2k.jpg",
+          "md5": "d40ec0ce7c8eb0a9d64bbbe13def80f5",
+          "size": 1537839,
+          "sha256": "4baa7cd0ad25c78fd171d0aad1e19833e4feaf650b0330e4fdc92654796e5e68"
+        }
+      ]
+    },
+    {
+      "id": "american_walnut_veneer",
+      "type": "texture",
+      "resolution": "2k",
+      "source": "https://polyhaven.com/a/american_walnut_veneer",
+      "authors": {
+        "Jenelle van Heerden": "All"
+      },
+      "source_physical_scale": null,
+      "files": [
+        {
+          "relative_path": "american_walnut_veneer/american_walnut_veneer_diff_2k.jpg",
+          "role": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/american_walnut_veneer/american_walnut_veneer_diff_2k.jpg",
+          "md5": "c3db17b94fbd90a079a8bdc915cd5960",
+          "size": 2418767,
+          "sha256": "278ed3382b3a28a95861a84ccf4f3b591abf96a203698152064d65fcc6425271"
+        },
+        {
+          "relative_path": "american_walnut_veneer/american_walnut_veneer_rough_2k.jpg",
+          "role": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/american_walnut_veneer/american_walnut_veneer_rough_2k.jpg",
+          "md5": "e9319bd840c79e64a043e299f2550ece",
+          "size": 2865130,
+          "sha256": "9a4df282cf8ea10e005c2c28abc77ee5287793738c1e1db619b600c9e9caa4f8"
+        },
+        {
+          "relative_path": "american_walnut_veneer/american_walnut_veneer_nor_gl_2k.jpg",
+          "role": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/american_walnut_veneer/american_walnut_veneer_nor_gl_2k.jpg",
+          "md5": "a123f7e5b035243d77d453cd402fe78c",
+          "size": 1959270,
+          "sha256": "1a78784fc40a10f72582cd91dadce3ba2dbe9ab08f8622c909d1c0647162a130"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "scene_id": "door_basketball_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_door_basketball_collision.py",
+    "render": "render_door_basketball_collision.py",
+    "build_pcve": "build_pcve_door_basketball_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "door_basketball_collision_baseline",
+    "edit_fast_door",
+    "edit_heavy_door",
+    "edit_heavy_ball",
+    "edit_remove_ball",
+    "edit_stiff_hinge_midway",
+    "edit_remove_door"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_door_basketball_collision_suite": {
+      "target": "renders/pcve_suites/pcve_door_basketball_collision_suite",
+      "case_video_sha256": {
+        "door_basketball_collision_baseline": "1679f80071ed7ea9879e9639c2fb4ba627b681ff3ff5a2e2a00a06ee722a73ba",
+        "edit_fast_door": "3c68eb384c4703e8288332cc7c924ff4e4d1dbbf9e14bbc728282c1dff63ad07",
+        "edit_heavy_ball": "51eab2f46afeb81ceea1edaf4e8d67f0423c9a97f60826e5ac0224b9b7a06a77",
+        "edit_heavy_door": "df6db03e246744c8cbe0f44589dad6e6f6156cf096f32c8ceb84ba0512929bda",
+        "edit_remove_ball": "bbceef593ec11d53ff79dea6725f1061834d66c884cd56cfdcfdf8570446698b",
+        "edit_remove_door": "a12a9b789d1a255f848121a609ea8a6fcfd64d865a758cfbd7be376d0adf4b02",
+        "edit_stiff_hinge_midway": "60e7b5f29ae4348059509674588c1a4c5f890623daa72ef9a4e6ac4d7fc9b2b3"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "door_basketball_collision_baseline": "source",
+        "edit_fast_door": "edit_fast_door",
+        "edit_heavy_door": "edit_heavy_door",
+        "edit_heavy_ball": "edit_heavy_ball",
+        "edit_remove_ball": "edit_remove_ball",
+        "edit_stiff_hinge_midway": "edit_stiff_hinge_midway"
+      },
+      "public_case_video_sha256": {
+        "source": "1679f80071ed7ea9879e9639c2fb4ba627b681ff3ff5a2e2a00a06ee722a73ba",
+        "edit_fast_door": "3c68eb384c4703e8288332cc7c924ff4e4d1dbbf9e14bbc728282c1dff63ad07",
+        "edit_heavy_ball": "51eab2f46afeb81ceea1edaf4e8d67f0423c9a97f60826e5ac0224b9b7a06a77",
+        "edit_heavy_door": "df6db03e246744c8cbe0f44589dad6e6f6156cf096f32c8ceb84ba0512929bda",
+        "edit_remove_ball": "bbceef593ec11d53ff79dea6725f1061834d66c884cd56cfdcfdf8570446698b",
+        "edit_stiff_hinge_midway": "60e7b5f29ae4348059509674588c1a4c5f890623daa72ef9a4e6ac4d7fc9b2b3",
+        "edit_remove_door": "a12a9b789d1a255f848121a609ea8a6fcfd64d865a758cfbd7be376d0adf4b02"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/door_basketball_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/door_basketball_collision",
+      "scenes/door_basketball_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

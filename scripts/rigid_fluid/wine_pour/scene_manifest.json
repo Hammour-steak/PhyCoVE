@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "scene_id": "wine_pour",
+  "interaction_category": "rigid_fluid",
+  "description": {
+    "event": "A tilted bottle pours a continuous red-wine stream into a stationary transparent stemless glass; the liquid impacts the rigid bowl, spreads, and accumulates.",
+    "units": {
+      "length": "meter",
+      "mass": "kilogram",
+      "time": "second",
+      "up_axis": "+Z"
+    },
+    "coupling": "The bottle is a prescribed inflow. The glass uses hidden static effectors plus sealed domain side/bottom borders inset inside the visible bowl for stability; liquid forces are not fed back into a rigid-body solve.",
+    "appearance": {
+      "glass_type": "procedural stemless wine glass",
+      "glass_height_m": 0.125,
+      "glass_outer_max_diameter_m": 0.095,
+      "glass_radial_segments": 192,
+      "bottle_type": "normalized Sketchfab label and internal wine with a measured-profile, continuous 128-segment hollow dark-olive glass bottle shell",
+      "bottle_mouth": "fully uncapped hollow neck with a moulded annular lip split by optical role: lighter transmissive olive/amber top edge, textured dark-olive outer lip, burgundy-tinted wine-wet inner wall, local roughness variation and 0.10 mm micro-displacement; no red capsule or sealed top face",
+      "wine_base_color_linear_rgba": [
+        0.02,
+        0.00022,
+        0.0004,
+        1.0
+      ],
+      "environment": "3D back-bar environment. The visible honed-soapstone customer counter is a narrow raised ledge with a rounded rear nosing and fascia, while the independent tabletop fluid collider remains frozen. Behind the ledge, a clearly exposed lower brushed-stainless bartender deck carries a ribbed black rubber service mat and a slatted stainless drip tray. The aged-walnut base cabinetry is grounded beneath the worktop, and the established mirror, warm shelves and licensed bottle display remain in place. The two counter heights and recognizable bar equipment make the recessed service zone readable from the final locked camera",
+      "lighting": "smaller lower-specularity neutral-warm window key, restrained cool fill, narrow warm rim, low-strength neutral world, and two subdued warm backbar shelf practicals",
+      "depth_of_field_fstop": 4.5
+    }
+  },
+  "entry_points": {
+    "simulate": "simulate_wine_pour.py",
+    "render": "render_wine_pour.py",
+    "build_pcve": "build_pcve_wine_pour.py"
+  },
+  "supported_cases": [
+    "wine_pour_source",
+    "edit_high_viscosity_wine",
+    "edit_high_flow_rate",
+    "edit_low_flow_rate",
+    "edit_delete_wine",
+    "edit_stop_flow_at_1s"
+  ],
+  "workflows": {},
+  "configuration": {
+    "simulation": {
+      "solver": "Blender 4.3.2 Mantaflow FLIP; prescribed inflow against a static glass (no two-way coupling)",
+      "domain_resolution": 144,
+      "effector_subframes": 4,
+      "baseline_physics": {
+        "wine_density_kg_m3": 990.0,
+        "wine_kinematic_viscosity_m2_s": 1.7e-06,
+        "flow_rate_ml_s": 60.0,
+        "nozzle_speed_m_s": 0.45,
+        "pour_start_sec": 0.35,
+        "pour_end_sec": 3.35,
+        "gravity_m_s2": 9.81
+      }
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 96,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96
+    }
+  },
+  "assets": {
+    "scene_template": {
+      "path": "assets/scenes/wine_pour/scene_template.blend",
+      "sha256": "18c2754d5b7f684202f5e434069a744f4a8e7afa47923d8098fb5fe970926a24",
+      "made_by": "tools/prepare_scene_template.py"
+    },
+    "external": [
+      {
+        "name": "Wine Bottle and Glass",
+        "author": "JoeDev",
+        "license": "CC BY 4.0",
+        "source": "https://sketchfab.com/3d-models/wine-bottle-and-glass-13027525814d4c4ea07d4e12549cb9ef"
+      },
+      {
+        "name": "Wine Bottles 01",
+        "authors": [
+          "Rico Cilliers",
+          "Jurita Burger"
+        ],
+        "license": "CC0 1.0",
+        "source": "https://polyhaven.com/a/wine_bottles_01"
+      }
+    ]
+  },
+  "data": {
+    "native_runs": "renders/pcve_suites/pcve_wine_pour_suite/inputs/ (the accepted native suite)"
+  },
+  "canonical_suites": {
+    "pcve_wine_pour_suite": {
+      "target": "renders/pcve_suites/pcve_wine_pour_suite",
+      "public_case_ids": {
+        "wine_pour_source": "source",
+        "edit_high_viscosity_wine": "edit_high_viscosity_wine",
+        "edit_high_flow_rate": "edit_high_flow_rate",
+        "edit_low_flow_rate": "edit_low_flow_rate",
+        "edit_delete_wine": "edit_delete_wine",
+        "edit_stop_flow_at_1s": "edit_stop_flow_at_1s"
+      },
+      "case_video_sha256": {
+        "wine_pour_source": "f39f1973a00d79cc46d324436a14fc6d75b657d9bdc70289cb74430b8d302ab0",
+        "edit_high_viscosity_wine": "4d8d90b4188d2abf382eff32e7ac1cd63cb3e21bec136dfcbcc69ef34fc00fbd",
+        "edit_high_flow_rate": "56152d917004682a26642305edc15edc3294159b75e8aeec1809adcacd10ed24",
+        "edit_low_flow_rate": "bd8e60350a9f85a251d50cd3cbac6cee3ddbdd5f09fe9bd6ede5029124080efb",
+        "edit_delete_wine": "f7eda05e9ed93280e23edd6c003c01beba9c021c2a57c2a062894c9edabeb608",
+        "edit_stop_flow_at_1s": "3e60fea6242ef85d852f9a533462a3b9bc2fe51fb495a61b031e61324882a0ea"
+      }
+    }
+  }
+}

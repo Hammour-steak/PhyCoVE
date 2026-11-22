@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "scene": "scarf_chair_slip",
+  "category": "rigid_elastic",
+  "case_number": 22,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_scarf_chair_slip.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x10",
+        "density_x2",
+        "friction_x0_2",
+        "add_landing_book",
+        "delete_chair"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_scarf_chair_slip.py",
+      "runtime": "python",
+      "native_options": [
+        "--case",
+        "--look",
+        "--out",
+        "--frames",
+        "--samples",
+        "--device",
+        "--cache",
+        "--gpu-uuid",
+        "--cpu-threads",
+        "--blender-bin"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x10",
+        "density_x2",
+        "friction_x0_2",
+        "add_landing_book",
+        "delete_chair"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_scarf_chair_slip.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out"
+      ],
+      "cases": [
+        "source",
+        "young_modulus_x10",
+        "density_x2",
+        "friction_x0_2",
+        "add_landing_book",
+        "delete_chair"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {},
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "libuipc CUDA IPC solve (pyuipc 0.0.29) of a fringed cotton scarf as a strain-limiting Baraff-Witkin thin shell with discrete-shell bending, frictional self-contact and quadratic air drag, coupled to a 6.7 kg wooden chair that is a free affine body on the floor; the scarf is built draped over the chair's top rail with both ends clear of the seat and released at t = 0 with no pinned vertex and no prescribed motion (physics/common.py layout and physics, physics/simulate.py). Every edit starts from frame 1 of the accepted source solve and changes only its DSL-resolved field (scarf Young's modulus with stretch, shear and bending scaled together, scarf density, scarf-chair friction), adds a free 0.65 kg book body over the seat, or leaves the chair body out (physics/edit_vocab.py). appearance/render_replay.py is the accepted renderer (room, chair model, scarf fabric and camera of the accepted delivery); appearance/realism.py, the current look, rebuilds the scene from each case's native cache: the scarf plays the native vertex states through a Mesh Cache of the exact solver positions, the chair and book follow the native transforms, and only the room, lights, materials, props and the fixed camera of appearance/view.py are its own. tools/export_ground_truth.py writes each case's ground truth from its native cache and that camera; --stage verify checks the accepted delivery, the native inputs and the published suite. Effective material parameters, not fitted to a measured scarf.",
+  "implementation_files": [
+    "simulate_scarf_chair_slip.py",
+    "render_scarf_chair_slip.py",
+    "build_pcve_scarf_chair_slip.py",
+    "edit_vocab.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/simulate.py",
+    "physics/common.py",
+    "physics/edit_vocab.py",
+    "appearance/realism.py",
+    "appearance/view.py",
+    "appearance/render_replay.py",
+    "appearance/room.py",
+    "appearance/optics.py",
+    "appearance/scarf_material.py",
+    "tools/worker.py",
+    "tools/finalize.py",
+    "tools/retained_delivery.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "assets": "assets/scenes/scarf_chair_slip",
+  "edit_catalog": {
+    "file": "build_pcve_scarf_chair_slip.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

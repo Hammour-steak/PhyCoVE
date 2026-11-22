@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "scene": "basketball_rim_roll_in",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_basketball_rim_roll_in.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--scenario-overrides-json"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [],
+      "python_runtime": null
+    },
+    "render": {
+      "file": "render_basketball_rim_roll_in.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--scenario-overrides-json",
+        "--mode",
+        "--keyframes",
+        "--resolution",
+        "--samples",
+        "--threads",
+        "--engine",
+        "--device",
+        "--gpu-backend",
+        "--frame-range",
+        "--physics-json"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [],
+      "python_runtime": null
+    },
+    "build_pcve": {
+      "file": "build_pcve_basketball_rim_roll_in.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--simulate-only",
+        "--mode",
+        "--only",
+        "--resolution",
+        "--samples",
+        "--engine",
+        "--device",
+        "--gpu-backend",
+        "--render-python",
+        "--blender",
+        "--keyframes"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "basketball_rim_baseline",
+        "edit_fast_ball",
+        "edit_aim_high",
+        "edit_aim_left",
+        "edit_bouncier",
+        "edit_gravity_midway",
+        "edit_delete_backboard"
+      ],
+      "python_runtime": null,
+      "named_suite_output": true
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Scene physics, geometry, rendering and helper modules live in this scene directory and its physics/, appearance/ and tools/ subdirectories; only the shared scripts/ modules and repository assets are external.",
+  "runtime_policy": "python_runtime is null on purpose: every entry runs in the interpreter that invokes it. Use --render-python / --blender to point at a specific render environment instead of baking a machine path into the manifest.",
+  "implementation_files": [
+    "README.md",
+    "appearance/gym_hall.py",
+    "appearance/look_basketball_rim_roll_in.py",
+    "build_pcve_basketball_rim_roll_in.py",
+    "edit_vocab.py",
+    "entrypoints.json",
+    "physics/launch.py",
+    "physics/scene_geometry.py",
+    "render_basketball_rim_roll_in.py",
+    "requirements.txt",
+    "scene_config.py",
+    "scene_manifest.json",
+    "simulate_basketball_rim_roll_in.py",
+    "tools/audit_basketball_rim_roll_in.py"
+  ]
+}

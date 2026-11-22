@@ -1,0 +1,260 @@
+{
+  "revision": "bridge_look",
+  "camera": [
+    0.6,
+    -1.4,
+    0.42
+  ],
+  "target": [
+    0.3,
+    0.03,
+    0.08
+  ],
+  "lens_mm": 40.0,
+  "camera_optics": {
+    "focus_distance_m": 1.55,
+    "fstop": 4.5
+  },
+  "seed": 27,
+  "environment": "Sunlit child room on an oak floor: plaster wall and skirting, CC0 pine cube shelf, potted plant, wicker basket with a settled linen throw, carved wooden elephant and baseball; window daylight only",
+  "silicone": {
+    "id": "translucent_platinum_silicone",
+    "base_color_linear": [
+      0.035,
+      0.19,
+      0.165,
+      1
+    ],
+    "translucency": 0.2,
+    "translucent_color_linear": [
+      0.1,
+      0.42,
+      0.36,
+      1
+    ],
+    "ior": 1.41,
+    "roughness_range": [
+      0.2,
+      0.3
+    ],
+    "orange_peel_scale_m": 0.004,
+    "orange_peel_bump_m": 2e-05,
+    "smudge_roughness_add": 0.1,
+    "coordinates": "rest-pose metric UV, deforms with solved shell",
+    "subdivision_render_levels": 2,
+    "relief_method": "shading normal only; no mesh displacement or physics change",
+    "visible_clamped_ends": "the fixed 20 mm end bands are rendered, lying in 6.2 mm deep rebates of the road deck"
+  },
+  "bridge_mount": {
+    "rebate_depth_m": 0.0062,
+    "rebate_half_width_m": 0.0605,
+    "plate_x_m": [
+      0.1415,
+      0.1595
+    ],
+    "plate_y_m": [
+      0.046,
+      0.074
+    ],
+    "plate_thickness_m": 0.0025,
+    "screw_y_m": [
+      0.0525,
+      0.0675
+    ],
+    "screw_head_radius_m": 0.0026,
+    "screw_head_height_m": 0.0013,
+    "clearance_note": "car body |y| <= 0.0406 m in every cached frame; hardware starts at |y| = 0.046 m"
+  },
+  "car_visual_design": {
+    "id": "refined_diecast_hatchback",
+    "body_color": "muted mineral blue",
+    "roof_color": "body colour",
+    "roof_luggage": false,
+    "paint_color_linear": [
+      0.032,
+      0.14,
+      0.2,
+      1
+    ],
+    "paint_roughness_range": [
+      0.23,
+      0.28
+    ],
+    "paint_metallic": 0.22,
+    "paint_coat_weight": 0.38,
+    "rim_color_linear": [
+      0.22,
+      0.24,
+      0.25,
+      1
+    ],
+    "rim_roughness": 0.34,
+    "rim_metallic": 0.82,
+    "wheel_style": "recessed five broad manufactured spokes",
+    "glass_color_linear": [
+      0.52,
+      0.57,
+      0.59,
+      1
+    ],
+    "glass_transmission": 0.96,
+    "glass_roughness": 0.075,
+    "glass_ior": 1.49,
+    "body_section_exponents": [
+      0.38,
+      0.32
+    ],
+    "formed_fender_outer_y_m": 0.0368,
+    "cast_sheet_pillars": true,
+    "panel_gap_radius_m": 5.5e-05
+  },
+  "room": {
+    "wall_texture": "white_plaster_02",
+    "wall_tile_m": 1.0,
+    "plaster_color_texture_mix": 0.16,
+    "floor_texture": "wood_floor",
+    "floor_tile_m": 1.7,
+    "floor_roughness_range": [
+      0.3,
+      0.48
+    ],
+    "floor_normal_strength": 0.22,
+    "floor_coat_weight": 0.1,
+    "floor_coat_roughness": 0.22,
+    "cushion_position_m": [
+      -0.36,
+      0.45,
+      -0.001
+    ],
+    "cushion_rotation_z_rad": 0.1,
+    "basket_drape_offset_m": [
+      -0.075,
+      -0.015,
+      0
+    ],
+    "window": {
+      "y_m": [
+        -1.25,
+        0.55
+      ],
+      "z_m": [
+        0.55,
+        1.95
+      ],
+      "mullion_y_m": [],
+      "note": "1.8 m wide opening; with the sun below, every visible road point (x -0.45..0.95) sees the sun through it"
+    }
+  },
+  "shared_models": {
+    "polyhaven/wooden_display_shelves_01": {
+      "file": "wooden_display_shelves_01_2k.gltf",
+      "center_x_m": 0.72,
+      "back_y_m": 1.064,
+      "rotation_z_rad": 1.5707963267948966,
+      "bin_tint_linear": [
+        0.58,
+        0.55,
+        0.5
+      ],
+      "bin_roughness": 0.72
+    },
+    "polyhaven_models/potted_plant_02": {
+      "file": "potted_plant_02_1k.gltf",
+      "position_m": [
+        -0.95,
+        0.68,
+        0
+      ],
+      "rotation_z_rad": 0.6
+    },
+    "polyhaven/carved_wooden_elephant": {
+      "file": "carved_wooden_elephant_2k.gltf",
+      "position_m": [
+        0.25,
+        0.57,
+        0
+      ],
+      "rotation_z_rad": -0.4
+    },
+    "polyhaven/baseball_01": {
+      "file": "baseball_01_2k.gltf",
+      "position_m": [
+        0.37,
+        0.61,
+        0
+      ],
+      "rotation_z_rad": 1.1
+    }
+  },
+  "external_models": {
+    "wicker_basket_01": {
+      "longest_horizontal_m": 0.3832,
+      "position_m": [
+        -0.06,
+        0.775,
+        0
+      ],
+      "rotation_z_rad": -0.07
+    }
+  },
+  "basket_drape": {
+    "enabled": true,
+    "mesh": "settled_linen_envelope.npz",
+    "provenance": "linen_settlement_envelope.json",
+    "original_size_m": [
+      0.178,
+      0.448
+    ],
+    "auxiliary_cloth_frame": 100
+  },
+  "window_sheer": {
+    "enabled": true,
+    "panels_y_m": [
+      [
+        -1.25,
+        -1.12
+      ],
+      [
+        0.44,
+        0.55
+      ]
+    ],
+    "bottom_z_m": 0.535,
+    "top_z_m": 1.96,
+    "fold_pitch_m": 0.085,
+    "fold_depth_m": 0.018,
+    "fabric_thickness_m": 0.00035,
+    "translucent_weight": 0.48,
+    "transparent_weight": 0.22
+  },
+  "lighting": {
+    "policy": "daylight through the real window opening only; no hidden fill or key lights",
+    "hdri": {
+      "asset": "kloofendal_48d_partly_cloudy",
+      "resolution": "2k",
+      "rotation_z_degrees": 115,
+      "strength": 1.0,
+      "clamp": 40.0
+    },
+    "sun": {
+      "strength": 3.5,
+      "angle_degrees": 0.53,
+      "direction": [
+        0.847,
+        0.18,
+        -0.5
+      ],
+      "color": [
+        1,
+        0.95,
+        0.86
+      ],
+      "note": "azimuth 12 deg toward +y, elevation 30 deg: the whole road, bridge and clamps are sunlit in every frame"
+    },
+    "window_portal": "Cycles portal exactly covering room.window"
+  },
+  "color_grade": {
+    "look": "AgX - Medium High Contrast",
+    "exposure_ev": 2.6
+  }
+}

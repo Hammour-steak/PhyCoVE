@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "scene": "bathroom_sink_duck_neospace",
+  "category": "elastic_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_bathroom_sink_duck_neospace.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out",
+        "filename": "genesis_sim.npz"
+      },
+      "native_options": [
+        "--pool-simulate",
+        "--duck-solid",
+        "--ghost-mesh",
+        "--gamma",
+        "--adhesion",
+        "--mu",
+        "--sph-particle",
+        "--boundary-friction",
+        "--young",
+        "--inflow-velocity",
+        "--inflow-change-frame",
+        "--inflow-velocity-after",
+        "--no-duck",
+        "--no-water",
+        "--core-young",
+        "--skin-thickness",
+        "--poisson",
+        "--substeps",
+        "--mpm-particle",
+        "--mpm-mass",
+        "--map-width",
+        "--settle-seconds",
+        "--seconds",
+        "--out",
+        "--source-branch-out",
+        "--branch-replay-frames"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_bathroom_sink_duck_neospace.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--output-dir"
+      },
+      "native_options": [
+        "--scene",
+        "--surfaces",
+        "--output-dir",
+        "--frames"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_bathroom_sink_duck_neospace.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--suite-root",
+        "--scene",
+        "--bathroom-asset",
+        "--duck-asset",
+        "--blender",
+        "--python",
+        "--pool-simulate",
+        "--map-width",
+        "--publish-root",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "bathroom_sink_duck_baseline",
+        "edit_stiff_duck",
+        "edit_soft_core_duck",
+        "edit_delete_duck",
+        "edit_delete_water",
+        "edit_high_flow",
+        "edit_stop_flow_at_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_bathroom_sink_duck_neospace.py",
+    "appearance/duck_bathroom_sink_duck_neospace.py",
+    "appearance/look_bathroom_sink_duck_neospace.py",
+    "render_bathroom_sink_duck_neospace.py",
+    "appearance/scene_bathroom_sink_duck_neospace.py",
+    "simulate_bathroom_sink_duck_neospace.py",
+    "../elastic_fluid_duck/simulate_elastic_fluid_duck.py",
+    "appearance/surface_bathroom_sink_duck_neospace.py",
+    "scene_manifest.json"
+  ]
+}

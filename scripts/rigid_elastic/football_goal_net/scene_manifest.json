@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "scene_id": "football_goal_net",
+  "interaction_category": "rigid_elastic",
+  "case_number": 6,
+  "look": "football stadium pitch with the re-projected stadium photograph behind the goal (appearance/realism.py)",
+  "entry_points": {
+    "simulate": "simulate_football_goal_net.py",
+    "render": "render_football_goal_net.py",
+    "build_pcve": "build_pcve_football_goal_net.py"
+  },
+  "configuration": [
+    "edit_vocab.py",
+    "physics/strict_edit_plan.json",
+    "appearance/visual_layout.json"
+  ],
+  "supported_cases": [
+    "source",
+    "young_tenth",
+    "mass_double",
+    "speed_half",
+    "remove_net",
+    "mass_double_at_frame_8"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/football_goal_net (assets.json group scenes/football_goal_net: packed scene, net model, collision world, grass tiles, stadium panorama, native 120 Hz caches)",
+    "accepted_physics_delivery": "renders/football_goal_net/accepted_physics",
+    "accepted_media_delivery": "renders/football_goal_net/accepted_media",
+    "timed_native_solves": "renders/pcve_suites/pcve_football_goal_net_suite/inputs/native_timed/<case>"
+  },
+  "canonical_suites": {
+    "pcve_football_goal_net_suite": {
+      "target": "renders/pcve_suites/pcve_football_goal_net_suite",
+      "look": "appearance/realism.py",
+      "case_video_sha256": {
+        "source": "59c74824632f6bcaf0e026eb76597263fee880beff9a7904164f8b9540fb449f",
+        "young_tenth": "dbf92b902be14e7009de10718784fb3401f5d6c4c121952ff2bdb66f755eb1cc",
+        "mass_double": "587b81ca233577f8735cd35ceff9c70756698df443eb79e57ba64cf6e26b7e35",
+        "speed_half": "90d052a42f0db522c9b715aee3b7011709e02d5827d0ead4e4d4218515e49383",
+        "remove_net": "698bdf62fce8d8394b9f9d65ec5a5b231a6f729b35bd776d8e4fb3fb0d50d053",
+        "mass_double_at_frame_8": "c8bd5ce35a66d9403a0bfe336535012b03d805732f70dd6f455101d8fa086aee",
+        "edit_remove_ball": "fdc59bcecbba458d7a9cc65c6de02dc33eb350e3ce2f93a32b7950d4be79e4ac"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "young_tenth": "edit_young_tenth",
+        "mass_double": "edit_mass_double",
+        "speed_half": "edit_speed_half",
+        "remove_net": "edit_remove_net",
+        "mass_double_at_frame_8": "edit_mass_double_at_frame_8"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native 120 Hz state 5(k-1), t = (k-1)/24 s"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1), written by tools/export_ground_truth.py from the native states"
+}

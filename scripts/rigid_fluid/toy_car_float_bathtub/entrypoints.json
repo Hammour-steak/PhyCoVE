@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "scene": "toy_car_float_bathtub",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_toy_car_float_bathtub.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--settled",
+        "--particle",
+        "--rest-spacing",
+        "--level",
+        "--fill-extra",
+        "--frames",
+        "--fps",
+        "--steps-per-frame",
+        "--substeps",
+        "--surface-tension",
+        "--mu",
+        "--float-mass",
+        "--car-mass",
+        "--float-inertia",
+        "--float-omega",
+        "--car-omega",
+        "--float-yaw",
+        "--float-offset",
+        "--car-euler",
+        "--car-ang-vel",
+        "--car-offset",
+        "--release-z",
+        "--no-car",
+        "--no-float",
+        "--relax-frames",
+        "--relax-damp",
+        "--layers",
+        "--momentum-avg",
+        "--momentum-max",
+        "--position-avg",
+        "--position-max",
+        "--div-iters",
+        "--debug-from",
+        "--momentum-iters",
+        "--position-iters",
+        "--density-after",
+        "--density-time",
+        "--checkpoint-frames",
+        "--resume-from",
+        "--resume-frame",
+        "--warm-omega",
+        "--warm-rise",
+        "--warm-fall",
+        "--still-speed",
+        "--rho-interior",
+        "--compaction",
+        "--speed-cap"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_toy_car_float_bathtub.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--run",
+        "--mesh-dir",
+        "--out",
+        "--frames",
+        "--samples",
+        "--resolution",
+        "--camera",
+        "--target",
+        "--lens",
+        "--exposure",
+        "--window",
+        "--beam",
+        "--beam-spread",
+        "--world",
+        "--caustics",
+        "--absorb",
+        "--look",
+        "--no-motion-blur",
+        "--no-water"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [],
+      "prefix_args": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_toy_car_float_bathtub.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--suite-root",
+        "--blender",
+        "--python",
+        "--publish-root",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "toy_car_float_bathtub_baseline",
+        "edit_no_float",
+        "edit_heavy_car",
+        "edit_low_density",
+        "edit_density_at_2s",
+        "edit_no_car"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "appearance/car_paint_appearance.py",
+    "appearance/bathroom_appearance.py",
+    "appearance/bathroom_details.py",
+    "appearance/bathroom_finish.py",
+    "build_pcve_toy_car_float_bathtub.py",
+    "edit_vocab.py",
+    "physics/coupling_toy_car_float_bathtub.py",
+    "render_toy_car_float_bathtub.py",
+    "simulate_toy_car_float_bathtub.py",
+    "surface_toy_car_float_bathtub.py",
+    "tools/export_tub_shell.py",
+    "tools/make_float.py",
+    "scene_manifest.json"
+  ]
+}

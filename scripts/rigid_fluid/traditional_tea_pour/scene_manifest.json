@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "scene_id": "traditional_tea_pour",
+  "interaction_category": "rigid_fluid",
+  "description": {
+    "event": "A tilted traditional porcelain teapot pours amber tea into a stationary matching teacup.",
+    "units": {
+      "length": "m",
+      "mass": "kg",
+      "time": "s",
+      "up_axis": "Z"
+    },
+    "coupling": "prescribed inlet at the spout; teapot, cup and coaster are fixed rigid boundaries (no two-way rigid/liquid coupling)"
+  },
+  "entry_points": {
+    "simulate": "simulate_traditional_tea_pour.py",
+    "render": "render_traditional_tea_pour.py",
+    "build_pcve": "build_pcve_traditional_tea_pour.py"
+  },
+  "supported_cases": [
+    "source",
+    "speed_2x",
+    "speed_0p5x",
+    "remove_tea",
+    "stop_flow_at_2s"
+  ],
+  "workflows": {
+    "edits": {
+      "file": "build_traditional_tea_edits.py",
+      "cases": [
+        "speed_2x",
+        "speed_0p5x",
+        "remove_tea",
+        "stop_flow_at_2s"
+      ]
+    }
+  },
+  "configuration": {
+    "simulation": {
+      "solver": "Genesis 1.4.3 DFSPH contact solve with the repaired cup collider; teapot, cup and coaster fixed, prescribed inlet at the spout (no two-way rigid/liquid coupling)",
+      "baseline_physics": {
+        "tea_density_kg_m3": 1000.0,
+        "tea_kinematic_viscosity_m2_s": 1.05e-06,
+        "inlet_speed_m_s": 0.5,
+        "pour_start_sec": 0.5,
+        "pour_end_sec": 3.5,
+        "gravity_m_s2": 9.81
+      },
+      "timed_stop": "stop_flow_at_2s continues the accepted source solve from its state after frame 48 (solver time 2.0 s) with an empty inlet"
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 128,
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96,
+      "motion_blur": "velocity, 180 degrees"
+    }
+  },
+  "assets": {
+    "external": [
+      {
+        "name": "Traditional Tea Set",
+        "author": "Drake Dang (@drakedang)",
+        "source": "https://sketchfab.com/3d-models/traditional-tea-set-07573fa831364d52a79cd0fccb8b105f",
+        "license": "CC BY 4.0",
+        "sha256": "fd6b13cbc524ae75e9167d6710e3792d5d245c585e9d00f558afe866ac201332"
+      }
+    ]
+  },
+  "data": {
+    "source_inputs": "renders/pcve_suites/pcve_traditional_tea_pour_suite/inputs/source/cases/contact_inputs",
+    "source_run": "renders/pcve_suites/pcve_traditional_tea_pour_suite/inputs/source/cases/source_run",
+    "environment": "renders/pcve_suites/pcve_traditional_tea_pour_suite/inputs/source/cases/environment_render/scene_environment_refined.blend"
+  },
+  "canonical_suites": {
+    "pcve_traditional_tea_pour_suite": {
+      "target": "renders/pcve_suites/pcve_traditional_tea_pour_suite",
+      "public_case_ids": {
+        "source": "source",
+        "speed_2x": "edit_speed_2x",
+        "speed_0p5x": "edit_speed_0p5x",
+        "remove_tea": "edit_remove_tea",
+        "stop_flow_at_2s": "edit_stop_flow_at_2s"
+      },
+      "case_video_sha256": {
+        "source": "a0f44845dacc84445a34cc3009bf7247ef0aa4386bde93c17076048aa93c76ca",
+        "speed_2x": "8bc644b45a34f24f8f86c5a8253f570369fbbe2369ca094d182572a31ef93911",
+        "speed_0p5x": "870d5bf97b21909534cc59b8e56ca86da1453fcf04ba1af8841e354dab45465d",
+        "remove_tea": "aecf8ff86c07c03e9a057f422a7de23f6d5e82aae29ca30651c5c902b26d4038",
+        "stop_flow_at_2s": "9862d104c1cd6a80b440219575543efa7cba6ce5439b27bed0d8c5370dc0ac72"
+      }
+    }
+  }
+}

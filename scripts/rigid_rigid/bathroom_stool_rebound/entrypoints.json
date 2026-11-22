@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "scene": "bathroom_stool_rebound",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_bathroom_stool_rebound.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out",
+        "filename": "simulation.json"
+      },
+      "native_options": [
+        "--out",
+        "--scenario-json",
+        "--scenario-overrides-json",
+        "--remove-bathtub",
+        "--fps",
+        "--duration-sec",
+        "--slow-motion",
+        "--stool-mass",
+        "--launch-speed",
+        "--launch-spin",
+        "--stool-friction"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "bathroom_stool_rebound_baseline",
+        "edit_fast_spin",
+        "edit_remove_bathtub",
+        "edit_fast_throw",
+        "edit_frictionless_floor_timed"
+      ],
+      "python_runtime": null
+    },
+    "render": {
+      "file": "render_bathroom_stool_rebound.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--remove-bathtub",
+        "--out-dir",
+        "--physics-json",
+        "--physics-python",
+        "--engine",
+        "--device",
+        "--samples",
+        "--resolution",
+        "--mode",
+        "--preview-frame",
+        "--keyframes",
+        "--scenario-json",
+        "--scenario-overrides-json",
+        "--fps",
+        "--duration-sec",
+        "--slow-motion",
+        "--stool-mass",
+        "--launch-speed",
+        "--launch-spin",
+        "--stool-friction",
+        "--seed"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "bathroom_stool_rebound_baseline",
+        "edit_fast_spin",
+        "edit_remove_bathtub",
+        "edit_fast_throw",
+        "edit_frictionless_floor_timed"
+      ],
+      "python_runtime": null
+    },
+    "build_pcve": {
+      "file": "build_pcve_bathroom_stool_rebound.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--engine",
+        "--device",
+        "--samples",
+        "--resolution",
+        "--mode",
+        "--out-root",
+        "--physics-python",
+        "--render-python",
+        "--blender",
+        "--duration-sec",
+        "--fps",
+        "--slow-motion",
+        "--preview-frame",
+        "--simulate-only",
+        "--render-only",
+        "--skip-existing",
+        "--dry-run",
+        "--verbose-render",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "bathroom_stool_rebound_baseline",
+        "edit_fast_spin",
+        "edit_remove_bathtub",
+        "edit_fast_throw",
+        "edit_frictionless_floor_timed"
+      ],
+      "python_runtime": null,
+      "named_suite_output": true
+    }
+  },
+  "workflows": {
+    "batch_render": {
+      "file": "tools/render_queue.py",
+      "runtime": "python",
+      "python_runtime": null,
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--engine",
+        "--device",
+        "--samples",
+        "--resolution",
+        "--mode",
+        "--out-root",
+        "--physics-python",
+        "--render-python",
+        "--blender",
+        "--duration-sec",
+        "--fps",
+        "--slow-motion",
+        "--preview-frame",
+        "--simulate-only",
+        "--render-only",
+        "--skip-existing",
+        "--dry-run",
+        "--verbose-render",
+        "--cases",
+        "--count",
+        "--start-index",
+        "--seed-base"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [],
+      "description": "Randomised batch sampling on top of the scene builder."
+    }
+  },
+  "implementation_policy": "Scene physics, geometry, rendering and helper modules live in this scene directory and its physics/, appearance/ and tools/ subdirectories; only the shared scripts/ modules and repository assets are external.",
+  "runtime_policy": "python_runtime is null on purpose: every entry runs in the interpreter that invokes it. Use --physics-python / --render-python / --blender to point at a specific environment instead of baking a machine path into the manifest.",
+  "implementation_files": [
+    "README.md",
+    "appearance/look_bathroom_stool_rebound.py",
+    "appearance/spa_dressing.py",
+    "appearance/spa_materials.py",
+    "build_pcve_bathroom_stool_rebound.py",
+    "edit_vocab.py",
+    "entrypoints.json",
+    "physics/input_hashes.py",
+    "physics/scene_geometry.py",
+    "physics/validate_bathroom_stool_rebound.py",
+    "render_bathroom_stool_rebound.py",
+    "requirements.txt",
+    "scene_config.py",
+    "scene_manifest.json",
+    "simulate_bathroom_stool_rebound.py",
+    "tools/export_alcove_collider.py",
+    "tools/export_bathtub_collider.py",
+    "tools/render_queue.py"
+  ]
+}

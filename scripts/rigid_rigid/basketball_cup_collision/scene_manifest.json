@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "scene_id": "basketball_cup_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_basketball_cup_collision.py",
+    "render": "render_basketball_cup_collision.py",
+    "build_pcve": "build_pcve_basketball_cup_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "basketball_cup_collision_baseline",
+    "edit_fast_ball",
+    "edit_heavy_bottle",
+    "edit_heavy_ball",
+    "edit_heavy_gravity_after_impact",
+    "edit_delete_bottle",
+    "edit_delete_basketball"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_basketball_cup_collision_suite": {
+      "target": "renders/pcve_suites/pcve_basketball_cup_collision_suite",
+      "case_video_sha256": {
+        "basketball_cup_collision_baseline": "a38a8001cb3cc6db9a5488a0a34d1e1b27923d903d686e503b7f9c7f69fa8028",
+        "edit_delete_basketball": "2bc2e2084b39479420b4dc15a19d1851a83a9ba31f3be8bfbc852f33a20362e8",
+        "edit_delete_bottle": "4ba3679aef0d4510c02a96ce4c06ea10a849cb1e876ab9639838a056b71bfaaf",
+        "edit_fast_ball": "4c4476d501d58631f7106e4a1687c50d85c0c64026ea2ba742d5661878a22d85",
+        "edit_heavy_ball": "4da27a61f1185081864b429351b92d4ca5a4600f66ce2d15449979af50c02d99",
+        "edit_heavy_bottle": "964d84578cb13f4e50f771daaaefabbed47f6b94d251bdec38eb04c5b66e12a2",
+        "edit_heavy_gravity_after_impact": "65b5c8578ebeebf040a965fdafce2565eac2130ca8f9adc71614ce1bacd82f92"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "basketball_cup_collision_baseline": "source",
+        "edit_fast_ball": "edit_fast_ball",
+        "edit_heavy_bottle": "edit_heavy_bottle",
+        "edit_heavy_ball": "edit_heavy_ball",
+        "edit_heavy_gravity_after_impact": "edit_heavy_gravity_after_impact"
+      },
+      "public_case_video_sha256": {
+        "source": "a38a8001cb3cc6db9a5488a0a34d1e1b27923d903d686e503b7f9c7f69fa8028",
+        "edit_fast_ball": "4c4476d501d58631f7106e4a1687c50d85c0c64026ea2ba742d5661878a22d85",
+        "edit_heavy_ball": "4da27a61f1185081864b429351b92d4ca5a4600f66ce2d15449979af50c02d99",
+        "edit_heavy_bottle": "964d84578cb13f4e50f771daaaefabbed47f6b94d251bdec38eb04c5b66e12a2",
+        "edit_heavy_gravity_after_impact": "65b5c8578ebeebf040a965fdafce2565eac2130ca8f9adc71614ce1bacd82f92",
+        "edit_delete_bottle": "4ba3679aef0d4510c02a96ce4c06ea10a849cb1e876ab9639838a056b71bfaaf",
+        "edit_delete_basketball": "2bc2e2084b39479420b4dc15a19d1851a83a9ba31f3be8bfbc852f33a20362e8"
+      }
+    }
+  },
+  "source_provenance": "authored in this repository (modelled on clean_scripts conventions)",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/basketball_cup_collision",
+      "scenes/basketball_cup_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

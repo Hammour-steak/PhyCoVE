@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "scene": "wine_pour",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_wine_pour.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out",
+        "filename": "simulation.json"
+      },
+      "native_options": [
+        "--out",
+        "--fps",
+        "--duration-sec",
+        "--pour-start-sec",
+        "--pour-end-sec",
+        "--wine-density-kg-m3",
+        "--wine-kinematic-viscosity-m2-s",
+        "--flow-rate-ml-s",
+        "--nozzle-speed-m-s",
+        "--nozzle-speed-change-frame",
+        "--nozzle-speed-after-m-s",
+        "--wine-presence",
+        "--glass-presence"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_wine_pour.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--scenario-overrides-json",
+        "--cache-dir",
+        "--resolution",
+        "--fps",
+        "--duration-sec",
+        "--samples",
+        "--domain-resolution",
+        "--effector-subframes",
+        "--wine-density-kg-m3",
+        "--wine-kinematic-viscosity-m2-s",
+        "--flow-rate-ml-s",
+        "--nozzle-speed-m-s",
+        "--nozzle-speed-change-frame",
+        "--nozzle-speed-after-m-s",
+        "--pour-start-sec",
+        "--pour-end-sec",
+        "--wine-presence",
+        "--glass-presence",
+        "--skip-fluid-bake",
+        "--skip-render",
+        "--render-stills-only",
+        "--preview-frames",
+        "--reuse-existing-frames",
+        "--video-name"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_wine_pour.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--blender",
+        "--template",
+        "--resolution",
+        "--fps",
+        "--duration-sec",
+        "--samples",
+        "--domain-resolution",
+        "--skip-fluid-bake",
+        "--skip-render",
+        "--render-stills-only",
+        "--preview-frames",
+        "--skip-existing",
+        "--dry-run",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "wine_pour_source",
+        "edit_high_viscosity_wine",
+        "edit_high_flow_rate",
+        "edit_low_flow_rate",
+        "edit_delete_wine",
+        "edit_stop_flow_at_1s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_wine_pour.py",
+    "edit_vocab.py",
+    "tools/prepare_scene_template.py",
+    "render_wine_pour.py",
+    "simulate_wine_pour.py",
+    "scene_manifest.json"
+  ]
+}

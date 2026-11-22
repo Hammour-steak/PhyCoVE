@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scene_id": "cup_water_drop",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_cup_water_drop.py",
+    "render": "render_cup_water_drop.py",
+    "build_pcve": "build_pcve_cup_water_drop.py"
+  },
+  "supported_cases": [
+    "cup_water_drop_baseline",
+    "edit_heavy_cup",
+    "edit_high_viscosity_water",
+    "edit_low_density_water",
+    "edit_delete_water"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_cup_water_drop_suite": {
+      "target": "renders/pcve_suites/pcve_cup_water_drop_suite",
+      "case_video_sha256": {
+        "cup_water_drop_baseline": "81fa6829db3fc5d96942fe864cc971e59a845a9bcd5ab759a917c833f4c996a8",
+        "edit_heavy_cup": "3b147e23b95495609bbe84c478833e325e1727954851cd0e2fa54230ebfd0c71",
+        "edit_high_viscosity_water": "7b97d59df30a65db18fe53a9f0331ac0034d2353d997ac3a8e87500ac08f375e",
+        "edit_low_density_water": "e9334762db7cd7a8e70002801881255c35368a44786e9de197dd8826eb31d899",
+        "edit_delete_water": "b15b72ca42bce6b3de038451e4f0ebff553409e5f3dd8b25f04c8bd45172813a"
+      },
+      "public_case_ids": {
+        "cup_water_drop_baseline": "source",
+        "edit_heavy_cup": "edit_heavy_cup",
+        "edit_high_viscosity_water": "edit_high_viscosity_water",
+        "edit_low_density_water": "edit_low_density_water",
+        "edit_delete_water": "edit_delete_water"
+      }
+    }
+  }
+}

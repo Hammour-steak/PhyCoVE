@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "scene": "traditional_tea_pour",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_traditional_tea_pour.py",
+      "runtime": "python",
+      "output": {
+        "position": 0
+      },
+      "native_options": [
+        "--skin"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_traditional_tea_pour.py",
+      "runtime": "blender",
+      "output": {
+        "position": 0
+      },
+      "native_options": [
+        "--device",
+        "--frames",
+        "--samples",
+        "--output",
+        "--save-quality"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_traditional_tea_pour.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--inputs",
+        "--input-blend",
+        "--baseline-caps",
+        "--skin",
+        "--device",
+        "--frames",
+        "--samples",
+        "--output",
+        "--save-quality",
+        "--out-root",
+        "--stage",
+        "--python",
+        "--blender",
+        "--threads",
+        "--gpu",
+        "--dry-run"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source"
+      ]
+    }
+  },
+  "workflows": {
+    "edits": {
+      "file": "build_traditional_tea_edits.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--resume",
+        "--dry-run",
+        "--cases"
+      ],
+      "resource_flags": {},
+      "stage_semantics": "none",
+      "cases": [
+        "speed_2x",
+        "speed_0p5x",
+        "remove_tea",
+        "stop_flow_at_2s"
+      ],
+      "description": "The four edits, solved with the contact solver from the accepted source run and rendered in the refined environment scene."
+    }
+  },
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_traditional_tea_pour.py",
+    "build_traditional_tea_edits.py",
+    "edit_vocab.py",
+    "physics/audit_raw_liquid_cache.py",
+    "physics/launch_tea_contact.py",
+    "physics/measure_tea_dynamics.py",
+    "physics/measure_tea_table_caps.py",
+    "physics/prepare_tea_dynamic_case.py",
+    "physics/run_compute.py",
+    "physics/simulate_tea_contact.py",
+    "physics/simulate_tea_edits.py",
+    "physics/surface_tea_dynamics.py",
+    "appearance/bind_contact_cache.py",
+    "appearance/launch_tea_render.py",
+    "appearance/prepare_tea_contact_native.py",
+    "appearance/prepare_tea_edit_native.py",
+    "appearance/render_direct_chunks.py",
+    "appearance/render_tea_chunks.py",
+    "appearance/render_tea_contact.py",
+    "appearance/render_tea_direct.py",
+    "appearance/render_tea_edit.py",
+    "appearance/run_render.py",
+    "appearance/tea_environment_state.py",
+    "appearance/verify_genesis_blend.py",
+    "appearance/verify_tea_contact_scene.py",
+    "tools/accept_tea_contact.py",
+    "tools/audit_genesis_actual_cup.py",
+    "tools/audit_tea_edit_cup.py",
+    "tools/branch_cached_tea_delete.py",
+    "tools/package_tea_contact.py",
+    "tools/package_tea_edits.py",
+    "tools/qa_tea_contact.py",
+    "tools/reproduce_tea_contact.sh",
+    "tools/summarize_accumulation.py",
+    "tools/validate_genesis_tea.py",
+    "tools/validate_tea_edit.py",
+    "render_traditional_tea_pour.py",
+    "simulate_traditional_tea_pour.py",
+    "scene_manifest.json"
+  ]
+}

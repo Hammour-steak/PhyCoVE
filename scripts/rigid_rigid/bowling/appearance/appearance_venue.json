@@ -1,0 +1,326 @@
+{
+  "appearance": {
+    "preset": "bowling_venue",
+    "seed": 409061,
+    "camera": {
+      "location": [
+        -7.2,
+        -1.55,
+        1.55
+      ],
+      "target": [
+        0.45,
+        0.05,
+        0.2
+      ],
+      "lens_mm": 50.0,
+      "sensor_width_mm": 36.0
+    },
+    "lane": {
+      "wood_asset": "Poly Haven white_maple_veneer",
+      "plank_width_m": 0.027025641025641027,
+      "roughness": 0.12,
+      "coat_weight": 0.45,
+      "board_count": 39,
+      "seam_width_m": 0.00016,
+      "roughness_range": [
+        0.095,
+        0.145
+      ],
+      "coat_roughness": 0.08,
+      "physical_grain_tile_m": 1,
+      "board_tone_factors": [
+        0.91,
+        0.94,
+        0.97,
+        1,
+        1.02,
+        1.04,
+        1.06
+      ],
+      "basecolor_value": 0.45,
+      "anisotropic": 0.06
+    },
+    "ball": {
+      "color_a_linear": [
+        0.0025,
+        0.006,
+        0.021,
+        1
+      ],
+      "color_b_linear": [
+        0.022,
+        0.058,
+        0.15,
+        1
+      ],
+      "roughness": 0.16,
+      "coat_weight": 0.18,
+      "roughness_range": [
+        0.19,
+        0.265
+      ],
+      "coat_roughness": 0.19,
+      "texture_asset": "Ramprasath BlenderKit Bowling Ball photographed abstract resin pattern"
+    },
+    "pin": {
+      "color_linear": [
+        0.72,
+        0.72,
+        0.69,
+        1.0
+      ],
+      "stripe_linear": [
+        0.48,
+        0.012,
+        0.009,
+        1.0
+      ],
+      "roughness": 0.235,
+      "source_white_mix": 0.12,
+      "roughness_range": [
+        0.205,
+        0.32
+      ],
+      "coat_weight": 0.38,
+      "coat_roughness": 0.12,
+      "normal_strength": 0.2
+    },
+    "world_strength": 0.0,
+    "exposure_ev": 0.0,
+    "adjacent_lanes": {
+      "indices": [
+        -2,
+        -1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "pitch_m": 1.78
+    },
+    "asset_root_relative": "bowling_documentary",
+    "pin_visual_yaw_rad": [
+      0.0,
+      2.0,
+      4.2
+    ],
+    "asset_revision": {
+      "venue": "Masking unit hides parked pinsetters; full-height kickbacks; black pit curtain on the unchanged pit-back contact face; light concentrated on pin decks",
+      "pin": "David Geuens BlenderKit source PBR; unchanged 38 cm radial fit, UV atlas and yaw",
+      "lane": "White maple photographic grain at 1 m tile; 39 flush boards, 0.16 mm seams",
+      "fixed_contact_geometry": "unchanged from accepted physics",
+      "reference_url": "https://brunswickbowling.com/bowling-centers/equipment-parts-supplies/center-operations/pinsetters/gs-nxt-pinsetters",
+      "ball": "Ramprasath BlenderKit photographed abstract paint pattern, blue-toned; original B01 mesh and bores retained",
+      "photographic_finish": "Photographic finish: lane numerals removed and pin maker marks painted out (no text or logos); woven acoustic fabric masking (Poly Haven poly_wool_herringbone, CC0) replaces the neon print and blue LED edge; scanned scuff roughness/normal on gutters, capping, kickbacks and strike plates (Poly Haven blue_metal_plate, CC0); smoother, fuller lane top coat; every lamp is a visible fixture and the world fill is off"
+    },
+    "lighting": {
+      "overhead_rows_x_m": [
+        -10.4,
+        -6.8,
+        -3.2,
+        -1.0
+      ],
+      "overhead_power_W": 70,
+      "ceiling_z_m": 3.46,
+      "pin_light_W": 40,
+      "mask_wash_W": 18,
+      "pit_service_W": 6,
+      "lane_end_W": 25
+    },
+    "venue": {
+      "kickback_color": [
+        0.018,
+        0.019,
+        0.021
+      ],
+      "wood_tint": [
+        1.0,
+        0.8,
+        0.58
+      ],
+      "wood_saturation": 0.8,
+      "wood_value": 0.6,
+      "led_color": [
+        0.35,
+        0.55,
+        1.0
+      ],
+      "led_strength": 6.0,
+      "pin_diffuser_strength": 12.0,
+      "lane_coat_weight": 0.45,
+      "mask_low": [
+        0.012,
+        0.016,
+        0.045
+      ],
+      "mask_high": [
+        0.003,
+        0.004,
+        0.012
+      ],
+      "mask_ribbons": [
+        [
+          0.03,
+          0.0,
+          0.075,
+          0.022,
+          [
+            0.01,
+            0.1,
+            0.16
+          ]
+        ],
+        [
+          0.025,
+          1.7,
+          0.05,
+          0.01,
+          [
+            0.12,
+            0.02,
+            0.09
+          ]
+        ]
+      ],
+      "streak_roughness": 0.1,
+      "track_roughness": 0.08,
+      "glare_threshold": 1.0,
+      "glare_mix": -0.88,
+      "vignette": 0.32,
+      "idle_lanes": "closed",
+      "deck_start_x_m": -0.1,
+      "deck_tint": [
+        0.93,
+        0.96,
+        1.0
+      ],
+      "deck_wear": 0.15,
+      "deck_roughness_add": 0.05,
+      "pin_spot_radius_m": 0.0286
+    },
+    "photographic_finish": {
+      "pin": {
+        "print_box_uv": [
+          0.4,
+          0.63,
+          0.03,
+          0.49
+        ],
+        "patch_shift_u": 0.21,
+        "feather_u": 0.012
+      },
+      "masking_fabric": {
+        "asset": "poly_wool_herringbone",
+        "tile_m": 0.272,
+        "tint_linear": [
+          0.11,
+          0.13,
+          0.21
+        ],
+        "roughness_range": [
+          0.8,
+          0.97
+        ],
+        "normal_strength": 0.6,
+        "sheen": 0.3,
+        "panel_tone_range": [
+          0.9,
+          1.1
+        ]
+      },
+      "scuff_maps": {
+        "asset": "blue_metal_plate",
+        "tile_m": 2.5,
+        "gutter": {
+          "roughness_range": [
+            0.46,
+            0.7
+          ],
+          "normal_strength": 0.1,
+          "stretch_xyz": [
+            3,
+            1,
+            1
+          ]
+        },
+        "capping": {
+          "roughness_range": [
+            0.26,
+            0.46
+          ],
+          "normal_strength": 0.08,
+          "stretch_xyz": [
+            3,
+            1,
+            1
+          ],
+          "offset_xyz": [
+            0.37,
+            0.11,
+            0
+          ]
+        },
+        "kickback": {
+          "roughness_range": [
+            0.3,
+            0.55
+          ],
+          "normal_strength": 0.1,
+          "offset_xyz": [
+            0.21,
+            0,
+            0.53
+          ]
+        },
+        "strike_plate": {
+          "roughness_range": [
+            0.26,
+            0.5
+          ],
+          "normal_strength": 0.12,
+          "offset_xyz": [
+            0.63,
+            0,
+            0.29
+          ]
+        }
+      },
+      "lane_coat": {
+        "weight": 0.8,
+        "roughness": 0.03,
+        "streak": 0.04
+      },
+      "board_tone_factors": [
+        0.88,
+        0.92,
+        0.96,
+        1.0,
+        1.03,
+        1.06,
+        1.1
+      ],
+      "fixtures": {
+        "lane_end": {
+          "dx_m": -0.06,
+          "dz_m": -0.035,
+          "lens_height_m": 0.05,
+          "lens_strength": 15.0
+        },
+        "masking_wash": {
+          "z_m": 3.3,
+          "aim_z_m": 1.55,
+          "power_W": 30.0,
+          "cone_deg": 60.0,
+          "blend": 0.7,
+          "lens_radius_m": 0.045,
+          "lens_strength": 30.0
+        },
+        "pit_service": {
+          "z_m": 1.05,
+          "lens_strength": 12.0
+        }
+      }
+    }
+  }
+}

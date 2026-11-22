@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "scene_id": "book_pillow_bedroom",
+  "interaction_category": "rigid_elastic",
+  "case_number": 9,
+  "entry_points": {
+    "simulate": "simulate_book_pillow_bedroom.py",
+    "render": "render_book_pillow_bedroom.py",
+    "build_pcve": "build_pcve_book_pillow_bedroom.py"
+  },
+  "configuration": [
+    "scene_paths.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "heavy_book",
+    "soft_pillow",
+    "firm_pillow",
+    "remove_pillow",
+    "add_bedside_book"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_book_pillow_bedroom_suite": {
+      "target": "renders/pcve_suites/pcve_book_pillow_bedroom_suite",
+      "look": "daylight bedroom",
+      "case_video_sha256": {
+        "source": "79d2e8ae3abc89df807e8060e44c24fa61d3f48714de3af3df548f0312f6797b",
+        "heavy_book": "739d4ad95416d0c872a26db19f975fc2e5bc7cfd6b408bacda23cd2135a77b07",
+        "soft_pillow": "61034a47ed44868c25aef21f971d316c83fb497e7c932d4ba45c64e194cc7045",
+        "firm_pillow": "4f7a4a8b4a106ed1f4b36f380c127dd684a6d108e377be57b855a97f80bba37a",
+        "remove_pillow": "599982b35c791a89f5d3703cdd73c84f8fd4b85770c5ebc8e86245f016cfd437",
+        "add_bedside_book": "08dad82e0decc2dfd486f8b7fcf3794bde1046f7f999728ccc789b5d85009105",
+        "edit_remove_book": "0f21ada823f496a4f8373b011e2633404ce02052f6621dc02752b8566153ad46"
+      }
+    }
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json#scenes/book_pillow_bedroom",
+    "assets/scenes/book_pillow_bedroom/kit/files.json",
+    "assets/scenes/book_pillow_bedroom/kit/kit_layout.json",
+    "assets.json#polyhaven/plastered_wall_04",
+    "assets.json#polyhaven/poly_wool_herringbone",
+    "assets.json#polyhaven/stretch_poplin",
+    "assets.json#polyhaven/side_table_01",
+    "assets.json#polyhaven/potted_plant_04",
+    "assets.json#polyhaven/ceramic_vase_04"
+  ],
+  "native_delivery": {
+    "target": "renders/book_pillow_bedroom/accepted",
+    "role": "Accepted physics: native caches (cases/<case>/simulation.npz), motion audits, physics configs and acceptance records. Every render replays these caches."
+  }
+}

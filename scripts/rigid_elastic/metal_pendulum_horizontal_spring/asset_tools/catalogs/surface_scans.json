@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "provider": "Poly Haven",
+  "credit": "Powered by Poly Haven",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "id": "natural_walnut_veneer",
+      "source": "https://polyhaven.com/a/natural_walnut_veneer",
+      "authors": {
+        "Jenelle van Heerden": "All"
+      },
+      "resolution": "4k",
+      "chosen_texture_span_m": 1.0,
+      "scale_basis": "Authored metre mapping; compared with published texel density on the source page.",
+      "files": [
+        {
+          "relative_path": "natural_walnut_veneer/natural_walnut_veneer_diff_4k.jpg",
+          "role": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/natural_walnut_veneer/natural_walnut_veneer_diff_4k.jpg",
+          "md5": "16ddb5047e92f5e26e973f184aeef224",
+          "size": 9406851,
+          "sha256": "dcdb564c322f6e5d354fcb539ec7a2bd3637c85a0dfd52a68a4baf641883d7dd"
+        },
+        {
+          "relative_path": "natural_walnut_veneer/natural_walnut_veneer_rough_4k.jpg",
+          "role": "Rough",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/natural_walnut_veneer/natural_walnut_veneer_rough_4k.jpg",
+          "md5": "f8df5508e748d0168885c6a8ab185ede",
+          "size": 8650583,
+          "sha256": "417c316be46fde0ff7ed033d69be1fb3c4bd8e99046b6dd2284bb4c67f41f5e4"
+        },
+        {
+          "relative_path": "natural_walnut_veneer/natural_walnut_veneer_nor_gl_4k.jpg",
+          "role": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/natural_walnut_veneer/natural_walnut_veneer_nor_gl_4k.jpg",
+          "md5": "150581194fc5834e1fc8763384d4158b",
+          "size": 7411419,
+          "sha256": "79559ce0ae4549c4eddedb87861da04d5fb6bf299d1ce1ec537248c7170876d0"
+        }
+      ]
+    },
+    {
+      "id": "wood_table_worn",
+      "source": "https://polyhaven.com/a/wood_table_worn",
+      "authors": {
+        "Dimitrios Savva": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "resolution": "4k",
+      "chosen_texture_span_m": 0.55,
+      "scale_basis": "Authored metre mapping; compared with published texel density on the source page.",
+      "files": [
+        {
+          "relative_path": "wood_table_worn/wood_table_worn_diff_4k.jpg",
+          "role": "Diffuse",
+          "size": 12097188,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_table_worn/wood_table_worn_diff_4k.jpg",
+          "md5": "1296890ff5cfaea5ad0104e53293dc1e",
+          "sha256": "1261fb3ab3fad39259528ea3db8b401fbfa2e09fc833e0913ca489938985cb9d"
+        },
+        {
+          "relative_path": "wood_table_worn/wood_table_worn_rough_4k.jpg",
+          "role": "Rough",
+          "size": 11785007,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_table_worn/wood_table_worn_rough_4k.jpg",
+          "md5": "25bc0ddd7e7e12202b00fde9e1c5635b",
+          "sha256": "4ce6c1d30e67baf2dbace9a613b7f04ed9bce2ab5621134fbc5c001cd60b4bca"
+        },
+        {
+          "relative_path": "wood_table_worn/wood_table_worn_nor_gl_4k.jpg",
+          "role": "nor_gl",
+          "size": 11350528,
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/wood_table_worn/wood_table_worn_nor_gl_4k.jpg",
+          "md5": "16732b787fca3086e25ef293053c9a9a",
+          "sha256": "8cec3d34bbea6de2699796826b6632a6962e24f17a6456734d570e0e51325ba9"
+        }
+      ]
+    }
+  ]
+}

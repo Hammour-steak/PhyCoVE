@@ -1,0 +1,163 @@
+{
+  "gym_landing_mat": {
+    "actor_id": "medicine_ball",
+    "elastic_id": "landing_mat",
+    "physics": {
+      "active": [
+        1,
+        1
+      ],
+      "body_mass": 4.5359237,
+      "body_initial_speed": 0.8,
+      "body_initial_location": [
+        -0.09,
+        -0.035,
+        0.515
+      ],
+      "body_direction": [
+        0.55,
+        0.0,
+        -0.8351646544245033
+      ],
+      "solid_dimensions": [
+        1.2,
+        0.8,
+        0.14
+      ],
+      "solid_young_modulus": 22000.0,
+      "solid_poisson_ratio": 0.22,
+      "solid_density": 32.0,
+      "lower_layer_stiffness_ratio": 1.8,
+      "corner_radius": 0.045,
+      "cover_thickness": 0.00055,
+      "cover_density": 820.0,
+      "cover_stretch_modulus": 8000000.0,
+      "cover_shear_modulus": 3000.0,
+      "cover_bending_stiffness": 0.0001,
+      "volume_shear_viscosity": 900.0,
+      "volume_bulk_viscosity": 2200.0,
+      "surface_shear_viscosity": 0.2,
+      "surface_bulk_viscosity": 0.4,
+      "friction": 0.55,
+      "bending_viscosity": 4E-06,
+      "body_radius": 0.1125,
+      "mat_anchor_location": [
+        0.0,
+        0.0,
+        0.14
+      ],
+      "mat_anchor_radius": 0.6,
+      "gym_water_bottle_active": [
+        0
+      ],
+      "gym_water_bottle_location": [
+        0.105,
+        -0.035,
+        0.195
+      ],
+      "gym_water_bottle_radius": 0.034,
+      "gym_water_bottle_length": 0.19,
+      "gym_water_bottle_mass": 0.55,
+      "path_obstacle_settle_seconds": 0.18,
+      "gym_water_bottle_settle_location": [
+        0.105,
+        -0.035,
+        0.179
+      ]
+    },
+    "simulation": {
+      "solid_grid": [
+        73,
+        49,
+        13
+      ],
+      "dt": 0.0008333333333333334,
+      "fps": 24,
+      "duration": 4.0,
+      "preload_seconds": 1.5,
+      "d_hat": 0.0006
+    }
+  },
+  "picnic_ground_blanket": {
+    "actor_id": "mandarin_orange",
+    "elastic_id": "cotton_blanket",
+    "physics": {
+      "active": [
+        1,
+        1
+      ],
+      "body_mass": 0.11,
+      "body_radius": 0.032,
+      "body_initial_speed": 0.9,
+      "body_initial_location": [
+        -0.29,
+        -0.065,
+        0.08627613073421034
+      ],
+      "body_direction": [
+        0.9948341425312659,
+        0.1015136880133945,
+        0.0
+      ],
+      "cloth_dimensions": [
+        0.84,
+        0.6
+      ],
+      "cloth_pitch": 0.006,
+      "cloth_height": 0.071,
+      "rim_clips": false,
+      "cloth_young_modulus": 3000000.0,
+      "cloth_shear_modulus": 260.0,
+      "cloth_poisson_ratio": 0.3,
+      "cloth_density": 420.0,
+      "cloth_thickness": 0.00045,
+      "cloth_bending_stiffness": 6E-06,
+      "surface_shear_viscosity": 0.15,
+      "surface_bulk_viscosity": 0.3,
+      "friction": 0.55,
+      "bending_viscosity": 5E-07,
+      "cloth_initial_xy_scale": 1.0,
+      "support_type": "free_ground_blanket",
+      "foundation_pitch": 0.012,
+      "foundation_layers": 4,
+      "foundation_height": 0.05,
+      "solid_density": 80.0,
+      "solid_young_modulus": 900.0,
+      "solid_poisson_ratio": 0.16,
+      "lower_layer_stiffness_ratio": 1.0,
+      "volume_shear_viscosity": 25.0,
+      "volume_bulk_viscosity": 60.0,
+      "body_initial_angular_velocity": [
+        -2.8550724753767205,
+        27.979710258691853,
+        0.0
+      ],
+      "foundation_roughness_amplitude": 0.007,
+      "picnic_cup_active": [
+        0
+      ],
+      "picnic_cup_location": [
+        -0.16,
+        -0.01,
+        0.132
+      ],
+      "picnic_cup_radius": 0.035,
+      "picnic_cup_height": 0.076,
+      "preparation_placement": "flat_free_drop",
+      "picnic_cup_mass": 0.16,
+      "path_obstacle_settle_seconds": 0.22,
+      "picnic_cup_settle_location": [
+        -0.16,
+        -0.01,
+        0.094
+      ]
+    },
+    "simulation": {
+      "dt": 0.0008333333333333334,
+      "fps": 24,
+      "duration": 4.0,
+      "preload_seconds": 1.5,
+      "d_hat": 0.00045
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scene_id": "faucet_sink",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_faucet_sink.py",
+    "render": "render_faucet_sink.py",
+    "build_pcve": "build_pcve_faucet_sink.py"
+  },
+  "supported_cases": [
+    "source",
+    "edit_low_flow",
+    "edit_high_flow",
+    "edit_high_viscosity",
+    "edit_stop_flow_at_2s"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_faucet_sink_suite": {
+      "target": "renders/pcve_suites/pcve_faucet_sink_suite",
+      "case_video_sha256": {
+        "source": "6fa3915688fe625e46356bd85e186aa8e0ab886e6866198bcf927c03979d1cef",
+        "edit_low_flow": "aa6bfd724cf93dcd5b4af54e31c7ed28f942a7a1dd1e4ba3a0aa92c9094152c0",
+        "edit_high_flow": "355df5a2b5c662711b65a5a6dec4d870290ebf7158f8a303fb490dc20a038524",
+        "edit_high_viscosity": "32d8f42d2734437b48acc3d08094d07b115d4bb5cd36f6a2253f2aeae3d496e7",
+        "edit_stop_flow_at_2s": "bc625d8713af8d6e8678346b1a0618afec52201411410ed03f7c227949a6691a"
+      }
+    }
+  }
+}

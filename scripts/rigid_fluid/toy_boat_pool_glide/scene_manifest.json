@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "scene_id": "toy_boat_pool_glide",
+  "interaction_category": "rigid_fluid",
+  "entry_points": {
+    "simulate": "simulate_toy_boat_pool_glide.py",
+    "render": "render_toy_boat_pool_glide.py",
+    "build_pcve": "build_pcve_toy_boat_pool_glide.py"
+  },
+  "supported_cases": [
+    "toy_boat_pool_glide_baseline",
+    "edit_heavy_boat",
+    "edit_slow_push",
+    "edit_fast_push",
+    "edit_light_water",
+    "edit_viscous_water",
+    "edit_remove_boat",
+    "edit_heavy_boat_mid_glide"
+  ],
+  "workflows": {},
+  "configuration": {
+    "simulation": {
+      "solver": "Genesis 1.4.3 native rigid body + DFSPH liquid with two-way rigid_sph coupling",
+      "dx_m": 0.005,
+      "water_particles": 3107328,
+      "boat_mass_kg": 0.7176815672285165,
+      "placed_rest_draft_m": 0.03848,
+      "water_level_m": 0.3336338963640121,
+      "floor_z_m": 0.1498040267173513,
+      "preroll_push_frames": 8,
+      "released_at_m": [
+        -0.42808082699775696,
+        -0.09865503013134003,
+        0.2955210208892822
+      ],
+      "released_velocity_m_s": [
+        0.8756193518638611,
+        0.12503565847873688,
+        -0.037463005632162094
+      ],
+      "final_boat_pos_m": [
+        0.4125102162361145,
+        0.028192639350891113,
+        0.30132824182510376
+      ],
+      "closest_wall_gap_m": 0.179,
+      "viscous_water_model": {
+        "classification": "reduced_order_hybrid_with_stationary_medium",
+        "viscosity_multiplier": 3500,
+        "additional_medium_drag_rate_s_inv": 6.0,
+        "hull_pressure_mode": "hydrostatic",
+        "quasistatic_planar_drag": true,
+        "property_only_counterfactual": false,
+        "horizontal_pair_momentum_conserved": false
+      }
+    },
+    "render": {
+      "engine": "Cycles",
+      "samples": 64,
+      "environment": "garden",
+      "camera": {
+        "name": "kneeling_rim",
+        "location_m": [
+          0.345,
+          -1.95,
+          1.08
+        ],
+        "target_m": [
+          0,
+          0.0825,
+          0.2775
+        ],
+        "lens_mm": 28,
+        "fstop": 4.0
+      },
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "frames": 96
+    }
+  },
+  "assets": {
+    "assets/sketchfab/toy_ship/source/toy_ship.glb": "93b85b0005696f4fcc1680a7e4b4684096a275e361340b5a8b1df55b648a0e53",
+    "assets/sketchfab/inflatable_swimming_pool/source/inflatable_swimming_pool.glb": "9bd0d00c0f6c71e8b8d4b141a587409377edc3e83db0d2143fe85603a4c5d34d",
+    "assets/sketchfab/toy_ship/prepared/boat_collider.obj": "c6955fd052042f45ad98904b8a1da967ebd81127f6df4d33c79dbea44f7d2f58",
+    "assets/sketchfab/toy_ship/prepared/boat_frame.json": "20bbd817617f38209f34ce7b0448940bdf595556e97a4947c9595df099bdc08f",
+    "assets/sketchfab/inflatable_swimming_pool/prepared/pool_profile.json": "26d1b766ef38e9c958cf8f168aa0281afd94621b0622f2071dbbd8014e082c23",
+    "assets/polyhaven/sunny_rose_garden/sunny_rose_garden_8k.hdr": "3baf80dc0255d251480cea7b57045400040efdbb9941bff05ec5d42e3ec36990",
+    "assets/blenderkit/wood_board_cc0/wood_board.blend": "deb29de06f21287053fb2369eb492bdac2f6e931dff8dbc17057a43097a5fc59",
+    "assets/blenderkit/summer_garden/summer_garden.blend": "47ccaff499d0317da2b4d733a0ce6d96f68843e38ab1f76c19a12148c59c4758",
+    "assets/blenderkit/garden_hose_spray_nozzle/garden_hose_spray_nozzle.blend": "be7559f9afd1a078f06601a84e6c5b0c229f8db370849c026a1f65fbe15e2928"
+  },
+  "data": {
+    "source_run": "renders/toy_boat_pool_glide/source/run (the accepted source run: particles, surfaces and simulation_report.json; adopted by the builder and continued by edit_heavy_boat_mid_glide)",
+    "source_settle": "renders/toy_boat_pool_glide/source/settle/water_state.npz",
+    "viscous_settle": "renders/toy_boat_pool_glide/viscous_settle (accepted settled start of edit_viscous_water)"
+  },
+  "canonical_suites": {
+    "pcve_toy_boat_pool_glide_suite": {
+      "target": "renders/pcve_suites/pcve_toy_boat_pool_glide_suite",
+      "public_case_ids": {
+        "toy_boat_pool_glide_baseline": "source",
+        "edit_heavy_boat": "edit_heavy_boat",
+        "edit_slow_push": "edit_slow_push",
+        "edit_fast_push": "edit_fast_push",
+        "edit_light_water": "edit_light_water",
+        "edit_viscous_water": "edit_viscous_water",
+        "edit_remove_boat": "edit_remove_boat",
+        "edit_heavy_boat_mid_glide": "edit_heavy_boat_mid_glide"
+      },
+      "case_video_sha256": {
+        "toy_boat_pool_glide_baseline": "f535c932833237a4c5e8f231f774b8b61e6ac3956ef5a6643ad2c6fa38bb655b",
+        "edit_heavy_boat": "e2c9c32406e08318b8cbad8f1fd7102ea6296bd342b892906ccfd2802753923c",
+        "edit_slow_push": "49d9114a254fed1b859e2fce7286f8f6b00c312012d528f05732daba08dd46c5",
+        "edit_fast_push": "c7d53a9056b29deba0d94b90cef80086db336d78e9f86bdd3a9d919a6ca03029",
+        "edit_light_water": "3e5d04574ee347f2c351e73ef88b5c3396342b390e09f07229c82be0ff665b64",
+        "edit_viscous_water": "402d7143d1517f22de92c611055224f7a2b72d0cb7b6d0de81b623a3b5f45543",
+        "edit_remove_boat": "626e8c192544066a3b81ab3b13d2ffd4b4c816de373d31af2aa826f6c966161c",
+        "edit_heavy_boat_mid_glide": "defe5130511c48ebc48460196384bef5b072057a186163edc1e70c96c2714465"
+      }
+    }
+  }
+}

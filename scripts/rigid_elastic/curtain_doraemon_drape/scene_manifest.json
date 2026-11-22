@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "scene_id": "curtain_doraemon_drape",
+  "interaction_category": "rigid_elastic",
+  "case_number": 20,
+  "entry_points": {
+    "simulate": "simulate_curtain_doraemon_drape.py",
+    "render": "render_curtain_doraemon_drape.py",
+    "build_pcve": "build_pcve_curtain_doraemon_drape.py"
+  },
+  "configuration": [
+    "physics/baseline.py",
+    "physics/vocab.py",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "young_modulus_x10",
+    "density_x0_5",
+    "friction_x0_1",
+    "delete_figurine",
+    "friction_x0_1_at_frame_8"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/curtain_doraemon_drape",
+    "runtime": ".runtime/curtain_doraemon_drape",
+    "accepted_delivery": "renders/curtain_doraemon_drape/accepted/delivery",
+    "rebuild_output": "renders/curtain_doraemon_drape/<new folder>"
+  },
+  "canonical_suites": {
+    "pcve_curtain_doraemon_drape_suite": {
+      "target": "renders/pcve_suites/pcve_curtain_doraemon_drape_suite",
+      "format": "pcve_suite/1",
+      "look": "porcelain vase in a window-side room (appearance/render.py)",
+      "case_video_sha256": {
+        "source": "b1d8c84a5865c24122fdbddc9dfcb9ec92f2e7f4471b649535fe2a42641b1e0e",
+        "young_modulus_x10": "af5a9722c177d446c3af05b0ac9057c5848fb91f99ad44cf2d882cf1d2b2080f",
+        "density_x0_5": "ae835b6102a6f26fcf558c7b28588a36d61289f6f34ebc0ac7dafda7549b57ec",
+        "friction_x0_1": "c430d7ece1472eec2a23f12b0dc2d0b07fdd7ec2f667e42163d8b022d643a9f0",
+        "delete_figurine": "6a5b1ccc998c67629f96cdcebd178bfbd4d6b0f670520382caad360a623c5156",
+        "friction_x0_1_at_frame_8": "765a0a762102e3206155c8ea764de7d713e602b7d66e834f802b96b7fcc5a77f"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "young_modulus_x10": "edit_young_modulus_x10",
+        "density_x0_5": "edit_density_x0_5",
+        "friction_x0_1": "edit_friction_x0_1",
+        "delete_figurine": "edit_delete_figurine",
+        "friction_x0_1_at_frame_8": "edit_friction_x0_1_at_frame_8"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "young_modulus_x10": "cases/edit_young_modulus_x10/video.mp4",
+        "density_x0_5": "cases/edit_density_x0_5/video.mp4",
+        "friction_x0_1": "cases/edit_friction_x0_1/video.mp4",
+        "delete_figurine": "cases/edit_delete_figurine/video.mp4",
+        "friction_x0_1_at_frame_8": "cases/edit_friction_x0_1_at_frame_8/video.mp4"
+      }
+    }
+  },
+  "accepted_native_delivery": {
+    "target": "renders/curtain_doraemon_drape/accepted/delivery",
+    "solver_states": "renders/curtain_doraemon_drape/accepted/sim/<case>/run1",
+    "case_video_sha256": {
+      "source": "b1d8c84a5865c24122fdbddc9dfcb9ec92f2e7f4471b649535fe2a42641b1e0e",
+      "young_modulus_x10": "af5a9722c177d446c3af05b0ac9057c5848fb91f99ad44cf2d882cf1d2b2080f",
+      "density_x0_5": "ae835b6102a6f26fcf558c7b28588a36d61289f6f34ebc0ac7dafda7549b57ec",
+      "friction_x0_1": "c430d7ece1472eec2a23f12b0dc2d0b07fdd7ec2f667e42163d8b022d643a9f0",
+      "delete_figurine": "6a5b1ccc998c67629f96cdcebd178bfbd4d6b0f670520382caad360a623c5156"
+    },
+    "case_video_path": {
+      "source": "cases/source/video.mp4",
+      "young_modulus_x10": "cases/young_modulus_x10/video.mp4",
+      "density_x0_5": "cases/density_x0_5/video.mp4",
+      "friction_x0_1": "cases/friction_x0_1/video.mp4",
+      "delete_figurine": "cases/delete_figurine/video.mp4"
+    },
+    "note": "Native solver states, audits, masks, MDD, portable scenes and GT sidecars of the five whole-clip cases. scene_paths.py reads data.accepted_delivery; build_pcve --stage verify checks the cases of physics/vocab.py CASES in it. The timed case's merged native cache is published in the suite (inputs/native_timed/friction_x0_1_at_frame_8/)."
+  },
+  "current_look": "appearance/render.py"
+}

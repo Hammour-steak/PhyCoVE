@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "scene_id": "passive_car_spring_return_ramp",
+  "interaction_category": "rigid_elastic",
+  "entry_points": {
+    "simulate": "simulate_passive_car_spring_return_ramp.py",
+    "render": "render_passive_car_spring_return_ramp.py",
+    "build_pcve": "build_pcve_passive_car_spring_return_ramp.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "appearance_config.py",
+    "edit_vocab.py",
+    "book_assets.json",
+    "appearance/appearance_overlay.json"
+  ],
+  "supported_cases": [
+    "source",
+    "soft_spring",
+    "stiff_spring",
+    "high_friction",
+    "heavy_car",
+    "delete_spring"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_passive_car_spring_return_ramp_suite": {
+      "target": "renders/pcve_suites/pcve_passive_car_spring_return_ramp_suite",
+      "case_video_sha256": {
+        "source": "b50e2f99b072373c7c58882b4faa9bd305f129fedbf798740a285124af3ae697",
+        "soft_spring": "b064f65ea2eb256570e3c700b0e41395f38a87e38bbc5157cfaed15523d81349",
+        "stiff_spring": "bd67f13c09b65156008473a12d0a6f6c2be6f138f614f0714eaf85a8c34275b5",
+        "high_friction": "70599ca6f191a201ea66b436f31f61c0da90141f34e8fbb508fbb8934681f438",
+        "heavy_car": "fb9c608c8ff5898386e65c41fcb2032bbd37ab22a742528ed573d420b880a0dd",
+        "delete_spring": "b61d6ed8905314354cb628139b0055a79fa781b50444ef9db5ae1fe2a092d710",
+        "edit_delete_car": "7684e65d700ceff75b4b21d66b0aaa83660a66aaa7f400817849988c4217e105"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "soft_spring": "edit_soft_spring",
+        "stiff_spring": "edit_stiff_spring",
+        "high_friction": "edit_high_friction",
+        "heavy_car": "edit_heavy_car",
+        "delete_spring": "edit_delete_spring"
+      },
+      "public_case_video_sha256": {
+        "edit_delete_car": "7684e65d700ceff75b4b21d66b0aaa83660a66aaa7f400817849988c4217e105",
+        "edit_delete_spring": "b61d6ed8905314354cb628139b0055a79fa781b50444ef9db5ae1fe2a092d710",
+        "edit_heavy_car": "fb9c608c8ff5898386e65c41fcb2032bbd37ab22a742528ed573d420b880a0dd",
+        "edit_high_friction": "70599ca6f191a201ea66b436f31f61c0da90141f34e8fbb508fbb8934681f438",
+        "edit_soft_spring": "b064f65ea2eb256570e3c700b0e41395f38a87e38bbc5157cfaed15523d81349",
+        "edit_stiff_spring": "bd67f13c09b65156008473a12d0a6f6c2be6f138f614f0714eaf85a8c34275b5",
+        "source": "b50e2f99b072373c7c58882b4faa9bd305f129fedbf798740a285124af3ae697"
+      }
+    }
+  }
+}

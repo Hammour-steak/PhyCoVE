@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "scene": "gym_landing_mat",
+  "category": "rigid_elastic",
+  "case_number": 1,
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_gym_landing_mat.py",
+      "runtime": "python",
+      "native_options": [
+        "--case-id",
+        "--case",
+        "--out",
+        "--gpu-uuid",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "mass_double",
+        "faster",
+        "young_modulus_rebound",
+        "add_path_obstacle",
+        "delete_actor"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "render": {
+      "file": "render_gym_landing_mat.py",
+      "runtime": "python",
+      "native_options": [
+        "--case-id",
+        "--case",
+        "--out",
+        "--simulation",
+        "--scene",
+        "--reference-main",
+        "--look",
+        "--samples",
+        "--still-frame",
+        "--frame-start",
+        "--frame-end",
+        "--blender-bin",
+        "--gpu-uuid",
+        "--cpu-threads"
+      ],
+      "cases": [
+        "source",
+        "mass_double",
+        "faster",
+        "young_modulus_rebound",
+        "add_path_obstacle",
+        "delete_actor"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    },
+    "build_pcve": {
+      "file": "build_pcve_gym_landing_mat.py",
+      "runtime": "python",
+      "native_options": [
+        "--stage",
+        "--cases",
+        "--out",
+        "--gpu-uuid",
+        "--blender-bin",
+        "--cpu-threads",
+        "--reuse-native",
+        "--look",
+        "--samples"
+      ],
+      "cases": [
+        "source",
+        "mass_double",
+        "faster",
+        "young_modulus_rebound",
+        "add_path_obstacle",
+        "delete_actor"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "gpu": "--gpu-uuid",
+        "threads": "--cpu-threads",
+        "blender": "--blender-bin"
+      },
+      "output": {
+        "flag": "--out"
+      }
+    }
+  },
+  "workflows": {},
+  "assets": "assets/scenes/gym_landing_mat",
+  "implementation_policy": "libuipc CUDA IPC solve of a 4.54 kg medicine ball (affine rigid body) striking a two-layer compressible StableNeoHookean FEM foam core inside a loose Baraff-Witkin thin-shell PVC cover, with the native objective metric and dihedral viscosity extension (scripts/pcve_native_viscosity.cu, prebuilt in .runtime/gym_landing_mat/native_cuda12) solved in the same Newton/IPC system; the ADD edit is an independent dynamic affine-body bottle. Every case starts from the accepted source FEM state (assets native/<case>/initial_state.npz, rest arrays loaded byte-exactly) and changes only its DSL-resolved parameter; no motion or deformation is authored. Rendering replays the native shell vertices and rigid transforms into the accepted packed scene with the fixed camera: appearance/render_replay.py is the frozen accepted renderer and appearance/realism.py (the default look) runs it unchanged apart from one hook that restyles lights, materials and static dressing. tools/export_ground_truth.py writes each case's ground truth from its native cache and the reference camera. Solves and renders run directly on a claimed local GPU or on pool GPUs via tools/worker_run.py (scene_paths.py). The accepted native delivery is renders/gym_landing_mat/accepted (scene_manifest.json data.accepted_delivery; --stage verify checks its videos, native clocks and edit parameters); the published videos are the suite named in scene_manifest.json canonical_suites. Effective material parameters, not fitted to a measured mat.",
+  "implementation_files": [
+    "simulate_gym_landing_mat.py",
+    "render_gym_landing_mat.py",
+    "build_pcve_gym_landing_mat.py",
+    "edit_vocab.py",
+    "scene_inputs.py",
+    "scene_paths.py",
+    "scene_manifest.json",
+    "physics/simulate.py",
+    "physics/geometry.py",
+    "physics/edit_vocab.py",
+    "physics/scene_specs.json",
+    "physics/viscosity.py",
+    "appearance/render_replay.py",
+    "appearance/realism.py",
+    "tools/worker_run.py",
+    "tools/finalize.py",
+    "tools/retained_delivery.py",
+    "tools/validate_original.py",
+    "tools/support/build_pool_native.py",
+    "tools/export_ground_truth.py",
+    "tools/publish_suite.py"
+  ],
+  "edit_catalog": {
+    "file": "build_pcve_gym_landing_mat.py",
+    "source_constant": "PCVE_SOURCE",
+    "edits_constant": "PCVE_EDITS",
+    "commands": [
+      "--list-edits",
+      "--show-prompts [CASE]",
+      "--export-prompts [--out-root DIR]"
+    ],
+    "case_count": 6
+  }
+}

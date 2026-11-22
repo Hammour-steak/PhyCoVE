@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "scene_id": "chalk_box_stack",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_chalk_box_stack.py",
+    "render": "render_chalk_box_stack.py",
+    "build_pcve": "build_pcve_chalk_box_stack.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "chalk_box_stack_baseline",
+    "edit_fast_eraser",
+    "edit_slow_eraser",
+    "edit_slick_eraser",
+    "edit_slippery_boxes",
+    "edit_frictionless_midway",
+    "edit_delete_eraser",
+    "edit_delete_bottom_box"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_chalk_box_stack_suite": {
+      "target": "renders/pcve_suites/pcve_chalk_box_stack_suite",
+      "case_video_sha256": {
+        "chalk_box_stack_baseline": "af27a675b92ea228a3c1cc100c31c67f6dff1f5f949ece05382ad11c1ffbec4c",
+        "edit_delete_bottom_box": "6acb3b87e5f06c678ac244e20fa5fb331070eb3f4542aa2f1e4696411ec72474",
+        "edit_delete_eraser": "1256e6a62b6ac0bda8883801dd8360b990f116590aad6029ad586ef4c6bec958",
+        "edit_fast_eraser": "bff737bdd1626b1466c6bc507b3f1b4d4e88243226a8251aa742a67cec472667",
+        "edit_frictionless_midway": "b8e6ccf74c6efb446839b478affe14055fa9bfc750ade84150e955ac17741632",
+        "edit_slick_eraser": "fc563a7d7ec0ceb4164676753ac1eb05a085385e14c4335c34c2cb230c0bafcd",
+        "edit_slippery_boxes": "568c0bc795866ca16ff315ff8f8f83ad101a7d59373ef9a65773d106a2d46fe0",
+        "edit_slow_eraser": "6ca41bcefd5a827b1640541a0a00d8eb870e4c4ebe973489b32829b302acc820"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "chalk_box_stack_baseline": "source",
+        "edit_fast_eraser": "edit_fast_eraser",
+        "edit_slow_eraser": "edit_slow_eraser",
+        "edit_slick_eraser": "edit_slick_eraser",
+        "edit_slippery_boxes": "edit_slippery_boxes",
+        "edit_frictionless_midway": "edit_frictionless_midway"
+      },
+      "public_case_video_sha256": {
+        "source": "af27a675b92ea228a3c1cc100c31c67f6dff1f5f949ece05382ad11c1ffbec4c",
+        "edit_fast_eraser": "bff737bdd1626b1466c6bc507b3f1b4d4e88243226a8251aa742a67cec472667",
+        "edit_frictionless_midway": "b8e6ccf74c6efb446839b478affe14055fa9bfc750ade84150e955ac17741632",
+        "edit_slick_eraser": "fc563a7d7ec0ceb4164676753ac1eb05a085385e14c4335c34c2cb230c0bafcd",
+        "edit_slippery_boxes": "568c0bc795866ca16ff315ff8f8f83ad101a7d59373ef9a65773d106a2d46fe0",
+        "edit_slow_eraser": "6ca41bcefd5a827b1640541a0a00d8eb870e4c4ebe973489b32829b302acc820",
+        "edit_delete_eraser": "1256e6a62b6ac0bda8883801dd8360b990f116590aad6029ad586ef4c6bec958",
+        "edit_delete_bottom_box": "6acb3b87e5f06c678ac244e20fa5fb331070eb3f4542aa2f1e4696411ec72474"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/chalk_box_stack",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/chalk_box_stack",
+      "scenes/chalk_box_stack"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

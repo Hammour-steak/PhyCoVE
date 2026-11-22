@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "scene": "juice_dispenser_orange_cup",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_juice_dispenser_orange_cup.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out",
+        "filename": "simulation.json"
+      },
+      "native_options": [
+        "--out",
+        "--fps",
+        "--duration-sec",
+        "--nozzle-speed-change-sec",
+        "--nozzle-speed-after-m-s",
+        "--pour-start-sec",
+        "--pour-end-sec",
+        "--orange-juice-density-kg-m3",
+        "--orange-juice-kinematic-viscosity-m2-s",
+        "--nozzle-speed-m-s",
+        "--orange-juice-presence",
+        "--glass-presence"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_juice_dispenser_orange_cup.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--scenario-overrides-json",
+        "--cache-dir",
+        "--resolution",
+        "--fps",
+        "--duration-sec",
+        "--samples",
+        "--domain-resolution",
+        "--timesteps-min",
+        "--flip-ratio",
+        "--timesteps-max",
+        "--orange-juice-density-kg-m3",
+        "--orange-juice-kinematic-viscosity-m2-s",
+        "--inlet-aperture-mode",
+        "--inlet-target-area-m2",
+        "--inlet-plane-z-m",
+        "--viscosity-cg-accuracy",
+        "--solver-vendor",
+        "--viscosity-solver",
+        "--nozzle-speed-m-s",
+        "--nozzle-speed-change-sec",
+        "--nozzle-speed-after-m-s",
+        "--pour-start-sec",
+        "--pour-end-sec",
+        "--orange-juice-presence",
+        "--glass-presence",
+        "--skip-fluid-bake",
+        "--skip-render",
+        "--render-stills-only",
+        "--preview-frames",
+        "--reuse-existing-frames",
+        "--video-name"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_juice_dispenser_orange_cup.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--blender",
+        "--template",
+        "--resolution",
+        "--fps",
+        "--duration-sec",
+        "--samples",
+        "--domain-resolution",
+        "--timesteps-min",
+        "--timesteps-max",
+        "--solver-vendor",
+        "--threads",
+        "--skip-fluid-bake",
+        "--skip-render",
+        "--render-stills-only",
+        "--preview-frames",
+        "--skip-existing",
+        "--dry-run",
+        "--cases",
+        "--reuse-source"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender",
+        "threads": "--threads"
+      },
+      "cases": [
+        "juice_dispenser_orange_cup_source",
+        "edit_stop_flow_at_2s",
+        "edit_high_flow_speed",
+        "edit_low_flow_speed",
+        "edit_high_viscosity",
+        "edit_paste_like_viscosity",
+        "edit_delete_orange_juice"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_juice_dispenser_orange_cup.py",
+    "physics/coupled_viscosity.py",
+    "edit_vocab.py",
+    "appearance/flux_boundary.py",
+    "tools/install_solver_dependency.py",
+    "physics/liquid_measurements.py",
+    "render_juice_dispenser_orange_cup.py",
+    "simulate_juice_dispenser_orange_cup.py",
+    "scene_manifest.json"
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "revision": "photographic_finish",
+  "appearance": {
+    "environment": "Child play room with no printed text anywhere (plain cloth-bound shelf books, plain blocks, unprinted ramp and car), scanned painted-plaster wall, CC0 scanned potted succulent on the cabinet top, plain wall socket; window, sky and sun light only; passive gravity toy",
+    "look_module": "look_passive_car_spring_return_ramp",
+    "car_color": [
+      0.64,
+      0.155,
+      0.027,
+      1
+    ],
+    "exposure": 0.15,
+    "car_plastic_roughness": 0.245,
+    "fabric_texture_height_m": 0.3,
+    "floor_texture_width_m": 1.7,
+    "wood_texture_width_m": 1.0,
+    "floor_roughness_range": [
+      0.31,
+      0.49
+    ],
+    "wood_roughness_range": [
+      0.29,
+      0.46
+    ],
+    "wood_normal_strength": 0.12,
+    "floor_normal_strength": 0.11,
+    "lighting": {
+      "hdri_strength": 0.23,
+      "hdri_rotation_z_rad": 0.45,
+      "window_area_W": 70,
+      "window_color": [
+        0.8,
+        0.89,
+        1.0
+      ],
+      "sun_color": [
+        1.0,
+        0.93,
+        0.83
+      ],
+      "sun_strength": 3.8,
+      "sun_angle_rad": 0.024,
+      "room_fill_W": 0.0,
+      "sun_direction": [
+        1.45,
+        0.2,
+        -1.3
+      ],
+      "window_target_m": [
+        -0.68,
+        -0.05,
+        1.27
+      ]
+    },
+    "wall_color": [
+      0.66,
+      0.69,
+      0.66,
+      1
+    ],
+    "camera": [
+      0.58,
+      -1.82,
+      0.505
+    ],
+    "target": [
+      0.025,
+      0.055,
+      0.125
+    ],
+    "lens_mm": 46,
+    "floor_tint": [
+      0.92,
+      0.94,
+      0.96,
+      1
+    ],
+    "road_wood_tint": [
+      0.96,
+      0.91,
+      0.8,
+      1
+    ],
+    "support_wood_tint": [
+      0.87,
+      0.8,
+      0.65,
+      1
+    ],
+    "camera_optics": {
+      "dof_enabled": true,
+      "fstop": 11.0,
+      "focus_distance_m": 1.95,
+      "aperture_blades": 7
+    },
+    "surface_finish": {
+      "plastic_roughness_variation": 0.14,
+      "wood_coat_weight": 0.14,
+      "wood_coat_roughness": 0.36,
+      "road_wear_opacity": 0.065,
+      "paint_touch_roughness_delta": 0.05,
+      "glazing_touch_roughness_delta": 0.07
+    },
+    "finish": {
+      "book_cover_rgb": [
+        [0.030, 0.045, 0.085],
+        [0.040, 0.075, 0.050],
+        [0.150, 0.035, 0.030],
+        [0.380, 0.240, 0.070],
+        [0.180, 0.170, 0.150],
+        [0.090, 0.130, 0.170],
+        [0.520, 0.470, 0.380]
+      ],
+      "wall_paint": {
+        "colour": [0.66, 0.69, 0.66, 1],
+        "tile_m": 3.0,
+        "roughness_range": [0.80, 0.92],
+        "normal_strength": 0.5
+      },
+      "steel": {
+        "spring_wire": {"base_color": [0.70, 0.71, 0.72], "metallic": 1.0, "roughness": 0.30},
+        "guide_steel": {"base_color": [0.58, 0.59, 0.60], "metallic": 1.0, "roughness": 0.24}
+      },
+      "potted_plant": {
+        "base_centre_m": [0.50, 0.86, 0.357],
+        "yaw_rad": 0.6,
+        "support": "top face of the oak cabinet top, z = 0.357 m"
+      },
+      "wall_socket": {
+        "centre_m": [-0.35, 1.04, 0.30],
+        "plate_m": [0.151, 0.080, 0.009],
+        "recess_offsets_m": [-0.0355, 0.0355],
+        "recess_radius_m": 0.0195,
+        "recess_depth_m": 0.006,
+        "pin_spacing_m": 0.019,
+        "plastic_rgb": [0.80, 0.79, 0.75]
+      },
+      "render_quality": {
+        "samples": 384,
+        "adaptive_threshold": 0.005,
+        "adaptive_min_samples": 64,
+        "seed": 0,
+        "motion_blur": true,
+        "shutter_frames": 0.25,
+        "persistent_data": false
+      }
+    }
+  }
+}

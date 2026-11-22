@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "scene_id": "scarf_chair_slip",
+  "interaction_category": "rigid_elastic",
+  "case_number": 22,
+  "entry_points": {
+    "simulate": "simulate_scarf_chair_slip.py",
+    "render": "render_scarf_chair_slip.py",
+    "build_pcve": "build_pcve_scarf_chair_slip.py"
+  },
+  "supported_cases": [
+    "source",
+    "young_modulus_x10",
+    "density_x2",
+    "friction_x0_2",
+    "add_landing_book",
+    "delete_chair"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/scarf_chair_slip",
+    "native_inputs": "assets/scenes/scarf_chair_slip/native",
+    "runtime": ".runtime/scarf_chair_slip",
+    "accepted_delivery": "renders/scarf_chair_slip/accepted",
+    "rebuild_output": "renders/scarf_chair_slip/rebuild"
+  },
+  "canonical_suites": {
+    "pcve_scarf_chair_slip_suite": {
+      "target": "renders/pcve_suites/pcve_scarf_chair_slip_suite",
+      "look": "appearance/realism.py rendered from the accepted native states",
+      "case_video_sha256": {
+        "source": "473b03716753606f5b1f24b38c7c31d349f285cfd8385047bc4998f2b63f476a",
+        "young_modulus_x10": "ec7a05ffee0235aea9c011c0a685a5ec2aa26a4665270193bfe8c7a7599a8b70",
+        "density_x2": "16bc1702decdf0e08633cfc8bcd329308de25f68378eaf5eb798c12a628e8392",
+        "friction_x0_2": "8dfe37f2a003fe5dd834e03f454f74cf57308cdd5bcb26c0432205f65f0b6b88",
+        "add_landing_book": "77538e4eb3de71e08a66c3ee1b43e13028e565454d5ffa1317d574248250e198",
+        "delete_chair": "beb0aba9920679159aa11dba01dfe973929806bc7dd2285d79a8ac6917650d2b"
+      },
+      "case_video_path": {
+        "source": "cases/source/video.mp4",
+        "young_modulus_x10": "cases/edit_young_modulus_x10/video.mp4",
+        "density_x2": "cases/edit_density_x2/video.mp4",
+        "friction_x0_2": "cases/edit_friction_x0_2/video.mp4",
+        "add_landing_book": "cases/edit_add_landing_book/video.mp4",
+        "delete_chair": "cases/edit_delete_chair/video.mp4"
+      }
+    }
+  },
+  "accepted_native_delivery": {
+    "target": "renders/scarf_chair_slip/accepted",
+    "case_video_sha256": {
+      "source": "e766f9cf8e2e91bb8780a620fbafe7436a64135c46266f19a27c0cddeddb07d8",
+      "young_modulus_x10": "3345ee3bc6ca7230a100c4c115875f2670e5fc08760a5d608e6cb500d99635df",
+      "density_x2": "c05ba26359ce55ba548e9b4ee6b0b1583743bd2845dfc346d3de69d393272103",
+      "friction_x0_2": "7343568062ec64cd84bee887791c6b55bab1332c7147d1a7421368e4d890231b",
+      "add_landing_book": "6d8cf5d715a0401414b76e1134e4d6dc3125eef3692ae71dad7201f4ca97eee1",
+      "delete_chair": "62d3d7846fc77a2cf27732ba6e8177761c7dd02c8b5e6806dc517242545defd2"
+    },
+    "note": "Native audits, the delivery's GT, portable scenes (scene.blend + cloth.mdd), receipts, packaging records and the reference videos (cases/<case>/video.mp4); the native caches and simulation configs are in data.native_inputs."
+  },
+  "current_look": "appearance/realism.py"
+}

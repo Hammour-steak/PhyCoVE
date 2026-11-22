@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "scene": "basketball_court_bounce",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_basketball_court_bounce.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--config-json",
+        "--case"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_basketball_court_bounce.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--physics-json",
+        "--out-dir",
+        "--asset-root",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--threads-native",
+        "--skip-existing"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "threads": "--threads-native"
+      },
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_basketball_court_bounce.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--threads-native",
+        "--device",
+        "--skip-existing",
+        "--config-json",
+        "--reuse-physics-json"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender",
+        "threads": "--threads-native"
+      },
+      "cases": [
+        "source",
+        "low_restitution",
+        "high_restitution",
+        "remove_ball",
+        "heavy_ball",
+        "restitution_at_1s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Source-gated independent PyBullet solves: restitution, object deletion, doubled mass and native timed restitution at frame 25. Common frozen appearance and numerical/render settings.",
+  "implementation_files": [
+    "appearance/look_basketball_court_bounce.py",
+    "build_pcve_basketball_court_bounce.py",
+    "physics/validate_basketball_court_bounce.py",
+    "render_basketball_court_bounce.py",
+    "scene_config.py",
+    "simulate_basketball_court_bounce.py",
+    "edit_vocab.py",
+    "tools/assemble_split_render.py"
+  ]
+}

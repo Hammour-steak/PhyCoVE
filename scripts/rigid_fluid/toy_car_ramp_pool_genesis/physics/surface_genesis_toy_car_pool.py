@@ -1,0 +1,101 @@
+"""Reconstruct renderable water surfaces from Genesis DFSPH particles."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import time
+from pathlib import Path
+
+import numpy as np
+
+
+def parse_args():
+    p = argparse.ArgumentParser()
+    p.add_argument("--run", type=Path, required=True)
+    p.add_argument("--frames", nargs="*", type=int)
+    p.add_argument("--smoothing-iters", type=int, default=20)
+    p.add_argument("--cube-size-factor", type=float, default=0.8)
+    p.add_argument("--iso-threshold", type=float, default=0.6)
+    p.add_argument("--mesh-dir-name", default="meshes")
+    return p.parse_args()
+
+
+def atomic_json(path: Path, value):
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(value, indent=2) + "\n")
+    tmp.replace(path)
+
+
+def main():
+    args = parse_args()
+    import pysplashsurf
+
+    report = json.loads((args.run / "simulation_report.json").read_text())
+    dx = float(report["numerics"]["dx_m"])
+    frame_count = int(report["numerics"]["frames"])
+    frames = args.frames or list(range(1, frame_count + 1))
+    out = args.run / args.mesh_dir_name
+    out.mkdir(exist_ok=True)
+    settings = {
+        "source": "Genesis DFSPH particles",
+        "particle_radius_m": dx / 2.0,
+        "smoothing_length_radius_factor": 2.0,
+        "cube_size_radius_factor": args.cube_size_factor,
+        "iso_surface_threshold": args.iso_threshold,
+        "mesh_smoothing_iters": args.smoothing_iters,
+        "mesh_smoothing_weights": True,
+        "normals_smoothing_iters": 10,
+        "mesh_cleanup": True,
+    }
+    log_path = args.run / f"meshing_report_{args.mesh_dir_name}.json"
+    log = json.loads(log_path.read_text()) if log_path.exists() else {
+        "settings": settings, "frames": {}, "compute_seconds": 0.0,
+    }
+    if log["settings"] != settings:
+        raise RuntimeError("existing meshing settings differ")
+
+    for frame in frames:
+        target = out / f"water_{frame:04d}.npz"
+        if target.exists():
+            continue
+        started = time.monotonic()
+        with np.load(args.run / "particles" / f"frame_{frame:04d}.npz") as state:
+            points = np.ascontiguousarray(state["water_pos"], dtype=np.float64)
+        mesh_data, _ = pysplashsurf.reconstruction_pipeline(
+            points,
+            particle_radius=dx / 2.0,
+            smoothing_length=2.0,
+            cube_size=args.cube_size_factor,
+            iso_surface_threshold=args.iso_threshold,
+            mesh_smoothing_weights=True,
+            mesh_smoothing_iters=args.smoothing_iters,
+            normals_smoothing_iters=10,
+            mesh_cleanup=True,
+            compute_normals=True,
+            multi_threading=True,
+        )
+        vertices = np.asarray(mesh_data.mesh.vertices, dtype=np.float32)
+        triangles = np.asarray(mesh_data.mesh.triangles, dtype=np.int32)
+        normals = np.asarray(mesh_data.point_attributes["normals"], dtype=np.float32)
+        if not len(vertices) or not len(triangles):
+            raise RuntimeError(f"empty reconstructed mesh at frame {frame}")
+        if not np.isfinite(vertices).all() or not np.isfinite(normals).all():
+            raise RuntimeError(f"non-finite reconstructed mesh at frame {frame}")
+        if triangles.min() < 0 or triangles.max() >= len(vertices):
+            raise RuntimeError(f"invalid triangle index at frame {frame}")
+        np.savez_compressed(target, vertices=vertices, triangles=triangles, normals=normals)
+        row = {
+            "vertices": int(len(vertices)),
+            "triangles": int(len(triangles)),
+            "bounds_m": [vertices.min(axis=0).tolist(), vertices.max(axis=0).tolist()],
+            "seconds": time.monotonic() - started,
+        }
+        log["frames"][str(frame)] = row
+        log["compute_seconds"] = sum(v["seconds"] for v in log["frames"].values())
+        atomic_json(log_path, log)
+        print("MESH", frame, row["vertices"], row["triangles"], flush=True)
+
+
+if __name__ == "__main__":
+    main()

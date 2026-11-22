@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "scene_id": "opposing_pendulum_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_opposing_pendulum_collision.py",
+    "render": "render_opposing_pendulum_collision.py",
+    "build_pcve": "build_pcve_opposing_pendulum_collision.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_heavy_left",
+    "edit_low_restitution",
+    "edit_remove_right",
+    "edit_remove_left_rope"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_opposing_pendulum_collision_suite": {
+      "target": "renders/pcve_suites/pcve_opposing_pendulum_collision_suite",
+      "case_video_sha256": {
+        "source": "8586d30fc1ca2f55bb0e407cb5498bace226f80099a1dc32ac3c49849583581e",
+        "edit_heavy_left": "0f706418afe2ebfff7ceb718a2f94cc5c42ac29c9dfa6cd314e90bbd0e622c33",
+        "edit_low_restitution": "cc18c6f5e3c60130c2645db50f313e37dd8847ab2ada626df95c9c89ee289470",
+        "edit_remove_right": "af387802f27abc71542c034fbee3b6138f0fc92ace8ee1aed7bc6695d472fd31",
+        "edit_remove_left_rope": "d87925bcdfc60612d0dd29d5cfac8adc95801d1b21bd35dd9f10b58ce47f2ad9"
+      }
+    }
+  }
+}

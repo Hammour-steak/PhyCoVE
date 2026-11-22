@@ -1,0 +1,6 @@
+# Simulation environment; Blender's bpy ships with the renderer.
+pybullet==3.2.7
+numpy
+pillow
+imageio          # appearance/video_presentation.py (only with --label)
+imageio-ffmpeg   # mp4 reading and writing for imageio

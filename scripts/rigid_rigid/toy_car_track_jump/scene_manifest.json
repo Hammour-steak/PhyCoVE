@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scene_id": "toy_car_track_jump",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_toy_car_track_jump.py",
+    "render": "render_toy_car_track_jump.py",
+    "build_pcve": "build_pcve_toy_car_track_jump.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "counterfactual_cases.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_initial_speed_half",
+    "edit_initial_speed_double",
+    "edit_high_friction_uphill",
+    "edit_remove_car",
+    "edit_high_friction_near_lip"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_toy_car_track_jump_suite": {
+      "target": "renders/pcve_suites/pcve_toy_car_track_jump_suite",
+      "case_video_sha256": {
+        "source": "a96043fc4331a6668857833158a4728558a4665c8264696e9ded320478175933",
+        "edit_initial_speed_half": "2fbea9970cf67690ee56062aae0eaf98396a8ffcc52206fd5943b8637fec8706",
+        "edit_initial_speed_double": "c167e9cb6753693592cacaafc098969340f581c14371b603ed1f5e9ca5fd035c",
+        "edit_high_friction_uphill": "0b20d7657cbb2760000076277cd7d725eed613c60a6d79d9aa8a365e5903c880",
+        "edit_remove_car": "6618ae957deef649c1d43e6e64de0f5149b6e702ff808f55ad672a7ef4d139c7",
+        "edit_high_friction_near_lip": "1dd11e8f41b27eec494e947ec53c6d1bb83848fab3f0de07f158e9eae8ae908e"
+      }
+    }
+  }
+}

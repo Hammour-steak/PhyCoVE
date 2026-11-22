@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scene_id": "bathroom_stool_rebound",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_bathroom_stool_rebound.py",
+    "render": "render_bathroom_stool_rebound.py",
+    "build_pcve": "build_pcve_bathroom_stool_rebound.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "bathroom_stool_rebound_baseline",
+    "edit_fast_spin",
+    "edit_remove_bathtub",
+    "edit_fast_throw",
+    "edit_frictionless_floor_timed"
+  ],
+  "workflows": {
+    "batch_render": "tools/render_queue.py"
+  },
+  "canonical_suites": {
+    "pcve_bathroom_stool_rebound_suite": {
+      "target": "renders/pcve_suites/pcve_bathroom_stool_rebound_suite",
+      "case_video_sha256": {
+        "bathroom_stool_rebound_baseline": "9b8470a4e388cbf5eaed591ef4273c571c644a3700865c52db3d46986d7d2738",
+        "edit_fast_spin": "92c65f99224463dc1761c4abbb7bc3dae5b40f3699cdb68f8d433799175c088a",
+        "edit_fast_throw": "e3bd6b2cbc1c68cddc65366ea20795303545b84bb79edfb53897285e81fde3ca",
+        "edit_frictionless_floor_timed": "9af1b86ddbd1264da5434961af022b9952b5e6d9e2658388a48ce90da5b3899e",
+        "edit_remove_bathtub": "64d49f4357e21f29383248e1c4b59a7cb7edb7ffe9ddd89ffc2d237e32c25fcc"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "bathroom_stool_rebound_baseline": "source",
+        "edit_fast_spin": "edit_fast_spin",
+        "edit_remove_bathtub": "edit_remove_bathtub",
+        "edit_fast_throw": "edit_fast_throw",
+        "edit_frictionless_floor_timed": "edit_frictionless_floor_timed"
+      },
+      "public_case_video_sha256": {
+        "source": "9b8470a4e388cbf5eaed591ef4273c571c644a3700865c52db3d46986d7d2738",
+        "edit_fast_spin": "92c65f99224463dc1761c4abbb7bc3dae5b40f3699cdb68f8d433799175c088a",
+        "edit_fast_throw": "e3bd6b2cbc1c68cddc65366ea20795303545b84bb79edfb53897285e81fde3ca",
+        "edit_frictionless_floor_timed": "9af1b86ddbd1264da5434961af022b9952b5e6d9e2658388a48ce90da5b3899e",
+        "edit_remove_bathtub": "64d49f4357e21f29383248e1c4b59a7cb7edb7ffe9ddd89ffc2d237e32c25fcc"
+      }
+    }
+  },
+  "source_provenance": "authored in this repository; bathroom from assets/models/big_project.glb, stool = the GLB's own tall stool (Cube.045 assembly); appearance (dusk hotel-spa bathroom): Poly Haven CC0 textures, props and window HDRI in assets/polyhaven/bathroom_stool_rebound",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/bathroom_stool_rebound",
+      "scenes/bathroom_stool_rebound"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}

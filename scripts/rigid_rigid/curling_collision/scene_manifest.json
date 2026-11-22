@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "scene_id": "curling_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_curling_collision.py",
+    "render": "render_curling_collision.py",
+    "build_pcve": "build_pcve_curling_collision.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "edit_add_green_stone_midpoint",
+    "edit_delete_yellow_stone",
+    "edit_delete_blue_stone",
+    "edit_blue_mass_x3",
+    "edit_red_mass_x1p1"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_curling_collision_suite": {
+      "target": "renders/pcve_suites/pcve_curling_collision_suite",
+      "case_video_sha256": {
+        "source": "c7b981267acbb8ae2e8242ae948492abbd5701e8aaf868c4e6c7718b0a189127",
+        "edit_add_green_stone_midpoint": "0e5fb5c7ea928143daeeb1c9c5f8cd08f39e184ae66bb3b67019e13a581a6e6f",
+        "edit_delete_yellow_stone": "25e8d7a3cc84a6d0015fdfd1c6b364eaea8d426fc810f48dd7f0824133cd03ac",
+        "edit_delete_blue_stone": "f43c26dd3a67de9870073b8db7eccda561c64d869b33373e50408c77ff445d18",
+        "edit_blue_mass_x3": "ccda749102dce3d3edf532ab1bad950b62f80ffb94a1cab00486510aa74cba67",
+        "edit_red_mass_x1p1": "8782e080593e689a0a5de972a85e053e0ae0e25cb212deaceb058681006e136c",
+        "edit_delete_red_stone": "b85a6a4770af2d46e7fbe8bd0a0ce9786dcf22b7707039ae1892301196a77e14"
+      }
+    }
+  }
+}

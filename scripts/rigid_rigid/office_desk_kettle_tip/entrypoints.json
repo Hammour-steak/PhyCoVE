@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "scene": "office_desk_kettle_tip",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_office_desk_kettle_tip.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out",
+        "filename": "simulation.json"
+      },
+      "native_options": [
+        "--out",
+        "--scenario-json",
+        "--scenario-overrides-json",
+        "--kettle-mass",
+        "--pen-holder-mass",
+        "--pen-mass",
+        "--remove-pen",
+        "--fps",
+        "--duration-sec",
+        "--slow-motion"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [],
+      "python_runtime": null
+    },
+    "render": {
+      "file": "render_office_desk_kettle_tip.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--physics-json",
+        "--physics-python",
+        "--engine",
+        "--device",
+        "--samples",
+        "--resolution",
+        "--mode",
+        "--preview-frame",
+        "--keyframes",
+        "--scenario-json",
+        "--scenario-overrides-json",
+        "--kettle-mass",
+        "--pen-holder-mass",
+        "--pen-mass",
+        "--remove-pen",
+        "--fps",
+        "--duration-sec",
+        "--slow-motion",
+        "--seed"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [],
+      "python_runtime": null
+    },
+    "build_pcve": {
+      "file": "build_pcve_office_desk_kettle_tip.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--render-python",
+        "--blender",
+        "--simulate-only",
+        "--render-only",
+        "--samples",
+        "--resolution",
+        "--engine",
+        "--device",
+        "--mode",
+        "--cases",
+        "--preview-frame",
+        "--fps",
+        "--duration-sec",
+        "--slow-motion",
+        "--physics-python",
+        "--skip-existing",
+        "--dry-run",
+        "--verbose-render"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "office_desk_kettle_tip_baseline",
+        "edit_heavy_kettle",
+        "edit_heavy_pen_holder",
+        "edit_remove_pen",
+        "edit_remove_pen_holder",
+        "edit_remove_kettle"
+      ],
+      "python_runtime": null,
+      "named_suite_output": true
+    }
+  },
+  "workflows": {
+    "batch_render": {
+      "file": "tools/render_queue.py",
+      "runtime": "python",
+      "python_runtime": null,
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--render-python",
+        "--blender",
+        "--simulate-only",
+        "--render-only",
+        "--samples",
+        "--resolution",
+        "--engine",
+        "--device",
+        "--mode",
+        "--cases",
+        "--preview-frame",
+        "--fps",
+        "--duration-sec",
+        "--slow-motion",
+        "--count",
+        "--seed",
+        "--physics-python",
+        "--skip-existing",
+        "--dry-run",
+        "--verbose-render"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [],
+      "description": "Randomised batch sampling on top of the scene builder."
+    }
+  },
+  "implementation_policy": "Scene physics, geometry, rendering and helper modules live in this scene directory and its physics/, appearance/ and tools/ subdirectories; only the shared scripts/ modules and repository assets are external.",
+  "runtime_policy": "python_runtime is null on purpose: every entry runs in the interpreter that invokes it. Use --physics-python / --render-python / --blender to point at a specific environment instead of baking a machine path into the manifest.",
+  "implementation_files": [
+    "README.md",
+    "appearance/look_office_desk_kettle_tip.py",
+    "appearance/open_office.py",
+    "build_pcve_office_desk_kettle_tip.py",
+    "edit_vocab.py",
+    "entrypoints.json",
+    "physics/input_hashes.py",
+    "physics/scene_geometry.py",
+    "physics/validate_office_desk_kettle_tip.py",
+    "render_office_desk_kettle_tip.py",
+    "requirements.txt",
+    "scene_config.py",
+    "scene_manifest.json",
+    "simulate_office_desk_kettle_tip.py",
+    "tools/render_queue.py"
+  ]
+}

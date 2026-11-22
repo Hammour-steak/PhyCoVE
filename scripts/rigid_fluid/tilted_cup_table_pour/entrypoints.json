@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "scene": "tilted_cup_table_pour",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_tilted_cup_table_pour.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--particle",
+        "--rest-spacing",
+        "--head",
+        "--frames",
+        "--fps",
+        "--steps-per-frame",
+        "--substeps",
+        "--mu",
+        "--no-cup",
+        "--surface-tension",
+        "--table-wet",
+        "--cl-friction",
+        "--div-iters",
+        "--table-x",
+        "--table-y"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_tilted_cup_table_pour.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--run",
+        "--hdri",
+        "--out",
+        "--frames",
+        "--mesh-dir-name",
+        "--resolution",
+        "--output-fps",
+        "--samples",
+        "--engine",
+        "--device",
+        "--camera-lens",
+        "--camera-target",
+        "--resume",
+        "--geometric-normals",
+        "--real-time",
+        "--appearance-preset",
+        "--appearance-assets",
+        "--look",
+        "--sun-strength",
+        "--bounce-energy",
+        "--window-scale",
+        "--exposure",
+        "--sun-elevation",
+        "--sun-azimuth",
+        "--fstop"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_tilted_cup_table_pour.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--suite-root",
+        "--blender",
+        "--python",
+        "--publish-root",
+        "--cases",
+        "--no-manifest"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "tilted_cup_table_pour_baseline",
+        "edit_high_viscosity_water",
+        "edit_delete_water",
+        "edit_delete_cup"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "appearance/appearance_kitchen.py",
+    "build_pcve_tilted_cup_table_pour.py",
+    "appearance/ceramic_wood_details.py",
+    "physics/contact_geometry.py",
+    "physics/coupling_tilted_cup_table_pour.py",
+    "edit_vocab.py",
+    "physics/film_tilted_cup_table_pour.py",
+    "appearance/look_tilted_cup_table_pour.py",
+    "render_tilted_cup_table_pour.py",
+    "simulate_tilted_cup_table_pour.py",
+    "surface_tilted_cup_table_pour.py",
+    "scene_manifest.json"
+  ]
+}

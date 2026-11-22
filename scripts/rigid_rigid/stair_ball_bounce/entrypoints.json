@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "scene": "stair_ball_bounce",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_stair_ball_bounce.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--case",
+        "--scenario-overrides-json",
+        "--substeps"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_stair_ball_bounce.py",
+      "runtime": "blender",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--physics-json",
+        "--asset-root",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--appearance-json",
+        "--skip-existing"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_stair_ball_bounce.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--threads-native",
+        "--device",
+        "--skip-existing",
+        "--appearance-json"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "source",
+        "edit_low_restitution",
+        "edit_high_restitution",
+        "edit_slow_initial_velocity",
+        "edit_fast_initial_velocity",
+        "edit_low_sliding_friction",
+        "edit_low_rolling_friction",
+        "edit_high_rolling_friction",
+        "edit_high_friction"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Normal-gravity free 6-DOF rigid-body motion, one initial velocity, solver contacts on five rounded-nosing treads; source-gated declared physical edits. Single-coefficient cases and an explicitly requested joint lateral-and-rolling friction edit are supported. Blender replays actual solved poses at real time.",
+  "implementation_files": [
+    "scene_config.py",
+    "simulate_stair_ball_bounce.py",
+    "physics/graybox_stair_ball_bounce.py",
+    "physics/validate_stair_ball_bounce.py",
+    "edit_vocab.py",
+    "appearance/look_stair_ball_bounce.py",
+    "render_stair_ball_bounce.py",
+    "build_pcve_stair_ball_bounce.py",
+    "tools/prepare_appearance_stair_ball_bounce.py",
+    "tools/fetch_assets.py"
+  ]
+}

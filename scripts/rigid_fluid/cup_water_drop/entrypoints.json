@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "scene": "cup_water_drop",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_cup_water_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--geom",
+        "--out",
+        "--water-state",
+        "--particle",
+        "--rest-spacing",
+        "--fill-z",
+        "--mu",
+        "--surface-tension",
+        "--wall-wetting",
+        "--density",
+        "--cup-mass",
+        "--release",
+        "--yaw-deg",
+        "--omega-deg",
+        "--fps",
+        "--frames",
+        "--start-frame",
+        "--steps-per-frame",
+        "--substeps",
+        "--max-density-error",
+        "--max-divergence-error",
+        "--max-error-max",
+        "--momentum-error-avg",
+        "--momentum-error-max",
+        "--jacobi-omega",
+        "--max-iters",
+        "--checkpoint-every",
+        "--ghost-layers",
+        "--friction",
+        "--surface-friction",
+        "--sdf-cell",
+        "--coup-softness",
+        "--contact-timeconst",
+        "--table-half",
+        "--domain-top",
+        "--relax-gravity",
+        "--relax-sec",
+        "--relax-damping",
+        "--meniscus-omega"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_cup_water_drop.py",
+      "runtime": "blender",
+      "output": {
+        "position": 2
+      },
+      "native_options": [],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_cup_water_drop.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--suite-root",
+        "--cup-asset",
+        "--geometry",
+        "--blender",
+        "--python",
+        "--publish-root",
+        "--cases"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "cup_water_drop_baseline",
+        "edit_heavy_cup",
+        "edit_high_viscosity_water",
+        "edit_low_density_water",
+        "edit_delete_water"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_cup_water_drop.py",
+    "physics/cavity_cup_water_drop.py",
+    "physics/coupling_cup_water_drop.py",
+    "physics/dfsph_cup_water_drop.py",
+    "physics/droplets_cup_water_drop.py",
+    "edit_vocab.py",
+    "appearance/geometry_cup_water_drop.py",
+    "physics/layout_cup_water_drop.py",
+    "render_cup_water_drop.py",
+    "simulate_cup_water_drop.py",
+    "surface_cup_water_drop.py",
+    "scene_manifest.json"
+  ]
+}

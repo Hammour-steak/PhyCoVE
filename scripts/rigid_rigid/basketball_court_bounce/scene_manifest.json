@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "scene_id": "basketball_court_bounce",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_basketball_court_bounce.py",
+    "render": "render_basketball_court_bounce.py",
+    "build_pcve": "build_pcve_basketball_court_bounce.py"
+  },
+  "configuration": [
+    "scene_config.py",
+    "edit_vocab.py"
+  ],
+  "supported_cases": [
+    "source",
+    "low_restitution",
+    "high_restitution",
+    "remove_ball",
+    "heavy_ball",
+    "restitution_at_1s"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_basketball_court_bounce_suite": {
+      "target": "renders/pcve_suites/pcve_basketball_court_bounce_suite",
+      "case_video_sha256": {
+        "source": "37c0ac3ea7d1922b3b02134a426a18b497bc8dc4309ce7d740626bb796ca7b5d",
+        "low_restitution": "2ec8d604a4084bfb70336cf7ec3340113283270697517df42b357573e650b0b9",
+        "high_restitution": "a12d1831411d3ddf23d181456f3d3971ec154f8b04e4bb72692e465a92c991b0",
+        "remove_ball": "bc3f042ea4a196b9264c792ee1027336abdbbb09e57424838f8cb004f7a3fd12",
+        "heavy_ball": "dbdb0fdf47f9b34ad13687e6fa4ebda88894e30d49928e847d251ec3669cc497",
+        "restitution_at_1s": "ba80e5fcf7afeb5c55c3c76e612df1e0755ca85e5a4e9cb1f358dfe260925082"
+      },
+      "public_case_ids": {
+        "source": "source",
+        "low_restitution": "edit_low_restitution",
+        "high_restitution": "edit_high_restitution",
+        "remove_ball": "edit_remove_ball",
+        "heavy_ball": "edit_heavy_ball",
+        "restitution_at_1s": "edit_restitution_at_1s"
+      },
+      "public_case_video_sha256": {
+        "source": "37c0ac3ea7d1922b3b02134a426a18b497bc8dc4309ce7d740626bb796ca7b5d",
+        "edit_low_restitution": "2ec8d604a4084bfb70336cf7ec3340113283270697517df42b357573e650b0b9",
+        "edit_high_restitution": "a12d1831411d3ddf23d181456f3d3971ec154f8b04e4bb72692e465a92c991b0",
+        "edit_remove_ball": "bc3f042ea4a196b9264c792ee1027336abdbbb09e57424838f8cb004f7a3fd12",
+        "edit_heavy_ball": "dbdb0fdf47f9b34ad13687e6fa4ebda88894e30d49928e847d251ec3669cc497",
+        "edit_restitution_at_1s": "ba80e5fcf7afeb5c55c3c76e612df1e0755ca85e5a4e9cb1f358dfe260925082"
+      }
+    }
+  }
+}

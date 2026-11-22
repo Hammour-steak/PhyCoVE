@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "scene": "milk_pitcher_glass",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_milk_pitcher_glass.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--out",
+        "--cup",
+        "--particle",
+        "--rest-spacing",
+        "--frames",
+        "--fps",
+        "--steps-per-frame",
+        "--substeps",
+        "--mu",
+        "--surface-tension",
+        "--flow",
+        "--start",
+        "--stop",
+        "--exit",
+        "--axis",
+        "--jet-radius",
+        "--cl-friction",
+        "--div-iters",
+        "--resume-from",
+        "--resume-frame"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_milk_pitcher_glass.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--run",
+        "--out-dir",
+        "--frames",
+        "--samples",
+        "--mesh-dir",
+        "--no-milk",
+        "--device"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [],
+      "prefix_args": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_milk_pitcher_glass.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--suite-root"
+      },
+      "native_options": [
+        "--suite-root",
+        "--blender",
+        "--python",
+        "--publish-root",
+        "--cases",
+        "--device"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender"
+      },
+      "cases": [
+        "milk_pitcher_glass_baseline",
+        "edit_high_flow_speed",
+        "edit_low_flow_speed",
+        "edit_delete_milk",
+        "edit_stop_after_2s"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_milk_pitcher_glass.py",
+    "physics/coupling_milk_pitcher_glass.py",
+    "edit_vocab.py",
+    "render_milk_pitcher_glass.py",
+    "simulate_milk_pitcher_glass.py",
+    "surface_milk_pitcher_glass.py",
+    "scene_manifest.json"
+  ]
+}

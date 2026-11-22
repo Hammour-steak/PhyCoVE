@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "scene": "toy_car_track_jump",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_toy_car_track_jump.py",
+      "runtime": "python",
+      "python_runtime": ".venv-toy-car-bridge/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--scenario-overrides-json",
+        "--case"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": [
+        "source",
+        "edit_initial_speed_half",
+        "edit_initial_speed_double",
+        "edit_high_friction_uphill",
+        "edit_remove_car",
+        "edit_high_friction_near_lip"
+      ]
+    },
+    "render": {
+      "file": "render_toy_car_track_jump.py",
+      "runtime": "blender",
+      "python_runtime": ".venv-toy-car-bridge/bin/python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--physics-json",
+        "--mode",
+        "--keyframes",
+        "--frame-start",
+        "--frame-end",
+        "--device",
+        "--appearance-json",
+        "--skip-existing",
+        "--worker-id",
+        "--base-scene",
+        "--frames"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_toy_car_track_jump.py",
+      "runtime": "python",
+      "python_runtime": ".venv-toy-car-bridge/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--device",
+        "--threads-native",
+        "--render-workers",
+        "--skip-existing",
+        "--scenario-overrides-json",
+        "--source-scene",
+        "--keyframes"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "source",
+        "edit_initial_speed_half",
+        "edit_initial_speed_double",
+        "edit_high_friction_uphill",
+        "edit_remove_car",
+        "edit_high_friction_near_lip"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "MuJoCo free 6-DOF chassis with two passive hinge axles and four rigid wheels. Five physical counterfactuals: half/double initial speed with matching wheel spin, high contact friction from frame 1, true deletion of the car and wheels, and a native track-friction change at frame 8 (7/24 s) without pose or velocity resets. Source and edits share the same visual template, camera, quality and real-time playback; native out-of-frame trajectories are retained in annotations. Cycles persistent data is disabled to retain the wheel-flicker fix.",
+  "implementation_files": [
+    "scene_config.py",
+    "simulate_toy_car_track_jump.py",
+    "physics/validate_toy_car_track_jump.py",
+    "physics/validate_counterfactuals.py",
+    "appearance/look_toy_car_track_jump.py",
+    "appearance/refine_toy_car_track_jump.py",
+    "appearance/finish_toy_car_track_jump.py",
+    "render_toy_car_track_jump.py",
+    "build_pcve_toy_car_track_jump.py",
+    "counterfactual_cases.py",
+    "counterfactual_suite.py",
+    "edit_vocab.py",
+    "asset_manifest.json",
+    "tools/prepare_real_car.py"
+  ]
+}

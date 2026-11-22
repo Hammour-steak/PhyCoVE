@@ -1,0 +1,4 @@
+# API runners (Kling 4.0, MiniMax H3, Seedance 2.5, Wan 3.0); FFmpeg (ffprobe, ffmpeg) must be on the path.
+# The local models (JoyAI-Video-Edit, Kiwi-Edit, OmniWeaving, VOID) run in environments
+# built from their official repositories (see README.md).
+requests>=2.31,<3

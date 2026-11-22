@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scene_id": "tennis_net_hit",
+  "interaction_category": "rigid_elastic",
+  "case_number": 3,
+  "look": "clear_afternoon_park_court",
+  "entry_points": {
+    "simulate": "simulate_tennis_net_hit.py",
+    "render": "render_tennis_net_hit.py",
+    "build_pcve": "build_pcve_tennis_net_hit.py"
+  },
+  "configuration": [
+    "physics/common.py",
+    "edit_vocab.py",
+    "scene_paths.py"
+  ],
+  "supported_cases": [
+    "source",
+    "ball_speed_div5",
+    "ball_speed_x2",
+    "net_young_div10",
+    "net_young_x10",
+    "remove_entire_net"
+  ],
+  "workflows": {},
+  "data": {
+    "assets": "assets/scenes/tennis_net_hit",
+    "accepted_native_delivery": "renders/tennis_net_hit/accepted",
+    "render_caches": "renders/tennis_net_hit/accepted/physics/<case>/ (render_cache.npz, qualification.json, ground_truth_24fps.npz: members of worker_tars/<worker>/<case>_artifacts.tar, kept extracted; per-file index worker_tars/<worker>/<case>_files.json)",
+    "rebuild_output": "renders/tennis_net_hit/<new folder>"
+  },
+  "canonical_suites": {
+    "pcve_tennis_net_hit_suite": {
+      "target": "renders/pcve_suites/pcve_tennis_net_hit_suite",
+      "look": "clear_afternoon_park_court",
+      "case_video_sha256": {
+        "source": "245ea3889855817cb5996fc16165b32b569fcd01e20dc4b047a6978d68456885",
+        "net_young_x10": "7291a2aa0915615492df5ecb2922955d6cb00b8f9ce6bf24165d0c41b59e25f2",
+        "ball_speed_x2": "b7d81448bef497a22edcd5ed0e68abd398d4f75dc05ff2c7708f9bedf32f83e7",
+        "ball_speed_div5": "23559834d63bac80f476e2c70ea04eafd3797741e8da2893d0696406d9e38f34",
+        "remove_entire_net": "f7e04befb0f6148243984f77f80b1d8523f8dbb89b2165e0184390cfdcf3ef49",
+        "net_young_div10": "a66f17cffec5375a56e48262938fcf2a946ac4bfa488ce0b3ac7bbef36f2b02c",
+        "edit_remove_tennis_ball": "21a37f223da8e4a7a366f3946f296981d1ff8210f3e64da5ca6b5f81a09be5bd"
+      }
+    }
+  },
+  "media": {
+    "resolution": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "frames": 96,
+    "duration_seconds": 4.0,
+    "sampling": "frame k = native state at (k-1)/24 s"
+  },
+  "ground_truth": "cases/<case>/ground_truth_transforms.json in the suite (pcve_ground_truth/1); native arrays in physics/<case>/ground_truth_24fps.npz of the worker tars"
+}

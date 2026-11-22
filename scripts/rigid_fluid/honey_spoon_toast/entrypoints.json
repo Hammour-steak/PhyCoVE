@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "scene": "honey_spoon_toast",
+  "category": "rigid_fluid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_honey_spoon_toast.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out"
+      },
+      "native_options": [
+        "--source",
+        "--out",
+        "--sigma",
+        "--dt",
+        "--nozzle-radius",
+        "--meniscus-time",
+        "--spawn-length",
+        "--max-edge",
+        "--min-edge",
+        "--break-radius",
+        "--lateral-noise",
+        "--contact-fraction",
+        "--film-cell",
+        "--landing-height",
+        "--seed",
+        "--frames",
+        "--inflow"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_honey_spoon_toast.py",
+      "runtime": "blender",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--input-blend",
+        "--run",
+        "--out-dir",
+        "--frames",
+        "--resolution",
+        "--samples",
+        "--engine",
+        "--mesh-subdir",
+        "--extra-mesh-subdir",
+        "--encode",
+        "--remove-honey-from-frame"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_honey_spoon_toast.py",
+      "runtime": "python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--python",
+        "--blender",
+        "--threads",
+        "--gpu",
+        "--dry-run",
+        "--reservoir-run",
+        "--bulk-run",
+        "--input-blend",
+        "--with-edits"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "python": "--python",
+        "blender": "--blender",
+        "gpu": "--gpu",
+        "threads": "--threads"
+      },
+      "cases": [
+        "source",
+        "remove_bread",
+        "remove_honey",
+        "lower_viscosity",
+        "remove_honey_at_frame_51"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Original physical and render implementations; only public argument adaptation is added",
+  "implementation_files": [
+    "build_pcve_honey_spoon_toast.py",
+    "simulate_honey_spoon_toast.py",
+    "render_honey_spoon_toast.py",
+    "edit_vocab.py",
+    "simulate_honey_reservoir.py",
+    "simulate_viscous_rope.py",
+    "surface_honey_spoon_toast.py",
+    "mesh_viscous_rope.py",
+    "physics/prepare_honey_bulk.py",
+    "physics/spoon_reservoir_geometry.py",
+    "physics/validate_viscous_rope.py",
+    "edits/build_timed_remove_honey.py",
+    "edits/export_bread_contact.py",
+    "edits/export_contact.py",
+    "edits/make_review.py",
+    "edits/prepare_edits.py",
+    "edits/receiver_surface.py",
+    "edits/render_edit.py",
+    "edits/render_sequence.py",
+    "edits/reproduce.py",
+    "edits/simulate_honey_reservoir.py",
+    "edits/surface_honey_spoon_toast.py",
+    "tools/build_scene_honey_spoon_toast.py",
+    "tools/look_honey_spoon_toast.py",
+    "tools/pipeline_viscous_rope.sh",
+    "scene_manifest.json"
+  ]
+}

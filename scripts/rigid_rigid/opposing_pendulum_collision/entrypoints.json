@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "scene": "opposing_pendulum_collision",
+  "category": "rigid_rigid",
+  "entrypoints": {
+    "simulate": {
+      "file": "simulate_opposing_pendulum_collision.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out",
+        "filename": "physics_transforms.json"
+      },
+      "native_options": [
+        "--out",
+        "--case",
+        "--scenario-overrides-json",
+        "--progress"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "render": {
+      "file": "render_opposing_pendulum_collision.py",
+      "runtime": "blender",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-dir"
+      },
+      "native_options": [
+        "--out-dir",
+        "--physics-json",
+        "--asset-root",
+        "--mode",
+        "--keyframes",
+        "--device",
+        "--skip-existing"
+      ],
+      "stage_semantics": "none",
+      "resource_flags": {},
+      "cases": []
+    },
+    "build_pcve": {
+      "file": "build_pcve_opposing_pendulum_collision.py",
+      "runtime": "python",
+      "python_runtime": ".venv-domino/bin/python",
+      "output": {
+        "flag": "--out-root"
+      },
+      "native_options": [
+        "--out-root",
+        "--stage",
+        "--cases",
+        "--blender",
+        "--threads-native",
+        "--device",
+        "--skip-existing"
+      ],
+      "stage_semantics": "selector",
+      "resource_flags": {
+        "blender": "--blender"
+      },
+      "cases": [
+        "source",
+        "edit_heavy_left",
+        "edit_low_restitution",
+        "edit_remove_right",
+        "edit_remove_left_rope"
+      ]
+    }
+  },
+  "workflows": {},
+  "implementation_policy": "Gravity-only simultaneous release. Independent 6-DOF spheres, actual sphere contacts and finite box boundaries. Massless tension-only slack-capable inextensible ropes at body-fixed eyelets. No motors, planar guides, authored dynamics, collision velocity flips or energy clamps. Dense solved poses only drive offline Cycles replay.",
+  "implementation_files": [
+    "scene_config.py",
+    "physics/rigid_solver.py",
+    "physics/motion_metrics.py",
+    "simulate_opposing_pendulum_collision.py",
+    "physics/validate_opposing_pendulum_collision.py",
+    "physics/graybox_opposing_pendulum_collision.py",
+    "appearance/look_opposing_pendulum_collision.py",
+    "render_opposing_pendulum_collision.py",
+    "build_pcve_opposing_pendulum_collision.py",
+    "edit_vocab.py"
+  ]
+}

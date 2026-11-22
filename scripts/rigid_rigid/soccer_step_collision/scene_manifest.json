@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scene_id": "soccer_step_collision",
+  "interaction_category": "rigid_rigid",
+  "entry_points": {
+    "simulate": "simulate_soccer_step_collision.py",
+    "render": "render_soccer_step_collision.py",
+    "build_pcve": "build_pcve_soccer_step_collision.py"
+  },
+  "configuration": [
+    "scene_config.py"
+  ],
+  "supported_cases": [
+    "soccer_step_collision_baseline",
+    "edit_soccer_mass_x3",
+    "edit_basketball_mass_x3",
+    "edit_soccer_speed_x05",
+    "edit_step_height_x2",
+    "edit_soccer_speed_halved_midrun",
+    "edit_delete_basketball",
+    "edit_delete_soccer"
+  ],
+  "workflows": {},
+  "canonical_suites": {
+    "pcve_soccer_step_collision_suite": {
+      "target": "renders/pcve_suites/pcve_soccer_step_collision_suite",
+      "case_video_sha256": {
+        "edit_basketball_mass_x3": "442c190358f8385704a96d935531788fcc8099eb4306cd4b1aa8438854cfd012",
+        "edit_delete_basketball": "95e6e506a94f16da9d2082347a2f1ac2f12fc2d5606f7a201ddcd435606a82ea",
+        "edit_delete_soccer": "74fff3cfba35e681b56202c61d323651defc32343aa4a16be69b87423306586f",
+        "edit_soccer_mass_x3": "031cc124ae4a5d8ac144668bc290555ffde6ef4d1f50d4f648cd72e5389ba4bf",
+        "edit_soccer_speed_halved_midrun": "6a785e17367f096c25269720ba4b47cb8aa96f252e504cb1fd4f5385301404d2",
+        "edit_soccer_speed_x05": "9e1bbd90687e685de4c0f3538314486e6b0385a58b36fd084915b0d6dfe9612a",
+        "edit_step_height_x2": "03715cc72aad97607d63ebb1c22ffb3d7fdfbe45f861a990a1299624304c73a5",
+        "soccer_step_collision_baseline": "67bab715846f8fa57658152ddeec74aa1e8956b90cc7bbcd3097898c5b96b5e4"
+      },
+      "prompts_complete": true,
+      "distribution_schema_version": 3,
+      "metadata_level": "recovered_from_scene_definitions",
+      "physics_trace_available": false,
+      "ground_truth_available": true,
+      "public_case_ids": {
+        "soccer_step_collision_baseline": "source",
+        "edit_soccer_mass_x3": "edit_soccer_mass_x3",
+        "edit_basketball_mass_x3": "edit_basketball_mass_x3",
+        "edit_soccer_speed_x05": "edit_soccer_speed_x05",
+        "edit_step_height_x2": "edit_step_height_x2",
+        "edit_soccer_speed_halved_midrun": "edit_soccer_speed_halved_midrun"
+      },
+      "public_case_video_sha256": {
+        "edit_basketball_mass_x3": "442c190358f8385704a96d935531788fcc8099eb4306cd4b1aa8438854cfd012",
+        "edit_delete_basketball": "95e6e506a94f16da9d2082347a2f1ac2f12fc2d5606f7a201ddcd435606a82ea",
+        "edit_delete_soccer": "74fff3cfba35e681b56202c61d323651defc32343aa4a16be69b87423306586f",
+        "edit_soccer_mass_x3": "031cc124ae4a5d8ac144668bc290555ffde6ef4d1f50d4f648cd72e5389ba4bf",
+        "edit_soccer_speed_halved_midrun": "6a785e17367f096c25269720ba4b47cb8aa96f252e504cb1fd4f5385301404d2",
+        "edit_soccer_speed_x05": "9e1bbd90687e685de4c0f3538314486e6b0385a58b36fd084915b0d6dfe9612a",
+        "edit_step_height_x2": "03715cc72aad97607d63ebb1c22ffb3d7fdfbe45f861a990a1299624304c73a5",
+        "source": "67bab715846f8fa57658152ddeec74aa1e8956b90cc7bbcd3097898c5b96b5e4"
+      }
+    }
+  },
+  "source_provenance": "imported from clean_scripts/soccer_step_collision",
+  "assets": {
+    "models": [],
+    "texture_sets": [],
+    "scenes": [],
+    "registry_keys": [
+      "models",
+      "polyhaven/soccer_step_collision",
+      "scenes/soccer_step_collision"
+    ]
+  },
+  "asset_manifests_referenced_by_code": [
+    "assets.json"
+  ]
+}
