@@ -15,9 +15,8 @@
 </p>
 
 <p align="center">
-  <!-- Uncomment when arXiv is live:
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?style=flat&amp;logo=arxiv&amp;logoColor=white" alt="arXiv Paper"></a>
-  -->
+  <a href="https://arxiv.org/pdf/2611.29184"><img src="https://img.shields.io/badge/Paper-PDF-7C3AED?style=flat&amp;logo=adobeacrobatreader&amp;logoColor=white" alt="Paper PDF"></a>
+  <a href="https://arxiv.org/abs/2611.29184"><img src="https://img.shields.io/badge/arXiv-2611.29184-B31B1B?style=flat&amp;logo=arxiv&amp;logoColor=white" alt="arXiv 2611.29184"></a>
   <a href="https://phycove.github.io/"><img src="https://img.shields.io/badge/Project-Page-2563EB?style=flat&amp;logo=googlechrome&amp;logoColor=white" alt="Project Page"></a>
   <a href="https://huggingface.co/datasets/ccmoony/PhyCoVE"><img src="https://img.shields.io/badge/Hugging_Face-Dataset-FFD21E?style=flat&amp;logo=huggingface&amp;logoColor=FFD21E" alt="Hugging Face Dataset"></a>
 </p>
@@ -281,6 +280,7 @@ See [scripts/README.md](scripts/README.md) for per-scene runtimes, Blender comma
 @article{yue2026phycove,
   title   = {PhyCoVE: Benchmarking Physical Counterfactual Video Editing across Diverse Material Dynamics},
   author  = {Yue, Conghan and Chen, Yuanjie and Xiao, Yunyan and Peng, Zeyu and Ye, Xingsong and Gao, Ya and Huang, Yanglin and Zhang, WeiYao and Han, Yue and Chen, Zhineng and Jiang, Yu-Gang},
+  journal = {arXiv preprint arXiv:2611.29184},
   year    = {2026}
 }
 ```

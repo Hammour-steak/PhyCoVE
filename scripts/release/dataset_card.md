@@ -17,6 +17,7 @@ tags:
 - simulation
 - blender
 - datasets
+- arxiv:2611.29184
 configs:
 - config_name: default
   default: true
@@ -38,6 +39,8 @@ configs:
 ---
 
 # PhyCoVE
+
+[Paper (PDF)](https://arxiv.org/pdf/2611.29184) · [arXiv](https://arxiv.org/abs/2611.29184) · [Project Page](https://phycove.github.io/) · [Code](https://github.com/Hammour-steak/PhyCoVE)
 
 **PhyCoVE is a simulation-based benchmark for physics-aware video editing, with 90 scenes, 90 source videos, and 508 editing tasks.** Given a source video and an instruction that changes physical properties or object presence, a model generates an edited video. Each task includes a reference edited video, instructions in English and Chinese, and simulation-derived ground-truth annotations.
 
@@ -275,4 +278,16 @@ The authoring validation labels are preserved, including pending-review or unrec
 
 PhyCoVE is released under the [MIT License](LICENSE). Third-party asset attributions and their original license declarations are retained in `assets.json`; the MIT license does not replace those third-party terms.
 
-No separate paper citation has been supplied for this release. When referencing it, identify **PhyCoVE**, its [Hugging Face repository](https://huggingface.co/datasets/ccmoony/PhyCoVE), and the revision used. Dataset questions and reproducibility issues can be reported in the repository's [Community tab](https://huggingface.co/datasets/ccmoony/PhyCoVE/discussions).
+## Citation
+
+```bibtex
+@article{yue2026phycove,
+  title   = {PhyCoVE: Benchmarking Physical Counterfactual Video Editing across Diverse Material Dynamics},
+  author  = {Yue, Conghan and Chen, Yuanjie and Xiao, Yunyan and Peng, Zeyu and Ye, Xingsong and
+             Gao, Ya and Huang, Yanglin and Zhang, WeiYao and Han, Yue and Chen, Zhineng and Jiang, Yu-Gang},
+  journal = {arXiv preprint arXiv:2611.29184},
+  year    = {2026}
+}
+```
+
+Dataset questions and reproducibility issues can be reported in the repository's [Community tab](https://huggingface.co/datasets/ccmoony/PhyCoVE/discussions).
